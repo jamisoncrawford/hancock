@@ -16,7 +16,7 @@ Preprocessing was conducted using freeware [Foxit PhantomPDF](https://www.foxits
 * Permanent PDF Rotation
 * Text-Readable Conversion via Optical Character Recognition (OCR)
 
-### File Suffixes
+### File Name Suffixes
 
 Rotated PDFs are available in the "Rotated PDFs" folder of the master repository. File names contain suffix `_r`.
  
