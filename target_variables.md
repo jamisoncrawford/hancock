@@ -1,4 +1,4 @@
-# Target Data: Hancock Airport Project by Subcontractor
+# Target Variables: Hancock Airport Project by Subcontractor
 
 The following data are requested from Legal Services of Central New York (LSCNY) via PDF scraping. Sections are named after the construction company pertaining to each PDF file, located in "Raw Data" and "Rotated PDFs" folder in master repository.
 
