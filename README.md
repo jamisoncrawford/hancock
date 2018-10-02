@@ -29,3 +29,5 @@ The following parameters were selected using Foxit PhantomPDF:
 * All Pages
 * English
 * Searchable Text Image
+
+Foxit PhantomPDF converts each PDF document into a series of high-resolution images which are then converted into machine-readable text.
