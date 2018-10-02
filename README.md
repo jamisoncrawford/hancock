@@ -19,3 +19,9 @@ Preprocessing was conducted using freeware [Foxit PhantomPDF](https://www.foxits
 Rotated PDFs are available in the "Rotated PDFs" folder of the master repository. File names contain suffix `_r`.
  
 Text-readable PDFs are available in the "OCR PDFs" folder of the master repository. File names contain suffix `_rocr`.
+
+**OCR Engine Settings:** The following parameters were selected using Foxit PhantomPDF:
+
+* All Pages
+* English
+* Searchable Text Image
