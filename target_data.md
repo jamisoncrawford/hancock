@@ -81,6 +81,7 @@ Each section provides the following:
 *quality_structures_3.pdf*
 
 **Note 1:** These records are the most numerous and also contained the most useful data. 
+ 
 **Note 2:** "Union" & "Position" located directly below "Social Security Number".
 
 1. Social Security Number (4 Digits) 
