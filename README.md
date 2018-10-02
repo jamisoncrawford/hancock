@@ -16,6 +16,6 @@ Preprocessing was conducted using freeware [Foxit PhantomPDF](https://www.foxits
 * Permanent PDF Rotation
 * Text-Readable Conversion via Optical Character Recognition (OCR)
 
-Rotated PDFs are available in the "Rotated PDFs" folder of the master repository.
+Rotated PDFs are available in the "Rotated PDFs" folder of the master repository. File names contain suffix `_r`.
  
-Text-readable PDFs are available in the "OCR PDFs" folder of the master repository.
+Text-readable PDFs are available in the "OCR PDFs" folder of the master repository. File names contain suffix `_rocr`.
