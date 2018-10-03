@@ -13,7 +13,7 @@ Each section provides the following:
 
 *danforth_company.pdf*
  
-21 Pages
+**Pages:** 21
  
 1. Social Security Number (4 Digits) 
 2. Zip
@@ -23,7 +23,7 @@ Each section provides the following:
 
 *edward_schalk_and_son.pdf*
 
-14 Pages
+**Pages:** 14
 
 **Note:** Some records identify only zip code; minimum datum required. 
 
@@ -38,7 +38,7 @@ Each section provides the following:
 
 *longhouse_construction.pdf*
 
-6 Pages
+**Pages:** 6
 
 **Note:** "Rcae" & "Gender" located on far right of each document.
 
@@ -52,7 +52,7 @@ Each section provides the following:
 
 *m_and_s_fire_protection*
 
-12 Pages
+**Pages:** 12
 
 **Note:** There are no useful data in the records provided; preserved.
 
@@ -60,7 +60,7 @@ Each section provides the following:
 
 *niagara.pdf*
 
-14 Pages
+**Pages:** 14
 
 1. City, State, Zip
 2. Social Security Number (4 Digits) 
@@ -69,7 +69,7 @@ Each section provides the following:
 
 *nrc_ny_environmental_services.pdf*
 
-35 Pages
+**Pages:** 35
 
 1. City, State, Zip
 2. Social Security Number (4 Digits) 
@@ -79,7 +79,7 @@ Each section provides the following:
 
 *patricia_electric.pdf*
 
-10 Pages
+**Pages:** 10
 
 **Note:** "Race" & "Gender" located on far right of documents.
 
@@ -97,7 +97,7 @@ Each section provides the following:
  
 *quality_structures_3.pdf*
 
-374 Pages
+**Pages:** 374
 
 **Note 1:** These records are the most numerous and also contained the most useful data. 
  
@@ -115,7 +115,7 @@ Each section provides the following:
 
 *stone_bridge_iron_and_steel.pdf*
 
-10 Pages
+**Pages:** 10
 
 1. City, State, Zip
 2. Social Security Number (4 Digits) 
