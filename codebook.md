@@ -24,20 +24,20 @@ Employee-related variables:
 
 * `ssn`: Last four digit of employee social security number
 * `race`: Racial classification of employee per [EEOC taxonomy](https://www.eeoc.gov/eeoc/statistics/employment/jobpat-eeo1/glossary.cfm); categories within documentation include:
-  -`White`
-  -`Two or More Races`
-  -`American Indian or Alaskan`
-  -`Black or African American`
+  - `White`
+  - `Two or More Races`
+  - `American Indian or Alaskan`
+  - `Black or African American`
 * `sex`: Employee gender
 * `position`: Employee position per union classification; categories within documentation include:
-  -`Journeyman`          
-  -`General Foreman`
-  -`Operator Class 1`
-  -`Foreman`
-  -`Operator Class A`
-  -`Apprentice 1st Year`
-  -`Apprentice 2nd Year`
-  -`Apprentice 3rd Year`
+  - `Journeyman`          
+  - `General Foreman`
+  - `Operator Class 1`
+  - `Foreman`
+  - `Operator Class A`
+  - `Apprentice 1st Year`
+  - `Apprentice 2nd Year`
+  - `Apprentice 3rd Year`
 * `union`: Employee union
 * `eeo`: General employee classification under *EEOC*
 
