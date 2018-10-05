@@ -66,4 +66,8 @@ The original location of each record is stored in a variable, as well as index o
 
 ### OCR Error
 
-Missing values (`NA`) resulting from OCR error are indexed, checked, and corrected manually. OCR error proved particularly troublesome with `zip` and `ssn` values, and digits in general. 
+Missing values (`NA`) resulting from OCR error are indexed, checked, and corrected manually *if detected*. OCR error proved particularly troublesome with numeric values, e.g. `zip` and `ssn` in [*quality_structures_scrape_1.5.r*](https://github.com/jamisoncrawford/REIS/blob/master/Scripts/quality_structures_scrape_1.5.r). To assess potential error, function `table()` was called and rare values (e.g. $n <= 3$) were visually inspected within the raw data, with confirmed values entered, concatenated, and input manually. 
+
+# Notice
+
+While several measures were taken to ensure accuracy in final output, *results are not 100% reliable* and caution should be taken when using these results for policy-making decisions and elsehow. While data scraping can potentially be very efficient, especially with large documents, using images, regarless of resolution, and optical character recognition (OCR) software does not ensure 100% accuracy, particularly when using information-redacted scans, compared to PDF files, e.g., with embedded texts.
