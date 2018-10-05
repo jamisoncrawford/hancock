@@ -30,10 +30,10 @@ Employee-related variables:
   - `Black or African American`
 * `sex`: Employee gender
 * `position`: Employee position per union classification; categories within documentation include:
-  - `Journeyman`          
+  - `Journeyman`
+  - `Foreman`
   - `General Foreman`
   - `Operator Class 1`
-  - `Foreman`
   - `Operator Class A`
   - `Apprentice 1st Year`
   - `Apprentice 2nd Year`
