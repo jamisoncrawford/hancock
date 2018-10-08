@@ -91,5 +91,5 @@ The only notable caveat at present regards importing .csv files into *Microsoft 
 The following individuals contributed to this project in the manner described below:
 
 * **Jamison Crawford, MPA:** Principal analyst.
-* **Andrew Croom, Esq.:** Retrieved and organized all raw data, as well as provided variables of interest within each document.
+* **Andrew Croom, Esq.:** Retrieved and organized all raw data, as well as provided variables of interest.
 * **Shannon Connor, MA:** Assisted in all paired data inspection and corroboration processes.
