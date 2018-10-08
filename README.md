@@ -81,3 +81,15 @@ The following addresses the variable detection accuracy for each document scrape
 Of the 607 employee records, 606 were detected. Review determined the missing record, which has been corrected. Discounting said record, all variable values scraped were correct except variable `zip`, which contained 2 errors (99.67% accuracy). A total of 7 extracted variables, at 606 instances each, resulted in 4,242 data points, with 4,240 correct, resulting in a total accuracy of 99.95%.
 
 Following review, all output in *quality_structures_scrape_1.1.csv*, located in the "Tables" folder, are 100% accurate.
+
+# Caveats
+
+The only notable caveat at present regards importing .csv files into *Microsoft Excel*, which may automatically convert character values into numeric values. If those values begin with one or more zeroes ("0"), e.g. `ssn` in *quality_structures_scrape_1.1.csv*, they will be removed automatically. It is strongly advised that users ensure automatic formatting for numeric data is disabled in their spreadsheet software.
+
+# Contributors
+
+The following individuals contributed to this project in the manner described below:
+
+* **Jamison Crawford, MPA:** Principal analyst.
+* **Andrew Croom, Esq.:** Retrieved and organized all raw data, as well as provided variables of interest within each document.
+* **Shannon Connor, MA:** Assisted in all paired data inspection and corroboration processes.
