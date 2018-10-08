@@ -64,10 +64,20 @@ Rotated PDFs are read in from the "Rotated PDFs" folder located in the master re
 
 The original location of each record is stored in a variable, as well as index of which record within the raw data corresponds to each extraction to preserve ordering. All punctuation is removed from extracted text, while line breaks are substituted with `%SPLIT%` for subsetting purposes. Further extraction may occur to isolate specific variable data. The most encompassing albeit universally-applicable regular expresssions are used for pattern detection, isolation, and extraction, and refined using a combination of `unique()` function calls to ensure uniformity and `table()` function calls to determine rarity for manual checking.
 
-### OCR Error
+### OCR Error: Numeric Data
 
-Missing values (`NA`) resulting from OCR error are indexed, checked, and corrected manually *if detected*. OCR error proved particularly troublesome with numeric values, e.g. `zip` and `ssn` in [*quality_structures_scrape_1.5.r*](https://github.com/jamisoncrawford/REIS/blob/master/Scripts/quality_structures_scrape_1.5.r). To assess potential error, function `table()` was called and rare values (e.g. $n <= 3$) were visually inspected within the raw data, with confirmed values entered, concatenated, and input manually. 
+Missing numeric values (`NA`) resulting from OCR error are indexed, checked, and corrected manually *if detected*. Emphasis was placed on particular variables which were obstructed via redaction in preprocessing, e.g. `zip` in [*quality_structures_scrape_1.5.r*](https://github.com/jamisoncrawford/REIS/blob/master/Scripts/quality_structures_scrape_1.6.r). To assess potential error, function `table()` was called and values with uncommon frequencies ($n <= 4$) were visually inspected within the raw data, with confirmed values entered, concatenated, and input manually. 
 
-# Notice
+### OCR Error: Character Data
 
-While several measures were taken to ensure accuracy in final output, *results are not 100% reliable* and caution should be taken when using these results for policy-making decisions and elsehow. While data scraping can potentially be very efficient, especially with large documents, using images, regarless of resolution, and optical character recognition (OCR) software does not ensure 100% accuracy, particularly when using information-redacted scans, compared to PDF files, e.g., with embedded texts.
+Missing character values (`NA`) where treated similarly to numeric data. Values cleaned using regular expressions and calls to function `unique()` to determine the most encompassing and distinguishing regular expressions. Low-frequency character values detected with `table()` were visually inspected within the raw data, with confirmed values entered, concatenated, and input manually. Categorical variables were coerced to factors where appropriate.
+
+# Accuracy
+
+The following addresses the variable detection accuracy for each document scrape. Using the above treatment of OCR error detection, data were then visually inspected using a paired reviewing process in which the analyst reads each data point in each record, variable-wise, and an assistant confirms whether each datum was correct.
+
+## Quality Structures, Inc.
+
+Of the 607 employee records, 606 were detected. Review determined the missing record, which has been corrected. Discounting said record, all variable values scraped were correct except variable `zip`, which contained 2 errors (99.67% accuracy). A total of 7 extracted variables, at 606 instances each, resulted in 4,242 data points, with 4,240 correct, resulting in a total accuracy of 99.95%.
+
+Following review, all output in *quality_structures_scrape_1.1.csv*, located in the "Tables" folder, are 100% accurate.
