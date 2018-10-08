@@ -1,0 +1,80 @@
+ssn,race,sex,vocation,title,grade,rate,net,hours,ot,zip,city,state,latitude,longitude,pdf_pg,occur
+3302,White,Male,Carpenter,Foreman,M-1,28.45,810.58,8,NA,13167,West Monroe,NY,43.309645,-76.0552,1,1
+7211,White,Male,Carpenter,Apprentice,S-0,16.47,749.34,24,7.5,14445,East Rochester,NY,43.111663,-77.48709,2,1
+1626,White,Male,Carpenter,Apprentice,S-0,19.22,832.36,40,18,13069,Fulton,NY,43.32347,-76.40029,2,2
+6590,White,Male,Carpenter,Not Specified,S-2,27.45,894.4,40,10,13069,Fulton,NY,43.32347,-76.40029,2,3
+4159,White,Male,Carpenter,Not Specified,S-2,27.45,1096.54,40,7,13122,New Woodstock,NY,42.837642,-75.84778,2,4
+2863,White,Male,Carpenter,Foreman,M-12,28.45,1607.28,32,19,13126,Oswego,NY,43.449201,-76.47992,2,5
+1178,White,Male,Carpenter,Not Specified,M-2,27.45,1031.71,40,7,13088,Liverpool,NY,43.105917,-76.19365,2,6
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1175.55,40,12.5,13167,West Monroe,NY,43.309645,-76.0552,2,7
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,1328.12,40,20.5,13076,Hastings,NY,43.354706,-76.14871,2,8
+1626,White,Male,Carpenter,Apprentice,S-0,19.22,609.52,40,5,13069,Fulton,NY,43.32347,-76.40029,3,1
+6590,White,Male,Carpenter,Not Specified,S-2,27.45,714,40,5,13069,Fulton,NY,43.32347,-76.40029,3,2
+2863,White,Male,Carpenter,Foreman,M-12,28.45,951.86,21,5,13126,Oswego,NY,43.449201,-76.47992,3,3
+7209,White,Male,Carpenter,Not Specified,M-3,27.45,879.24,24,3,13206,Syracuse,NY,43.069866,-76.10724,3,4
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1240.52,40,15,13167,West Monroe,NY,43.309645,-76.0552,3,5
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,1186.4,40,15,13076,Hastings,NY,43.354706,-76.14871,3,6
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,1147.22,24,12.5,13069,Fulton,NY,43.32347,-76.40029,4,1
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1028.89,40,7.5,13167,West Monroe,NY,43.309645,-76.0552,4,2
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,1195.79,40,15,13076,Hastings,NY,43.354706,-76.14871,4,3
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,1076.52,34,10,13069,Fulton,NY,43.32347,-76.40029,5,1
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1102.23,39,10,13167,West Monroe,NY,43.309645,-76.0552,5,2
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,1054.93,40,10,13076,Hastings,NY,43.354706,-76.14871,5,3
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,991.7,40,7,13069,Fulton,NY,43.32347,-76.40029,6,1
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1102.24,40,10,13167,West Monroe,NY,43.309645,-76.0552,6,2
+9487,White,Male,Carpenter,Not Specified,M-0,28.45,1026.67,40,9,13076,Hastings,NY,43.354706,-76.14871,6,3
+3060,White,Male,Taper,Not Specified,S-0,25.49,677.66,1.5,NA,13135,Phoenix,NY,43.235916,-76.31339,6,4
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,1076.52,7,2,13069,Fulton,NY,43.32347,-76.40029,7,1
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1131.56,10.5,2,13167,West Monroe,NY,43.309645,-76.0552,7,2
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,1054.94,8,1,13076,Hastings,NY,43.354706,-76.14871,7,3
+8611,White,Male,Carpenter,Not Specified,S-0,NA,902.66,NA,7,13126,Oswego,NY,43.449201,-76.47992,8,1
+2863,White,Male,Carpenter,Foreman,M-12,NA,1037.36,NA,7,13126,Oswego,NY,43.449201,-76.47992,8,2
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,1246.15,4,NA,13069,Fulton,NY,43.32347,-76.40029,8,3
+7072,White,Male,Carpenter,Not Specified,S-2,27.45,1000.61,4,NA,13066,Fayetteville,NY,43.028516,-76.00876,8,4
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1287.34,38,10.5,13167,West Monroe,NY,43.309645,-76.0552,8,5
+7702,Black,Male,Carpenter,Apprentice,S-0,19.22,598.26,16,4,13209,Syracuse,NY,43.081324,-76.23488,8,6
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,609.68,31,NA,13076,Hastings,NY,43.354706,-76.14871,8,7
+3060,White,Male,Taper,Not Specified,S-0,25.49,911.78,9,NA,13135,Phoenix,NY,43.235916,-76.31339,8,8
+8611,White,Male,Carpenter,Not Specified,S-0,27.45,842.26,3,5,13126,Oswego,NY,43.449201,-76.47992,9,1
+2863,White,Male,Carpenter,Foreman,M-12,NA,1052.46,NA,8,13126,Oswego,NY,43.449201,-76.47992,9,2
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,1246.15,40,16,13069,Fulton,NY,43.32347,-76.40029,9,3
+7072,White,Male,Carpenter,Not Specified,S-2,27.45,1000.6,40,10,13066,Fayetteville,NY,43.028516,-76.00876,9,4
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1175.54,21,9.5,13167,West Monroe,NY,43.309645,-76.0552,9,5
+7702,Black,Male,Carpenter,Apprentice,S-0,19.22,798.91,40,16,13209,Syracuse,NY,43.081324,-76.23488,9,6
+2770,White,Male,Carpenter,Not Specified,M-0,27.45,1125.64,23,10.5,13041,Clay,NY,43.1835,-76.18002,9,7
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,1243.91,40,17,13076,Hastings,NY,43.354706,-76.14871,9,8
+3060,White,Male,Taper,Not Specified,S-0,25.49,878.25,27,4,13135,Phoenix,NY,43.235916,-76.31339,9,9
+8611,White,Male,Carpenter,Not Specified,S-0,27.45,560.1,2,NA,13126,Oswego,NY,43.449201,-76.47992,10,1
+1790,Black,Male,Carpenter,Apprentice,S-3,13.73,527.75,40,8.5,13501,Utica,NY,43.087669,-75.22681,10,2
+1021,White,Male,Carpenter,Not Specified,M-1,NA,888.97,NA,8,13027,Baldwinsville,NY,43.165134,-76.33901,10,3
+5846,White,Male,Carpenter,Not Specified,M-0,27.45,828.87,16,2,13057,East Syracuse,NY,43.074266,-76.05538,10,4
+8205,White,Male,Carpenter,Not Specified,S-2,NA,937.05,NA,8,13069,Fulton,NY,43.32347,-76.40029,10,5
+2863,White,Male,Carpenter,Foreman,M-12,NA,1052.46,NA,8,13126,Oswego,NY,43.449201,-76.47992,10,6
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,1246.14,40,16,13069,Fulton,NY,43.32347,-76.40029,10,7
+2813,White,Male,Carpenter,Not Specified,M-10,NA,1141.35,NA,8,13088,Liverpool,NY,43.105917,-76.19365,10,8
+7072,White,Male,Carpenter,Not Specified,S-2,27.45,1000.61,40,10,13066,Fayetteville,NY,43.028516,-76.00876,10,9
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1299.83,40,17,13167,West Monroe,NY,43.309645,-76.0552,10,10
+7702,Black,Male,Carpenter,Apprentice,S-0,19.22,765.47,40,14,13209,Syracuse,NY,43.081324,-76.23488,10,11
+2770,White,Male,Carpenter,Not Specified,M-0,27.45,1267.98,35,10,13041,Clay,NY,43.1835,-76.18002,10,12
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,871.21,40,3.5,13076,Hastings,NY,43.354706,-76.14871,11,1
+3060,White,Male,Taper,Not Specified,S-0,25.49,699.85,16,NA,13135,Phoenix,NY,43.235916,-76.31339,11,2
+5846,White,Male,Carpenter,Not Specified,M-0,27.45,955.96,40,6.5,13057,East Syracuse,NY,43.074266,-76.05538,12,1
+2863,White,Male,Carpenter,Foreman,M-12,28.45,1463.64,40,22,13126,Oswego,NY,43.449201,-76.47992,12,2
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,1260.24,40,16.5,13069,Fulton,NY,43.32347,-76.40029,12,3
+6213,White,Male,Carpenter,Apprentice,M-9,NA,797,NA,8,13104,Manlius,NY,42.987329,-75.96763,12,4
+7072,White,Male,Carpenter,Not Specified,S-2,27.45,1204.68,40,18.5,13066,Fayetteville,NY,43.028516,-76.00876,12,5
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1204.83,40,13.5,13167,West Monroe,NY,43.309645,-76.0552,12,6
+7702,Black,Male,Carpenter,Apprentice,S-0,13.22,681.87,40,9,13209,Syracuse,NY,43.081324,-76.23488,12,7
+2770,White,Male,Carpenter,Not Specified,M-0,27.45,1267.97,38,18,13041,Clay,NY,43.1835,-76.18002,12,8
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,1219.85,40,16,13076,Hastings,NY,43.354706,-76.14871,12,9
+4159,White,Male,Carpenter,Not Specified,S-2,NA,925.7,NA,6,13122,New Woodstock,NY,42.837642,-75.84778,13,1
+2063,White,Male,Carpenter,Foreman,M-12,28.45,1229.76,40,14,13126,Oswego,NY,43.449201,-76.47992,13,2
+7393,White,Male,Carpenter,Not Specified,M-2,27.45,1246.15,40,16,13069,Fulton,NY,43.32347,-76.40029,13,3
+2813,White,Male,Carpenter,Not Specified,M-10,NA,1064.78,NA,6,13088,Liverpool,NY,43.105917,-76.19365,13,4
+7072,White,Male,Carpenter,Not Specified,S-2,27.45,590.74,30,30,13066,Fayetteville,NY,43.028516,-76.00876,13,5
+1170,White,Male,Carpenter,Not Specified,M-2,27.45,1043.42,40,6,13088,Liverpool,NY,43.105917,-76.19365,13,6
+3302,White,Male,Carpenter,Foreman,M-1,28.45,1274.85,40,16,13167,West Monroe,NY,43.309645,-76.0552,13,7
+7702,Black,Male,Carpenter,Apprentice,S-0,19.22,782.19,40,15,13209,Syracuse,NY,43.081324,-76.23488,13,8
+2770,White,Male,Carpenter,Not Specified,M-0,27.45,1195.78,32,12,13041,Clay,NY,43.1835,-76.18002,13,9
+9487,White,Male,Carpenter,Not Specified,M-0,27.45,1219.85,40,16,13076,Hastings,NY,43.354706,-76.14871,13,10
+3060,White,Male,Taper,Not Specified,S-0,25.49,833.64,8,6,13135,Phoenix,NY,43.235916,-76.31339,14,1
