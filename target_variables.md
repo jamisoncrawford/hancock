@@ -40,7 +40,7 @@ Each section provides the following:
 
 **Pages:** 6
 
-**Note:** "Rcae" & "Gender" located on far right of each document.
+**Note:** "Race" & "Gender" located on far right of each document.
 
 1. City, State, Zip
 2. SS# last four digits
