@@ -66,7 +66,7 @@ The original location of each record is stored in a variable, as well as index o
 
 ### OCR Error: Numeric Data
 
-Missing numeric values (`NA`) resulting from OCR error are indexed, checked, and corrected manually *if detected*. Emphasis was placed on particular variables which were obstructed via redaction in preprocessing, e.g. `zip` in [*quality_structures_scrape_1.5.r*](https://github.com/jamisoncrawford/REIS/blob/master/Scripts/quality_structures_scrape_1.6.r). To assess potential error, function `table()` was called and values with uncommon frequencies (n \leq 3) were visually inspected within the raw data, with confirmed values entered, concatenated, and input manually. 
+Missing numeric values (`NA`) resulting from OCR error are indexed, checked, and corrected manually *if detected*. Emphasis was placed on particular variables which were obstructed via redaction in preprocessing, e.g. `zip` in [*quality_structures_scrape_1.5.r*](https://github.com/jamisoncrawford/REIS/blob/master/Scripts/quality_structures_scrape_1.6.r). To assess potential error, function `table()` was called and values with uncommon frequencies (n < 4) were visually inspected within the raw data, with confirmed values entered, concatenated, and input manually. 
 
 ### OCR Error: Character Data
 
