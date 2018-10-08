@@ -1,0 +1,607 @@
+pdf_no,pdf_pg,occur,ssn,ssn_correct,zip,zip_correct,race,race_correct,sex,sex_correct,position,pos_correct,union,union_correct,eeo,eeo_correct,page
+1,1,1,9145,,14420,,White,,Male,,Journeyman,,Rochester Masons,,Journeyman,,1
+1,4,1,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,4
+1,5,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,5
+1,5,2,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,5
+1,7,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,7
+1,8,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,8
+1,8,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,8
+1,9,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,9
+1,9,2,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,9
+1,11,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,11
+1,11,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,11
+1,12,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,12
+1,14,1,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,14
+1,14,2,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,14
+1,16,1,9145,,14420,,White,,Male,,Journeyman,,Rochester Masons,,Journeyman,,16
+1,17,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,17
+1,19,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,19
+1,19,2,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,19
+1,20,1,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,20
+1,20,2,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,20
+1,21,1,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,21
+1,21,2,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,21
+1,22,1,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,22
+1,22,2,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,22
+1,23,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,23
+1,23,2,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,23
+1,24,1,9145,,14420,,White,,Male,,Journeyman,,Rochester Masons,,Journeyman,,24
+1,25,1,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,25
+1,26,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,26
+1,28,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,28
+1,28,2,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,28
+1,29,1,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,29
+1,30,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,30
+1,31,1,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,31
+1,31,2,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,31
+1,32,1,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,32
+1,32,2,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,32
+1,33,1,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,33
+1,33,2,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,33
+1,34,1,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,34
+1,34,2,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,34
+1,35,1,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,35
+1,35,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,35
+1,36,1,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,36
+1,36,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,36
+1,37,1,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,37
+1,37,2,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,37
+1,38,1,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,38
+1,38,2,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,38
+1,39,1,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,39
+1,39,2,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,39
+1,40,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,40
+1,41,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,41
+1,43,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,43
+1,44,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,44
+1,45,1,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,45
+1,46,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,46
+1,47,1,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,47
+1,47,2,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,47
+1,48,1,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,48
+1,48,2,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,48
+1,50,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,50
+1,51,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,51
+1,52,1,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,52
+1,53,1,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,53
+1,53,2,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,53
+1,54,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,54
+1,56,1,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,56
+1,57,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,57
+1,57,2,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,57
+1,58,1,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,58
+1,58,2,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,58
+1,59,1,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,59
+1,59,2,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,59
+1,60,1,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,60
+1,61,1,9145,,14420,,White,,Male,,Journeyman,,Rochester Masons,,Journeyman,,61
+1,63,1,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,63
+1,64,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,64
+1,64,2,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,64
+1,66,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,66
+1,66,2,8035,,NA,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,66
+1,67,1,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,67
+1,68,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,68
+1,68,2,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,68
+1,69,1,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,69
+1,70,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,70
+1,70,2,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,70
+1,71,1,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,71
+1,71,2,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,71
+1,72,1,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,72
+1,72,2,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,72
+1,73,1,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,73
+1,75,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,75
+1,75,2,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,75
+1,76,1,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,76
+1,76,2,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,76
+1,77,1,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,77
+1,77,2,6366,,13206,,Two or More Races,,Male,,Apprentice 1st Year,,Syracuse Carpenters,,Apprentice,,77
+1,78,1,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,78
+1,78,2,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,78
+1,79,1,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,79
+1,79,2,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,79
+1,80,1,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,80
+1,80,2,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,80
+1,82,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,82
+1,82,2,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,82
+1,83,1,8396,,14801,,White,,Male,,Apprentice 2nd Year,,Corning Carpenters,,Apprentice,,83
+1,83,2,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,83
+1,84,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,84
+1,84,2,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,84
+1,85,1,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,85
+1,85,2,6195,,13145,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,85
+1,86,1,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,86
+1,86,2,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,86
+1,87,1,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,87
+1,87,2,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,87
+1,88,1,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,88
+1,88,2,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,88
+1,90,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,90
+1,90,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,90
+1,91,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,91
+1,91,2,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,91
+1,93,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,93
+1,93,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,93
+1,94,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,94
+1,96,1,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,96
+1,96,2,7338,,13208,14517,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,96
+1,98,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,98
+1,98,2,1017,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,98
+1,99,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,99
+1,99,2,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,99
+1,100,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,100
+1,100,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,100
+1,101,1,1017,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,101
+1,101,2,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,101
+1,102,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,102
+1,104,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,104
+1,104,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,104
+1,105,1,1017,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,105
+1,105,2,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,105
+1,106,1,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,106
+1,106,2,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,106
+1,108,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,108
+1,108,2,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,108
+1,109,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,109
+1,109,2,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,109
+1,110,1,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,110
+1,110,2,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,110
+1,111,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,111
+1,111,2,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,111
+1,112,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,112
+1,114,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,114
+1,114,2,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,114
+1,115,1,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,115
+1,115,2,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,115
+1,116,1,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,116
+1,116,2,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,116
+1,117,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,117
+1,117,2,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,117
+1,118,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,118
+1,118,2,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,118
+1,120,1,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,120
+1,120,2,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,120
+1,121,1,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,121
+1,121,2,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,121
+1,123,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,123
+1,123,2,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,123
+1,124,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,124
+1,125,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,125
+1,125,2,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,125
+1,126,1,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,126
+1,127,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,127
+1,128,1,8243,,13219,13034,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,128
+1,128,2,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,128
+1,129,1,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,129
+1,129,2,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,129
+2,1,1,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,130
+2,1,2,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,130
+2,2,1,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,131
+2,2,2,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,131
+2,3,1,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,132
+2,3,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,132
+2,4,1,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,133
+2,4,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,133
+2,5,1,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,134
+2,5,2,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,134
+2,6,1,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,135
+2,6,2,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,135
+2,7,1,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,136
+2,7,2,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,136
+2,8,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,137
+2,9,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,138
+2,11,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,140
+2,11,2,9751,,13219,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,140
+2,12,1,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,141
+2,12,2,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,141
+2,13,1,3423,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,142
+2,13,2,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,142
+2,14,1,4373,,13165,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,143
+2,14,2,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,143
+2,15,1,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,144
+2,15,2,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,144
+2,16,1,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,145
+2,16,2,8778,,13201,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,145
+2,17,1,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,146
+2,17,2,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,146
+2,18,1,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,147
+2,18,2,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,147
+2,19,1,3877,,13074,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,148
+2,19,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,148
+2,20,1,1017,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,149
+2,20,2,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,149
+2,21,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,150
+2,21,2,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,150
+2,22,1,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,151
+2,22,2,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,151
+2,23,1,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,152
+2,23,2,6286,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,152
+2,24,1,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,153
+2,24,2,4034,,13090,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,153
+2,25,1,9585,,13211,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,154
+2,25,2,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,154
+2,26,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,155
+2,27,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,156
+2,27,2,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,156
+2,29,1,9751,,13219,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,158
+2,29,2,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,158
+2,30,1,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,159
+2,30,2,3423,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,159
+2,31,1,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,160
+2,31,2,4373,,13165,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,160
+2,32,1,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,161
+2,32,2,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,161
+2,33,1,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,162
+2,33,2,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,162
+2,34,1,8778,,13201,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,163
+2,34,2,1793,,13903,,White,,Male,,Journeyman,,Binghamton Laborers,,Journeyman,,163
+2,35,1,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,164
+2,35,2,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,164
+2,36,1,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,165
+2,36,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,165
+2,37,1,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,166
+2,37,2,3877,,13074,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,166
+2,38,1,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,167
+2,38,2,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,167
+2,39,1,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,168
+2,39,2,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,168
+2,40,1,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,169
+2,40,2,6286,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,169
+2,41,1,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,170
+2,41,2,4034,,13090,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,170
+2,42,1,9585,,13211,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,171
+2,42,2,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,171
+2,43,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,172
+2,43,2,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,172
+2,45,1,9751,,13219,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,174
+2,45,2,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,174
+2,46,1,7738,,13045,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,175
+2,46,2,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,175
+2,47,1,3423,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,176
+2,47,2,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,176
+2,48,1,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,177
+2,48,2,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,177
+2,49,1,8107,,13493,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,178
+2,49,2,4859,,13202,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,178
+2,50,1,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,179
+2,50,2,8778,,13201,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,179
+2,51,1,1793,,13903,,White,,Male,,Journeyman,,Binghamton Laborers,,Journeyman,,180
+2,51,2,1806,,13208,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,180
+2,52,1,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,181
+2,52,2,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,181
+2,53,1,3877,,13074,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,182
+2,53,2,8714,,13219,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,182
+2,54,1,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,183
+2,54,2,7881,,13082,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,183
+2,55,1,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,184
+2,55,2,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,184
+2,56,1,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,185
+2,56,2,6286,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,185
+2,57,1,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,186
+2,57,2,4034,,13090,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,186
+2,58,1,9585,,13211,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,187
+2,58,2,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,187
+2,59,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,188
+2,59,2,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,188
+2,61,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,190
+2,61,2,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,190
+2,62,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,191
+2,63,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,192
+2,63,2,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,192
+2,64,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,193
+2,64,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,193
+2,65,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,194
+2,65,2,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,194
+2,66,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,195
+2,66,2,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,195
+2,68,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,197
+2,68,2,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,197
+2,69,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,198
+2,70,1,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,199
+2,70,2,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,199
+2,71,1,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,200
+2,72,1,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,201
+2,72,2,8396,,14801,,White,,Male,,Apprentice 2nd Year,,Corning Carpenters,,Apprentice,,201
+2,73,1,6155,,13071,,White,,Male,,Apprentice 1st Year,,Syracuse Carpenters,,Apprentice,,202
+2,73,2,0497,,12175,,White,,Male,,Foreman,,Albany Carpenters,,Journeyman,,202
+2,74,1,5362,,13045,,White,,Male,,General Foreman,,Rochester Masons,,Journeyman,,203
+2,74,2,3082,,13795,,White,,Male,,General Foreman,,Empire State-Sullivan,,None,,203
+2,76,1,9751,,13219,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,205
+2,76,2,7718,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,205
+2,77,1,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,206
+2,77,2,7738,,13045,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,206
+2,78,1,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,207
+2,78,2,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,207
+2,79,1,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,208
+2,80,1,8996,,13041,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,209
+2,81,1,8107,,13493,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,210
+2,81,2,4859,,13202,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,210
+2,82,1,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,211
+2,82,2,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,211
+2,83,1,8778,,13201,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,212
+2,83,2,1793,,13903,,White,,Male,,Journeyman,,Binghamton Laborers,,Journeyman,,212
+2,84,1,1806,,13208,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,213
+2,84,2,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,213
+2,85,1,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,214
+2,85,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,214
+2,86,1,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,215
+2,86,2,3877,,13074,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,215
+2,87,1,8714,,13219,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,216
+2,87,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,216
+2,88,1,7881,,13082,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,217
+2,88,2,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,217
+2,89,1,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,218
+2,89,2,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,218
+2,90,1,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,219
+2,90,2,6286,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,219
+2,91,1,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,220
+2,91,2,4034,,13090,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,220
+2,92,1,9585,,13211,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,221
+2,92,2,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,221
+2,93,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,222
+2,93,2,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,222
+2,95,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,224
+2,95,2,9751,,13219,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,224
+2,96,1,7718,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,225
+2,96,2,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,225
+2,97,1,7738,,13045,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,226
+2,97,2,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,226
+2,98,1,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,227
+2,98,2,4373,,13165,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,227
+2,99,1,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,228
+2,99,2,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,228
+2,100,1,8996,,13041,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,229
+2,101,1,8107,,13493,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,230
+2,102,1,9167,,13118,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,231
+2,102,2,4859,,13202,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,231
+2,103,1,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,232
+2,103,2,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,232
+2,104,1,8778,,13201,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,233
+2,104,2,1793,,13903,,White,,Male,,Journeyman,,Binghamton Laborers,,Journeyman,,233
+2,105,1,1806,,13208,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,234
+2,105,2,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,234
+2,106,1,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,235
+2,107,1,8018,,13027,,White,,Male,,Apprentice 2nd Year,,Syracuse Carpenters,,Apprentice,,236
+2,107,2,6195,,13145,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,236
+2,108,1,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,237
+2,108,2,3877,,13074,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,237
+2,109,1,8714,,13219,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,238
+2,109,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,238
+2,110,1,7881,,13082,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,239
+2,110,2,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,239
+2,111,1,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,240
+2,111,2,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,240
+2,112,1,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,241
+2,112,2,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,241
+2,113,1,6286,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,242
+2,113,2,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,242
+2,114,1,4034,,13090,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,243
+2,114,2,9585,,13211,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,243
+2,115,1,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,244
+2,115,2,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,244
+2,116,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,245
+2,116,2,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,245
+2,118,1,9751,,13219,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,247
+2,118,2,7718,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,247
+2,119,1,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,248
+2,119,2,7738,,13045,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,248
+2,120,1,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,249
+2,120,2,0079,,13032,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,249
+2,121,1,8107,,13493,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,250
+2,122,1,9167,,13118,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,251
+2,122,2,4859,,13202,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,251
+2,123,1,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,252
+2,123,2,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,252
+2,124,1,8778,,13201,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,253
+2,124,2,1793,,13903,,White,,Male,,Journeyman,,Binghamton Laborers,,Journeyman,,253
+2,125,1,1806,,13208,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,254
+2,125,2,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,254
+2,126,1,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,255
+2,126,2,6195,,13145,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,255
+2,127,1,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,256
+2,127,2,3877,,13074,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,256
+2,128,1,8714,,13219,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,257
+2,128,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,257
+2,129,1,7881,,13082,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,258
+2,129,2,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,258
+3,1,1,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,259
+3,1,2,6286,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,259
+3,2,1,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,260
+3,2,2,4034,,13090,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,260
+3,3,1,9585,,13211,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,261
+3,3,2,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,261
+3,4,1,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,262
+3,4,2,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,262
+3,6,1,0966,,13132,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,264
+3,6,2,9751,,13219,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,264
+3,7,1,7718,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,265
+3,7,2,1468,,13208,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,265
+3,8,1,7738,,13045,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,266
+3,8,2,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,266
+3,9,1,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,267
+3,9,2,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,267
+3,10,1,8186,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,268
+3,10,2,8107,,13493,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,268
+3,11,1,9167,,13118,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,269
+3,11,2,2133,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,269
+3,12,1,8607,,13045,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,270
+3,12,2,8778,,13201,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,270
+3,13,1,1793,,13903,,White,,Male,,Journeyman,,Binghamton Laborers,,Journeyman,,271
+3,13,2,1806,,13208,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,271
+3,14,1,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,272
+3,14,2,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,272
+3,15,1,8018,,13027,,White,,Male,,Apprentice 2nd Year,,Syracuse Carpenters,,Apprentice,,273
+3,15,2,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,273
+3,16,1,6019,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,274
+3,16,2,2237,,13206,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,274
+3,17,1,8714,,13219,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,275
+3,17,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,275
+3,18,1,7881,,13082,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,276
+3,18,2,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,276
+3,19,1,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,277
+3,19,2,4944,,13036,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,277
+3,20,1,6286,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,278
+3,20,2,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,278
+3,21,1,4034,,13090,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,279
+3,21,2,5681,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,279
+3,22,1,9585,,13211,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,280
+3,22,2,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,280
+3,23,1,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,281
+3,25,1,0966,,NA,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,283
+3,25,2,9751,,NA,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,283
+3,26,1,7718,,NA,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,284
+3,26,2,1468,,NA,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,284
+3,27,1,7738,,NA,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,285
+3,27,2,4341,,NA,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,285
+3,28,1,8243,,NA,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,286
+3,28,2,0095,,NA,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,286
+3,29,1,3906,,NA,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,287
+3,29,2,8996,,NA,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,287
+3,30,1,8186,,NA,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,288
+3,30,2,8107,,NA,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,288
+3,31,1,9167,,NA,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,289
+3,31,2,2133,,NA,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,289
+3,32,1,8607,,NA,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,290
+3,32,2,8778,,NA,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,290
+3,33,1,1793,,13903,,White,,Male,,Journeyman,,Binghamton Laborers,,Journeyman,,291
+3,33,2,1806,,13208,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,291
+3,34,1,1390,,13204,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,292
+3,34,2,9784,,13069,,White,,Male,,Journeyman,,Syracuse Masons,,Journeyman,,292
+3,35,1,5496,,13030,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,293
+3,35,2,4000,,13021,,Two or More Races,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,293
+3,36,1,8025,,14456,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,294
+3,36,2,6019,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,294
+3,37,1,2237,,13206,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,295
+3,37,2,3877,,13074,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,295
+3,38,1,8714,,13219,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,296
+3,38,2,7881,,13082,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,296
+3,39,1,5782,,13084,,American Indian or Alaskan,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,297
+3,39,2,8015,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,297
+3,40,1,4944,,13036,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,298
+3,40,2,6286,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,298
+3,41,1,1829,,13207,,Black or African American,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,299
+3,41,2,4034,,13090,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,299
+3,42,1,5681,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,300
+3,42,2,9585,,13211,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,300
+3,43,1,4707,,13126,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,301
+3,43,2,3712,,14422,,White,,Male,,Foreman,,Rochester Laborers,,Journeyman,,301
+3,44,1,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,302
+3,46,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,304
+3,46,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,304
+3,47,1,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,305
+3,47,2,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,305
+3,48,1,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,306
+3,48,2,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,306
+3,50,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,308
+3,50,2,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,308
+3,51,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,309
+3,51,2,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,309
+3,52,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,310
+3,54,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,312
+3,54,2,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,312
+3,55,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,313
+3,55,2,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,313
+3,56,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,314
+3,58,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,316
+3,58,2,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,316
+3,59,1,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,317
+3,59,2,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,317
+3,60,1,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,318
+3,60,2,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,318
+3,62,1,4074,,14432,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,320
+3,62,2,8025,,14456,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,320
+3,63,1,7981,,14873,,White,,Male,,Operator Class 1,,Rochester Operators,,Journeyman,,321
+3,63,2,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,321
+3,64,1,2085,,14816,,White,,Male,,Foreman,,Elmira Laborers,,Journeyman,,322
+3,64,2,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,322
+3,65,1,7338,,14517,,White,,Male,,General Foreman,,Rochester Laborers,,Journeyman,,323
+3,66,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,324
+3,66,2,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,324
+3,67,1,8396,,14801,,White,,Male,,Apprentice 2nd Year,,Corning Carpenters,,Apprentice,,325
+3,67,2,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,325
+3,68,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,326
+3,68,2,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,326
+3,69,1,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,327
+3,69,2,6195,,13145,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,327
+3,70,1,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,328
+3,70,2,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,328
+3,71,1,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,329
+3,71,2,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,329
+3,72,1,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,330
+3,72,2,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,330
+3,74,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,332
+3,74,2,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,332
+3,75,1,8396,,14801,,White,,Male,,Apprentice 2nd Year,,Corning Carpenters,,Apprentice,,333
+3,75,2,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,333
+3,76,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,334
+3,76,2,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,334
+3,77,1,6366,,13206,,Two or More Races,,Male,,Apprentice 1st Year,,Syracuse Carpenters,,Apprentice,,335
+3,77,2,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,335
+3,78,1,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,336
+3,78,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,336
+3,79,1,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,337
+3,79,2,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,337
+3,80,1,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,338
+3,82,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,340
+3,82,2,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,340
+3,83,1,8396,,14801,,White,,Male,,Apprentice 2nd Year,,Corning Carpenters,,Apprentice,,341
+3,83,2,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,341
+3,84,1,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,342
+3,84,2,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,342
+3,85,1,8243,,13034,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,343
+3,85,2,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,343
+3,86,1,8996,missing occurrence 2,13041,missing occurrence 2,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,344
+3,87,1,8018,,13027,,White,,Male,,Apprentice 2nd Year,,Syracuse Carpenters,,Apprentice,,345
+3,87,2,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,345
+3,88,1,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,346
+3,88,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,346
+3,89,1,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,347
+3,89,2,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,347
+3,90,1,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,348
+3,90,2,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,348
+3,91,1,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,349
+3,91,2,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,349
+3,93,1,8773,,14839,,White,,Male,,Apprentice 3rd Year,,Corning Carpenters,,Apprentice,,351
+3,93,2,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,351
+3,94,1,8396,,14801,,White,,Male,,Apprentice 2nd Year,,Corning Carpenters,,Apprentice,,352
+3,94,2,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,352
+3,95,1,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,353
+3,95,2,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,353
+3,96,1,7025,,13207,,Two or More Races,,Male,,Apprentice 1st Year,,Syracuse Carpenters,,Apprentice,,354
+3,96,2,6155,,13071,,White,,Male,,Apprentice 1st Year,,Syracuse Carpenters,,Apprentice,,354
+3,97,1,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,355
+3,97,2,8996,,13041,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,355
+3,98,1,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,356
+3,98,2,6195,,13145,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,356
+3,99,1,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,357
+3,99,2,5496,,13030,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,357
+3,100,1,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,358
+3,100,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,358
+3,101,1,3877,,13074,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,359
+3,101,2,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,359
+3,102,1,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,360
+3,102,2,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,360
+3,103,1,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,361
+3,103,2,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,361
+3,104,1,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,362
+3,106,1,5113,,13045,,White,,Male,,Journeyman,,Binghamton Carpenters,,Journeyman,,364
+3,106,2,8396,,14801,,White,,Male,,Apprentice 2nd Year,,Corning Carpenters,,Apprentice,,364
+3,107,1,8035,,16936,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,365
+3,107,2,4341,,14489,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,365
+3,108,1,4128,,17771,,White,,Male,,Journeyman,,Pennsylvania Carpenters,,Journeyman,,366
+3,108,2,7025,,13207,,Two or More Races,,Male,,Apprentice 1st Year,,Syracuse Carpenters,,Apprentice,,366
+3,109,1,6155,,13071,,White,,Male,,Apprentice 1st Year,,Syracuse Carpenters,,Apprentice,,367
+3,109,2,0095,,13044,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,367
+3,110,1,2078,,16933,,White,,Male,,Apprentice 1st Year,,Ithaca Carpenters,,Apprentice,,368
+3,110,2,8018,,13027,,White,,Male,,Apprentice 2nd Year,,Syracuse Carpenters,,Apprentice,,368
+3,111,1,6195,,13145,,White,,Male,,Journeyman,,Syracuse Carpenters,,Journeyman,,369
+3,111,2,2002,,14825,,White,,Male,,Journeyman,,Elmira Laborers,,Journeyman,,369
+3,112,1,3555,,16933,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,370
+3,112,2,3131,,16932,,White,,Male,,Journeyman,,Millwright Local 1163,,Journeyman,,370
+3,113,1,1817,,14456,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,371
+3,113,2,1700,,13069,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,371
+3,114,1,6977,,13224,,White,,Male,,Journeyman,,Syracuse Laborers,,Journeyman,,372
+3,114,2,9976,,13617,,White,,Male,,Operator Class A,,Syracuse Operators,,Journeyman,,372
+3,115,1,2495,,16901,,White,,Male,,Journeyman,,Corning Carpenters,,Journeyman,,373
+3,115,2,4674,,14422,,White,,Male,,Journeyman,,Rochester Laborers,,Journeyman,,373
