@@ -1,0 +1,116 @@
+pdf_pg,occur,ssn,class,position,title,ending,st_1,st_2,st_3,ot_1,ot_2,zip
+1,1,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-02-11,476.14,,,,,13108
+1,2,,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-02-11,540.54,,,,,13084
+1,3,5589,9M,Sheet Metal Workers,Journeyman,2018-02-11,97.38,,,,,13069
+1,4,6357,0S,Sheet Metal Workers,Journeyman,2018-02-11,259.74,,,,,13088
+2,1,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-02-18,"1,423.48",,,,,13108
+2,2,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-02-18,617.76,,,,,13084
+2,3,5589,9M,Sheet Metal Workers,Journeyman,2018-02-18,32.46,,,,,13069
+2,4,6357,0S,Sheet Metal Workers,Journeyman,2018-02-18,577.20,,,,,13088
+2,5,6000,0S,Sheet Metal Workers,Journeyman,2018-02-18,82.38,,,,,13057
+2,6,9922,0S,Sheet Metal Workers,Apprentice,2018-02-18,61.80,,,,,13030
+3,1,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-02-25,"1,498.40",,,,,13108
+3,2,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-02-25,"1,544.40",,,,,13084
+3,3,4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-02-25,952.40,,,,,14841
+3,4,5589,9M,Sheet Metal Workers,Journeyman,2018-02-25,81.15,,,,,13069
+3,5,6357,0S,Sheet Metal Workers,Journeyman,2018-02-25,981.24,,,,,13088
+3,6,9922,0S,Sheet Metal Workers,Apprentice,2018-02-25,288.40,,,,,13030
+4,1,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-03-04,"1,498.40",,,,,13108
+4,2,2202,1M,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-04,78.00,,,,,14225
+4,3,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-03-04,"1,544.40",,,,,13084
+4,4,4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-04,761.92,,,,,14841
+4,5,5589,9M,Sheet Metal Workers,Journeyman,2018-03-04,129.84,,,,,13069
+4,6,6357,0S,Sheet Metal Workers,Journeyman,2018-03-04,981.24,,,,,13088
+5,1,3666,0S,Sheet Metal Workers,Journeyman,2018-03-04,864.99,,,,,13492
+5,2,9922,0S,Sheet Metal Workers,Apprentice,2018-03-04,779.94,,,,,13030
+6,1,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-03-11,"1,498.40",,,,,13108
+6,2,2202,1M,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-11,104.00,,,,,14225
+6,3,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-03-11,"1,544.40",,,173.76,,13084
+6,4,4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-11,952.40,,,,,14841
+6,5,5589,9M,Sheet Metal Workers,Journeyman,2018-03-11,64.92,,,,,13069
+6,6,6357,0S,Sheet Metal Workers,Journeyman,2018-03-11,"1,154.40",,,21.65,,13088
+7,1,3666,0S,Sheet Metal Workers,Journeyman,2018-03-11,439.36,,,,,13492
+7,2,9922,0S,Sheet Metal Workers,Apprentice,2018-03-11,878.80,,,16.48,,13030
+8,1,4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-03-18,544.16,,,,,13041
+8,2,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-03-18,"1,498.40",,,56.19,,13108
+8,3,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-03-18,"1,544.40",,,173.76,,13084
+8,4,4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-18,880.97,,,,,14841
+8,5,3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-18,629.37,,,,,13041
+8,6,0060,2S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-18,299.36,,,,,14850
+9,1,5589,9M,Sheet Metal Workers,Journeyman,2018-03-18,64.92,,,,,13069
+9,2,6357,0S,Sheet Metal Workers,Journeyman,2018-03-18,"1,096.68",,,,,13088
+9,3,3666,0S,Sheet Metal Workers,Journeyman,2018-03-18,823.80,,,,,13492
+9,4,9466,2M,Sheet Metal Workers,Apprentice,2018-03-18,573.80,,,,,13206
+9,5,9922,0S,Sheet Metal Workers,Apprentice,2018-03-18,659.10,,,,,13030
+9,6,7343,2S,Sheet Metal Workers,Journeyman,2018-03-18,"1,043.48",,,,,13209
+10,1,4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-03-25,"1,088.32",,,,,13041
+10,2,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-03-25,"1,498.40",,,28.10,,13108
+10,3,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-03-25,"1,544.40",,,173.76,,13084
+10,4,4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-25,952.40,,,,,14841
+10,5,3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-03-25,544.32,,,,,13041
+10,6,6357,0S,Sheet Metal Workers,Journeyman,2018-03-25,"1,154.40",,,21.65,,13088
+11,1,3666,0S,Sheet Metal Workers,Journeyman,2018-03-25,"1,098.40",,,,,13492
+11,2,9466,2M,Sheet Metal Workers,Apprentice,2018-03-25,604.00,,,,,13206
+11,3,9922,0S,Sheet Metal Workers,Apprentice,2018-03-25,878.80,,,,,13030
+11,4,7343,2S,Sheet Metal Workers,Journeyman,2018-03-25,"1,098.40",,,,,13209
+12,1,4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-01,"1,360.40",,,,,13041
+12,2,7509,2M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-01,272.08,,,,,13116
+12,3,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-01,"1,498.40",,,28.10,,13108
+12,4,4277,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-01,680.40,,,12.76,,13209
+12,5,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-04-01,"1,544.40",28.96,,28.96,,13084
+13,1,4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-01,190.48,,,,,14841
+13,2,3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-01,680.40,,,12.76,,13041
+13,3,1160,1S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-01,272.08,,,,,13041
+13,4,6357,0S,Sheet Metal Workers,Journeyman,2018-04-01,"1,154.40",,,,,13088
+13,5,3666,0S,Sheet Metal Workers,Journeyman,2018-04-01,"1,098.40",,,,,13492
+13,6,9466,2M,Sheet Metal Workers,Apprentice,2018-04-01,604.00,,,,,13206
+13,7,9922,0S,Sheet Metal Workers,Apprentice,2018-04-01,878.80,,,,,13030
+13,8,7343,2S,Sheet Metal Workers,Journeyman,2018-04-01,878.72,,,,,13209
+14,1,4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-08,"1,360.40",,,,,13041
+14,2,7509,2M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-08,"1,360.40",,,,,13116
+14,3,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-08,"1,498.40",,,365.24,,13108
+14,4,4277,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-08,680.40,,,153.06,,13209
+14,5,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-04-08,"1,389.96",,,144.80,,13084
+14,6,3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-08,272.16,,,,,13041
+15,1,0060,2S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-08,149.68,,,,,14850
+15,2,5589,9M,Sheet Metal Workers,Journeyman,2018-04-08,32.46,,,,,13069
+15,3,6357,0S,Sheet Metal Workers,Journeyman,2018-04-08,"1,154.40",,,86.58,,13088
+15,4,,2S,Sheet Metal Workers,Journeyman,2018-04-08,878.72,274.64,,329.52,412.00,13316
+15,5,3666,0S,Sheet Metal Workers,Journeyman,2018-04-08,878.72,137.32,,,,13492
+15,6,9466,2M,Sheet Metal Workers,Apprentice,2018-04-08,483.20,,,,,13206
+15,7,9922,0S,Sheet Metal Workers,Apprentice,2018-04-08,615.16,109.84,,,,13030
+15,8,7343,2S,Sheet Metal Workers,Journeyman,2018-04-08,878.72,205.98,,,,13209
+16,1,0060,2S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-08,149.68,,,,,14850
+16,2,5589,9M,Sheet Metal Workers,Journeyman,2018-04-08,32.46,,,,,13069
+16,3,6357,0S,Sheet Metal Workers,Journeyman,2018-04-08,"1,154.40",,,86.58,,13088
+16,4,,2S,Sheet Metal Workers,Journeyman,2018-04-08,878.72,274.64,,329.52,412.00,13316
+16,5,3666,0S,Sheet Metal Workers,Journeyman,2018-04-08,878.72,137.32,,,,13492
+16,6,9466,2M,Sheet Metal Workers,Apprentice,2018-04-08,483.20,,,,,13206
+16,7,9922,0S,Sheet Metal Workers,Apprentice,2018-04-08,615.16,109.84,,,,13030
+16,8,7343,2S,Sheet Metal Workers,Journeyman,2018-04-08,878.72,205.98,,,,13209
+18,1,4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-15,"1,360.40",,,,,13041
+18,2,7509,2M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-15,861.60,899.00,,,,13116
+18,3,,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-15,899.04,,,,,13108
+18,4,4277,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-15,408.24,,,,,13209
+18,5,3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,2018-04-15,"1,544.40",260.64,,,,13084
+18,6,9052,3M,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-15,"1,360.40",,,,,13208
+19,1,6589,0S,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-15,136.04,782.20,816.20,,,13211
+19,2,3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-15,680.40,,,,,13041
+19,3,1160,1S,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-15,816.24,,,,,13041
+19,4,1671,3S,Sheet Metal Workers,Journeyman,2018-04-15,"1,098.40",,,,,13042
+19,5,6357,0S,Sheet Metal Workers,Journeyman,2018-04-15,"1,154.40",,,21.65,,13068
+19,6,,2S,Sheet Metal Workers,Journeyman,2018-04-15,"1,098.40",,,,,13316
+19,7,3666,0S,Sheet Metal Workers,Journeyman,2018-04-15,878.72,,,,,13492
+19,8,9466,2M,Sheet Metal Workers,Apprentice,2018-04-15,604.00,,,,,13206
+19,9,1841,2M,Sheet Metal Workers,Journeyman,2018-04-15,"1,098.40",,,,,13321
+20,1,6589,0S,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-15,136.04,782.20,816.20,,,13211
+20,2,3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,2018-04-15,680.40,,,,,13041
+20,3,1160,1S,"Pipelayer, Plumber, Pipefitter",Journeyman,2018-04-15,816.24,,,,,13041
+20,4,1671,3S,Sheet Metal Workers,Journeyman,2018-04-15,"1,098.40",,,,,13042
+20,5,6357,0S,Sheet Metal Workers,Journeyman,2018-04-15,"1,154.40",,,21.65,,13088
+20,6,,2S,Sheet Metal Workers,Journeyman,2018-04-15,"1,098.40",,,,,13316
+20,7,3666,0S,Sheet Metal Workers,Journeyman,2018-04-15,878.72,,,,,13492
+20,8,9466,2M,Sheet Metal Workers,Apprentice,2018-04-15,604.00,,,,,13206
+20,9,1841,2M,Sheet Metal Workers,Journeyman,2018-04-15,"1,098.40",,,82.38,,13321
+21,1,9922,0S,Sheet Metal Workers,Apprentice,2018-04-15,878.80,,,,,13030
+21,2,7343,2S,Sheet Metal Workers,Journeyman,2018-04-15,"1,070.94",,,82.38,,13209
