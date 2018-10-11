@@ -84,7 +84,12 @@ Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scr
 
 Employee-related variables include:
 
-* 
+* `ssn`: Last four digit of employee social security number
+* `ending`: End of week of particular employment record
+* `class`: Employee pay grade
+* `position`: Employee vocation
+* `Title`: Employee rank, e.g. "General Foreman" or "Journeyman"
+* `Wage`: Gross wage for week of `ending`, including net and deductions
 
 Location-related variables include:
 
@@ -123,7 +128,16 @@ Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scr
 
 Employee-related variables include:
 
-* 
+* `ssn`: Last four digit of employee social security number
+* `race`: Racial classification of employee
+* `grade`: Employee pay grade
+* `sex`: Employee gender
+* `vocation`: Employee trade, e.g. "Carpenter"
+* `title`: Employee rank, e.g. "Foreman" or "Apprentice"
+* `rate`: Hourly wage
+* `net`: Total earnings during week
+* `hours`: Total regular hours worked in reported week
+* `ot`: Total overtime hours worked in reported week
 
 Location-related variables include:
 
@@ -163,7 +177,14 @@ Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scr
 
 Employee-related variables include:
 
-* 
+* `ssn`: Last four digit of employee social security number
+* `race`: Racial classification of employee
+* `ending`: End of week of particular employment record
+* `sex`: Employee gender
+* `class`: Employee rank, e.g. "Foreman" or "Journeyman"
+* `exempt`: Employee pay grade
+* `ending`: End of week of particular employment record
+* `week_wg`: Gross earnings during week of `ending`, including net and deductions
 
 Location-related variables include:
 
@@ -203,7 +224,9 @@ Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scr
 
 Employee-related variables include:
 
-* 
+* `ssn`: Last four digit of employee social security number
+* `ending`: End of week of particular employment record
+* `wage`: Total earnings during week of `ending`, including net and deductions
 
 Location-related variables include:
 
@@ -243,7 +266,10 @@ Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scr
 
 Employee-related variables include:
 
-* 
+* `ssn`: Last four digit of employee social security number
+* `ending`: End of week of particular employment record
+* `class`: Employee vocation status, including "Laborer" and "Operator"
+* `gross`: Total earnings during week of `ending`, including net and deductions
 
 Location-related variables include:
 
@@ -283,7 +309,13 @@ Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scr
 
 Employee-related variables include:
 
-* 
+* `ssn`: Last four digit of employee social security number
+* `race`: Racial classification of employee
+* `sex`: Employee gender
+* `ending`: End of week of particular employment record
+* `vocation`: Employee trade, e.g. "Electrician"
+* `class`: Employee rank, title, or skill level, including "Foreman", "Journeyman", etc.
+* `gross`: Total earnings during week of `ending`, including net and deductions
 
 Location-related variables include:
 
@@ -323,7 +355,13 @@ Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scr
 
 Employee-related variables include:
 
-* 
+* `ssn`: Last four digit of employee social security number
+* `race`: Racial classification of employee
+* `ending`: End of week of particular employment record
+* `vocation`: Employee trade, e.g. "Iron Worker"
+* `title`: Employee rank or skill level, all of which are "Journeyman"
+* `hourly`: Employee hourly wage
+* `week_wg`: Total earnings during week of `ending`, including net and deductions
 
 Location-related variables include:
 
