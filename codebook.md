@@ -61,8 +61,8 @@ Scraping-related variables:
 
 Tables:
 
-*
-*
+* `danforth_table_1.0.csv`
+* `danforth_table_narm_1.0.csv`
 
 ### Related Files
 
@@ -92,8 +92,7 @@ Scraping-related variables:
 
 Tables:
 
-*
-*
+* `schalk_and_son_table_1.2.csv`
 
 ### Related Files
 
@@ -123,8 +122,8 @@ Scraping-related variables:
 
 Tables:
 
-*
-*
+* `longhouse_1.0.csv`
+* `longhouse_narm_1.0.csv`
 
 ### Related Files
 
@@ -154,8 +153,8 @@ Scraping-related variables:
 
 Tables:
 
-*
-*
+* `niagara_1.0.csv`
+* `niagara_narm_1.0.csv`
 
 ### Related Files
 
@@ -185,8 +184,8 @@ Scraping-related variables:
 
 Tables:
 
-*
-*
+* `environmental_table_1.0.csv`
+* `environmental_table_narm_1.0.csv`
 
 ### Related Files
 
@@ -216,8 +215,8 @@ Scraping-related variables:
 
 Tables:
 
-*
-*
+* `patricia_1.0.csv`
+* `patricia_narm_1.0.csv`
 
 ### Related Files
 
@@ -247,8 +246,8 @@ Scraping-related variables:
 
 Tables:
 
-*
-*
+* `stone_bridge_1.0.csv`
+* `stone_bridge_narm_1.0.csv`
 
 ### Related Files
 
