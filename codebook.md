@@ -88,12 +88,16 @@ Employee-related variables include:
 
 Location-related variables include:
 
-* 
+* `zip`: Five-digit home zip code of employee
+* `city`: Home city of employee determined using R extension `zipcode`
+* `state`: Home state of employee determined using R extension `zipcode`
+* `latitude`: Home city latitude coordinates determined using R extension `zipcode`
+* `longitude`: Home city longitude coordinates determined using R extension `zipcode`
 
 Scraping-related variables:
 
 * `pdf_pg`: Page number, within PDF, where record is located
-* `occur`: Indicates whether observation was first or second record on page
+* `occur`: Indicates which observation on `pdf_pg` in ascending order
 
 ## Edward Schalk & Son, Inc.
 
@@ -123,12 +127,16 @@ Employee-related variables include:
 
 Location-related variables include:
 
-* 
+* `zip`: Five-digit home zip code of employee
+* `city`: Home city of employee determined using R extension `zipcode`
+* `state`: Home state of employee determined using R extension `zipcode`
+* `latitude`: Home city latitude coordinates determined using R extension `zipcode`
+* `longitude`: Home city longitude coordinates determined using R extension `zipcode`
 
 Scraping-related variables:
 
 * `pdf_pg`: Page number, within PDF, where record is located
-* `occur`: Indicates whether observation was first or second record on page
+* `occur`: Indicates which observation on `pdf_pg` in ascending order
 
 ## Longhouse Construction LLC
 
@@ -159,12 +167,16 @@ Employee-related variables include:
 
 Location-related variables include:
 
-* 
+* `zip`: Five-digit home zip code of employee
+* `city`: Home city of employee determined using R extension `zipcode`
+* `state`: Home state of employee determined using R extension `zipcode`
+* `latitude`: Home city latitude coordinates determined using R extension `zipcode`
+* `longitude`: Home city longitude coordinates determined using R extension `zipcode`
 
 Scraping-related variables:
 
 * `pdf_pg`: Page number, within PDF, where record is located
-* `occur`: Indicates whether observation was first or second record on page
+* `occur`: Indicates which observation on `pdf_pg` in ascending order
 
 ## Niagara Erecting, Inc.
 
@@ -195,12 +207,16 @@ Employee-related variables include:
 
 Location-related variables include:
 
-* 
+* `zip`: Five-digit home zip code of employee
+* `city`: Home city of employee determined using R extension `zipcode`
+* `state`: Home state of employee determined using R extension `zipcode`
+* `latitude`: Home city latitude coordinates determined using R extension `zipcode`
+* `longitude`: Home city longitude coordinates determined using R extension `zipcode`
 
 Scraping-related variables:
 
 * `pdf_pg`: Page number, within PDF, where record is located
-* `occur`: Indicates whether observation was first or second record on page
+* `occur`: Indicates which observation on `pdf_pg` in ascending order
 
 ## NRC NY Environmental Services, Inc.
 
@@ -231,12 +247,16 @@ Employee-related variables include:
 
 Location-related variables include:
 
-* 
+* `zip`: Five-digit home zip code of employee
+* `city`: Home city of employee determined using R extension `zipcode`
+* `state`: Home state of employee determined using R extension `zipcode`
+* `latitude`: Home city latitude coordinates determined using R extension `zipcode`
+* `longitude`: Home city longitude coordinates determined using R extension `zipcode`
 
 Scraping-related variables:
 
 * `pdf_pg`: Page number, within PDF, where record is located
-* `occur`: Indicates whether observation was first or second record on page
+* `occur`: Indicates which observation on `pdf_pg` in ascending order
 
 ## Patricia Electric, Inc.
 
@@ -267,12 +287,16 @@ Employee-related variables include:
 
 Location-related variables include:
 
-* 
+* `zip`: Five-digit home zip code of employee
+* `city`: Home city of employee determined using R extension `zipcode`
+* `state`: Home state of employee determined using R extension `zipcode`
+* `latitude`: Home city latitude coordinates determined using R extension `zipcode`
+* `longitude`: Home city longitude coordinates determined using R extension `zipcode`
 
 Scraping-related variables:
 
 * `pdf_pg`: Page number, within PDF, where record is located
-* `occur`: Indicates whether observation was first or second record on page
+* `occur`: Indicates which observation on `pdf_pg` in ascending order
 
 ## Stone Bridge Iron & Steel, Inc.
 
@@ -303,9 +327,13 @@ Employee-related variables include:
 
 Location-related variables include:
 
-* 
+* `zip`: Five-digit home zip code of employee
+* `city`: Home city of employee determined using R extension `zipcode`
+* `state`: Home state of employee determined using R extension `zipcode`
+* `latitude`: Home city latitude coordinates determined using R extension `zipcode`
+* `longitude`: Home city longitude coordinates determined using R extension `zipcode`
 
 Scraping-related variables:
 
 * `pdf_pg`: Page number, within PDF, where record is located
-* `occur`: Indicates whether observation was first or second record on page
+* `occur`: Indicates which observation on `pdf_pg` in ascending order
