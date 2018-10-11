@@ -92,7 +92,8 @@ Location-related variables include:
 
 Scraping-related variables:
 
-* 
+* `pdf_pg`: Page number, within PDF, where record is located
+* `occur`: Indicates whether observation was first or second record on page
 
 ## Edward Schalk & Son, Inc.
 
@@ -126,7 +127,8 @@ Location-related variables include:
 
 Scraping-related variables:
 
-* 
+* `pdf_pg`: Page number, within PDF, where record is located
+* `occur`: Indicates whether observation was first or second record on page
 
 ## Longhouse Construction LLC
 
@@ -161,7 +163,8 @@ Location-related variables include:
 
 Scraping-related variables:
 
-* 
+* `pdf_pg`: Page number, within PDF, where record is located
+* `occur`: Indicates whether observation was first or second record on page
 
 ## Niagara Erecting, Inc.
 
@@ -196,7 +199,8 @@ Location-related variables include:
 
 Scraping-related variables:
 
-* 
+* `pdf_pg`: Page number, within PDF, where record is located
+* `occur`: Indicates whether observation was first or second record on page
 
 ## NRC NY Environmental Services, Inc.
 
@@ -231,7 +235,8 @@ Location-related variables include:
 
 Scraping-related variables:
 
-* 
+* `pdf_pg`: Page number, within PDF, where record is located
+* `occur`: Indicates whether observation was first or second record on page
 
 ## Patricia Electric, Inc.
 
@@ -266,7 +271,8 @@ Location-related variables include:
 
 Scraping-related variables:
 
-* 
+* `pdf_pg`: Page number, within PDF, where record is located
+* `occur`: Indicates whether observation was first or second record on page
 
 ## Stone Bridge Iron & Steel, Inc.
 
@@ -301,4 +307,5 @@ Location-related variables include:
 
 Scraping-related variables:
 
-* 
+* `pdf_pg`: Page number, within PDF, where record is located
+* `occur`: Indicates whether observation was first or second record on page
