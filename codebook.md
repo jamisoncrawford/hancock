@@ -18,7 +18,7 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 
 Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* 
+* `quality_structures_scrape_1.6.r`
 
 ### Variables
 
@@ -72,13 +72,13 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 
 * `danforth_company.pdf`
 
-Post-Scrape files:
+Post-Scrape files (see ["Manual Scrapes"](https://github.com/jamisoncrawford/REIS/tree/master/Manual%20Scrapes)):
 
-* 
+* `danforth_company_manual_scrape_1.0.csv`
 
 Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* 
+* `manual_scrape_edits_multiple_1.0.r`
 
 ### Variables
 
@@ -106,13 +106,13 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 
 * `edward_schalk_and_son.pdf`
 
-Post-Scrape files:
+Post-Scrape files (see ["Manual Scrapes"](https://github.com/jamisoncrawford/REIS/tree/master/Manual%20Scrapes)):
 
-* 
+* `schalk_and_son_manual_scrape_1.0.csv`
 
 Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* 
+* `edward_schalk_and_son_edits_1.0.r`
 
 ### Variables
 
@@ -141,13 +141,13 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 
 * `longhouse_construction.pdf`
 
-Post-Scrape files:
+Post-Scrape files (see ["Manual Scrapes"](https://github.com/jamisoncrawford/REIS/tree/master/Manual%20Scrapes)):
 
-* 
+* `longhouse_manual_scrape_1.0.csv`
 
 Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* 
+* `manual_scrape_edits_multiple_1.0.r`
 
 ### Variables
 
@@ -176,13 +176,13 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 
 * `niagra.pdf`
 
-Post-Scrape files:
+Post-Scrape files (see ["Manual Scrapes"](https://github.com/jamisoncrawford/REIS/tree/master/Manual%20Scrapes)):
 
-* 
+* `niagara_manual_scrape_1.0.csv`
 
 Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* 
+* `manual_scrape_edits_multiple_1.0.r`
 
 ### Variables
 
@@ -211,13 +211,13 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 
 * `nrc_ny_environmental_services.pdf`
 
-Post-Scrape files:
+Post-Scrape files (see ["Manual Scrapes"](https://github.com/jamisoncrawford/REIS/tree/master/Manual%20Scrapes)):
 
-* 
+* `environmental_services_manual_scrape_1.0.csv`
 
 Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* 
+* `manual_scrape_edits_multiple_1.0.r`
 
 ### Variables
 
@@ -246,13 +246,13 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 
 * `patricia_electric.pdf`
 
-Post-Scrape files:
+Post-Scrape files (see ["Manual Scrapes"](https://github.com/jamisoncrawford/REIS/tree/master/Manual%20Scrapes)):
 
-* 
+* `patricia_manual_scrape_1.0.csv`
 
 Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* 
+* `manual_scrape_edits_multiple_1.0.r`
 
 ### Variables
 
@@ -281,13 +281,13 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 
 * `stone_bridge_iron_and_steel.pdf`
 
-Post-Scrape files:
+Post-Scrape files (see ["Manual Scrapes"](https://github.com/jamisoncrawford/REIS/tree/master/Manual%20Scrapes)):
 
-* 
+* `stone_bridge_manual_scrape_1.0.csv`
 
 Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* 
+* `manual_scrape_edits_multiple_1.0.r`
 
 ### Variables
 
