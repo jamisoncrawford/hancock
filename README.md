@@ -52,7 +52,7 @@ The following versions were used with Windows 10 OS:
 
 Although these images were not used in the final scraping process, they are preserved for alternative methods of analysis and reproducibility.
 
-## Scraping Process
+## Automated Scraping Process
 
 All scraping procedures were performed in the *RStudio* IDE (version 1.1.456), powered by R (version 3.5.1). *Tidyverse* packages include `readr` for writing data, `dplyr` for data.frame manipulation, `purrr` for flattening list output, and `stringr` for text manipulation. The brunt of the preprocessing, including image conversion and OCR, was performed with the `magick` package, while location data was collected using package `zipcode`.
 
@@ -72,6 +72,10 @@ Missing numeric values (`NA`) resulting from OCR error are indexed, checked, and
 
 Missing character values (`NA`) where treated similarly to numeric data. Values cleaned using regular expressions and calls to function `unique()` to determine the most encompassing and distinguishing regular expressions. Low-frequency character values detected with `table()` were visually inspected within the raw data, with confirmed values entered, concatenated, and input manually. Categorical variables were coerced to factors where appropriate.
 
+## Manual Scraping Process
+
+Rotated PDFs, available in the "Rotated PDFs" folder, are visually inspected, while variables of interest are recorded in *Excel*. Additional variables, apart from those targeted, are included and defined in *codebook.md*, located in the master branch of the present repository. Each PDF page and occurrence number are checked between page transitions to ensure alignment.
+
 ## Accuracy
 
 The following addresses the variable detection accuracy for each document scrape. Using the above treatment of OCR error detection, data were then visually inspected using a paired reviewing process in which the analyst reads each data point in each record, variable-wise, and an assistant confirms whether each datum was correct.
@@ -82,9 +86,28 @@ Of the 607 employee records, 606 were detected. Review determined the missing re
 
 Following review, all output in *quality_structures_scrape_1.1.csv*, located in the "Tables" folder, are 100% accurate.
 
+### All Other Employers
+
+Remaining documentation, excluding "Quality Strictires, Inc.", remains to undergo paired review for accuracy; to be determined.
+
+## Scraped Table Modifications
+
+All manually scraped data are stored in the "Manual Scrapes" folder of the present repository. Some variables were further processed for each dataset within R, which is documented in the "Scripts" folder. Principally, data underwent the following modifications:
+
+* Summing `net` and `deduction` variables to determine gross wages for the pay period (`ending`)
+* Summing `st` (regular or standard) and `ot` (overtime) values to determine gross wages for the pay period (`ending`)
+* Merging `zip` values with the `zipcode` database, an R package, to determine `city`, `state`, `latitude`, and `longitude`
+* Rearranging variables in order of:
+  - Employee demographic data
+  - Employee compensation data
+  - Employee location data
+  - Record data, e.g. `pdf_pg` (page number)
+
 ## Caveats
 
-The only notable caveat at present regards importing .csv files into *Microsoft Excel*, which may automatically convert character values into numeric values. If those values begin with one or more zeroes ("0"), e.g. `ssn` in *quality_structures_scrape_1.1.csv*, they will be removed automatically. It is strongly advised that users ensure automatic formatting for numeric data is disabled in their spreadsheet software.
+**Automatic Numeric Conversion:** When importing .csv files into *Microsoft Excel* or other spreadsheet software, it may automatically convert character values into numeric values. If those values begin with one or more leading zeroes ("0"), e.g. `ssn` in *quality_structures_scrape_1.1.csv*, they will be removed automatically. It is strongly advised that users ensure automatic formatting for numeric data is disabled in their spreadsheet software, or else users ensure that converted values are reverted back to character format and leading zeroes are appended.
+
+**Accuracy:** All manually scraped documents, i.e. all barring *quality_structures_scrape_1.1.csv*, remain to be reviewed for accuracy. Use these data judiciously until it is confirmed that they have been reviewed. It may be assumed that the vast majority of manually scraped data are accurate, however.
 
 ## Contributors
 
