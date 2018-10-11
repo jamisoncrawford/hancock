@@ -1,0 +1,61 @@
+ssn,race,sex,vocation,class,gross,ending,zip,city,state,latitude,longitude,pdf_pg,occur
+2572,White,Male,Unspecified,3rd Period Apprentice,783.0000000000001,2018-02-20,13027,Baldwinsville,NY,43.165134,-76.33901,1,1
+0030,White,Male,Electrician,Journeyman,1856.8799999999999,2018-02-20,13219,Syracuse,NY,43.041566,-76.22072,1,2
+3050,White,Male,Unspecified,4th Period Apprentice,921.5899999999999,2018-02-20,13032,Canastota,NY,43.086439,-75.76484,1,3
+3972,White,Male,Electrician,Foreman,2331.1,2018-02-20,13021,Auburn,NY,42.922273,-76.55882,1,4
+7636,White,Male,Electrician,Journeyman,1856.88,2018-02-20,13403,Marcy,NY,43.162119,-75.28435,1,5
+0315,White,Male,Electrician,Journeyman,1452.6299999999999,2018-02-20,13408,Morrisville,NY,42.923334,-75.66314,1,6
+2381,White,Male,Electrician,Subforeman,1660.8,2018-02-13,13032,Canastota,NY,43.086439,-75.76484,2,1
+3050,White,Male,Unspecified,4th Period Apprentice,612.89,2018-02-13,13032,Canastota,NY,43.086439,-75.76484,2,2
+3972,White,Male,Electrician,Foreman,1730.58,2018-02-13,13021,Auburn,NY,42.922273,-76.55882,2,3
+2532,White,Male,Electrician,Subforeman,1979.25,2018-02-13,13159,Tully,NY,42.802031,-76.12717,2,4
+2572,White,Male,Unspecified,3rd Period Apprentice,948.5999999999999,2018-02-27,13027,Baldwinsville,NY,43.165134,-76.33901,3,1
+0030,White,Male,Electrician,Journeyman,2297.88,2018-02-27,13219,Syracuse,NY,43.041566,-76.22072,3,2
+3050,White,Male,Unspecified,4th Period Apprentice,1136.58,2018-02-27,13032,Canastota,NY,43.086439,-75.76484,3,3
+3972,White,Male,Electrician,Foreman,2529.13,2018-02-27,13021,Auburn,NY,42.922273,-76.55882,3,4
+7636,White,Male,Electrician,Journeyman,2297.88,2018-02-27,13403,Marcy,NY,43.162119,-75.28435,3,5
+0315,White,Male,Electrician,Journeyman,2297.88,2018-02-27,13408,Morrisville,NY,42.923334,-75.66314,3,6
+2572,White,Male,Unspecified,3rd Period Apprentice,645,2018-03-06,13027,Baldwinsville,NY,43.165134,-76.33901,4,1
+0030,White,Male,Electrician,Journeyman,1461.81,2018-03-06,13219,Syracuse,NY,43.041566,-76.22072,4,2
+3050,White,Male,Unspecified,4th Period Apprentice,772.7499999999999,2018-03-06,13032,Canastota,NY,43.086439,-75.76484,4,3
+3972,White,Male,Electrician,Foreman,2195.41,2018-03-06,13021,Auburn,NY,42.922273,-76.55882,4,4
+7636,White,Male,Electrician,Journeyman,1636.38,2018-03-06,13403,Marcy,NY,43.162119,-75.28435,4,5
+0315,White,Male,Electrician,Journeyman,1636.3799999999999,2018-03-06,13408,Morrisville,NY,42.923334,-75.66314,4,6
+2572,White,Male,Unspecified,3rd Period Apprentice,672.6,2018-03-13,13027,Baldwinsville,NY,43.165134,-76.33901,5,1
+0030,White,Male,Electrician,Journeyman,1259.69,2018-03-13,13219,Syracuse,NY,43.041566,-76.22072,5,2
+3050,White,Male,Unspecified,4th Period Apprentice,739.6800000000001,2018-03-13,13032,Canastota,NY,43.086439,-75.76484,5,3
+3972,White,Male,Electrician,Foreman,2013.3899999999999,2018-03-13,13021,Auburn,NY,42.922273,-76.55882,5,4
+7636,White,Male,Electrician,Journeyman,1498.56,2018-03-13,13403,Marcy,NY,43.162119,-75.28435,5,5
+0315,White,Male,Electrician,Journeyman,1471,2018-03-13,13408,Morrisville,NY,42.923334,-75.66314,5,6
+9037,White,Male,Electrician,Journeyman,1526.1299999999999,2018-03-13,13479,Washington Mills,NY,43.053769,-75.271559,5,7
+2572,White,Male,Unspecified,3rd Period Apprentice,700.1999999999999,2018-03-20,13027,Baldwinsville,NY,43.165134,-76.33901,6,1
+0030,White,Male,Electrician,Journeyman,1746.63,2018-03-20,13219,Syracuse,NY,43.041566,-76.22072,6,2
+3050,White,Male,Unspecified,4th Period Apprentice,1004.28,2018-03-20,13032,Canastota,NY,43.086439,-75.76484,6,3
+3972,White,Male,Electrician,Foreman,2225.75,2018-03-20,13021,Auburn,NY,42.922273,-76.55882,6,4
+7636,White,Male,Electrician,Journeyman,1691.5,2018-03-20,13403,Marcy,NY,43.162119,-75.28435,6,5
+9037,White,Male,Electrician,Journeyman,1471,2018-03-20,13479,Washington Mills,NY,43.053769,-75.271559,6,6
+2572,White,Male,Unspecified,3rd Period Apprentice,611.88,2018-03-27,13027,Baldwinsville,NY,43.165134,-76.33901,7,1
+0030,White,Male,Electrician,Journeyman,1652.9099999999999,2018-03-27,13219,Syracuse,NY,43.041566,-76.22072,7,2
+3050,White,Male,Unspecified,4th Period Apprentice,789.29,2018-03-27,13032,Canastota,NY,43.086439,-75.76484,7,3
+3972,White,Male,Electrician,Foreman,1801.03,2018-03-27,13021,Auburn,NY,42.922273,-76.55882,7,4
+7636,White,Male,Electrician,Journeyman,1608.81,2018-03-27,13403,Marcy,NY,43.162119,-75.28435,7,5
+9037,White,Male,Electrician,Journeyman,1515.1,2018-03-27,13479,Washington Mills,NY,43.053769,-75.271559,7,6
+2572,White,Male,Unspecified,3rd Period Apprentice,771.5,2018-04-03,13027,Baldwinsville,NY,43.165134,-76.33901,8,1
+0030,White,Male,Electrician,Journeyman,1566.55,2018-04-03,13219,Syracuse,NY,43.041566,-76.22072,8,2
+3050,White,Male,Unspecified,4th Period Apprentice,789.29,2018-04-03,13032,Canastota,NY,43.086439,-75.76484,8,3
+3972,White,Male,Electrician,Foreman,2043.7299999999998,2018-04-03,13021,Auburn,NY,42.922273,-76.55882,8,4
+7636,White,Male,Electrician,Journeyman,1498.56,2018-04-03,13403,Marcy,NY,43.162119,-75.28435,8,5
+9037,White,Male,Electrician,Journeyman,1493.05,2018-04-03,13479,Washington Mills,NY,43.053769,-75.271559,8,6
+2572,White,Male,Unspecified,3rd Period Apprentice,810.6,2018-04-10,13027,Baldwinsville,NY,43.165134,-76.33901,9,1
+0030,White,Male,Electrician,Journeyman,1452.63,2018-04-10,13219,Syracuse,NY,43.041566,-76.22072,9,2
+3050,White,Male,Unspecified,4th Period Apprentice,971.2,2018-04-10,13032,Canastota,NY,43.086439,-75.76484,9,3
+3972,White,Male,Electrician,Foreman,2104.4,2018-04-10,13021,Auburn,NY,42.922273,-76.55882,9,4
+2532,White,Male,Electrician,Subforeman,1390.6,2018-04-10,13159,Tully,NY,42.802031,-76.12717,9,5
+7636,White,Male,Electrician,Journeyman,1856.88,2018-04-10,13403,Marcy,NY,43.162119,-75.28435,9,6
+9037,White,Male,Electrician,Journeyman,1324,2018-04-10,13479,Washington Mills,NY,43.053769,-75.271559,9,7
+2572,White,Male,Unspecified,3rd Period Apprentice,442.59999999999997,2018-04-17,13027,Baldwinsville,NY,43.165134,-76.33901,10,1
+0030,White,Male,Electrician,Journeyman,1828.21,2018-04-17,13219,Syracuse,NY,43.041566,-76.22072,10,2
+3050,White,Male,Unspecified,4th Period Apprentice,871.98,2018-04-17,13032,Canastota,NY,43.086439,-75.76484,10,3
+3972,White,Male,Electrician,Foreman,2043.7299999999998,2018-04-17,13021,Auburn,NY,42.922273,-76.55882,10,4
+7636,White,Male,Electrician,Journeyman,1581.25,2018-04-17,13403,Marcy,NY,43.162119,-75.28435,10,5
+9037,White,Male,Electrician,Journeyman,1581.25,2018-04-17,13479,Washington Mills,NY,43.053769,-75.271559,10,6

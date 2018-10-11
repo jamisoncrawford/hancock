@@ -1,0 +1,23 @@
+ssn,class,sex,race,exempt,week_wg,ending,zip,city,state,latitude,longitude,pdf_pg,occur
+3451,Foreman,Male,White,S1,256,2018-03-03,13142,Pulaski,NY,43.559926,-76.13619,1,1
+5982,Foreman 2,Male,White,M3,544,2018-03-03,13605,Adams,NY,43.807654,-76.04936,1,2
+2336,2nd Year Apprentice,Male,White,S0,136,2018-03-03,13147,Scipio Center,NY,42.774714,-76.57045,1,3
+3451,Foreman,Male,White,S1,512,2018-03-10,13142,Pulaski,NY,43.559926,-76.13619,2,1
+4117,Foreman,Male,White,M3,512,2018-03-10,13211,Syracuse,NY,43.098917,-76.13688,2,2
+5982,Foreman 2,Male,White,M3,544,2018-03-10,13605,Adams,NY,43.807654,-76.04936,2,3
+2336,2nd Year Apprentice,Male,White,S0,408,2018-03-10,13147,Scipio Center,NY,42.774714,-76.57045,2,4
+3451,Foreman,Male,White,S1,1280,2018-03-17,13142,Pulaski,NY,43.559926,-76.13619,3,1
+4117,Foreman,Male,White,M3,352,2018-03-17,13211,Syracuse,NY,43.098917,-76.13688,3,2
+4397,Foreman,Male,White,M3,256,2018-03-17,13069,Fulton,NY,43.32347,-76.40029,3,3
+3328,Journeyman,Male,Black,S5,232,2018-03-17,13205,Syracuse,NY,43.010916,-76.14501,3,4
+5982,Foreman 2,Male,White,M3,1360,2018-03-17,13605,Adams,NY,43.807654,-76.04936,3,5
+2336,2nd Year Apprentice,Male,White,S0,544,2018-03-17,13147,Scipio Center,NY,42.774714,-76.57045,3,6
+3451,Foreman,Male,White,S1,1280,2018-03-24,13142,Pulaski,NY,43.559926,-76.13619,5,1
+1960,Foreman,Male,White,S0,144,2018-03-24,13069,Fulton,NY,43.32347,-76.40029,5,2
+3328,Journeyman,Male,Black,S5,1160,2018-03-24,13205,Syracuse,NY,43.010916,-76.14501,5,3
+5982,Foreman 2,Male,White,M3,1360,2018-03-24,13605,Adams,NY,43.807654,-76.04936,5,4
+2336,2nd Year Apprentice,Male,White,S0,680,2018-03-24,13147,Scipio Center,NY,42.774714,-76.57045,5,5
+3451,Foreman,Male,White,S1,256,2018-03-31,13142,Pulaski,NY,43.559926,-76.13619,6,1
+3328,Journeyman,Male,Black,S5,319,2018-03-31,13205,Syracuse,NY,43.010916,-76.14501,6,2
+5982,Foreman 2,Male,White,M3,816,2018-03-31,13605,Adams,NY,43.807654,-76.04936,6,3
+2336,2nd Year Apprentice,Male,White,S0,272,2018-03-31,13147,Scipio Center,NY,42.774714,-76.57045,6,4
