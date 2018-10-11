@@ -16,9 +16,9 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 * *quality_structures_2.pdf*
 * *quality_structures_3.pdf*
 
-Post-OCR files:
+Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
-* *quality_structures_text.rds*
+* 
 
 ### Variables
 
@@ -76,6 +76,10 @@ Post-Scrape files:
 
 * 
 
+Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
+
+* 
+
 ### Variables
 
 Employee-related variables include:
@@ -103,6 +107,10 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 * `edward_schalk_and_son.pdf`
 
 Post-Scrape files:
+
+* 
+
+Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
 * 
 
@@ -137,6 +145,10 @@ Post-Scrape files:
 
 * 
 
+Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
+
+* 
+
 ### Variables
 
 Employee-related variables include:
@@ -165,6 +177,10 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 * `niagra.pdf`
 
 Post-Scrape files:
+
+* 
+
+Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
 * 
 
@@ -199,6 +215,10 @@ Post-Scrape files:
 
 * 
 
+Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
+
+* 
+
 ### Variables
 
 Employee-related variables include:
@@ -230,6 +250,10 @@ Post-Scrape files:
 
 * 
 
+Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
+
+* 
+
 ### Variables
 
 Employee-related variables include:
@@ -258,6 +282,10 @@ Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tre
 * `stone_bridge_iron_and_steel.pdf`
 
 Post-Scrape files:
+
+* 
+
+Scripts (see ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts)):
 
 * 
 
