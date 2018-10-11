@@ -59,7 +59,10 @@ Scraping-related variables:
 
 ## John W. Danforth Company
 
-**Table Name:**
+Tables:
+
+*
+*
 
 ### Related Files
 
@@ -87,7 +90,10 @@ Scraping-related variables:
 
 ## Edward Schalk & Son, Inc.
 
-**Table Name:**
+Tables:
+
+*
+*
 
 ### Related Files
 
@@ -115,7 +121,10 @@ Scraping-related variables:
 
 ## Longhouse Construction LLC
 
-**Table Name:**
+Tables:
+
+*
+*
 
 ### Related Files
 
@@ -143,7 +152,10 @@ Scraping-related variables:
 
 ## Niagara Erecting, Inc.
 
-**Table Name:**
+Tables:
+
+*
+*
 
 ### Related Files
 
@@ -171,7 +183,10 @@ Scraping-related variables:
 
 ## NRC NY Environmental Services, Inc.
 
-**Table Name:**
+Tables:
+
+*
+*
 
 ### Related Files
 
@@ -199,7 +214,10 @@ Scraping-related variables:
 
 ## Patricia Electric, Inc.
 
-**Table Name:**
+Tables:
+
+*
+*
 
 ### Related Files
 
@@ -227,7 +245,10 @@ Scraping-related variables:
 
 ## Stone Bridge Iron & Steel, Inc.
 
-**Table Name:**
+Tables:
+
+*
+*
 
 ### Related Files
 
