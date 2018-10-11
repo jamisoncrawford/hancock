@@ -4,15 +4,17 @@ The following lists the table names, variables, and definitions for each employm
 
 ## Quality Structures, Inc.
 
-**Table Name:** `quality_structures_scrape.csv`
+Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables)): 
+
+* `quality_structures_scrape_1.1.csv`
 
 ### Related Files
 
-Original PDF files:
+Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data)):
 
-* *quality_structures_1.r*
-* *quality_structures_2.r*
-* *quality_structures_3.r*
+* *quality_structures_1.pdf*
+* *quality_structures_2.pdf*
+* *quality_structures_3.pdf*
 
 Post-OCR files:
 
@@ -66,9 +68,9 @@ Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Table
 
 ### Related Files
 
-Original PDF files:
+Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data)):
 
-* 
+* `danforth_company.pdf`
 
 Post-Scrape files:
 
@@ -96,9 +98,9 @@ Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Table
 
 ### Related Files
 
-Original PDF files:
+Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data)):
 
-* 
+* `edward_schalk_and_son.pdf`
 
 Post-Scrape files:
 
@@ -127,9 +129,9 @@ Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Table
 
 ### Related Files
 
-Original PDF files:
+Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data)):
 
-* 
+* `longhouse_construction.pdf`
 
 Post-Scrape files:
 
@@ -158,9 +160,9 @@ Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Table
 
 ### Related Files
 
-Original PDF files:
+Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data)):
 
-* 
+* `niagra.pdf`
 
 Post-Scrape files:
 
@@ -189,9 +191,9 @@ Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Table
 
 ### Related Files
 
-Original PDF files:
+Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data)):
 
-* 
+* `nrc_ny_environmental_services.pdf`
 
 Post-Scrape files:
 
@@ -220,9 +222,9 @@ Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Table
 
 ### Related Files
 
-Original PDF files:
+Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data)):
 
-* 
+* `patricia_electric.pdf`
 
 Post-Scrape files:
 
@@ -251,9 +253,9 @@ Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Table
 
 ### Related Files
 
-Original PDF files:
+Original PDF files (see ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data)):
 
-* 
+* `stone_bridge_iron_and_steel.pdf`
 
 Post-Scrape files:
 
