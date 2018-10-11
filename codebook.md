@@ -59,7 +59,7 @@ Scraping-related variables:
 
 ## John W. Danforth Company
 
-Tables:
+Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables)):
 
 * `danforth_table_1.0.csv`
 * `danforth_table_narm_1.0.csv`
@@ -90,7 +90,7 @@ Scraping-related variables:
 
 ## Edward Schalk & Son, Inc.
 
-Tables:
+Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables)):
 
 * `schalk_and_son_table_1.2.csv`
 
@@ -120,7 +120,7 @@ Scraping-related variables:
 
 ## Longhouse Construction LLC
 
-Tables:
+Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables)):
 
 * `longhouse_1.0.csv`
 * `longhouse_narm_1.0.csv`
@@ -151,7 +151,7 @@ Scraping-related variables:
 
 ## Niagara Erecting, Inc.
 
-Tables:
+Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables)):
 
 * `niagara_1.0.csv`
 * `niagara_narm_1.0.csv`
@@ -182,7 +182,7 @@ Scraping-related variables:
 
 ## NRC NY Environmental Services, Inc.
 
-Tables:
+Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables)):
 
 * `environmental_table_1.0.csv`
 * `environmental_table_narm_1.0.csv`
@@ -213,7 +213,7 @@ Scraping-related variables:
 
 ## Patricia Electric, Inc.
 
-Tables:
+Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables)):
 
 * `patricia_1.0.csv`
 * `patricia_narm_1.0.csv`
@@ -244,7 +244,7 @@ Scraping-related variables:
 
 ## Stone Bridge Iron & Steel, Inc.
 
-Tables:
+Tables (see ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables)):
 
 * `stone_bridge_1.0.csv`
 * `stone_bridge_narm_1.0.csv`
