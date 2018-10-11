@@ -97,7 +97,7 @@ All manually scraped data are stored in the "Manual Scrapes" folder of the prese
 * Summing `net` and `deduction` variables to determine gross wages for the pay period (`ending`)
 * Summing `st` (regular or standard) and `ot` (overtime) values to determine gross wages for the pay period (`ending`)
 * Merging `zip` values with the `zipcode` database, an R package, to determine `city`, `state`, `latitude`, and `longitude`
-* Writing `na.rm` versions of tables (see "Tables") in which missing values (`NA`) are replced with empty cells
+* Writing `na.rm` versions of tables (see "Tables") in which missing values (`NA`) are replaced with empty cells
 * Rearranging variables in order of:
   - Employee demographic data
   - Employee compensation data
