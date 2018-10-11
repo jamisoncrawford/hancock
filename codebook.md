@@ -89,7 +89,7 @@ Employee-related variables include:
 * `class`: Employee pay grade
 * `position`: Employee vocation
 * `Title`: Employee rank, e.g. "General Foreman" or "Journeyman"
-* `Wage`: Gross wage for week of `ending`, including net and deductions
+* `Wage`: Gross wage for week of `ending`, including net and deductions (USD)
 
 Location-related variables include:
 
@@ -134,8 +134,8 @@ Employee-related variables include:
 * `sex`: Employee gender
 * `vocation`: Employee trade, e.g. "Carpenter"
 * `title`: Employee rank, e.g. "Foreman" or "Apprentice"
-* `rate`: Hourly wage
-* `net`: Total earnings during week
+* `rate`: Hourly wage (USD)
+* `net`: Total earnings during week (USD)
 * `hours`: Total regular hours worked in reported week
 * `ot`: Total overtime hours worked in reported week
 
@@ -184,7 +184,7 @@ Employee-related variables include:
 * `class`: Employee rank, e.g. "Foreman" or "Journeyman"
 * `exempt`: Employee pay grade
 * `ending`: End of week of particular employment record
-* `week_wg`: Gross earnings during week of `ending`, including net and deductions
+* `week_wg`: Gross earnings during week of `ending`, including net and deductions (USD)
 
 Location-related variables include:
 
@@ -226,7 +226,7 @@ Employee-related variables include:
 
 * `ssn`: Last four digit of employee social security number
 * `ending`: End of week of particular employment record
-* `wage`: Total earnings during week of `ending`, including net and deductions
+* `wage`: Total earnings during week of `ending`, including net and deductions (USD)
 
 Location-related variables include:
 
@@ -269,7 +269,7 @@ Employee-related variables include:
 * `ssn`: Last four digit of employee social security number
 * `ending`: End of week of particular employment record
 * `class`: Employee vocation status, including "Laborer" and "Operator"
-* `gross`: Total earnings during week of `ending`, including net and deductions
+* `gross`: Total earnings during week of `ending`, including net and deductions (USD)
 
 Location-related variables include:
 
@@ -315,7 +315,7 @@ Employee-related variables include:
 * `ending`: End of week of particular employment record
 * `vocation`: Employee trade, e.g. "Electrician"
 * `class`: Employee rank, title, or skill level, including "Foreman", "Journeyman", etc.
-* `gross`: Total earnings during week of `ending`, including net and deductions
+* `gross`: Total earnings during week of `ending`, including net and deductions (USD)
 
 Location-related variables include:
 
@@ -360,8 +360,8 @@ Employee-related variables include:
 * `ending`: End of week of particular employment record
 * `vocation`: Employee trade, e.g. "Iron Worker"
 * `title`: Employee rank or skill level, all of which are "Journeyman"
-* `hourly`: Employee hourly wage
-* `week_wg`: Total earnings during week of `ending`, including net and deductions
+* `hourly`: Employee hourly wage (USD)
+* `week_wg`: Total earnings during week of `ending`, including net and deductions (USD)
 
 Location-related variables include:
 
