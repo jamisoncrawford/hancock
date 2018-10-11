@@ -59,6 +59,20 @@ Scraping-related variables:
 
 ## John W. Danforth Company
 
+**Table Name:**
+
+### Related Files
+
+Original PDF files:
+
+* 
+
+Post-Scrape files:
+
+* 
+
+### Variables
+
 Employee-related variables include:
 
 * 
@@ -72,6 +86,20 @@ Scraping-related variables:
 * 
 
 ## Edward Schalk & Son, Inc.
+
+**Table Name:**
+
+### Related Files
+
+Original PDF files:
+
+* 
+
+Post-Scrape files:
+
+* 
+
+### Variables
 
 Employee-related variables include:
 
@@ -87,6 +115,20 @@ Scraping-related variables:
 
 ## Longhouse Construction LLC
 
+**Table Name:**
+
+### Related Files
+
+Original PDF files:
+
+* 
+
+Post-Scrape files:
+
+* 
+
+### Variables
+
 Employee-related variables include:
 
 * 
@@ -100,6 +142,20 @@ Scraping-related variables:
 * 
 
 ## Niagara Erecting, Inc.
+
+**Table Name:**
+
+### Related Files
+
+Original PDF files:
+
+* 
+
+Post-Scrape files:
+
+* 
+
+### Variables
 
 Employee-related variables include:
 
@@ -115,6 +171,20 @@ Scraping-related variables:
 
 ## NRC NY Environmental Services, Inc.
 
+**Table Name:**
+
+### Related Files
+
+Original PDF files:
+
+* 
+
+Post-Scrape files:
+
+* 
+
+### Variables
+
 Employee-related variables include:
 
 * 
@@ -129,6 +199,20 @@ Scraping-related variables:
 
 ## Patricia Electric, Inc.
 
+**Table Name:**
+
+### Related Files
+
+Original PDF files:
+
+* 
+
+Post-Scrape files:
+
+* 
+
+### Variables
+
 Employee-related variables include:
 
 * 
@@ -142,6 +226,20 @@ Scraping-related variables:
 * 
 
 ## Stone Bridge Iron & Steel, Inc.
+
+**Table Name:**
+
+### Related Files
+
+Original PDF files:
+
+* 
+
+Post-Scrape files:
+
+* 
+
+### Variables
 
 Employee-related variables include:
 
