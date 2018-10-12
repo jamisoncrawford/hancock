@@ -1,15 +1,15 @@
 # Racial Equity Impact Statement
 The Racial Equity Impact Statement (REIS) is a joint effort by [Legal Services of Central New York (LSCNY)](https://www.lscny.org/) and the [Urban Jobs Task Force (UJTF)](http://www.ujtf.org/) to provide data-enabled recommendations for employers designed to ameliorate racial disparities in hiring practices for publicly-funded construction projects. 
 
-Variables of interest for each subcontractor document are located in *target_variables.md* in the master repository.
+Variables of interest for each subcontractor document are located in *target_variables.md* in the master branch.
 
-Table names and variable definitions for each document are located in *codebook.md* in the master repository.
+Table names and variable definitions for each document are located in *codebook.md* in the master branch.
 
 ## Raw Data
 
 Raw data consist of scanned PDF documents requested via [Freedom of Information Act (FOIA)](https://foia.state.gov/Learn/FOIA.aspx), sometimes referred to as Freedom of Information Law (FOIL), containing employment records for subcontractors in recent Hancock Airport construction work. 
 
-Original PDFs are available in the "Raw Data" folder of the master repository.
+Original PDFs are available in the "Raw Data" folder of the master branch.
 
 ## Preprocessing
 
@@ -22,9 +22,9 @@ Preprocessing for PDF reader software was conducted using freeware [Foxit Phanto
 
 #### File Name Suffixes
 
-Rotated PDFs are available in the "Rotated PDFs" folder of the master repository. File names contain suffix `_r`.
+Rotated PDFs are available in the "Rotated PDFs" folder of the master branch. File names contain suffix `_r`.
  
-Text-readable PDFs are available in the "OCR PDFs" folder of the master repository. File names contain suffix `_rocr`.
+Text-readable PDFs are available in the "OCR PDFs" folder of the master branch. File names contain suffix `_rocr`.
  
 #### OCR Engine Settings
  
@@ -38,7 +38,7 @@ Foxit PhantomPDF converts each PDF document into machine-readable text manipulab
 
 ### JPG Images
 
-High-resolution .JPG images were batch-converted via using [ImageMagick](https://www.imagemagick.org/script/index.php) and [Ghostscript](https://www.ghostscript.com/) and are available in the "JPG Images" folder of the master repository.
+High-resolution .JPG images were batch-converted via using [ImageMagick](https://www.imagemagick.org/script/index.php) and [Ghostscript](https://www.ghostscript.com/) and are available in the "JPG Images" folder of the master branch.
  
 The following parameters were used in the command line:
 
