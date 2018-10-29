@@ -1,0 +1,34 @@
+pdf_pg,occur,ending,ssn,race,vocation,title,week_wg,rate,zip,net
+2,1,3/4/2018,9027,Native American,Iron Worker,Journeyman,256.4,32.05,14779,684.37
+3,1,3/11/2018,6056,White,Iron Worker,Journeyman,232,29,13069,0
+3,2,3/11/2018,7646,White,Iron Worker,Journeyman,232,29,13209,0
+3,3,3/11/2018,9027,Native American,Iron Worker,Journeyman,256.4,32.05,14779,199.9
+3,4,3/11/2018,4582,White,Iron Worker,Journeyman,232,29,13069,0
+5,1,3/25/2018,6056,White,Iron Worker,Journeyman,928,29,13069,647.02
+5,2,3/25/2018,9027,Native American,Iron Worker,Journeyman,"1,282.00",32.05,14779,857.89
+5,3,3/25/2018,4582,White,Iron Worker,Journeyman,928,29,13069,680.69
+7,1,4/1/2018,6056,White,Iron Worker,Journeyman,348,29,13069,0
+7,2,4/1/2018,2210,White,Iron Worker,Journeyman,232,29,13031,0
+7,3,4/1/2018,2989,White,Iron Worker,Journeyman,348,29,13209,0
+7,4,4/1/2018,7832,Native American,Iron Worker,Journeyman,198,16.5,14779,459.32
+7,5,4/1/2018,9027,Native American,Iron Worker,Journeyman,512.8,32.05,14779,1006.05
+8,1,4/8/2018,2210,White,Iron Worker,Journeyman,696,29,13031,510.56
+8,2,4/8/2018,5456,White,Iron Worker,Journeyman,696,29,13080,533.25
+8,3,4/8/2018,7832,Native American,Iron Worker,Journeyman,396,16.5,14779,442.92
+8,4,4/8/2018,9027,Native American,Iron Worker,Journeyman,0,0,14779,975.53
+9,1,4/15/2018,6942,Hispanic,Iron Worker,Journeyman,"1,160.00",29,13088,483.15
+9,2,4/15/2018,6056,White,Iron Worker,Journeyman,"1,240.00",31,13069,827.67
+9,3,4/15/2018,7019,White,Iron Worker,Journeyman,"1,202.00",30.05,14219,735.16
+9,4,4/15/2018,2210,White,Iron Worker,Journeyman,348,29,13031,272.34
+9,5,4/15/2018,7020,White,Iron Worker,Journeyman,"1,160.00",29,13209,913.84
+9,6,4/15/2018,5456,White,Iron Worker,Journeyman,"1,160.00",29,13080,848.54
+9,7,4/15/2018,7832,Native American,Unspecified,Journeyman,660,16.5,14779,475.55
+9,8,4/15/2018,9027,Native American,Iron Worker,Journeyman,"1,362.00",34.05,14779,908.41
+10,1,4/22/2018,6942,Hispanic,Iron Worker,Journeyman,"1,160.00",29,13088,483.15
+10,2,4/22/2018,6056,White,Iron Worker,Journeyman,"1,240.00",31,13069,827.67
+10,3,4/22/2018,7019,White,Iron Worker,Journeyman,"1,202.00",30.05,14219,735.15
+10,4,4/22/2018,740,Native American,Iron Worker,Journeyman,"1,160.00",29,13205,881.19
+10,5,4/22/2018,7020,White,Iron Worker,Journeyman,"1,160.00",29,13209,913.84
+10,6,4/22/2018,5456,White,Iron Worker,Journeyman,"1,160.00",29,13080,848.54
+10,7,4/22/2018,9027,Native American,Iron Worker,Journeyman,"1,362.00",34.05,14779,908.42
+10,8,4/22/2018,452,White,Iron Worker,Journeyman,"1,160.00",29,13340,781.65

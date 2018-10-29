@@ -1,80 +1,80 @@
 pdf_pg,occur,ssn,race,sex,vocation,title,zip,grade,rate,net,hours,ot
-1,1,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,810.58,8.00,
-2,1,7211,White,Male,Carpenter,Apprentice,14445,S-0,16.47,749.34,24.00,7.50
-2,2,1626,White,Male,Carpenter,Apprentice,13069,S-0,19.22,832.36,40.00,18.00
-2,3,6590,White,Male,Carpenter,Not Specified,13069,S-2,27.45,894.40,40.00,10.00
-2,4,4159,White,Male,Carpenter,Not Specified,13122,S-2,27.45,1096.54,40.00,7.00
-2,5,2863,White,Male,Carpenter,Foreman,13126,M-12,28.45,1607.28,32.00,19.00
-2,6,1178,White,Male,Carpenter,Not Specified,13088,M-2,27.45,1031.71,40.00,7.00
-2,7,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1175.55,40.00,12.50
-2,8,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1328.12,40.00,20.50
-3,1,1626,White,Male,Carpenter,Apprentice,13069,S-0,19.22,609.52,40.00,5.00
-3,2,6590,White,Male,Carpenter,Not Specified,13069,S-2,27.45,714.00,40.00,5.00
-3,3,2863,White,Male,Carpenter,Foreman,13126,M-12,28.45,951.86,21.00,5.00
-3,4,7209,White,Male,Carpenter,Not Specified,13206,M-3,27.45,879.24,24.00,3.00
-3,5,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1240.52,40.00,15.00
-3,6,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1186.40,40.00,15.00
-4,1,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1147.22,24.00,12.50
-4,2,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1028.89,40.00,7.50
-4,3,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1195.79,40.00,15.00
-5,1,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1076.52,34.00,10.00
-5,2,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1102.23,39.00,10.00
-5,3,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1054.93,40.00,10.00
-6,1,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,991.70,40.00,7.00
-6,2,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1102.24,40.00,10.00
-6,3,9487,White,Male,Carpenter,Not Specified,13076,M-0,28.45,1026.67,40.00,9.00
-6,4,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,677.66,1.50,
-7,1,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1076.52,7.00,2.00
-7,2,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1131.56,10.50,2.00
-7,3,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1054.94,8.00,1.00
-8,1,8611,White,Male,Carpenter,Not Specified,13126,S-0,,902.66,,7.00
-8,2,2863,White,Male,Carpenter,Foreman,13126,M-12,,1037.36,,7.00
-8,3,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1246.15,4.00,
-8,4,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,1000.61,4.00,
-8,5,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1287.34,38.00,10.50
-8,6,7702,Black,Male,Carpenter,Apprentice,13209,S-0,19.22,598.26,16.00,4.00
-8,7,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,609.68,31.00,
-8,8,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,911.78,9.00,
-9,1,8611,White,Male,Carpenter,Not Specified,13126,S-0,27.45,842.26,3.00,5.00
-9,2,2863,White,Male,Carpenter,Foreman,13126,M-12,,1052.46,,8.00
-9,3,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1246.15,40.00,16.00
-9,4,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,1000.60,40.00,10.00
-9,5,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1175.54,21.00,9.50
-9,6,7702,Black,Male,Carpenter,Apprentice,13209,S-0,19.22,798.91,40.00,16.00
-9,7,2770,White,Male,Carpenter,Not Specified,13041,M-0,27.45,1125.64,23.00,10.50
-9,8,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1243.91,40.00,17.00
-9,9,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,878.25,27.00,4.00
-10,1,8611,White,Male,Carpenter,Not Specified,13126,S-0,27.45,560.10,2.00,
-10,2,1790,Black,Male,Carpenter,Apprentice,13501,S-3,13.73,527.75,40.00,8.50
-10,3,1021,White,Male,Carpenter,Not Specified,13027,M-1,,888.97,,8.00
-10,4,5846,White,Male,Carpenter,Not Specified,13057,M-0,27.45,828.87,16.00,2.00
-10,5,8205,White,Male,Carpenter,Not Specified,13069,S-2,,937.05,,8.00
-10,6,2863,White,Male,Carpenter,Foreman,13126,M-12,,1052.46,,8.00
-10,7,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1246.14,40.00,16.00
-10,8,2813,White,Male,Carpenter,Not Specified,13088,M-10,,1141.35,,8.00
-10,9,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,1000.61,40.00,10.00
-10,10,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1299.83,40.00,17.00
-10,11,7702,Black,Male,Carpenter,Apprentice,13209,S-0,19.22,765.47,40.00,14.00
-10,12,2770,White,Male,Carpenter,Not Specified,13041,M-0,27.45,1267.98,35.00,10.00
-11,1,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,871.21,40.00,3.50
-11,2,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,699.85,16.00,
-12,1,5846,White,Male,Carpenter,Not Specified,13057,M-0,27.45,955.96,40.00,6.50
-12,2,2863,White,Male,Carpenter,Foreman,13126,M-12,28.45,1463.64,40.00,22.00
-12,3,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1260.24,40.00,16.50
-12,4,6213,White,Male,Carpenter,Apprentice,13104,M-9,,797.00,,8.00
-12,5,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,1204.68,40.00,18.50
-12,6,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1204.83,40.00,13.50
-12,7,7702,Black,Male,Carpenter,Apprentice,13209,S-0,13.22,681.87,40.00,9.00
-12,8,2770,White,Male,Carpenter,Not Specified,13041,M-0,27.45,1267.97,38.00,18.00
-12,9,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1219.85,40.00,16.00
-13,1,4159,White,Male,Carpenter,Not Specified,13122,S-2,,925.70,,6.00
-13,2,2063,White,Male,Carpenter,Foreman,13126,M-12,28.45,1229.76,40.00,14.00
-13,3,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1246.15,40.00,16.00
-13,4,2813,White,Male,Carpenter,Not Specified,13088,M-10,,1064.78,,6.00
-13,5,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,590.74,30.00,30.00
-13,6,1170,White,Male,Carpenter,Not Specified,13088,M-2,27.45,1043.42,40.00,6.00
-13,7,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1274.85,40.00,16.00
-13,8,7702,Black,Male,Carpenter,Apprentice,13289,S-0,19.22,782.19,40.00,15.00
-13,9,2770,White,Male,Carpenter,Not Specified,13041,M-0,27.45,1195.78,32.00,12.00
-13,10,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1219.85,40.00,16.00
-14,1,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,833.64,8.00,6.00
+1,1,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,810.58,8,
+2,1,7211,White,Male,Carpenter,Apprentice,14445,S-0,16.47,749.34,24,7.5
+2,2,1626,White,Male,Carpenter,Apprentice,13069,S-0,19.22,832.36,40,18
+2,3,6590,White,Male,Carpenter,Not Specified,13069,S-2,27.45,894.4,40,10
+2,4,4159,White,Male,Carpenter,Not Specified,13122,S-2,27.45,1096.54,40,7
+2,5,2863,White,Male,Carpenter,Foreman,13126,M-12,28.45,1607.28,32,19
+2,6,1178,White,Male,Carpenter,Not Specified,13088,M-2,27.45,1031.71,40,7
+2,7,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1175.55,40,12.5
+2,8,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1328.12,40,20.5
+3,1,1626,White,Male,Carpenter,Apprentice,13069,S-0,19.22,609.52,40,5
+3,2,6590,White,Male,Carpenter,Not Specified,13069,S-2,27.45,714,40,5
+3,3,2863,White,Male,Carpenter,Foreman,13126,M-12,28.45,951.86,21,5
+3,4,7209,White,Male,Carpenter,Not Specified,13206,M-3,27.45,879.24,24,3
+3,5,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1240.52,40,15
+3,6,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1186.4,40,15
+4,1,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1147.22,24,12.5
+4,2,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1028.89,40,7.5
+4,3,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1195.79,40,15
+5,1,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1076.52,34,10
+5,2,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1102.23,39,10
+5,3,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1054.93,40,10
+6,1,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,991.7,40,7
+6,2,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1102.24,40,10
+6,3,9487,White,Male,Carpenter,Not Specified,13076,M-0,28.45,1026.67,40,9
+6,4,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,677.66,1.5,
+7,1,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1076.52,7,2
+7,2,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1131.56,10.5,2
+7,3,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1054.94,8,1
+8,1,8611,White,Male,Carpenter,Not Specified,13126,S-0,,902.66,,7
+8,2,2863,White,Male,Carpenter,Foreman,13126,M-12,,1037.36,,7
+8,3,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1246.15,4,
+8,4,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,1000.61,4,
+8,5,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1287.34,38,10.5
+8,6,7702,Black,Male,Carpenter,Apprentice,13209,S-0,19.22,598.26,16,4
+8,7,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,609.68,31,
+8,8,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,911.78,9,
+9,1,8611,White,Male,Carpenter,Not Specified,13126,S-0,27.45,842.26,3,5
+9,2,2863,White,Male,Carpenter,Foreman,13126,M-12,,1052.46,,8
+9,3,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1246.15,40,16
+9,4,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,1000.6,40,10
+9,5,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1175.54,21,9.5
+9,6,7702,Black,Male,Carpenter,Apprentice,13209,S-0,19.22,798.91,40,16
+9,7,2770,White,Male,Carpenter,Not Specified,13041,M-0,27.45,1125.64,23,10.5
+9,8,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1243.91,40,17
+9,9,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,878.25,27,4
+10,1,8611,White,Male,Carpenter,Not Specified,13126,S-0,27.45,560.1,2,
+10,2,1790,Black,Male,Carpenter,Apprentice,13501,S-3,13.73,527.75,40,8.5
+10,3,1021,White,Male,Carpenter,Not Specified,13027,M-1,,888.97,,8
+10,4,5846,White,Male,Carpenter,Not Specified,13057,M-0,27.45,828.87,16,2
+10,5,8205,White,Male,Carpenter,Not Specified,13069,S-2,,937.05,,8
+10,6,2863,White,Male,Carpenter,Foreman,13126,M-12,,1052.46,,8
+10,7,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1246.14,40,16
+10,8,2813,White,Male,Carpenter,Not Specified,13088,M-10,,1141.35,,8
+10,9,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,1000.61,40,10
+10,10,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1299.83,40,17
+10,11,7702,Black,Male,Carpenter,Apprentice,13209,S-0,19.22,765.47,40,14
+10,12,2770,White,Male,Carpenter,Not Specified,13041,M-0,27.45,1267.98,35,10
+11,1,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,871.21,40,3.5
+11,2,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,699.85,16,
+12,1,5846,White,Male,Carpenter,Not Specified,13057,M-0,27.45,955.96,40,6.5
+12,2,2863,White,Male,Carpenter,Foreman,13126,M-12,28.45,1463.64,40,22
+12,3,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1260.24,40,16.5
+12,4,6213,White,Male,Carpenter,Apprentice,13104,M-9,,797,,8
+12,5,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,1204.68,40,18.5
+12,6,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1204.83,40,13.5
+12,7,7702,Black,Male,Carpenter,Apprentice,13209,S-0,13.22,681.87,40,9
+12,8,2770,White,Male,Carpenter,Not Specified,13041,M-0,27.45,1267.97,38,18
+12,9,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1219.85,40,16
+13,1,4159,White,Male,Carpenter,Not Specified,13122,S-2,,925.7,,6
+13,2,2063,White,Male,Carpenter,Foreman,13126,M-12,28.45,1229.76,40,14
+13,3,7393,White,Male,Carpenter,Not Specified,13069,M-2,27.45,1246.15,40,16
+13,4,2813,White,Male,Carpenter,Not Specified,13088,M-10,,1064.78,,6
+13,5,7072,White,Male,Carpenter,Not Specified,13066,S-2,27.45,590.74,30,30
+13,6,1170,White,Male,Carpenter,Not Specified,13088,M-2,27.45,1043.42,40,6
+13,7,3302,White,Male,Carpenter,Foreman,13167,M-1,28.45,1274.85,40,16
+13,8,7702,Black,Male,Carpenter,Apprentice,13289,S-0,19.22,782.19,40,15
+13,9,2770,White,Male,Carpenter,Not Specified,13041,M-0,27.45,1195.78,32,12
+13,10,9487,White,Male,Carpenter,Not Specified,13076,M-0,27.45,1219.85,40,16
+14,1,3060,White,Male,Taper,Not Specified,13135,S-0,25.49,833.64,8,6
