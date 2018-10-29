@@ -1,0 +1,116 @@
+ssn,class,position,title,wage,ending,zip,net,city,state,latitude,longitude,pdf_pg,occur
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,476.14000000000004,2/11/2018,13108,$975.24,Marcellus,NY,42.979467,-76.33811,1,1
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,540.54,2/11/2018,13084,$999.41,La Fayette,NY,42.883503,-76.10983,1,2
+5589,9M,Sheet Metal Workers,Journeyman,97.38,2/11/2018,13069,$862.98,Fulton,NY,43.32347,-76.40029,1,3
+6357,0S,Sheet Metal Workers,Journeyman,259.74,2/11/2018,13088,$757.36,Liverpool,NY,43.105917,-76.19365,1,4
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,1423.48,2/18/2018,13108,$961.90,Marcellus,NY,42.979467,-76.33811,2,1
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,617.76,2/18/2018,13084,$437.93,La Fayette,NY,42.883503,-76.10983,2,2
+5589,9M,Sheet Metal Workers,Journeyman,32.46,2/18/2018,13069,$744.57,Fulton,NY,43.32347,-76.40029,2,3
+6357,0S,Sheet Metal Workers,Journeyman,577.2,2/18/2018,13088,$757.37,Liverpool,NY,43.105917,-76.19365,2,4
+6000,0S,Sheet Metal Workers,Journeyman,82.38,2/18/2018,13057,$721.57,East Syracuse,NY,43.074266,-76.05538,2,5
+9922,0S,Sheet Metal Workers,Apprentice,61.8,2/18/2018,13030,$585.64,Bridgeport,NY,43.164297,-75.96057,2,6
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,1498.4,2/25/2018,13108,"$1,010.02",Marcellus,NY,42.979467,-76.33811,3,1
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,1544.4,2/25/2018,13084,$999.42,La Fayette,NY,42.883503,-76.10983,3,2
+4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,952.4,2/25/2018,14841,$629.03,Hector,NY,42.521501,-76.86246,3,3
+5589,9M,Sheet Metal Workers,Journeyman,81.14999999999999,2/25/2018,13069,$795.31,Fulton,NY,43.32347,-76.40029,3,4
+6357,0S,Sheet Metal Workers,Journeyman,981.24,2/25/2018,13088,$757.35,Liverpool,NY,43.105917,-76.19365,3,5
+9922,0S,Sheet Metal Workers,Apprentice,288.4,2/25/2018,13030,NA,Bridgeport,NY,43.164297,-75.96057,3,6
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,1498.4,3/4/2018,13108,"$1,010.02",Marcellus,NY,42.979467,-76.33811,4,1
+2202,1M,"Pipelayer, Plumber, Pipefitter",Unspecified,78,3/4/2018,14225,$713.17,Buffalo,NY,42.929891,-78.75813,4,2
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,1544.4,3/4/2018,13084,$999.41,La Fayette,NY,42.883503,-76.10983,4,3
+4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,761.92,3/4/2018,14841,$514.51,Hector,NY,42.521501,-76.86246,4,4
+5589,9M,Sheet Metal Workers,Journeyman,129.84,3/4/2018,13069,$710.73,Fulton,NY,43.32347,-76.40029,4,5
+6357,0S,Sheet Metal Workers,Journeyman,981.24,3/4/2018,13088,$692.43,Liverpool,NY,43.105917,-76.19365,4,6
+3666,0S,Sheet Metal Workers,Journeyman,864.99,3/4/2018,13492,$591.22,Whitesboro,NY,43.11627,-75.31182,5,1
+9922,0S,Sheet Metal Workers,Apprentice,779.9399999999999,3/4/2018,13030,$556.25,Bridgeport,NY,43.164297,-75.96057,5,2
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,1498.4,3/11/2018,13108,"$1,010.02",Marcellus,NY,42.979467,-76.33811,6,1
+2202,1M,"Pipelayer, Plumber, Pipefitter",Unspecified,104,3/11/2018,14225,$761.01,Buffalo,NY,42.929891,-78.75813,6,2
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,1718.16,3/11/2018,13084,"$1,110.92",La Fayette,NY,42.883503,-76.10983,6,3
+4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,952.4,3/11/2018,14841,$629.03,Hector,NY,42.521501,-76.86246,6,4
+5589,9M,Sheet Metal Workers,Journeyman,64.92,3/11/2018,13069,$711.36,Fulton,NY,43.32347,-76.40029,6,5
+6357,0S,Sheet Metal Workers,Journeyman,1176.0500000000002,3/11/2018,13088,$770.08,Liverpool,NY,43.105917,-76.19365,6,6
+3666,0S,Sheet Metal Workers,Journeyman,439.36,3/11/2018,13492,$315.43,Whitesboro,NY,43.11627,-75.31182,7,1
+9922,0S,Sheet Metal Workers,Apprentice,895.28,3/11/2018,13030,$627.62,Bridgeport,NY,43.164297,-75.96057,7,2
+4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,544.16,3/18/2018,13041,"$1,040.74",Clay,NY,43.1835,-76.18002,8,1
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,1554.5900000000001,3/18/2018,13108,"$1,047.59",Marcellus,NY,42.979467,-76.33811,8,2
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,1718.16,3/18/2018,13084,"$1,110.92",La Fayette,NY,42.883503,-76.10983,8,3
+4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,880.97,3/18/2018,14841,$588.10,Hector,NY,42.521501,-76.86246,8,4
+3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,629.37,3/18/2018,13041,$470.96,Clay,NY,43.1835,-76.18002,8,5
+60,2S,"Pipelayer, Plumber, Pipefitter",Unspecified,299.36,3/18/2018,14850,$253.27,Ithaca,NY,42.449454,-76.49685,8,6
+5589,9M,Sheet Metal Workers,Journeyman,64.92,3/18/2018,13069,$693.67,Fulton,NY,43.32347,-76.40029,9,1
+6357,0S,Sheet Metal Workers,Journeyman,1096.6799999999998,3/18/2018,13088,$724.90,Liverpool,NY,43.105917,-76.19365,9,2
+3666,0S,Sheet Metal Workers,Journeyman,823.8,3/18/2018,13492,$568.20,Whitesboro,NY,43.11627,-75.31182,9,3
+9466,2M,Sheet Metal Workers,Apprentice,573.8,3/18/2018,13206,$459.29,Syracuse,NY,43.069866,-76.10724,9,4
+9922,0S,Sheet Metal Workers,Apprentice,659.1,3/18/2018,13030,$473.10,Bridgeport,NY,43.164297,-75.96057,9,5
+7343,2S,Sheet Metal Workers,Journeyman,1043.48,3/18/2018,13209,$726.03,Syracuse,NY,43.081324,-76.23488,9,6
+4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,1088.32,3/25/2018,13041,"$1,040.74",Clay,NY,43.1835,-76.18002,10,1
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,1526.5,3/25/2018,13108,"$1,028.80",Marcellus,NY,42.979467,-76.33811,10,2
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,1718.16,3/25/2018,13084,"$1,148.10",La Fayette,NY,42.883503,-76.10983,10,3
+4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,952.4,3/25/2018,14841,$629.03,Hector,NY,42.521501,-76.86246,10,4
+3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,544.3199999999999,3/25/2018,13041,$410.85,Clay,NY,43.1835,-76.18002,10,5
+6357,0S,Sheet Metal Workers,Journeyman,1176.0500000000002,3/25/2018,13088,$770.07,Liverpool,NY,43.105917,-76.19365,10,6
+3666,0S,Sheet Metal Workers,Journeyman,1098.4,3/25/2018,13492,$721.58,Whitesboro,NY,43.11627,-75.31182,11,1
+9466,2M,Sheet Metal Workers,Apprentice,604,3/25/2018,13206,$480.67,Syracuse,NY,43.069866,-76.10724,11,2
+9922,0S,Sheet Metal Workers,Apprentice,878.8,3/25/2018,13030,$617.91,Bridgeport,NY,43.164297,-75.96057,11,3
+7343,2S,Sheet Metal Workers,Journeyman,1098.4,3/25/2018,13209,$756.69,Syracuse,NY,43.081324,-76.23488,11,4
+4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,1360.4,4/1/2018,13041,"$1,040.68",Clay,NY,43.1835,-76.18002,12,1
+7509,2M,"Pipelayer, Plumber, Pipefitter",Journeyman,272.08,4/1/2018,13116,$997.51,Minoa,NY,43.077067,-76.00695,12,2
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,1526.5,4/1/2018,13108,"$1,028.53",Marcellus,NY,42.979467,-76.33811,12,3
+4277,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,693.16,4/1/2018,13209,$507.55,Syracuse,NY,43.081324,-76.23488,12,4
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,1602.3200000000002,4/1/2018,13084,"$1,036.20",La Fayette,NY,42.883503,-76.10983,12,5
+4725,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,190.48000000000002,4/1/2018,14841,$123.68,Hector,NY,42.521501,-76.86246,13,1
+3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,693.16,4/1/2018,13041,$516.06,Clay,NY,43.1835,-76.18002,13,2
+1160,1S,"Pipelayer, Plumber, Pipefitter",Unspecified,272.08,4/1/2018,13041,$914.91,Clay,NY,43.1835,-76.18002,13,3
+6357,0S,Sheet Metal Workers,Journeyman,1154.4,4/1/2018,13088,$757.37,Liverpool,NY,43.105917,-76.19365,13,4
+3666,0S,Sheet Metal Workers,Journeyman,1098.4,4/1/2018,13492,$721.57,Whitesboro,NY,43.11627,-75.31182,13,5
+9466,2M,Sheet Metal Workers,Apprentice,604,4/1/2018,13206,$480.66,Syracuse,NY,43.069866,-76.10724,13,6
+9922,0S,Sheet Metal Workers,Apprentice,878.8,4/1/2018,13030,$617.90,Bridgeport,NY,43.164297,-75.96057,13,7
+7343,2S,Sheet Metal Workers,Journeyman,878.72,4/1/2018,13209,$624.38,Syracuse,NY,43.081324,-76.23488,13,8
+4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,1360.4,4/8/2018,13041,"$1,040.68",Clay,NY,43.1835,-76.18002,14,1
+7509,2M,"Pipelayer, Plumber, Pipefitter",Journeyman,1360.4,4/8/2018,13116,$997.51,Minoa,NY,43.077067,-76.00695,14,2
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,1863.64,4/8/2018,13108,"$1,247.27",Marcellus,NY,42.979467,-76.33811,14,3
+4277,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,833.46,4/8/2018,13209,$604.24,Syracuse,NY,43.081324,-76.23488,14,4
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,1534.76,4/8/2018,13084,"$1,110.42",La Fayette,NY,42.883503,-76.10983,14,5
+3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,272.16,4/8/2018,13041,$629.48,Clay,NY,43.1835,-76.18002,14,6
+60,2S,"Pipelayer, Plumber, Pipefitter",Unspecified,149.68,4/8/2018,14850,$459.04,Ithaca,NY,42.449454,-76.49685,15,1
+5589,9M,Sheet Metal Workers,Journeyman,32.46,4/8/2018,13069,"$1,199.69",Fulton,NY,43.32347,-76.40029,15,2
+6357,0S,Sheet Metal Workers,Journeyman,1240.98,4/8/2018,13088,$808.25,Liverpool,NY,43.105917,-76.19365,15,3
+,2S,Sheet Metal Workers,Journeyman,1894.88,4/8/2018,13316,"$1,230.72",Camden,NY,43.377083,-75.74261,15,4
+3666,0S,Sheet Metal Workers,Journeyman,1016.04,4/8/2018,13492,$677.79,Whitesboro,NY,43.11627,-75.31182,15,5
+9466,2M,Sheet Metal Workers,Apprentice,483.2,4/8/2018,13206,$394.81,Syracuse,NY,43.069866,-76.10724,15,6
+9922,0S,Sheet Metal Workers,Apprentice,725,4/8/2018,13030,$518.47,Bridgeport,NY,43.164297,-75.96057,15,7
+7343,2S,Sheet Metal Workers,Journeyman,1084.7,4/8/2018,13209,NA,Syracuse,NY,43.081324,-76.23488,15,8
+60,2S,"Pipelayer, Plumber, Pipefitter",Unspecified,149.68,4/8/2018,14850,$459.04,Ithaca,NY,42.449454,-76.49685,16,1
+5589,9M,Sheet Metal Workers,Journeyman,32.46,4/8/2018,13069,"$1,199.69",Fulton,NY,43.32347,-76.40029,16,2
+6357,0S,Sheet Metal Workers,Journeyman,1240.98,4/8/2018,13088,$808.25,Liverpool,NY,43.105917,-76.19365,16,3
+,2S,Sheet Metal Workers,Journeyman,1894.88,4/8/2018,13316,"$1,230.72",Camden,NY,43.377083,-75.74261,16,4
+3666,0S,Sheet Metal Workers,Journeyman,1016.04,4/8/2018,13492,$677.79,Whitesboro,NY,43.11627,-75.31182,16,5
+9466,2M,Sheet Metal Workers,Apprentice,483.2,4/8/2018,13206,$394.81,Syracuse,NY,43.069866,-76.10724,16,6
+9922,0S,Sheet Metal Workers,Apprentice,725,4/8/2018,13030,$518.47,Bridgeport,NY,43.164297,-75.96057,16,7
+7343,2S,Sheet Metal Workers,Journeyman,1084.7,4/8/2018,13209,$945.22,Syracuse,NY,43.081324,-76.23488,16,8
+4382,6M,"Pipelayer, Plumber, Pipefitter",Journeyman,1360.4,4/15/2018,13041,"$1,040.68",Clay,NY,43.1835,-76.18002,18,1
+7509,2M,"Pipelayer, Plumber, Pipefitter",Journeyman,1760.6,4/15/2018,13116,"$1,285.17",Minoa,NY,43.077067,-76.00695,18,2
+,0M,"Pipelayer, Plumber, Pipefitter",Journeyman,899.04,4/15/2018,13108,$625.51,Marcellus,NY,42.979467,-76.33811,18,3
+4277,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,408.24,4/15/2018,13209,$309.17,Syracuse,NY,43.081324,-76.23488,18,4
+3431,2M,"Pipelayer, Plumber, Pipefitter",General Foreman,1805.04,4/15/2018,13084,"$1,166.03",La Fayette,NY,42.883503,-76.10983,18,5
+9052,3M,"Pipelayer, Plumber, Pipefitter",Journeyman,1360.4,4/15/2018,13208,"$1,008.30",Syracuse,NY,43.074566,-76.14747,18,6
+6589,0S,"Pipelayer, Plumber, Pipefitter",Journeyman,1734.44,4/15/2018,13211,"$1,123.70",Syracuse,NY,43.098917,-76.13688,19,1
+3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,680.4,4/15/2018,13041,$506.97,Clay,NY,43.1835,-76.18002,19,2
+1160,1S,"Pipelayer, Plumber, Pipefitter",Journeyman,816.24,4/15/2018,13041,$573.93,Clay,NY,43.1835,-76.18002,19,3
+1671,3S,Sheet Metal Workers,Journeyman,1098.4,4/15/2018,13042,$832.55,Cleveland,NY,43.252084,-75.84853,19,4
+6357,0S,Sheet Metal Workers,Journeyman,1176.0500000000002,4/15/2018,13068,$770.09,Freeville,NY,42.505075,-76.35283,19,5
+,2S,Sheet Metal Workers,Journeyman,1098.4,4/15/2018,13316,$759.13,Camden,NY,43.377083,-75.74261,19,6
+3666,0S,Sheet Metal Workers,Journeyman,878.72,4/15/2018,13492,$598.88,Whitesboro,NY,43.11627,-75.31182,19,7
+9466,2M,Sheet Metal Workers,Apprentice,604,4/15/2018,13206,$480.67,Syracuse,NY,43.069866,-76.10724,19,8
+1841,2M,Sheet Metal Workers,Journeyman,1098.4,4/15/2018,13321,NA,Clark Mills,NY,43.090027,-75.387088,19,9
+6589,0S,"Pipelayer, Plumber, Pipefitter",Journeyman,1734.44,4/15/2018,13211,"$1,123.70",Syracuse,NY,43.098917,-76.13688,20,1
+3090,0S,"Pipelayer, Plumber, Pipefitter",Unspecified,680.4,4/15/2018,13041,$506.97,Clay,NY,43.1835,-76.18002,20,2
+1160,1S,"Pipelayer, Plumber, Pipefitter",Journeyman,816.24,4/15/2018,13041,$573.93,Clay,NY,43.1835,-76.18002,20,3
+1671,3S,Sheet Metal Workers,Journeyman,1098.4,4/15/2018,13042,$832.55,Cleveland,NY,43.252084,-75.84853,20,4
+6357,0S,Sheet Metal Workers,Journeyman,1176.0500000000002,4/15/2018,13088,$770.09,Liverpool,NY,43.105917,-76.19365,20,5
+,2S,Sheet Metal Workers,Journeyman,1098.4,4/15/2018,13316,$759.13,Camden,NY,43.377083,-75.74261,20,6
+3666,0S,Sheet Metal Workers,Journeyman,878.72,4/15/2018,13492,$598.88,Whitesboro,NY,43.11627,-75.31182,20,7
+9466,2M,Sheet Metal Workers,Apprentice,604,4/15/2018,13206,$480.67,Syracuse,NY,43.069866,-76.10724,20,8
+1841,2M,Sheet Metal Workers,Journeyman,1180.7800000000002,4/15/2018,13321,$847.94,Clark Mills,NY,43.090027,-75.387088,20,9
+9922,0S,Sheet Metal Workers,Apprentice,878.8,4/15/2018,13030,$617.92,Bridgeport,NY,43.164297,-75.96057,21,1
+7343,2S,Sheet Metal Workers,Journeyman,1153.3200000000002,4/15/2018,13209,$789.57,Syracuse,NY,43.081324,-76.23488,21,2
