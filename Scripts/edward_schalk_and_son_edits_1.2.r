@@ -38,7 +38,7 @@ dat <- dat %>%
   mutate_at(.vars = c("ssn", "zip"), .funs = as.character) %>%                 # Coerce variable classes
   mutate_at(.vars = c("race", "sex", "vocation", "title", "grade"), .funs = as.factor) %>%
   left_join(zipcode) %>%                                                       # Merge location data
-  select(ssn:title, grade:ot, zip, city:longitude, pdf_pg:occur) %>%           # Reorder variables
+  select(ssn:title, grade:ot, ending, zip, city:longitude, pdf_pg:occur) %>%   # Reorder variables
   arrange(pdf_pg, occur)                                                       # Arrange by page, occurrence
 
 # CORRECTIONS: MISSING DATA & VALUE FREQUENCY
