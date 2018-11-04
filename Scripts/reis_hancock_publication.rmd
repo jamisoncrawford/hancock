@@ -1,0 +1,391 @@
+---
+title: 'Hancock: Importing Whites, Exporting Wealth'
+author: "Jamison R. Crawford, MPA"
+date: "November 4, 2018"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    number_sections: true
+---
+
+```{r echo=FALSE, message=FALSE, cache=TRUE}
+
+if(!require(sf)){install.packages("sf")}
+if(!require(tmap)){install.packages("tmap")}
+if(!require(readr)){install.packages("readr")}
+if(!require(dplyr)){install.packages("dplyr")}
+if(!require(GGally)){install.packages("GGally")}
+if(!require(tigris)){install.packages("tigris")}
+if(!require(scales)){install.packages("scales")}
+if(!require(stringr)){install.packages("stringr")}
+if(!require(ggplot2)){install.packages("ggplot2")}
+if(!require(leaflet)){install.packages("leaflet")}
+if(!require(flextable)){install.packages("flextable")}
+
+library(sf)
+library(tmap)
+library(readr)
+library(dplyr)
+library(GGally)
+library(tigris)
+library(scales)
+library(stringr)
+library(ggplot2)
+library(leaflet)
+library(noncensus)
+library(flextable)
+
+rm(list = ls())
+
+url <- "https://raw.githubusercontent.com/jamisoncrawford/REIS/master/Tables/hancock_master_table_1.3.csv"
+master <- read_csv(file = url, col_types = "cccccccnnDccccnnccliii"); rm(url)
+```
+
+# Introduction
+
+**Glass and aluminum** curtain walls, a grand staicase, and an indoor waterfall, among other features, now adorn the Syracuse Hancock International Airport, and will greet over two million travelers and other passersby for years to come. The terminal, built in 1961, underwent significant renovations throughout much of 2018, slated for completion in late Fall, at the cost of $60 million: $35.8 million from New York State, $1 million from Onondaga County, and the remainder from both federal and local sources ([Moriarty, 2018](https://www.syracuse.com/news/index.ssf/2018/07/first_look_inside_syracuse_airport_terminal_renovations_photos.html)).
+ 
+**The true cost to Syracuse** is one of opportunity. That is, opportunity costs in providing work to Syracuse residents, particularly African American and Latino residents, by failing to employ a workforce that remotely approximates the ethnoracial makeup of the city. Moreover, the mass exportation of wealth to tradesmen outside of Onondaga County proves further opportunity costs, as the vast majority of disposable income is distributed throughout New York State and northern Pennsylvania.
+
+<br>
+
+<center>
+
+```{r pressure, echo=FALSE, fig.cap="*Concept rendering for the passenger terminal at Hancock International Airport. Source: [Syracuse.com](https://www.syracuse.com/business-news/index.ssf/2017/10/heres_what_syracuse_airport_will_look_like_after_49m_renovation_photos.html)*", out.width = '90%'}
+
+knitr::include_graphics("https://image.syracuse.com/home/syr-media/width960/img/post-standard/photo/2017/10/17/-f16fcc8e20f3ee69.JPG")
+
+```
+
+</center>
+
+<br>
+
+## Background
+
+**The motivation and impetus** behind this publication stems from the combined efforts of the [Urban Jobs Task Force (UJTF)](http://www.ujtf.org/) and [Legal Services of Western New York (LSCNY)](https://www.lscny.org/), a collaboration endeavoring to scrutinize myriad construction projects in the Greater Syracuse area, the final results of which are to be published in their *Racial Equity Impact Statement*, or REIS, which both describes the racial disparities in construction-related employment practices, as well as provides recommendations for ameliorating said disparities. Most importantly, the intent of the REIS is to ensure more equitable employment practices in the highly publicized and much anticipated renovation of [Interstate 86](https://en.wikipedia.org/wiki/Interstate_86_(Pennsylvania%E2%80%93New_York)).
+ 
+**Seeking assistance in wrangling and analyzing** raw employment records retrieved by leveraging the [Freedom of Information Act (FOIA)](https://www.foia.state.gov/Learn/FOIA.aspx), LSCNY recruited volunteers from the biweekly *Community Data Meet-Up*, a collaborative collection of largely social sector analysts, grantwriters, executives, and other data professionals sponsored by the [Central New York Community Foundation (CNYCF)](https://cnycf.org/). 
+ 
+<br>
+ 
+## Initial & New Hypotheses
+
+**The initial hypothesis warranting creation of the REIS** was the existence of racial disparities in construction-related employment practices, demonstrated by LSCNY and UJTF's poring over employment records for recent renovations of a local portion of [Interstate 690](https://en.wikipedia.org/wiki/Interstate_690) and depicting an ethnoracial makeup markedly at odds with Syracuse demographics.
+ 
+**Analyzing the Hancock renovation data revealed unanticipated insight** into the geographic representation of construction employees, where location data were available, expanding the scope of analysis to include from where, precisely, workers were imported. Not only were the vast majority of workers White males, they traveled from all over New York State, as well as northern counties in Pennsylvania. With wage data at hand, analysts discovered a mass exodus and dissemination of capital from Syracuse, only a fraction of which was received by residents living in Onondaga County.
+ 
+<br>
+ 
+## Methods
+
+**Employment records were compiled** from [photocopies stored as PDFs](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data) and extracted using both manual scraping and automated scraping with optical character recognition in R, an Open Source, scripted computer language designed for statistical analysis and other data science tasks. Variables of interest, if available, initially included workers':
+ 
+* Last four digits of social security numbers
+* Zip codes or other location data
+* Status, titles, and vocations
+* Race and gender
+* Unions
+
+**As the scope of analysis grew,** variables of interest were expanded to include workers':
+
+* Weekly net payments, i.e. gross income less deductions
+* Hourly wages when race or gender available
+* Ending date of working period
+
+**Once scraped, the data were merged** into a master table in [tidy format](https://vita.had.co.nz/papers/tidy-data.pdf). Additional variable definitions, units of measurement, raw data, scraping and processing scripts, and final tables are available in the [REIS GitHub repository](https://github.com/jamisoncrawford/REIS).
+
+**Zipcodes were used to determine other location data** by merging the master table with the R `zipcodes` library, providing the city, state, and longitude/latitude coordinates, while [Federal Information Processing Standard (FIPS) codes](https://en.wikipedia.org/wiki/FIPS_county_code) were included to identify the state FIPS ID, county FIPS ID, and county name using the R `noncensus` library. The master table may be found in the ["Tables" folder of the REIS GitHub repository](https://github.com/jamisoncrawford/REIS/blob/master/Tables/hancock_master_table_1.2.csv). The code book, including variable definitions, units of measurement, and variable transformation details, is available in the [REIS Code Book](https://github.com/jamisoncrawford/REIS/blob/master/codebook.md), while a more in-depth overview ofmethodology and preprocessing steps is available in the [REIS README](https://github.com/jamisoncrawford/REIS/blob/master/README.md). 
+
+<br>
+
+## Sources: Companies Reviewed
+
+**Records retrieved from the FOIA request** for Hancock construction included the following companies:
+
+* John W. Danforth Company
+* Edward Schalk & Son, Inc.
+* Longhouse Construction LLC
+* Niagara Erecting, Inc.
+* NRC NY Environmental Services, Inc.
+* Patricia Electric, Inc.
+* Quality Structures, Inc.
+* Stone Bridge Iron & Steel, Inc.
+
+**There are some notable caveats.** Though provided, *M&S Fire Protection LLC* contained no variables of interest. While it contained some important data, *Niagara Erecting, Inc.* appeared to have handwritten weekly deductions and net pay, which were entirely illegible even in manual scraping. Though it provided gross amount earned, no attempt to extrapolate net pay was made. Lastly, not all records provided race or gender and in records for most companies reviewed, some data were obfuscated or redacted sporadically. Therefore, analysis was performed having filtered or imputed missing data where appropriate. A full list of target variables by company, as well as additional metadata, is available in the ["Target Variables" page of the REIS GitHub repository](https://github.com/jamisoncrawford/REIS/blob/master/target_variables.md).
+
+<br>
+
+# Findings
+
+**The following outlines significant findings** in racial disparities in employment for Hancock Airport construction contractors which provided demographic information in the FOIA request. Where relevant, additional notable findings discovered in exploratory analysis are also provided. Lastly, net wage and location data are organized and visualized similarly, with accompanying interpretations provided.
+
+**Notably, 100% of employees were male,** according to demographic records provided. Therefore, gender disparities are neither possible to determine, aproximate, nor impute.
+
+<br>
+
+## On Demographic Data
+
+```{r echo=FALSE, message=FALSE}
+library(scales)
+library(dplyr)
+
+x <- nrow(master %>% filter(!is.na(race)))
+y <- nrow(master %>% filter( is.na(race)))
+p <- percent(y/x)
+```
+
+**As an important caveat, contractors failing to disclose race or gender** in their employment records comprise `r p` of total payments throughout construction. That is, out of a total `r format(x + y, big.mark = ",")` recorded weekly payments, `r y` did not contain any race or gender data, while `r x` did. It is impossible to impute or otherwise approximate these data. Contractors failing to disclose race include:
+
+* John W. Danforth Company
+* Niagara Erecting, Inc.
+* NRC NY Environmental Services, Inc.
+
+```{r echo=FALSE, message=FALSE}
+library(dplyr)
+library(scales)
+
+x <- master %>% filter(!is.na(race)) %>% select(name, ssn, zip) %>% unique() %>% nrow()
+y <- master %>% filter( is.na(race)) %>% select(name, ssn, zip) %>% unique() %>% nrow()
+p <- percent(x / (x + y))
+p_na <- percent(y / (x + y))
+```
+
+**In terms of individual employees, rather than records,** the number of unique workers are determined by using each unique combination of social security numbers (or unique identification codes if unavailable), zip codes, and company names. In total, there are `r x + y` unique workers, `r x`, or `r p` of whom have race disclosed, while `r y`, or `r p_na` do not. 
+
+<br>
+
+## Workers by Race
+
+**Of the nine contractors producing employment records,** only five maintained records with workers' ethnoracial data:
+
+* Edward Schalk & Son, Inc.
+* Longhouse Construction LLC
+* Patricia Electric, Inc.
+* Quality Structures, Inc.
+* Stone Bridge Iron & Steel, Inc.
+
+```{r message=FALSE, echo=FALSE}
+library(dplyr)
+individuals <- master %>% 
+  filter(!is.na(race)) %>% 
+  select(name, ssn, race, zip) %>% 
+  unique()
+wh <- individuals[individuals$race == "White", ]
+aa <- individuals[individuals$race == "African American", ]
+na <- individuals[individuals$race == "Native American", ]
+mr <- individuals[individuals$race == "Two or More Races", ]
+hs <- individuals[individuals$race == "Hispanic", ]
+```
+
+**The race of each unique worker is identified** by determining all unique combinations of company names, social security numbers, race, and zip code, revealing `r nrow(individuals)` unique individuals for whom race is disclosed. *Table 1: Unique Workers by Race* depicts `r nrow(wh)` unique White workers, comprising the lion's share of total workers (`r percent(nrow(wh) / nrow(individuals))`), while only `r nrow(aa)` African American workers (`r percent(nrow(na) / nrow(individuals))`), `r nrow(na)` Native American workers (`r percent(nrow(aa) / nrow(individuals))`), and `r nrow(mr)` workers of two or more races (`r percent(nrow(mr) / nrow(individuals))`). Notably, only a single worker was identified as Hispanic or Latino (`r percent(nrow(hs) / nrow(individuals))`). These disparities are illustrated in *Figure 1: Unique Workers v. Race*.
+
+<center>
+
+**Table 1: Unique Workers by Race**
+ 
+```{r message=FALSE, echo=FALSE}
+library(flextable)
+library(scales)
+
+ind_table <- as_data_frame(table(individuals$race)) %>% 
+  rename("Race" = Var1, "Unique Workers" = n) %>% 
+  mutate(Percentage = percent(`Unique Workers` / sum(`Unique Workers`))) %>%
+  arrange(desc(`Unique Workers`))
+
+ind_table_ft <- regulartable(ind_table, cwidth = 3.5)
+ind_table_ft <- fontsize(ind_table_ft, part = "all", size = 14)
+theme_box(ind_table_ft)
+```
+
+<br>
+
+**Figure 1: Unique Workers v. Race**
+
+```{r echo=FALSE, message=FALSE}
+library(ggplot2)
+
+ggplot(ind_table, aes(x = reorder(Race, `Unique Workers`), 
+                      y = `Unique Workers`)) +
+  geom_bar(stat = "identity", alpha = 0.6, fill = "tomato") +
+  coord_flip() +
+  xlab("Race") +
+  ylab("Unique Workers") +
+  theme_light()
+```
+
+</center>
+
+<br>
+
+## Workers by Race & Contractor
+
+**Further breaking down unique worker race by contractors reveals additional findings** about workforce diversity, or lack thereof, within the companies themselves. For example, *Table 2: Unique Workers by Race & Contractor* reveals that all 9 workers in *Patricia Electric, Inc.* are White, while *Edward Schalk & Son, Inc.*, had more than twice the unique workers, 21 of whom were White (91.3%) and the remaining 2 of whom were African American (8.7%). *Longhouse Construction LLC* had a similar proportion of White to African American workers, with 1 of 7 unique workers identified as African American (14.3%) and the remaining 6 workers identified as White (85.7%). 
+
+**Notably, the lowest proportion of unique White workers** (69.2%) were hired by *Stone Bridge Iron & Steel, Inc.*, which also accounts for the majority of unique Native American workers among *all companies* (75%), with 3 of all 4 Native Americans identified within the company (23.1%). *Quality Structures, Inc.* had the greatest diversity in terms of distinct races. To wit, White, African American, Two or More Races, and Native American workers were among its ranks, though the vast majority were White (88.9%). *Figure 2: Unique Workers v. Race by Contractor* illustrates these proportions among each contractor.
+
+<br>
+
+<center>
+
+**Table 2: Unique Workers by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE}
+library(flextable)
+library(scales)
+
+con_table <- individuals %>%
+  group_by(name, race) %>%
+  summarize(unique = n()) %>%
+  rename("Contractor" = name, 
+         "Race" = race, 
+         "Unique Workers" = unique) %>%
+  mutate(Percentage = percent(`Unique Workers` / sum(`Unique Workers`))) %>%
+  arrange(Contractor, desc(`Unique Workers`))
+
+con_table_ft <- regulartable(con_table, cwidth = 3.5)
+con_table_ft <- fontsize(con_table_ft, part = "all", size = 14)
+theme_box(con_table_ft)
+```
+
+<br>
+
+**Figure 2: Unique Workers v. Race by Contractor**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+library(ggplot2)
+library(Cairo)
+
+ggplot(con_table, aes(x = reorder(Contractor, `Unique Workers`), 
+                      y = `Unique Workers`, 
+                      fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.6) +
+  coord_flip() +
+  xlab("Contractor") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light()
+```
+
+</center>
+
+<br>
+
+## Periods by Race
+
+```{r echo=FALSE, message=FALSE}
+library(dplyr)
+
+week_table <- master %>% 
+  filter(!is.na(race)) %>%
+  group_by(name, race, zip, ssn) %>%
+  summarize(periods = n()) %>%
+  arrange(desc(periods))
+
+week_table <- week_table[, c("race", "periods")]
+week_table <- week_table %>%
+  group_by(race) %>%
+  summarize(Periods = sum(periods)) %>%
+  rename("Race" = race) %>%
+  mutate(`Periods (%)` = percent(Periods / sum(Periods))) %>%
+  arrange(desc(Periods)) %>%
+  bind_cols(ind_table) %>%
+  select(Race:`Periods (%)`, Percentage) %>%
+  rename("Workers (%)" = Percentage)
+```
+
+**Racial disparities in total weeks worked are slightly larger.** Among the `r sum(week_table$Periods)` recorded pay periods containing race data, with uniqueness determined by permutations of companies, zip codes, social security numbers, and race, White workers accounted for approximately 715 weekly paychecks (89.3%), slightly higher than the proportion of unique White workers (86.2%). *Table 3: Total Weeks Worked by Race* further illustrates a slightly smaller proportion of the 47 weekly paychecks received by African Americans (5.9%) compared to the proportion of African Americans among all unique workers (7.3%). Similar discrepancies exist among Native American and Hispanic workers' total work weeks. 
+
+**In other words, White workers took home a slightly larger proportion of paychecks,** as well as comprised a significantly larger proportion of the total workforce compared to workers of color, while workers of color spent fewer weeks on the job compared to their proportion in the total workforce. Of particular note, again, is the single Hispanic worker among all 123 unique workers involved the renovations. Of the 801 paychecks distributed, he received 2. This is further illustrated in *Figure 3: Total Weeks Worked v. Race*. 
+
+<br>
+
+<center>
+
+**Table 3: Total Weeks Worked by Race**
+
+```{r echo=FALSE, message=FALSE}
+week_table_ft <- regulartable(week_table, cwidth = 3.5)
+week_table_ft <- fontsize(week_table_ft, part = "all", size = 14)
+theme_box(week_table_ft)
+```
+
+<br>
+
+**Figure 3: Total Weeks Worked v. Race**
+
+```{r echo=FALSE, message=FALSE}
+ggplot(week_table, aes(x = reorder(Race, `Periods`), 
+                      y = Periods)) +
+  geom_bar(stat = "identity", alpha = 0.6, fill = "tomato") +
+  coord_flip() +
+  xlab("Race") +
+  ylab("Periods (In Weeks)") +
+  theme_light()
+```
+
+</center>
+
+<br>
+
+## Periods by Race & Contractor
+
+```{r echo=FALSE, message=FALSE}
+library(dplyr)
+library(scales)
+
+week_con_table <- master %>%
+  filter(!is.na(race)) %>%
+  group_by(name, race, zip, ssn) %>%
+  summarize(periods = n()) %>%
+  arrange(desc(periods))
+  
+week_con_table <- week_con_table[, c("name", "race", "periods")]
+week_con_table <- week_con_table %>%
+  group_by(name, race) %>%
+  summarize(Periods = sum(periods)) %>%
+  rename("Race" = race, "Contractor" = name) %>%
+  mutate(`Periods (%)` = percent(Periods / sum(Periods))) %>%
+  arrange(Contractor, desc(Periods)) %>% 
+  bind_cols(con_table) %>%
+  select(Contractor:`Periods (%)`, Percentage) %>%
+  rename("Workers (%)" = Percentage)
+```
+
+**Breaking down total periods worked by race and contractor reveals additional, albeit slight disparities.** *Table 4: Total Weeks Worked by Race & Contractor* depicts the total count and proportion of working periods by race among each contractor. *Quality Structures, Inc.* appears to have the greatest disparities, with Whites comprising 85.9% of workers but taking home 89.5% of the 607 paychecks distributed, while African Americans comprised 8.5% of workers and receiving 6.3% of all weekly paychecks. The 4.2% of workers in *Quality Structures, Inc.* took home a total of 15 paychecks (2.5%) while, unusually, the 3 Native Americans among its workers (1.4%) received payment for 1.8% of all work periods.
+
+**Racial disparities in weeks worked are smaller among other contractors.** The 91.3% of White workers in *Edward Schalk & Son, Inc.* received 73 payments of 79 total weeks worked (92.4%) while the remaining 8.7% of paychecks were distributed to its African American workers, or 7.6% of all payment periods, indicating slightly more work time for Whites in proportion to the company's racial makeup. *Longhouse Construction LLC* exhibited similarly small disparities, with an 85.7% of Whites working 86.4% of its total work weeks and 14.3% of African Americans working only 13.6% of total work weeks. Notably, *Stone Bridge Iron & Steel, Inc.* was the only organization which reversed this trend, with 69.2% of Whites working 60.6% of aggregate work periods, while 23.1% of its 3 Native Americans employees received payment for 33.3% of work periods. The only exception being the 1 Hispanic worker, comprising 7.7% of its unique workers and taking home 2, or 6.1% of total paychecks. These disparities are further illustrated in *Figure 4: Total Weeks Worked v. Race by Contractor*.
+
+<br>
+
+<center>
+
+**Table 4: Total Weeks Worked by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE}
+week_con_table_ft <- regulartable(week_con_table, cwidth = 3.5)
+week_con_table_ft <- fontsize(week_con_table_ft, part = "all", size = 14)
+theme_box(week_con_table_ft)
+```
+
+<br>
+
+**Figure 4: Total Weeks Worked v. Race by Contractor**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+ggplot(week_con_table, aes(x = reorder(Contractor, `Periods`), 
+                      y = Periods, 
+                      fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.6) +
+  coord_flip() +
+  xlab("Contractor") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light()
+```
+
+<br>
+
+## Titles by Race
+
+TBD.
