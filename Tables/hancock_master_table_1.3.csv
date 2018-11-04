@@ -1,0 +1,1046 @@
+name,ssn,title,position,union,sex,race,rate,net,ending,zip,city,county,state,longitude,latitude,sfips,cfips,ssn_sub,pdf_no,pdf_pg,occur
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,975.24,2018-02-11,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,1,1
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,999.41,2018-02-11,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,1,2
+John W. Danforth Company,5589,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,862.98,2018-02-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,1,3
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,757.36,2018-02-11,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,1,4
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,961.9,2018-02-18,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,2,1
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,437.93,2018-02-18,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,2,2
+John W. Danforth Company,5589,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,744.57,2018-02-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,2,3
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,757.37,2018-02-18,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,2,4
+John W. Danforth Company,6000,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,721.57,2018-02-18,13057,East Syracuse,Onondaga,NY,-76.05538,43.074266,36,067,FALSE,1,2,5
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,585.64,2018-02-18,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,2,6
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1010.02,2018-02-25,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,3,1
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,999.42,2018-02-25,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,3,2
+John W. Danforth Company,4725,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,629.03,2018-02-25,14841,Hector,Schuyler,NY,-76.86246,42.521501,36,097,FALSE,1,3,3
+John W. Danforth Company,5589,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,795.31,2018-02-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,3,4
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,757.35,2018-02-25,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,3,5
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,NA,2018-02-25,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,3,6
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1010.02,2018-03-04,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,4,1
+John W. Danforth Company,2202,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,713.17,2018-03-04,14225,Buffalo,Erie,NY,-78.75813,42.929891,36,029,FALSE,1,4,2
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,999.41,2018-03-04,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,4,3
+John W. Danforth Company,4725,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,514.51,2018-03-04,14841,Hector,Schuyler,NY,-76.86246,42.521501,36,097,FALSE,1,4,4
+John W. Danforth Company,5589,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,710.73,2018-03-04,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,4,5
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,692.43,2018-03-04,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,4,6
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,591.22,2018-03-04,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,5,1
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,556.25,2018-03-04,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,5,2
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1010.02,2018-03-11,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,6,1
+John W. Danforth Company,2202,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,761.01,2018-03-11,14225,Buffalo,Erie,NY,-78.75813,42.929891,36,029,FALSE,1,6,2
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1110.92,2018-03-11,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,6,3
+John W. Danforth Company,4725,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,629.03,2018-03-11,14841,Hector,Schuyler,NY,-76.86246,42.521501,36,097,FALSE,1,6,4
+John W. Danforth Company,5589,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,711.36,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,6,5
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,770.08,2018-03-11,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,6,6
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,315.43,2018-03-11,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,7,1
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,627.62,2018-03-11,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,7,2
+John W. Danforth Company,4382,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1040.74,2018-03-18,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,8,1
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1047.59,2018-03-18,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,8,2
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1110.92,2018-03-18,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,8,3
+John W. Danforth Company,4725,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,588.1,2018-03-18,14841,Hector,Schuyler,NY,-76.86246,42.521501,36,097,FALSE,1,8,4
+John W. Danforth Company,3090,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,470.96,2018-03-18,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,8,5
+John W. Danforth Company,0060,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,253.27,2018-03-18,14850,Ithaca,Tompkins,NY,-76.49685,42.449454,36,109,FALSE,1,8,6
+John W. Danforth Company,5589,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,693.67,2018-03-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,9,1
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,724.9,2018-03-18,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,9,2
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,568.2,2018-03-18,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,9,3
+John W. Danforth Company,9466,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,459.29,2018-03-18,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,9,4
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,473.1,2018-03-18,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,9,5
+John W. Danforth Company,7343,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,726.03,2018-03-18,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,9,6
+John W. Danforth Company,4382,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1040.74,2018-03-25,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,10,1
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1028.8,2018-03-25,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,10,2
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1148.1,2018-03-25,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,10,3
+John W. Danforth Company,4725,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,629.03,2018-03-25,14841,Hector,Schuyler,NY,-76.86246,42.521501,36,097,FALSE,1,10,4
+John W. Danforth Company,3090,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,410.85,2018-03-25,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,10,5
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,770.07,2018-03-25,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,10,6
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,721.58,2018-03-25,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,11,1
+John W. Danforth Company,9466,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,480.67,2018-03-25,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,11,2
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,617.91,2018-03-25,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,11,3
+John W. Danforth Company,7343,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,756.69,2018-03-25,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,11,4
+John W. Danforth Company,4382,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1040.68,2018-04-01,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,12,1
+John W. Danforth Company,7509,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,997.51,2018-04-01,13116,Minoa,Onondaga,NY,-76.00695,43.077067,36,067,FALSE,1,12,2
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1028.53,2018-04-01,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,12,3
+John W. Danforth Company,4277,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,507.55,2018-04-01,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,12,4
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1036.2,2018-04-01,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,12,5
+John W. Danforth Company,4725,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,123.68,2018-04-01,14841,Hector,Schuyler,NY,-76.86246,42.521501,36,097,FALSE,1,13,1
+John W. Danforth Company,3090,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,516.06,2018-04-01,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,13,2
+John W. Danforth Company,1160,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,914.91,2018-04-01,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,13,3
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,757.37,2018-04-01,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,13,4
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,721.57,2018-04-01,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,13,5
+John W. Danforth Company,9466,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,480.66,2018-04-01,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,13,6
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,617.9,2018-04-01,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,13,7
+John W. Danforth Company,7343,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,624.38,2018-04-01,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,13,8
+John W. Danforth Company,4382,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1040.68,2018-04-08,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,14,1
+John W. Danforth Company,7509,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,997.51,2018-04-08,13116,Minoa,Onondaga,NY,-76.00695,43.077067,36,067,FALSE,1,14,2
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1247.27,2018-04-08,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,14,3
+John W. Danforth Company,4277,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,604.24,2018-04-08,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,14,4
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1110.42,2018-04-08,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,14,5
+John W. Danforth Company,3090,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,629.48,2018-04-08,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,14,6
+John W. Danforth Company,0060,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,459.04,2018-04-08,14850,Ithaca,Tompkins,NY,-76.49685,42.449454,36,109,FALSE,1,15,1
+John W. Danforth Company,5589,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,1199.69,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,15,2
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,808.25,2018-04-08,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,15,3
+John W. Danforth Company,2,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,1230.72,2018-04-08,13316,Camden,Oneida,NY,-75.74261,43.377083,36,065,TRUE,1,15,4
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,677.79,2018-04-08,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,15,5
+John W. Danforth Company,9466,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,394.81,2018-04-08,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,15,6
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,518.47,2018-04-08,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,15,7
+John W. Danforth Company,7343,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,NA,2018-04-08,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,15,8
+John W. Danforth Company,0060,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,459.04,2018-04-08,14850,Ithaca,Tompkins,NY,-76.49685,42.449454,36,109,FALSE,1,16,1
+John W. Danforth Company,5589,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,1199.69,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,16,2
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,808.25,2018-04-08,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,16,3
+John W. Danforth Company,2,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,1230.72,2018-04-08,13316,Camden,Oneida,NY,-75.74261,43.377083,36,065,TRUE,1,16,4
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,677.79,2018-04-08,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,16,5
+John W. Danforth Company,9466,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,394.81,2018-04-08,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,16,6
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,518.47,2018-04-08,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,16,7
+John W. Danforth Company,7343,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,945.22,2018-04-08,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,16,8
+John W. Danforth Company,4382,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1040.68,2018-04-15,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,18,1
+John W. Danforth Company,7509,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1285.17,2018-04-15,13116,Minoa,Onondaga,NY,-76.00695,43.077067,36,067,FALSE,1,18,2
+John W. Danforth Company,1,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,625.51,2018-04-15,13108,Marcellus,Onondaga,NY,-76.33811,42.979467,36,067,TRUE,1,18,3
+John W. Danforth Company,4277,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,309.17,2018-04-15,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,18,4
+John W. Danforth Company,3431,General Foreman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1166.03,2018-04-15,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,18,5
+John W. Danforth Company,9052,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1008.3,2018-04-15,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,18,6
+John W. Danforth Company,6589,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1123.7,2018-04-15,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,1,19,1
+John W. Danforth Company,3090,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,506.97,2018-04-15,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,19,2
+John W. Danforth Company,1160,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,573.93,2018-04-15,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,19,3
+John W. Danforth Company,1671,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,832.55,2018-04-15,13042,Cleveland,Oneida,NY,-75.84853,43.252084,36,065,FALSE,1,19,4
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,770.09,2018-04-15,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,19,5
+John W. Danforth Company,2,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,759.13,2018-04-15,13316,Camden,Oneida,NY,-75.74261,43.377083,36,065,TRUE,1,19,6
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,598.88,2018-04-15,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,19,7
+John W. Danforth Company,9466,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,480.67,2018-04-15,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,19,8
+John W. Danforth Company,1841,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,NA,2018-04-15,13321,Clark Mills,Oneida,NY,-75.387088,43.090027,36,065,FALSE,1,19,9
+John W. Danforth Company,6589,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,1123.7,2018-04-15,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,1,20,1
+John W. Danforth Company,3090,Unspecified,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,506.97,2018-04-15,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,20,2
+John W. Danforth Company,1160,Journeyman,"Pipelayer, Plumber, Pipefitter",NA,NA,NA,NA,573.93,2018-04-15,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,20,3
+John W. Danforth Company,1671,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,832.55,2018-04-15,13042,Cleveland,Oneida,NY,-75.84853,43.252084,36,065,FALSE,1,20,4
+John W. Danforth Company,6357,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,770.09,2018-04-15,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,20,5
+John W. Danforth Company,2,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,759.13,2018-04-15,13316,Camden,Oneida,NY,-75.74261,43.377083,36,065,TRUE,1,20,6
+John W. Danforth Company,3666,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,598.88,2018-04-15,13492,Whitesboro,Oneida,NY,-75.31182,43.11627,36,065,FALSE,1,20,7
+John W. Danforth Company,9466,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,480.67,2018-04-15,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,20,8
+John W. Danforth Company,1841,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,847.94,2018-04-15,13321,Clark Mills,Oneida,NY,-75.387088,43.090027,36,065,FALSE,1,20,9
+John W. Danforth Company,9922,Apprentice,Sheet Metal Workers,NA,NA,NA,NA,617.92,2018-04-15,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,1,21,1
+John W. Danforth Company,7343,Journeyman,Sheet Metal Workers,NA,NA,NA,NA,789.57,2018-04-15,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,21,2
+Environmental Services,4151,NA,Laborer,NA,NA,NA,NA,620.88,2018-03-11,13131,Parish,Oswego,NY,-76.11416,43.415157,36,075,FALSE,1,1,1
+Environmental Services,0285,NA,Laborer,NA,NA,NA,NA,815.16,2018-03-11,13104,Manlius,Onondaga,NY,-75.96763,42.987329,36,067,FALSE,1,1,3
+Environmental Services,1001,NA,Laborer,NA,NA,NA,NA,200.96,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,1,5
+Environmental Services,9884,NA,Laborer,NA,NA,NA,NA,727.3,2018-03-11,13039,Cicero,Onondaga,NY,-76.09505,43.171707,36,067,FALSE,1,1,7
+Environmental Services,6019,NA,Laborer,NA,NA,NA,NA,299.74,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,2,1
+Environmental Services,5625,NA,Laborer,NA,NA,NA,NA,258.54,2018-03-11,14522,Palmyra,Wayne,NY,-77.2223,43.063858,36,117,FALSE,1,2,3
+Environmental Services,7070,NA,Laborer,NA,NA,NA,NA,541.38,2018-03-11,13114,Mexico,Oswego,NY,-76.2382,43.468092,36,075,FALSE,1,3,3
+Environmental Services,6626,NA,Laborer,NA,NA,NA,NA,515.24,2018-03-11,13145,Sandy Creek,Oswego,NY,-76.13214,43.653475,36,075,FALSE,1,3,7
+Environmental Services,4956,NA,Laborer,NA,NA,NA,NA,1443.95,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,4,3
+Environmental Services,9545,NA,Laborer,NA,NA,NA,NA,1907.7,2018-03-11,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,1,4,5
+Environmental Services,6669,NA,Laborer,NA,NA,NA,NA,1149.21,2018-03-11,13212,Syracuse,Onondaga,NY,-76.13931,43.128534,36,067,FALSE,1,4,7
+Environmental Services,9034,NA,Operator,NA,NA,NA,NA,526.2,2018-03-11,13135,Phoenix,Oswego,NY,-76.31339,43.235916,36,075,FALSE,1,5,3
+Environmental Services,5774,NA,Laborer,NA,NA,NA,NA,1249.81,2018-03-11,14616,Rochester,Monroe,NY,-77.64905,43.232312,36,055,FALSE,1,5,7
+Environmental Services,3169,NA,Laborer,NA,NA,NA,NA,1081.08,2018-03-11,14621,Rochester,Monroe,NY,-77.60368,43.185163,36,055,FALSE,1,6,1
+Environmental Services,6916,NA,Laborer,NA,NA,NA,NA,1081.08,2018-03-11,14608,Rochester,Monroe,NY,-77.62401,43.155568,36,055,FALSE,1,6,3
+Environmental Services,5589,NA,Laborer,NA,NA,NA,NA,1378.45,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,6,5
+Environmental Services,9782,NA,Laborer,NA,NA,NA,NA,1116.7,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,6,7
+Environmental Services,0249,NA,Operator,NA,NA,NA,NA,70.66999999999999,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,7,1
+Environmental Services,3846,NA,Laborer,NA,NA,NA,NA,1601.08,2018-03-11,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,7,3
+Environmental Services,9577,NA,Laborer,NA,NA,NA,NA,2654.96,2018-03-11,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,1,7,5
+Environmental Services,9016,NA,Laborer,NA,NA,NA,NA,951.54,2018-03-11,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,7,7
+Environmental Services,1001,NA,Laborer,NA,NA,NA,NA,1390.07,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,8,1
+Environmental Services,1712,NA,Laborer,NA,NA,NA,NA,687.75,2018-03-11,13205,Syracuse,Onondaga,NY,-76.14501,43.010916,36,067,FALSE,1,8,3
+Environmental Services,9884,NA,Laborer,NA,NA,NA,NA,631,2018-03-11,13039,Cicero,Onondaga,NY,-76.09505,43.171707,36,067,FALSE,1,8,5
+Environmental Services,6019,NA,Laborer,NA,NA,NA,NA,1069.28,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,8,7
+Environmental Services,5625,NA,Laborer,NA,NA,NA,NA,1016.89,2018-03-11,14522,Palmyra,Wayne,NY,-77.2223,43.063858,36,117,FALSE,1,9,1
+Environmental Services,0900,NA,Laborer,NA,NA,NA,NA,1155.04,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,9,5
+Environmental Services,3333,NA,Laborer,NA,NA,NA,NA,723.81,2018-03-11,13319,Chadwicks,Oneida,NY,-75.27211,43.029669,36,065,FALSE,1,10,1
+Environmental Services,1479,NA,Laborer,NA,NA,NA,NA,1081.08,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,10,3
+Environmental Services,5384,NA,Laborer,NA,NA,NA,NA,2165.21,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,10,5
+Environmental Services,7495,NA,Laborer,NA,NA,NA,NA,1028.84,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,11,1
+Environmental Services,9368,NA,Laborer,NA,NA,NA,NA,191.49,2018-03-11,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,11,3
+Environmental Services,7603,NA,Operator,NA,NA,NA,NA,486.35,2018-03-11,13363,Lee Center,Oneida,NY,-75.50677,43.311975,36,065,FALSE,1,11,5
+Environmental Services,0878,NA,Laborer,NA,NA,NA,NA,848.22,2018-03-11,13114,Mexico,Oswego,NY,-76.2382,43.468092,36,075,FALSE,1,11,7
+Environmental Services,4136,NA,Operator,NA,NA,NA,NA,436.45,2018-03-11,13302,Altmar,Oswego,NY,-75.97716,43.499843,36,075,FALSE,1,12,1
+Environmental Services,5384,NA,Laborer,NA,NA,NA,NA,2107.36,2018-03-11,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,12,3
+Environmental Services,4956,NA,Laborer,NA,NA,NA,NA,1444.98,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,13,3
+Environmental Services,9545,NA,Laborer,NA,NA,NA,NA,1950.54,2018-03-25,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,1,13,5
+Environmental Services,6669,NA,Laborer,NA,NA,NA,NA,1432.91,2018-03-25,13212,Syracuse,Onondaga,NY,-76.13931,43.128534,36,067,FALSE,1,13,7
+Environmental Services,9034,NA,Operator,NA,NA,NA,NA,1655.95,2018-03-25,13135,Phoenix,Oswego,NY,-76.31339,43.235916,36,075,FALSE,1,14,3
+Environmental Services,5774,NA,Laborer,NA,NA,NA,NA,1250.56,2018-03-25,14616,Rochester,Monroe,NY,-77.64905,43.232312,36,055,FALSE,1,14,7
+Environmental Services,3169,NA,Laborer,NA,NA,NA,NA,1249.26,2018-03-25,14621,Rochester,Monroe,NY,-77.60368,43.185163,36,055,FALSE,1,15,1
+Environmental Services,6916,NA,Laborer,NA,NA,NA,NA,1597.6699999999998,2018-03-25,14608,Rochester,Monroe,NY,-77.62401,43.155568,36,055,FALSE,1,15,3
+Environmental Services,5589,NA,Laborer,NA,NA,NA,NA,1988.96,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,15,5
+Environmental Services,9782,NA,Laborer,NA,NA,NA,NA,1116.7,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,15,7
+Environmental Services,0249,NA,Operator,NA,NA,NA,NA,1468.77,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,16,1
+Environmental Services,3846,NA,Laborer,NA,NA,NA,NA,2159.77,2018-03-25,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,16,3
+Environmental Services,9577,NA,Laborer,NA,NA,NA,NA,2856.3900000000003,2018-03-25,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,1,16,5
+Environmental Services,9016,NA,Laborer,NA,NA,NA,NA,1384.6799999999998,2018-03-25,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,16,7
+Environmental Services,1001,NA,Laborer,NA,NA,NA,NA,1390.08,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,17,1
+Environmental Services,1712,NA,Laborer,NA,NA,NA,NA,1235.46,2018-03-25,13205,Syracuse,Onondaga,NY,-76.14501,43.010916,36,067,FALSE,1,17,3
+Environmental Services,6019,NA,Laborer,NA,NA,NA,NA,1021.64,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,17,5
+Environmental Services,5625,NA,Laborer,NA,NA,NA,NA,1150.08,2018-03-25,14522,Palmyra,Wayne,NY,-77.2223,43.063858,36,117,FALSE,1,17,7
+Environmental Services,0900,NA,Laborer,NA,NA,NA,NA,1155.76,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,18,3
+Environmental Services,3333,NA,Laborer,NA,NA,NA,NA,1439.1599999999999,2018-03-25,13319,Chadwicks,Oneida,NY,-75.27211,43.029669,36,065,FALSE,1,18,7
+Environmental Services,1479,NA,Laborer,NA,NA,NA,NA,1260.53,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,19,1
+Environmental Services,5384,NA,Laborer,NA,NA,NA,NA,1979.06,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,19,3
+Environmental Services,7495,NA,Laborer,NA,NA,NA,NA,1128.07,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,19,5
+Environmental Services,7603,NA,Operator,NA,NA,NA,NA,1945.22,2018-03-25,13363,Lee Center,Oneida,NY,-75.50677,43.311975,36,065,FALSE,1,20,1
+Environmental Services,0878,NA,Laborer,NA,NA,NA,NA,1088.49,2018-03-25,13114,Mexico,Oswego,NY,-76.2382,43.468092,36,075,FALSE,1,20,3
+Environmental Services,4136,NA,Operator,NA,NA,NA,NA,1556.48,2018-03-25,13302,Altmar,Oswego,NY,-75.97716,43.499843,36,075,FALSE,1,20,5
+Environmental Services,5384,NA,Laborer,NA,NA,NA,NA,2153.4300000000003,2018-03-25,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,20,7
+Environmental Services,4956,NA,Laborer,NA,NA,NA,NA,1113.8799999999999,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,21,5
+Environmental Services,9545,NA,Laborer,NA,NA,NA,NA,1594.35,2018-04-01,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,1,21,7
+Environmental Services,6669,NA,Laborer,NA,NA,NA,NA,913.48,2018-04-01,13212,Syracuse,Onondaga,NY,-76.13931,43.128534,36,067,FALSE,1,22,1
+Environmental Services,9034,NA,Operator,NA,NA,NA,NA,844.92,2018-04-01,13135,Phoenix,Oswego,NY,-76.31339,43.235916,36,075,FALSE,1,22,7
+Environmental Services,5774,NA,Laborer,NA,NA,NA,NA,661.38,2018-04-01,14616,Rochester,Monroe,NY,-77.64905,43.232312,36,055,FALSE,1,23,5
+Environmental Services,3169,NA,Laborer,NA,NA,NA,NA,984.04,2018-04-01,14621,Rochester,Monroe,NY,-77.60368,43.185163,36,055,FALSE,1,24,1
+Environmental Services,6916,NA,Laborer,NA,NA,NA,NA,1044.22,2018-04-01,14608,Rochester,Monroe,NY,-77.62401,43.155568,36,055,FALSE,1,24,3
+Environmental Services,5589,NA,Laborer,NA,NA,NA,NA,1558.49,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,24,5
+Environmental Services,9782,NA,Laborer,NA,NA,NA,NA,550.8599999999999,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,24,7
+Environmental Services,0249,NA,Operator,NA,NA,NA,NA,1087.05,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,25,3
+Environmental Services,3846,NA,Laborer,NA,NA,NA,NA,1098.83,2018-04-01,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,25,5
+Environmental Services,9577,NA,Laborer,NA,NA,NA,NA,1880.71,2018-04-01,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,1,25,7
+Environmental Services,9016,NA,Laborer,NA,NA,NA,NA,636.19,2018-04-01,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,26,1
+Environmental Services,1001,NA,Laborer,NA,NA,NA,NA,944.6800000000001,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,26,3
+Environmental Services,1712,NA,Laborer,NA,NA,NA,NA,746.05,2018-04-01,13205,Syracuse,Onondaga,NY,-76.14501,43.010916,36,067,FALSE,1,26,7
+Environmental Services,6019,NA,Laborer,NA,NA,NA,NA,941.15,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,27,1
+Environmental Services,5625,NA,Laborer,NA,NA,NA,NA,639.38,2018-04-01,14522,Palmyra,Wayne,NY,-77.2223,43.063858,36,117,FALSE,1,27,3
+Environmental Services,0900,NA,Laborer,NA,NA,NA,NA,727.25,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,28,1
+Environmental Services,3333,NA,Laborer,NA,NA,NA,NA,693.75,2018-04-01,13319,Chadwicks,Oneida,NY,-75.27211,43.029669,36,065,FALSE,1,28,7
+Environmental Services,1479,NA,Laborer,NA,NA,NA,NA,1020.22,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,29,1
+Environmental Services,5384,NA,Laborer,NA,NA,NA,NA,1606.06,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,29,3
+Environmental Services,7603,NA,Operator,NA,NA,NA,NA,1095.1,2018-04-01,13363,Lee Center,Oneida,NY,-75.50677,43.311975,36,065,FALSE,1,29,7
+Environmental Services,0878,NA,Laborer,NA,NA,NA,NA,604.8599999999999,2018-04-01,13114,Mexico,Oswego,NY,-76.2382,43.468092,36,075,FALSE,1,30,1
+Environmental Services,4136,NA,Operator,NA,NA,NA,NA,947.07,2018-04-01,13302,Altmar,Oswego,NY,-75.97716,43.499843,36,075,FALSE,1,30,3
+Environmental Services,5384,NA,Laborer,NA,NA,NA,NA,1378.72,2018-04-01,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,30,5
+Environmental Services,4956,NA,Laborer,NA,NA,NA,NA,545.7700000000001,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,31,3
+Environmental Services,9545,NA,Laborer,NA,NA,NA,NA,1155.7,2018-04-08,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,1,31,5
+Environmental Services,5774,NA,Laborer,NA,NA,NA,NA,178.66,2018-04-08,14616,Rochester,Monroe,NY,-77.64905,43.232312,36,055,FALSE,1,32,1
+Environmental Services,5589,NA,Laborer,NA,NA,NA,NA,692.11,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,32,3
+Environmental Services,9782,NA,Laborer,NA,NA,NA,NA,106.49000000000001,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,32,5
+Environmental Services,3846,NA,Laborer,NA,NA,NA,NA,1391.3899999999999,2018-04-08,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,32,7
+Environmental Services,9577,NA,Laborer,NA,NA,NA,NA,987.48,2018-04-08,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,1,33,1
+Environmental Services,1001,NA,Laborer,NA,NA,NA,NA,505.66,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,33,3
+Environmental Services,1712,NA,Laborer,NA,NA,NA,NA,491.65000000000003,2018-04-08,13205,Syracuse,Onondaga,NY,-76.14501,43.010916,36,067,FALSE,1,33,7
+Environmental Services,6019,NA,Laborer,NA,NA,NA,NA,1152.6799999999998,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,34,1
+Environmental Services,0900,NA,Laborer,NA,NA,NA,NA,152.19,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,34,5
+Environmental Services,3333,NA,Laborer,NA,NA,NA,NA,295.33,2018-04-08,13319,Chadwicks,Oneida,NY,-75.27211,43.029669,36,065,FALSE,1,35,1
+Environmental Services,5384,NA,Laborer,NA,NA,NA,NA,1035.1299999999999,2018-04-08,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,35,5
+Longhouse Construction,3451,Foreman,NA,NA,Male,White,32,175.66,2018-03-03,13142,Pulaski,Oswego,NY,-76.13619,43.559926,36,075,FALSE,1,1,1
+Longhouse Construction,5982,Foreman,NA,NA,Male,White,34,400.1,2018-03-03,13605,Adams,Jefferson,NY,-76.04936,43.807654,36,045,FALSE,1,1,2
+Longhouse Construction,2336,Apprentice 2nd Year,NA,NA,Male,White,17,102,2018-03-03,13147,Scipio Center,Cayuga,NY,-76.57045,42.774714,36,011,FALSE,1,1,3
+Longhouse Construction,3451,Foreman,NA,NA,Male,White,32,347.19,2018-03-10,13142,Pulaski,Oswego,NY,-76.13619,43.559926,36,075,FALSE,1,2,1
+Longhouse Construction,4117,Foreman,NA,NA,Male,White,32,380.37,2018-03-10,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,1,2,2
+Longhouse Construction,5982,Foreman,NA,NA,Male,White,34,400.1,2018-03-10,13605,Adams,Jefferson,NY,-76.04936,43.807654,36,045,FALSE,1,2,3
+Longhouse Construction,2336,Apprentice 2nd Year,NA,NA,Male,White,17,292.98,2018-03-10,13147,Scipio Center,Cayuga,NY,-76.57045,42.774714,36,011,FALSE,1,2,4
+Longhouse Construction,3451,Foreman,NA,NA,Male,White,32,867.98,2018-03-17,13142,Pulaski,Oswego,NY,-76.13619,43.559926,36,075,FALSE,1,3,1
+Longhouse Construction,4117,Foreman,NA,NA,Male,White,32,287.96,2018-03-17,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,1,3,2
+Longhouse Construction,4397,Foreman,NA,NA,Male,White,32,188.1,2018-03-17,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,3,3
+Longhouse Construction,3328,Journeyman,NA,NA,Male,African American,29,166.74,2018-03-17,13205,Syracuse,Onondaga,NY,-76.14501,43.010916,36,067,FALSE,1,3,4
+Longhouse Construction,5982,Foreman,NA,NA,Male,White,34,1000.27,2018-03-17,13605,Adams,Jefferson,NY,-76.04936,43.807654,36,045,FALSE,1,3,5
+Longhouse Construction,2336,Apprentice 2nd Year,NA,NA,Male,White,17,390.63,2018-03-17,13147,Scipio Center,Cayuga,NY,-76.57045,42.774714,36,011,FALSE,1,3,6
+Longhouse Construction,3451,Foreman,NA,NA,Male,White,32,867.98,2018-03-24,13142,Pulaski,Oswego,NY,-76.13619,43.559926,36,075,FALSE,1,5,1
+Longhouse Construction,1960,Foreman,NA,NA,Male,White,32,91,2018-03-24,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,5,2
+Longhouse Construction,3328,Journeyman,NA,NA,Male,African American,29,834.1,2018-03-24,13205,Syracuse,Onondaga,NY,-76.14501,43.010916,36,067,FALSE,1,5,3
+Longhouse Construction,5982,Foreman,NA,NA,Male,White,34,1000.27,2018-03-24,13605,Adams,Jefferson,NY,-76.04936,43.807654,36,045,FALSE,1,5,4
+Longhouse Construction,2336,Apprentice 2nd Year,NA,NA,Male,White,17,488.3,2018-03-24,13147,Scipio Center,Cayuga,NY,-76.57045,42.774714,36,011,FALSE,1,5,5
+Longhouse Construction,3451,Foreman,NA,NA,Male,White,32,172.4,2018-03-31,13142,Pulaski,Oswego,NY,-76.13619,43.559926,36,075,FALSE,1,6,1
+Longhouse Construction,3328,Journeyman,NA,NA,Male,African American,29,230.05,2018-03-31,13205,Syracuse,Onondaga,NY,-76.14501,43.010916,36,067,FALSE,1,6,2
+Longhouse Construction,5982,Foreman,NA,NA,Male,White,34,600.17,2018-03-31,13605,Adams,Jefferson,NY,-76.04936,43.807654,36,045,FALSE,1,6,3
+Longhouse Construction,2336,Apprentice 2nd Year,NA,NA,Male,White,17,195.32,2018-03-31,13147,Scipio Center,Cayuga,NY,-76.57045,42.774714,36,011,FALSE,1,6,4
+Niagara Erecting,4123,NA,NA,NA,NA,NA,NA,NA,2018-02-24,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,1,1
+Niagara Erecting,2576,NA,NA,NA,NA,NA,NA,NA,2018-02-24,14860,Lodi,Seneca,NY,-76.84745,42.590355,36,099,FALSE,1,1,3
+Niagara Erecting,8090,NA,NA,NA,NA,NA,NA,NA,2018-02-24,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,1,4
+Niagara Erecting,8248,NA,NA,NA,NA,NA,NA,NA,2018-02-24,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,1,6
+Niagara Erecting,2029,NA,NA,NA,NA,NA,NA,NA,2018-02-24,14606,Rochester,Monroe,NY,-77.68132,43.168062,36,055,FALSE,1,2,2
+Niagara Erecting,5395,NA,NA,NA,NA,NA,NA,NA,2018-02-24,13131,Parish,Oswego,NY,-76.11416,43.415157,36,075,FALSE,1,2,6
+Niagara Erecting,4123,NA,NA,NA,NA,NA,NA,NA,2018-03-03,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,4,1
+Niagara Erecting,2576,NA,NA,NA,NA,NA,NA,NA,2018-03-03,14860,Lodi,Seneca,NY,-76.84745,42.590355,36,099,FALSE,1,4,3
+Niagara Erecting,8090,NA,NA,NA,NA,NA,NA,NA,2018-03-03,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,4,6
+Niagara Erecting,8248,NA,NA,NA,NA,NA,NA,NA,2018-03-03,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,5,2
+Niagara Erecting,5395,NA,NA,NA,NA,NA,NA,NA,2018-03-03,13131,Parish,Oswego,NY,-76.11416,43.415157,36,075,FALSE,1,5,4
+Niagara Erecting,4123,NA,NA,NA,NA,NA,NA,NA,2018-03-03,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,9,1
+Niagara Erecting,2576,NA,NA,NA,NA,NA,NA,NA,2018-03-03,14860,Lodi,Seneca,NY,-76.84745,42.590355,36,099,FALSE,1,9,3
+Niagara Erecting,8090,NA,NA,NA,NA,NA,NA,NA,2018-03-03,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,9,6
+Niagara Erecting,8248,NA,NA,NA,NA,NA,NA,NA,2018-03-03,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,10,2
+Niagara Erecting,5395,NA,NA,NA,NA,NA,NA,NA,2018-03-03,13131,Parish,Oswego,NY,-76.11416,43.415157,36,075,FALSE,1,10,4
+Niagara Erecting,2345,NA,NA,NA,NA,NA,NA,NA,2018-03-10,13037,Chittenango,Madison,NY,-75.87116,43.059992,36,053,FALSE,1,11,1
+Niagara Erecting,8246,NA,NA,NA,NA,NA,NA,NA,2018-03-10,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,11,2
+Niagara Erecting,5395,NA,NA,NA,NA,NA,NA,NA,2018-03-10,13131,Parish,Oswego,NY,-76.11416,43.415157,36,075,FALSE,1,11,3
+Niagara Erecting,4123,NA,NA,NA,NA,NA,NA,NA,2018-03-17,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,12,1
+Niagara Erecting,0388,NA,NA,NA,NA,NA,NA,NA,2018-03-17,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,12,2
+Niagara Erecting,8090,NA,NA,NA,NA,NA,NA,NA,2018-03-17,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,12,3
+Niagara Erecting,8248,NA,NA,NA,NA,NA,NA,NA,2018-03-17,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,12,4
+Niagara Erecting,5395,NA,NA,NA,NA,NA,NA,NA,2018-03-17,13131,Parish,Oswego,NY,-76.11416,43.415157,36,075,FALSE,1,12,5
+Niagara Erecting,2576,NA,NA,NA,NA,NA,NA,NA,2018-03-24,14860,Lodi,Seneca,NY,-76.84745,42.590355,36,099,FALSE,1,13,1
+Niagara Erecting,0388,NA,NA,NA,NA,NA,NA,NA,2018-03-24,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,13,2
+Niagara Erecting,8090,NA,NA,NA,NA,NA,NA,NA,2018-03-24,13203,Syracuse,Onondaga,NY,-76.13733,43.061116,36,067,FALSE,1,13,3
+Niagara Erecting,8248,NA,NA,NA,NA,NA,NA,NA,2018-03-24,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,13,4
+Niagara Erecting,5395,NA,NA,NA,NA,NA,NA,NA,2018-03-24,13131,Parish,Oswego,NY,-76.11416,43.415157,36,075,FALSE,1,13,6
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,614.79,2018-02-20,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,1,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1419.05,2018-02-20,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,1,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,678.31,2018-02-20,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,1,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1496.43,2018-02-20,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,1,4
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,1197.49,2018-02-20,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,1,5
+Patricia Electric,0315,Journeyman,Electrician,NA,Male,White,NA,963.93,2018-02-20,13408,Morrisville,Madison,NY,-75.66314,42.923334,36,053,FALSE,1,1,6
+Patricia Electric,2381,Subforeman,Electrician,NA,Male,White,NA,1231.99,2018-02-13,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,2,1
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,465.08,2018-02-13,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,2,2
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1125.26,2018-02-13,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,2,3
+Patricia Electric,2532,Subforeman,Electrician,NA,Male,White,NA,1246.96,2018-02-13,13159,Tully,Onondaga,NY,-76.12717,42.802031,36,067,FALSE,1,2,4
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,730.55,2018-02-27,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,3,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1717.65,2018-02-27,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,3,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,807.09,2018-02-27,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,3,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1572.32,2018-02-27,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,3,4
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,1444.52,2018-02-27,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,3,5
+Patricia Electric,0315,Journeyman,Electrician,NA,Male,White,NA,1444.67,2018-02-27,13408,Morrisville,Madison,NY,-75.66314,42.923334,36,053,FALSE,1,3,6
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,516.25,2018-03-06,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,4,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1147.69,2018-03-06,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,4,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,576.83,2018-03-06,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,4,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1387.79,2018-03-06,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,4,4
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,1071.71,2018-03-06,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,4,5
+Patricia Electric,0315,Journeyman,Electrician,NA,Male,White,NA,1072.38,2018-03-06,13408,Morrisville,Madison,NY,-75.66314,42.923334,36,053,FALSE,1,4,6
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,536.1,2018-03-13,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,5,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1006.09,2018-03-13,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,5,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,553.71,2018-03-13,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,5,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1286.27,2018-03-13,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,5,4
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,990.37,2018-03-13,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,5,5
+Patricia Electric,0315,Journeyman,Electrician,NA,Male,White,NA,963.55,2018-03-13,13408,Morrisville,Madison,NY,-75.66314,42.923334,36,053,FALSE,1,5,6
+Patricia Electric,9037,Journeyman,Electrician,NA,Male,White,NA,1117.55,2018-03-13,13479,Washington Mills,Oneida,NY,-75.271559,43.053769,36,065,FALSE,1,5,7
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,555.94,2018-03-20,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,6,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1343.41,2018-03-20,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,6,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,727.85,2018-03-20,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,6,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1404.65,2018-03-20,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,6,4
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,1103.58,2018-03-20,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,6,5
+Patricia Electric,9037,Journeyman,Electrician,NA,Male,White,NA,1079.59,2018-03-20,13479,Washington Mills,Oneida,NY,-75.271559,43.053769,36,065,FALSE,1,6,6
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,492.45,2018-03-27,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,7,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1279.08,2018-03-27,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,7,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,588.39,2018-03-27,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,7,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1165.78,2018-03-27,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,7,4
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,1055.44,2018-03-27,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,7,5
+Patricia Electric,9037,Journeyman,Electrician,NA,Male,White,NA,1110.03,2018-03-27,13479,Washington Mills,Oneida,NY,-75.271559,43.053769,36,065,FALSE,1,7,6
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,606.76,2018-04-03,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,8,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1219.83,2018-04-03,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,8,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,588.39,2018-04-03,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,8,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1303.19,2018-04-03,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,8,4
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,990.37,2018-04-03,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,8,5
+Patricia Electric,9037,Journeyman,Electrician,NA,Male,White,NA,1095.13,2018-04-03,13479,Washington Mills,Oneida,NY,-75.271559,43.053769,36,065,FALSE,1,8,6
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,634.09,2018-04-10,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,9,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1141.4,2018-04-10,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,9,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,708.02,2018-04-10,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,9,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1337.03,2018-04-10,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,9,4
+Patricia Electric,2532,Subforeman,Electrician,NA,Male,White,NA,906.66,2018-04-10,13159,Tully,Onondaga,NY,-76.12717,42.802031,36,067,FALSE,1,9,5
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,1197.49,2018-04-10,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,9,6
+Patricia Electric,9037,Journeyman,Electrician,NA,Male,White,NA,978.94,2018-04-10,13479,Washington Mills,Oneida,NY,-75.271559,43.053769,36,065,FALSE,1,9,7
+Patricia Electric,2572,Apprentice 3rd Year,Unspecified,NA,Male,White,NA,370.21,2018-04-17,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,10,1
+Patricia Electric,0030,Journeyman,Electrician,NA,Male,White,NA,1416.34,2018-04-17,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,1,10,2
+Patricia Electric,3050,Apprentice 4th Year,Unspecified,NA,Male,White,NA,646.17,2018-04-17,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,10,3
+Patricia Electric,3972,Foreman,Electrician,NA,Male,White,NA,1303.19,2018-04-17,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,10,4
+Patricia Electric,7636,Journeyman,Electrician,NA,Male,White,NA,1039.18,2018-04-17,13403,Marcy,Oneida,NY,-75.28435,43.162119,36,065,FALSE,1,10,5
+Patricia Electric,9037,Journeyman,Electrician,NA,Male,White,NA,1155.49,2018-04-17,13479,Washington Mills,Oneida,NY,-75.271559,43.053769,36,065,FALSE,1,10,6
+Quality Structures,9145,Journeyman,NA,Rochester Masons,Male,White,29.08,824.86,2018-02-04,14420,Brockport,Monroe,NY,-77.93937,43.214261,36,055,FALSE,1,1,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1220.32,2018-02-25,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,1,4,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1781.83,2018-02-25,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,5,1
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,893.28,2018-02-25,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,1,5,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1113.71,2018-02-04,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,7,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1141.06,2018-02-11,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,8,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1079.45,2018-02-11,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,8,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,785.51,2018-02-11,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,1,9,1
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1243.6,2018-02-11,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,9,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1277.46,2018-02-18,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,11,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1142.53,2018-02-18,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,11,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1418.87,2018-02-18,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,12,1
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,572.33,2018-02-25,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,14,1
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1739.81,2018-02-25,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,14,2
+Quality Structures,9145,Journeyman,NA,Rochester Masons,Male,White,29.08,186.21,2018-02-11,14420,Brockport,Monroe,NY,-77.93937,43.214261,36,055,FALSE,1,16,1
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,311.04,2018-02-11,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,1,17,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1277.46,2018-02-18,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,19,1
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,816.32,2018-02-18,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,19,2
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,627.75,2018-02-18,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,1,20,1
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,401.94,2018-02-18,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,20,2
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,1204.52,2018-02-18,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,21,1
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,322.61,2018-02-18,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,21,2
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1142.53,2018-02-18,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,22,1
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,283.18,2018-02-18,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,22,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,836.86,2018-02-18,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,1,23,1
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,283.18,2018-02-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,23,2
+Quality Structures,9145,Journeyman,NA,Rochester Masons,Male,White,29.08,167.75,2018-02-18,14420,Brockport,Monroe,NY,-77.93937,43.214261,36,055,FALSE,1,24,1
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,512.48,2018-02-18,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,25,1
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1125.99,2018-02-18,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,1,26,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1662.26,2018-02-25,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,28,1
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,878.01,2018-02-25,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,28,2
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,803.33,2018-02-25,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,1,29,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1781.83,2018-02-25,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,30,1
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,772.43,2018-02-25,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,1,31,1
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,793.87,2018-02-25,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,1,31,2
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,572.33,2018-02-25,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,32,1
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1104.05,2018-02-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,32,2
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,692.85,2018-02-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,33,1
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,1047.02,2018-02-25,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,33,2
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1095.13,2018-02-25,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,1,34,1
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1164.63,2018-02-25,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,1,34,2
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1275.56,2018-02-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,35,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1990.42,2018-02-25,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,1,35,2
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,864.02,2018-02-25,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,1,36,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1515.03,2018-02-25,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,36,2
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,819.4,2018-02-25,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,1,37,1
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,939.74,2018-02-25,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,1,37,2
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,984.03,2018-02-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,38,1
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,580.81,2018-02-25,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,1,38,2
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1176.97,2018-02-25,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,1,39,1
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1002.8,2018-02-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,39,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1739.81,2018-02-25,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,40,1
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.87,2018-02-25,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,1,41,1
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,649.32,2018-01-28,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,43,1
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1107.11,2018-02-04,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,1,44,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1054.21,2018-02-04,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,45,1
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1236.56,2018-02-04,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,46,1
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,709.36,2018-02-11,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,47,1
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,879.09,2018-02-11,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,1,47,2
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1392.98,2018-02-11,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,48,1
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1616.46,2018-02-11,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,48,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1277.46,2018-02-18,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,50,1
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1665.46,2018-02-18,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,1,51,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1539.74,2018-02-18,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,52,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1142.53,2018-02-18,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,53,1
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,836.86,2018-02-18,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,1,53,2
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,2071.26,2018-02-18,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,54,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1220.32,2018-02-25,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,1,56,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1781.83,2018-02-25,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,57,1
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,692.85,2018-02-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,57,2
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1275.56,2018-02-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,58,1
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1738.76,2018-02-25,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,1,58,2
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1804.74,2018-02-25,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,59,1
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1730.96,2018-02-25,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,59,2
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,893.28,2018-02-25,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,1,60,1
+Quality Structures,9145,Journeyman,NA,Rochester Masons,Male,White,29.08,167.75,2018-02-18,14420,Brockport,Monroe,NY,-77.93937,43.214261,36,055,FALSE,1,61,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1220.32,2018-02-25,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,1,63,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1781.83,2018-02-25,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,64,1
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,893.28,2018-02-25,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,1,64,2
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,1334,2018-03-04,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,1,66,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1331.35,2018-03-04,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,1,66,2
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,1137.88,2018-03-04,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,1,67,1
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,905.4,2018-03-11,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,1,68,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,509.14,2018-03-11,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,68,2
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1202.48,2018-03-11,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,1,69,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1366.1,2018-03-11,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,70,1
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,659.92,2018-03-11,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,70,2
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1301.46,2018-03-11,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,1,71,1
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1263.83,2018-03-11,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,71,2
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1522.85,2018-03-11,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,1,72,1
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,865.96,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,72,2
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,812.44,2018-03-11,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,1,73,1
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,880.32,2018-03-18,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,1,75,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,866.43,2018-03-18,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,75,2
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1166.72,2018-03-18,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,1,76,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1700.26,2018-03-18,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,76,2
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,916.66,2018-03-18,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,77,1
+Quality Structures,6366,Apprentice 1st Year,NA,Syracuse Carpenters,Male,Two or More Races,13.73,270.93,2018-03-18,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,77,2
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1116.16,2018-03-18,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,1,78,1
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1285.33,2018-03-18,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,78,2
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1861.23,2018-03-18,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,1,79,1
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,953.15,2018-03-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,79,2
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1268.38,2018-03-18,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,1,80,1
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,870.66,2018-03-18,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,1,80,2
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,1222.47,2018-03-25,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,1,82,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,830.2,2018-03-25,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,82,2
+Quality Structures,8396,Apprentice 2nd Year,NA,Corning Carpenters,Male,White,16.47,762.34,2018-03-25,14801,Addison,Steuben,NY,-77.288570000000007,42.104389,36,101,FALSE,1,83,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1154.81,2018-03-25,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,1,83,2
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1642.32,2018-03-25,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,84,1
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,797.11,2018-03-25,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,1,84,2
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,632.24,2018-03-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,85,1
+Quality Structures,6195,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,772.43,2018-03-25,13145,Sandy Creek,Oswego,NY,-76.13214,43.653475,36,075,FALSE,1,85,2
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1536.45,2018-03-25,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,1,86,1
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1115.28,2018-03-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,86,2
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,2478.44,2018-03-25,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,1,87,1
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,668.86,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,87,2
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1268.37,2018-03-25,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,1,88,1
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,836.74,2018-03-25,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,1,88,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1141.06,2018-02-11,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,90,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1079.45,2018-02-11,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,90,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,785.51,2018-02-11,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,1,91,1
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1243.6,2018-02-11,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,91,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1277.46,2018-02-18,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,93,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1142.53,2018-02-18,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,93,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1418.87,2018-02-18,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,94,1
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,572.33,2018-02-25,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,96,1
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1739.81,2018-02-25,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,96,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1375.41,2018-03-11,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,98,1
+Quality Structures,1017,Journeyman,NA,Syracuse Laborers,Male,White,24.2,991.08,2018-03-11,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,1,98,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,991.22,2018-03-11,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,1,99,1
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,991.07,2018-03-11,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,1,99,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1471.78,2018-03-18,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,100,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1142.54,2018-03-18,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,100,2
+Quality Structures,1017,Journeyman,NA,Syracuse Laborers,Male,White,24.2,991.07,2018-03-18,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,1,101,1
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,1042.68,2018-03-18,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,1,101,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1620.86,2018-03-18,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,102,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1407.88,2018-03-25,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,104,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1205.6,2018-03-25,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,1,104,2
+Quality Structures,1017,Journeyman,NA,Syracuse Laborers,Male,White,24.2,918.43,2018-03-25,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,1,105,1
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,1042.69,2018-03-25,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,1,105,2
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,918.44,2018-03-25,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,1,106,1
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1588,2018-03-25,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,1,106,2
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,1334,2018-03-04,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,1,108,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1331.35,2018-03-04,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,1,108,2
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1789.82,2018-03-04,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,109,1
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,710.54,2018-03-04,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,109,2
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,905.18,2018-03-04,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,110,1
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1841.83,2018-03-04,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,110,2
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1534.24,2018-03-04,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,1,111,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1863.65,2018-03-04,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,111,2
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1730.94,2018-03-04,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,112,1
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,905.4,2018-03-11,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,1,114,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1366.1,2018-03-11,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,114,2
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,659.92,2018-03-11,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,115,1
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1263.83,2018-03-11,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,115,2
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,905.18,2018-03-04,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,116,1
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1841.83,2018-03-04,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,1,116,2
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1470.89,2018-03-11,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,1,117,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1745.85,2018-03-11,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,117,2
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1730.95,2018-03-11,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,118,1
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,812.44,2018-03-11,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,1,118,2
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,1004.88,2018-03-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,120,1
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1754.48,2018-03-18,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,1,120,2
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1834.2,2018-03-18,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,121,1
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1730.96,2018-03-18,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,121,2
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1534.23,2018-03-25,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,1,123,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1745.83,2018-03-25,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,1,123,2
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1730.94,2018-03-25,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,1,124,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1662.26,2018-02-25,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,1,125,1
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,878.01,2018-02-25,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,1,125,2
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,803.33,2018-02-25,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,1,126,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1781.83,2018-02-25,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,1,127,1
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,772.43,2018-02-25,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,1,128,1
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,793.87,2018-02-25,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,1,128,2
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,572.33,2018-02-25,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,1,129,1
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1104.05,2018-02-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,129,2
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,692.85,2018-02-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,2,1,1
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,1047.02,2018-02-25,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,1,2
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1095.13,2018-02-25,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,2,2,1
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1164.63,2018-02-25,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,2,2,2
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1275.56,2018-02-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,2,3,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1990.42,2018-02-25,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,2,3,2
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,864.02,2018-02-25,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,2,4,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1515.03,2018-02-25,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,2,4,2
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,819.4,2018-02-25,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,2,5,1
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,939.74,2018-02-25,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,2,5,2
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,984.03,2018-02-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,6,1
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,580.81,2018-02-25,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,2,6,2
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1176.97,2018-02-25,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,2,7,1
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1002.8,2018-02-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,7,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1739.81,2018-02-25,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,2,8,1
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.87,2018-02-25,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,9,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1598.93,2018-03-04,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,2,11,1
+Quality Structures,9751,Journeyman,NA,Syracuse Laborers,Male,White,24.2,796.64,2018-03-04,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,11,2
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,980.99,2018-03-04,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,12,1
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,957.53,2018-03-04,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,2,12,2
+Quality Structures,3423,Journeyman,NA,Syracuse Laborers,Male,White,25.41,1104.38,2018-03-04,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,13,1
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,768.89,2018-03-04,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,2,13,2
+Quality Structures,4373,Journeyman,NA,Rochester Laborers,Male,White,25.89,339.12,2018-03-04,13165,Waterloo,Seneca,NY,-76.87027,42.911377,36,099,FALSE,2,14,1
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,689.37,2018-03-04,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,2,14,2
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,1225.6,2018-03-04,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,2,15,1
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1393.48,2018-03-04,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,15,2
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,1129.64,2018-03-04,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,16,1
+Quality Structures,8778,Journeyman,NA,Syracuse Laborers,Male,White,24.2,679.14,2018-03-04,13201,Syracuse,Onondaga,NY,-76.197701,43.02143,36,067,FALSE,2,16,2
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,493.14,2018-03-04,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,2,17,1
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1682.21,2018-03-04,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,2,17,2
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1998.95,2018-03-04,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,2,18,1
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,638.59,2018-03-04,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,2,18,2
+Quality Structures,3877,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1004.63,2018-03-04,13074,Hannibal,Oswego,NY,-76.56767,43.317683,36,075,FALSE,2,19,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1260.42,2018-03-04,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,2,19,2
+Quality Structures,1017,Journeyman,NA,Syracuse Laborers,Male,White,24.2,741.38,2018-03-04,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,2,20,1
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,751.07,2018-03-04,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,2,20,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,1144.46,2018-03-04,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,2,21,1
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,490.44,2018-03-04,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,21,2
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,894.93,2018-03-04,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,22,1
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1225.55,2018-03-04,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,2,22,2
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1205.45,2018-03-04,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,2,23,1
+Quality Structures,6286,Journeyman,NA,Syracuse Laborers,Male,White,24.2,837.85,2018-03-04,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,23,2
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1423.46,2018-03-04,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,2,24,1
+Quality Structures,4034,Journeyman,NA,Syracuse Laborers,Male,White,24.2,613.37,2018-03-04,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,2,24,2
+Quality Structures,9585,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1066.09,2018-03-04,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,2,25,1
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1058.02,2018-03-04,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,25,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1734.24,2018-03-04,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,2,26,1
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1062.98,2018-03-04,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,27,1
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,689.85,2018-03-04,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,27,2
+Quality Structures,9751,Journeyman,NA,Syracuse Laborers,Male,White,24.2,794.47,2018-03-11,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,29,1
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,857.43,2018-03-11,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,29,2
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,942.79,2018-03-11,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,2,30,1
+Quality Structures,3423,Journeyman,NA,Syracuse Laborers,Male,White,25.41,892.59,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,30,2
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,772.43,2018-03-11,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,2,31,1
+Quality Structures,4373,Journeyman,NA,Rochester Laborers,Male,White,25.89,487.11,2018-03-11,13165,Waterloo,Seneca,NY,-76.87027,42.911377,36,099,FALSE,2,31,2
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,777.69,2018-03-11,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,2,32,1
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,1288.46,2018-03-11,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,2,32,2
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1062.37,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,33,1
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,831.83,2018-03-11,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,33,2
+Quality Structures,8778,Journeyman,NA,Syracuse Laborers,Male,White,24.2,668.56,2018-03-11,13201,Syracuse,Onondaga,NY,-76.197701,43.02143,36,067,FALSE,2,34,1
+Quality Structures,1793,Journeyman,NA,Binghamton Laborers,Male,White,24.2,833.36,2018-03-11,13903,Binghamton,Broome,NY,-75.90226,42.077258,36,007,FALSE,2,34,2
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,594.8,2018-03-11,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,2,35,1
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,1038.12,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,35,2
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1301.46,2018-03-11,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,2,36,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1522.85,2018-03-11,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,2,36,2
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,638.39,2018-03-11,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,2,37,1
+Quality Structures,3877,Journeyman,NA,Syracuse Laborers,Male,White,24.2,929.04,2018-03-11,13074,Hannibal,Oswego,NY,-76.56767,43.317683,36,075,FALSE,2,37,2
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1205.6,2018-03-11,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,2,38,1
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,593.44,2018-03-11,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,2,38,2
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,865.96,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,39,1
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,785,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,39,2
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1268.38,2018-03-11,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,2,40,1
+Quality Structures,6286,Journeyman,NA,Syracuse Laborers,Male,White,24.2,712.36,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,40,2
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,965.58,2018-03-11,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,2,41,1
+Quality Structures,4034,Journeyman,NA,Syracuse Laborers,Male,White,24.2,707.35,2018-03-11,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,2,41,2
+Quality Structures,9585,Journeyman,NA,Syracuse Laborers,Male,White,24.2,711.13,2018-03-11,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,2,42,1
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,803.77,2018-03-11,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,42,2
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.87,2018-03-11,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,43,1
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,693.36,2018-03-11,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,43,2
+Quality Structures,9751,Journeyman,NA,Syracuse Laborers,Male,White,24.2,642.42,2018-03-18,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,45,1
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,775.21,2018-03-18,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,45,2
+Quality Structures,7738,Journeyman,NA,Syracuse Laborers,Male,White,24.2,749.16,2018-03-18,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,46,1
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,957.55,2018-03-18,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,2,46,2
+Quality Structures,3423,Journeyman,NA,Syracuse Laborers,Male,White,25.41,96.44,2018-03-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,47,1
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,913.56,2018-03-18,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,2,47,2
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,591.55,2018-03-18,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,2,48,1
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,1130.98,2018-03-18,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,2,48,2
+Quality Structures,8107,Operator,NA,Syracuse Operators,Male,White,36.84,1095.98,2018-03-18,13493,Williamstown,Oswego,NY,-75.90529,43.421597,36,075,FALSE,2,49,1
+Quality Structures,4859,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,788.87,2018-03-18,13202,Syracuse,Onondaga,NY,-76.14994,43.045066,36,067,FALSE,2,49,2
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1258.82,2018-03-18,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,50,1
+Quality Structures,8778,Journeyman,NA,Syracuse Laborers,Male,White,24.2,654.91,2018-03-18,13201,Syracuse,Onondaga,NY,-76.197701,43.02143,36,067,FALSE,2,50,2
+Quality Structures,1793,Journeyman,NA,Binghamton Laborers,Male,White,24.2,1055.59,2018-03-18,13903,Binghamton,Broome,NY,-75.90226,42.077258,36,007,FALSE,2,51,1
+Quality Structures,1806,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,834.53,2018-03-18,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,51,2
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,741.92,2018-03-18,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,2,52,1
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,606.2,2018-03-18,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,2,52,2
+Quality Structures,3877,Journeyman,NA,Syracuse Laborers,Male,White,24.2,757.65,2018-03-18,13074,Hannibal,Oswego,NY,-76.56767,43.317683,36,075,FALSE,2,53,1
+Quality Structures,8714,Journeyman,NA,Syracuse Laborers,Male,African American,26.62,799.67,2018-03-18,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,53,2
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1142.54,2018-03-18,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,2,54,1
+Quality Structures,7881,Journeyman,NA,Syracuse Laborers,Male,White,26.62,727.52,2018-03-18,13082,Kirkville,Madison,NY,-75.9619,43.099547,36,053,FALSE,2,54,2
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,664.89,2018-03-18,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,2,55,1
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,541.43,2018-03-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,55,2
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,845.89,2018-03-18,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,2,56,1
+Quality Structures,6286,Journeyman,NA,Syracuse Laborers,Male,White,24.2,683.64,2018-03-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,56,2
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1152.73,2018-03-18,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,2,57,1
+Quality Structures,4034,Journeyman,NA,Syracuse Laborers,Male,White,24.2,678.64,2018-03-18,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,2,57,2
+Quality Structures,9585,Journeyman,NA,Syracuse Laborers,Male,White,24.2,704.02,2018-03-18,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,2,58,1
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,776.42,2018-03-18,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,58,2
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.88,2018-03-18,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,59,1
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,913.43,2018-03-18,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,59,2
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1644.37,2018-04-01,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,2,61,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1834.2,2018-04-01,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,61,2
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1730.96,2018-04-08,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,2,62,1
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,830.15,2018-04-08,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,2,63,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1535.58,2018-04-08,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,2,63,2
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1284.6,2018-04-08,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,2,64,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1618.63,2018-04-08,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,2,64,2
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1312.89,2018-04-08,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,2,65,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1686.93,2018-04-08,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,65,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,1188.04,2018-04-08,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,2,66,1
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1656.27,2018-04-08,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,2,66,2
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1691.55,2018-04-15,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,2,68,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1716.38,2018-04-15,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,68,2
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1730.95,2018-04-15,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,2,69,1
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1469.84,2018-04-22,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,2,70,1
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1802.79,2018-04-22,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,70,2
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1729.53,2018-04-22,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,2,71,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,721.71,2018-04-29,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,72,1
+Quality Structures,8396,Apprentice 2nd Year,NA,Corning Carpenters,Male,White,16.47,580.86,2018-04-29,14801,Addison,Steuben,NY,-77.288570000000007,42.104389,36,101,FALSE,2,72,2
+Quality Structures,6155,Apprentice 1st Year,NA,Syracuse Carpenters,Male,White,13.73,453.81,2018-04-29,13071,Genoa,Cayuga,NY,-76.54154,42.677418,36,011,FALSE,2,73,1
+Quality Structures,0497,Foreman,NA,Albany Carpenters,Male,White,36.3,1564.45,2018-04-29,12175,Summit,Schoharie,NY,-74.55282,42.559096,36,095,FALSE,2,73,2
+Quality Structures,5362,General Foreman,NA,Rochester Masons,Male,White,35.51,1597.06,2018-04-29,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,74,1
+Quality Structures,3082,General Foreman,NA,Empire State-Sullivan,Male,White,42.64,1729.54,2018-04-29,13795,Kirkwood,Broome,NY,-75.79275,42.056312,36,007,FALSE,2,74,2
+Quality Structures,9751,Journeyman,NA,Syracuse Laborers,Male,White,24.2,635.99,2018-03-25,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,76,1
+Quality Structures,7718,Journeyman,NA,Syracuse Masons,Male,White,33.16,111.87,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,76,2
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,734.1,2018-03-25,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,77,1
+Quality Structures,7738,Journeyman,NA,Syracuse Laborers,Male,White,24.2,692.61,2018-03-25,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,77,2
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,781.34,2018-03-25,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,2,78,1
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,721.33,2018-03-25,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,2,78,2
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,1034.65,2018-03-25,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,2,79,1
+Quality Structures,8996,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,739.28,2018-03-25,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,2,80,1
+Quality Structures,8107,Operator,NA,Syracuse Operators,Male,White,36.84,1296.28,2018-03-25,13493,Williamstown,Oswego,NY,-75.90529,43.421597,36,075,FALSE,2,81,1
+Quality Structures,4859,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,828.79,2018-03-25,13202,Syracuse,Onondaga,NY,-76.14994,43.045066,36,067,FALSE,2,81,2
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1226.5,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,82,1
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,967.35,2018-03-25,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,82,2
+Quality Structures,8778,Journeyman,NA,Syracuse Laborers,Male,White,24.2,613.87,2018-03-25,13201,Syracuse,Onondaga,NY,-76.197701,43.02143,36,067,FALSE,2,83,1
+Quality Structures,1793,Journeyman,NA,Binghamton Laborers,Male,White,24.2,1055.59,2018-03-25,13903,Binghamton,Broome,NY,-75.90226,42.077258,36,007,FALSE,2,83,2
+Quality Structures,1806,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,800.32,2018-03-25,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,84,1
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1601.4,2018-03-25,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,2,84,2
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,1237.27,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,85,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,2478.44,2018-03-25,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,2,85,2
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,565.61,2018-03-25,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,2,86,1
+Quality Structures,3877,Journeyman,NA,Syracuse Laborers,Male,White,24.2,572.88,2018-03-25,13074,Hannibal,Oswego,NY,-76.56767,43.317683,36,075,FALSE,2,86,2
+Quality Structures,8714,Journeyman,NA,Syracuse Laborers,Male,African American,26.62,839.59,2018-03-25,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,87,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1205.6,2018-03-25,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,2,87,2
+Quality Structures,7881,Journeyman,NA,Syracuse Laborers,Male,White,26.62,761.45,2018-03-25,13082,Kirkville,Madison,NY,-75.9619,43.099547,36,053,FALSE,2,88,1
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,918.43,2018-03-25,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,2,88,2
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,348.09,2018-03-25,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,2,89,1
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,767.66,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,89,2
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,918.44,2018-03-25,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,2,90,1
+Quality Structures,6286,Journeyman,NA,Syracuse Laborers,Male,White,24.2,780.78,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,90,2
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1176.98,2018-03-25,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,2,91,1
+Quality Structures,4034,Journeyman,NA,Syracuse Laborers,Male,White,24.2,754.18,2018-03-25,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,2,91,2
+Quality Structures,9585,Journeyman,NA,Syracuse Laborers,Male,White,24.2,984.93,2018-03-25,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,2,92,1
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,776.42,2018-03-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,92,2
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.87,2018-03-25,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,93,1
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,599.21,2018-03-25,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,93,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1210.58,2018-04-01,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,2,95,1
+Quality Structures,9751,Journeyman,NA,Syracuse Laborers,Male,White,24.2,658.02,2018-04-01,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,95,2
+Quality Structures,7718,Journeyman,NA,Syracuse Masons,Male,White,33.16,877.3,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,96,1
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,615.78,2018-04-01,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,96,2
+Quality Structures,7738,Journeyman,NA,Syracuse Laborers,Male,White,24.2,813.51,2018-04-01,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,97,1
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,869.37,2018-04-01,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,2,97,2
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,627.76,2018-04-01,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,2,98,1
+Quality Structures,4373,Journeyman,NA,Rochester Laborers,Male,White,25.89,339.03,2018-04-01,13165,Waterloo,Seneca,NY,-76.87027,42.911377,36,099,FALSE,2,98,2
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,721.34,2018-04-01,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,2,99,1
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,1001.87,2018-04-01,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,2,99,2
+Quality Structures,8996,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,739.29,2018-04-01,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,2,100,1
+Quality Structures,8107,Operator,NA,Syracuse Operators,Male,White,36.84,1394.23,2018-04-01,13493,Williamstown,Oswego,NY,-75.90529,43.421597,36,075,FALSE,2,101,1
+Quality Structures,9167,Operator,NA,Syracuse Operators,Male,White,40.53,696.42,2018-04-01,13118,Moravia,Cayuga,NY,-76.41226,42.755698,36,011,FALSE,2,102,1
+Quality Structures,4859,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,788.87,2018-04-01,13202,Syracuse,Onondaga,NY,-76.14994,43.045066,36,067,FALSE,2,102,2
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1352.33,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,103,1
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,943.2,2018-04-01,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,103,2
+Quality Structures,8778,Journeyman,NA,Syracuse Laborers,Male,White,24.2,654.91,2018-04-01,13201,Syracuse,Onondaga,NY,-76.197701,43.02143,36,067,FALSE,2,104,1
+Quality Structures,1793,Journeyman,NA,Binghamton Laborers,Male,White,24.2,1031.38,2018-04-01,13903,Binghamton,Broome,NY,-75.90226,42.077258,36,007,FALSE,2,104,2
+Quality Structures,1806,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,582.35,2018-04-01,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,105,1
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1135.62,2018-04-01,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,2,105,2
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,1098.27,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,106,1
+Quality Structures,8018,Apprentice 2nd Year,NA,Syracuse Carpenters,Male,White,16.47,484.88,2018-04-01,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,2,107,1
+Quality Structures,6195,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,913.56,2018-04-01,13145,Sandy Creek,Oswego,NY,-76.13214,43.653475,36,075,FALSE,2,107,2
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,662.77,2018-04-01,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,2,108,1
+Quality Structures,3877,Journeyman,NA,Syracuse Laborers,Male,White,24.2,757.66,2018-04-01,13074,Hannibal,Oswego,NY,-76.56767,43.317683,36,075,FALSE,2,108,2
+Quality Structures,8714,Journeyman,NA,Syracuse Laborers,Male,African American,26.62,504.29,2018-04-01,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,109,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1063.62,2018-04-01,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,2,109,2
+Quality Structures,7881,Journeyman,NA,Syracuse Laborers,Male,White,26.62,795.4,2018-04-01,13082,Kirkville,Madison,NY,-75.9619,43.099547,36,053,FALSE,2,110,1
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,797.53,2018-04-01,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,2,110,2
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,586.53,2018-04-01,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,2,111,1
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,888.28,2018-04-01,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,2,111,2
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,757.65,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,112,1
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,797.52,2018-04-01,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,2,112,2
+Quality Structures,6286,Journeyman,NA,Syracuse Laborers,Male,White,24.2,965.07,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,113,1
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1152.73,2018-04-01,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,2,113,2
+Quality Structures,4034,Journeyman,NA,Syracuse Laborers,Male,White,24.2,689.24,2018-04-01,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,2,114,1
+Quality Structures,9585,Journeyman,NA,Syracuse Laborers,Male,White,24.2,797.71,2018-04-01,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,2,114,2
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,776.43,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,115,1
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1423.54,2018-04-01,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,2,115,2
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.87,2018-04-01,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,116,1
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,913.44,2018-04-01,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,2,116,2
+Quality Structures,9751,Journeyman,NA,Syracuse Laborers,Male,White,24.2,458.24,2018-04-08,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,118,1
+Quality Structures,7718,Journeyman,NA,Syracuse Masons,Male,White,33.16,916.03,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,118,2
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,754.66,2018-04-08,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,119,1
+Quality Structures,7738,Journeyman,NA,Syracuse Laborers,Male,White,24.2,692.61,2018-04-08,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,119,2
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,814.98,2018-04-08,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,2,120,1
+Quality Structures,0079,Operator,NA,Syracuse Operators,Male,White,36.84,1115.21,2018-04-08,13032,Canastota,Madison,NY,-75.76484,43.086439,36,053,FALSE,2,120,2
+Quality Structures,8107,Operator,NA,Syracuse Operators,Male,White,36.84,1221.37,2018-04-08,13493,Williamstown,Oswego,NY,-75.90529,43.421597,36,075,FALSE,2,121,1
+Quality Structures,9167,Operator,NA,Syracuse Operators,Male,White,40.53,1068.94,2018-04-08,13118,Moravia,Cayuga,NY,-76.41226,42.755698,36,011,FALSE,2,122,1
+Quality Structures,4859,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,505.23,2018-04-08,13202,Syracuse,Onondaga,NY,-76.14994,43.045066,36,067,FALSE,2,122,2
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1291.15,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,2,123,1
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,1039.84,2018-04-08,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,2,123,2
+Quality Structures,8778,Journeyman,NA,Syracuse Laborers,Male,White,24.2,654.89,2018-04-08,13201,Syracuse,Onondaga,NY,-76.197701,43.02143,36,067,FALSE,2,124,1
+Quality Structures,1793,Journeyman,NA,Binghamton Laborers,Male,White,24.2,1079.82,2018-04-08,13903,Binghamton,Broome,NY,-75.90226,42.077258,36,007,FALSE,2,124,2
+Quality Structures,1806,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,714.36,2018-04-08,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,2,125,1
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,954.17,2018-04-08,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,2,125,2
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,1004.88,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,2,126,1
+Quality Structures,6195,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,825.35,2018-04-08,13145,Sandy Creek,Oswego,NY,-76.13214,43.653475,36,075,FALSE,2,126,2
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,727.14,2018-04-08,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,2,127,1
+Quality Structures,3877,Journeyman,NA,Syracuse Laborers,Male,White,24.2,675.63,2018-04-08,13074,Hannibal,Oswego,NY,-76.56767,43.317683,36,075,FALSE,2,127,2
+Quality Structures,8714,Journeyman,NA,Syracuse Laborers,Male,African American,26.62,464.37,2018-04-08,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,2,128,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1111,2018-04-08,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,2,128,2
+Quality Structures,7881,Journeyman,NA,Syracuse Laborers,Male,White,26.62,727.52,2018-04-08,13082,Kirkville,Madison,NY,-75.9619,43.099547,36,053,FALSE,2,129,1
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,654.91,2018-04-08,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,2,129,2
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,901.65,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,1,1
+Quality Structures,6286,Journeyman,NA,Syracuse Laborers,Male,White,24.2,737.62,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,1,2
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1176.98,2018-04-08,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,3,2,1
+Quality Structures,4034,Journeyman,NA,Syracuse Laborers,Male,White,24.2,441.09,2018-04-08,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,3,2,2
+Quality Structures,9585,Journeyman,NA,Syracuse Laborers,Male,White,24.2,963.3,2018-04-08,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,3,3,1
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,899.82,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,3,2
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.89,2018-04-08,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,4,1
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,913.44,2018-04-08,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,4,2
+Quality Structures,0966,Journeyman,NA,Syracuse Laborers,Male,White,26.62,336.16,2018-04-15,13132,Pennellville,Oswego,NY,-76.22912,43.262012,36,075,FALSE,3,6,1
+Quality Structures,9751,Journeyman,NA,Syracuse Laborers,Male,White,24.2,658.23,2018-04-15,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,3,6,2
+Quality Structures,7718,Journeyman,NA,Syracuse Masons,Male,White,33.16,1220.48,2018-04-15,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,7,1
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,775.21,2018-04-15,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,3,7,2
+Quality Structures,7738,Journeyman,NA,Syracuse Laborers,Male,White,24.2,813.51,2018-04-15,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,8,1
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,847.34,2018-04-15,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,3,8,2
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,772.44,2018-04-15,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,3,9,1
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,769.71,2018-04-15,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,3,9,2
+Quality Structures,8186,Journeyman,NA,Syracuse Laborers,Male,White,25.41,451.71,2018-04-15,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,10,1
+Quality Structures,8107,Operator,NA,Syracuse Operators,Male,White,36.84,1394.22,2018-04-15,13493,Williamstown,Oswego,NY,-75.90529,43.421597,36,075,FALSE,3,10,2
+Quality Structures,9167,Operator,NA,Syracuse Operators,Male,White,40.53,1181.57,2018-04-15,13118,Moravia,Cayuga,NY,-76.41226,42.755698,36,011,FALSE,3,11,1
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1387.44,2018-04-15,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,11,2
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,1015.68,2018-04-15,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,12,1
+Quality Structures,8778,Journeyman,NA,Syracuse Laborers,Male,White,24.2,654.9,2018-04-15,13201,Syracuse,Onondaga,NY,-76.197701,43.02143,36,067,FALSE,3,12,2
+Quality Structures,1793,Journeyman,NA,Binghamton Laborers,Male,White,24.2,1055.59,2018-04-15,13903,Binghamton,Broome,NY,-75.90226,42.077258,36,007,FALSE,3,13,1
+Quality Structures,1806,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,693.78,2018-04-15,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,3,13,2
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,954.16,2018-04-15,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,3,14,1
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,1364.37,2018-04-15,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,14,2
+Quality Structures,8018,Apprentice 2nd Year,NA,Syracuse Carpenters,Male,White,16.47,551.93,2018-04-15,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,3,15,1
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,775.49,2018-04-15,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,3,15,2
+Quality Structures,6019,Journeyman,NA,Syracuse Laborers,Male,White,26.62,336.16,2018-04-15,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,16,1
+Quality Structures,2237,Journeyman,NA,Syracuse Laborers,Male,African American,26.62,383.39,2018-04-15,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,3,16,2
+Quality Structures,8714,Journeyman,NA,Syracuse Laborers,Male,African American,26.62,530.91,2018-04-15,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,3,17,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1205.6,2018-04-15,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,3,17,2
+Quality Structures,7881,Journeyman,NA,Syracuse Laborers,Male,White,26.62,806.68,2018-04-15,13082,Kirkville,Madison,NY,-75.9619,43.099547,36,053,FALSE,3,18,1
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,541.43,2018-04-15,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,3,18,2
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,963.43,2018-04-15,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,19,1
+Quality Structures,4944,Journeyman,NA,Syracuse Carpenters,Male,White,30.2,917.38,2018-04-15,13036,Central Square,Oswego,NY,-76.15144,43.299689,36,075,FALSE,3,19,2
+Quality Structures,6286,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1102.97,2018-04-15,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,20,1
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1104.29,2018-04-15,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,3,20,2
+Quality Structures,4034,Journeyman,NA,Syracuse Laborers,Male,White,24.2,660.94,2018-04-15,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,3,21,1
+Quality Structures,5681,Journeyman,NA,Syracuse Laborers,Male,White,25.41,345.47,2018-04-15,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,21,2
+Quality Structures,9585,Journeyman,NA,Syracuse Laborers,Male,White,24.2,682.43,2018-04-15,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,3,22,1
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.87,2018-04-15,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,22,2
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,913.44,2018-04-15,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,23,1
+Quality Structures,0966,Journeyman,NA,Syracuse Laborers,Male,White,26.62,645.7,2018-04-22,13132,Pennellville,Oswego,NY,-76.22912,43.262012,36,075,FALSE,3,25,1
+Quality Structures,9751,Journeyman,NA,Syracuse Laborers,Male,White,24.2,332.35,2018-04-22,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,3,25,2
+Quality Structures,7718,Journeyman,NA,Syracuse Masons,Male,White,33.16,1000.42,2018-04-22,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,26,1
+Quality Structures,1468,Journeyman,NA,Syracuse Laborers,Male,White,24.2,713.57,2018-04-22,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,3,26,2
+Quality Structures,7738,Journeyman,NA,Syracuse Laborers,Male,White,24.2,813.51,2018-04-22,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,27,1
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,825.34,2018-04-22,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,3,27,2
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,627.75,2018-04-22,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,3,28,1
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,938.98,2018-04-22,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,3,28,2
+Quality Structures,3906,Journeyman,NA,Rochester Laborers,Male,White,25.89,932.86,2018-04-22,NA,NA,NA,NA,NA,NA,NA,NA,FALSE,3,29,1
+Quality Structures,8996,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,470.78,2018-04-22,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,3,29,2
+Quality Structures,8186,Journeyman,NA,Syracuse Laborers,Male,White,25.41,682.42,2018-04-22,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,30,1
+Quality Structures,8107,Operator,NA,Syracuse Operators,Male,White,36.84,1616.77,2018-04-22,13493,Williamstown,Oswego,NY,-75.90529,43.421597,36,075,FALSE,3,30,2
+Quality Structures,9167,Operator,NA,Syracuse Operators,Male,White,40.53,1163.57,2018-04-22,13118,Moravia,Cayuga,NY,-76.41226,42.755698,36,011,FALSE,3,31,1
+Quality Structures,2133,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1407.5,2018-04-22,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,31,2
+Quality Structures,8607,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,916.39,2018-04-22,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,32,1
+Quality Structures,8778,Journeyman,NA,Syracuse Laborers,Male,White,24.2,654.9,2018-04-22,13201,Syracuse,Onondaga,NY,-76.197701,43.02143,36,067,FALSE,3,32,2
+Quality Structures,1793,Journeyman,NA,Binghamton Laborers,Male,White,24.2,1152.07,2018-04-22,13903,Binghamton,Broome,NY,-75.90226,42.077258,36,007,FALSE,3,33,1
+Quality Structures,1806,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,693.78,2018-04-22,13208,Syracuse,Onondaga,NY,-76.14747,43.074566,36,067,FALSE,3,33,2
+Quality Structures,1390,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1007.38,2018-04-22,13204,Syracuse,Onondaga,NY,-76.17536,43.048966,36,067,FALSE,3,34,1
+Quality Structures,9784,Journeyman,NA,Syracuse Masons,Male,White,33.16,1104.2,2018-04-22,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,34,2
+Quality Structures,5496,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,818.74,2018-04-22,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,3,35,1
+Quality Structures,4000,Journeyman,NA,Syracuse Laborers,Male,Two or More Races,24.2,751.31,2018-04-22,13021,Auburn,Cayuga,NY,-76.55882,42.922273,36,011,FALSE,3,35,2
+Quality Structures,8025,Operator,NA,Rochester Operators,Male,White,36.84,1070.8,2018-04-22,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,36,1
+Quality Structures,6019,Journeyman,NA,Syracuse Laborers,Male,White,26.62,589.6,2018-04-22,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,36,2
+Quality Structures,2237,Journeyman,NA,Syracuse Laborers,Male,African American,26.62,842.95,2018-04-22,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,3,37,1
+Quality Structures,3877,Journeyman,NA,Syracuse Laborers,Male,White,24.2,946.32,2018-04-22,13074,Hannibal,Oswego,NY,-76.56767,43.317683,36,075,FALSE,3,37,2
+Quality Structures,8714,Journeyman,NA,Syracuse Laborers,Male,African American,26.62,234,2018-04-22,13219,Syracuse,Onondaga,NY,-76.22072,43.041566,36,067,FALSE,3,38,1
+Quality Structures,7881,Journeyman,NA,Syracuse Laborers,Male,White,26.62,602.83,2018-04-22,13082,Kirkville,Madison,NY,-75.9619,43.099547,36,053,FALSE,3,38,2
+Quality Structures,5782,Journeyman,NA,Syracuse Laborers,Male,Native American,24.2,654.9,2018-04-22,13084,La Fayette,Onondaga,NY,-76.10983,42.883503,36,067,FALSE,3,39,1
+Quality Structures,8015,Journeyman,NA,Syracuse Laborers,Male,White,24.2,983.73,2018-04-22,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,39,2
+Quality Structures,4944,Journeyman,NA,Syracuse Carpenters,Male,White,30.2,847.2,2018-04-22,13036,Central Square,Oswego,NY,-76.15144,43.299689,36,075,FALSE,3,40,1
+Quality Structures,6286,Journeyman,NA,Syracuse Laborers,Male,White,24.2,716.02,2018-04-22,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,40,2
+Quality Structures,1829,Journeyman,NA,Syracuse Laborers,Male,African American,24.2,1176.68,2018-04-22,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,3,41,1
+Quality Structures,4034,Journeyman,NA,Syracuse Laborers,Male,White,24.2,678.64,2018-04-22,13090,Liverpool,Onondaga,NY,-76.22068,43.152017,36,067,FALSE,3,41,2
+Quality Structures,5681,Journeyman,NA,Syracuse Laborers,Male,White,25.41,723.47,2018-04-22,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,42,1
+Quality Structures,9585,Journeyman,NA,Syracuse Laborers,Male,White,24.2,725.6,2018-04-22,13211,Syracuse,Onondaga,NY,-76.13688,43.098917,36,067,FALSE,3,42,2
+Quality Structures,4707,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1002.5,2018-04-22,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,3,43,1
+Quality Structures,3712,Foreman,NA,Rochester Laborers,Male,White,29.39,1121.46,2018-04-22,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,43,2
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,935.3,2018-04-22,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,44,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1407.88,2018-03-25,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,3,46,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1205.6,2018-03-25,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,3,46,2
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,918.4,2018-03-25,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,47,1
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,1042.69,2018-03-25,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,3,47,2
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,918.4,2018-03-25,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,3,48,1
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1588,2018-03-25,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,3,48,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1210.5,2018-04-01,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,3,50,1
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,797.5,2018-04-01,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,50,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,888.2,2018-04-01,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,3,51,1
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,797.52,2018-04-01,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,3,51,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1423.5,2018-04-01,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,3,52,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1535.5,2018-04-08,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,3,54,1
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1063.7,2018-04-08,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,54,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,1188,2018-04-08,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,3,55,1
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1063.77,2018-04-08,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,3,55,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1842.54,2018-04-08,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,3,56,1
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1637.13,2018-04-15,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,3,58,1
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1205.6,2018-04-15,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,3,58,2
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,942.6,2018-04-15,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,59,1
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,1042.7,2018-04-15,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,3,59,2
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,942.6,2018-04-15,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,3,60,1
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1670.1,2018-04-15,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,3,60,2
+Quality Structures,4074,Operator,NA,Rochester Operators,Male,White,36.84,1276.85,2018-04-15,14432,Clifton Springs,Ontario,NY,-77.14416,42.965372,36,069,FALSE,3,62,1
+Quality Structures,8025,Operator,NA,Rochester Operators,Male,White,36.84,1070.8,2018-04-15,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,62,2
+Quality Structures,7981,Operator,NA,Rochester Operators,Male,White,36.84,1141.9,2018-04-22,14873,Prattsburgh,Steuben,NY,-77.29673,42.525335,36,101,FALSE,3,63,1
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,918.4,2018-04-22,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,63,2
+Quality Structures,2085,Foreman,NA,Elmira Laborers,Male,White,25.7,1029.5,2018-04-22,14816,Breesport,Chemung,NY,-76.73437,42.177039,36,015,FALSE,3,64,1
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,942.6,2018-04-22,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,3,64,2
+Quality Structures,7338,General Foreman,NA,Rochester Laborers,Male,White,32.89,1733.9,2018-04-22,14517,Nunda,Livingston,NY,-77.9075,42.589984,36,051,FALSE,3,65,1
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,1222.47,2018-03-25,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,3,66,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,830.2,2018-03-25,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,66,2
+Quality Structures,8396,Apprentice 2nd Year,NA,Corning Carpenters,Male,White,16.47,762.34,2018-03-25,14801,Addison,Steuben,NY,-77.288570000000007,42.104389,36,101,FALSE,3,67,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1154.81,2018-03-25,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,3,67,2
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1642.32,2018-03-25,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,3,68,1
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,797.11,2018-03-25,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,3,68,2
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,632.24,2018-03-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,69,1
+Quality Structures,6195,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,772.43,2018-03-25,13145,Sandy Creek,Oswego,NY,-76.13214,43.653475,36,075,FALSE,3,69,2
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1536.45,2018-03-25,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,3,70,1
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1115.28,2018-03-25,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,70,2
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,2478.44,2018-03-25,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,3,71,1
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,668.86,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,71,2
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1268.37,2018-03-25,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,3,72,1
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,836.74,2018-03-25,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,3,72,2
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,763.27,2018-04-01,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,3,74,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,769.94,2018-04-01,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,74,2
+Quality Structures,8396,Apprentice 2nd Year,NA,Corning Carpenters,Male,White,16.47,656.1,2018-04-01,14801,Addison,Steuben,NY,-77.288570000000007,42.104389,36,101,FALSE,3,75,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,872.42,2018-04-01,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,3,75,2
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,672.01,2018-04-01,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,3,76,1
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,542.22,2018-04-01,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,76,2
+Quality Structures,6366,Apprentice 1st Year,NA,Syracuse Carpenters,Male,Two or More Races,13.73,191.47,2018-04-01,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,3,77,1
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,946.58,2018-04-01,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,3,77,2
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,904.48,2018-04-01,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,78,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1272.92,2018-04-01,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,3,78,2
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,627.77,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,79,1
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1252.76,2018-04-01,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,3,79,2
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,565.48,2018-04-01,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,3,80,1
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,830.15,2018-04-08,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,3,82,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,890.57,2018-04-08,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,82,2
+Quality Structures,8396,Apprentice 2nd Year,NA,Corning Carpenters,Male,White,16.47,672.8,2018-04-08,14801,Addison,Steuben,NY,-77.288570000000007,42.104389,36,101,FALSE,3,83,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1047.61,2018-04-08,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,3,83,2
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,814.98,2018-04-08,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,3,84,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1284.6,2018-04-08,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,3,84,2
+Quality Structures,8243,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,718.17,2018-04-08,13034,Cayuga,Cayuga,NY,-76.70818,42.912846,36,011,FALSE,3,85,1
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,757.61,2018-04-08,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,3,85,2
+Quality Structures,8996,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,526.67,2018-04-08,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,3,86,1
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,569.91,2018-04-08,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,86,1
+Quality Structures,8018,Apprentice 2nd Year,NA,Syracuse Carpenters,Male,White,16.47,518.52,2018-04-08,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,3,87,1
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,995.02,2018-04-08,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,3,87,2
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1275.55,2018-04-08,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,88,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1618.63,2018-04-08,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,3,88,2
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1063.76,2018-04-08,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,89,1
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,881.03,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,89,2
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1063.77,2018-04-08,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,3,90,1
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1283.8,2018-04-08,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,3,90,2
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,779.34,2018-04-08,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,3,91,1
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,913.44,2018-04-08,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,91,2
+Quality Structures,8773,Apprentice 3rd Year,NA,Corning Carpenters,Male,White,19.22,863.6,2018-04-15,14839,Greenwood,Steuben,NY,-77.63705,42.129806,36,101,FALSE,3,93,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,763.36,2018-04-15,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,93,2
+Quality Structures,8396,Apprentice 2nd Year,NA,Corning Carpenters,Male,White,16.47,739.66,2018-04-15,14801,Addison,Steuben,NY,-77.288570000000007,42.104389,36,101,FALSE,3,94,1
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,1142.9,2018-04-15,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,3,94,2
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,847.34,2018-04-15,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,3,95,1
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,1088.78,2018-04-15,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,3,95,2
+Quality Structures,7025,Apprentice 1st Year,NA,Syracuse Carpenters,Male,Two or More Races,13.73,648.72,2018-04-15,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,3,96,1
+Quality Structures,6155,Apprentice 1st Year,NA,Syracuse Carpenters,Male,White,13.73,509.21,2018-04-15,13071,Genoa,Cayuga,NY,-76.54154,42.677418,36,011,FALSE,3,96,2
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,769.71,2018-04-15,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,3,97,1
+Quality Structures,8996,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,739.28,2018-04-15,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,3,97,2
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,583.76,2018-04-15,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,98,1
+Quality Structures,6195,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,913.56,2018-04-15,13145,Sandy Creek,Oswego,NY,-76.13214,43.653475,36,075,FALSE,3,98,2
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1311.73,2018-04-15,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,3,99,1
+Quality Structures,5496,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,660.38,2018-04-15,13030,Bridgeport,Madison,NY,-75.96057,43.164297,36,053,FALSE,3,99,2
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1205.22,2018-04-15,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,100,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1482.56,2018-04-15,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,3,100,2
+Quality Structures,3877,Journeyman,NA,Syracuse Laborers,Male,White,24.2,870.75,2018-04-15,13074,Hannibal,Oswego,NY,-76.56767,43.317683,36,075,FALSE,3,101,1
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,942.63,2018-04-15,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,101,2
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,1045.84,2018-04-15,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,102,1
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,942.63,2018-04-15,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,3,102,2
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1651.46,2018-04-15,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,3,103,1
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,825.42,2018-04-15,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,3,103,2
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,913.44,2018-04-15,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,104,1
+Quality Structures,5113,Journeyman,NA,Binghamton Carpenters,Male,White,27.45,699.82,2018-04-22,13045,Cortland,Cortland,NY,-76.19217,42.591109,36,023,FALSE,3,106,1
+Quality Structures,8396,Apprentice 2nd Year,NA,Corning Carpenters,Male,White,16.47,722.95,2018-04-22,14801,Addison,Steuben,NY,-77.288570000000007,42.104389,36,101,FALSE,3,106,2
+Quality Structures,8035,Journeyman,NA,Pennsylvania Carpenters,Male,White,28.88,934.2,2018-04-22,16936,Millerton,Tioga,PA,-76.94413,41.951518,42,117,FALSE,3,107,1
+Quality Structures,4341,Journeyman,NA,Rochester Laborers,Male,White,25.69,825.34,2018-04-22,14489,Lyons,Wayne,NY,-76.99231,43.076715,36,117,FALSE,3,107,2
+Quality Structures,4128,Journeyman,NA,Pennsylvania Carpenters,Male,White,27.45,989.25,2018-04-22,17771,Trout Run,Lycoming,PA,-77.03435,41.43664,42,081,FALSE,3,108,1
+Quality Structures,7025,Apprentice 1st Year,NA,Syracuse Carpenters,Male,Two or More Races,13.73,593.34,2018-04-22,13207,Syracuse,Onondaga,NY,-76.16406,43.020116,36,067,FALSE,3,108,2
+Quality Structures,6155,Apprentice 1st Year,NA,Syracuse Carpenters,Male,White,13.73,502.29,2018-04-22,13071,Genoa,Cayuga,NY,-76.54154,42.677418,36,011,FALSE,3,109,1
+Quality Structures,0095,Journeyman,NA,Syracuse Laborers,Male,White,24.2,938.98,2018-04-22,13044,Constantia,Oswego,NY,-76.00138,43.28547,36,075,FALSE,3,109,2
+Quality Structures,2078,Apprentice 1st Year,NA,Ithaca Carpenters,Male,White,13.73,597.59,2018-04-22,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,110,1
+Quality Structures,8018,Apprentice 2nd Year,NA,Syracuse Carpenters,Male,White,16.47,547.41,2018-04-22,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,3,110,2
+Quality Structures,6195,Journeyman,NA,Syracuse Carpenters,Male,White,27.45,772.44,2018-04-22,13145,Sandy Creek,Oswego,NY,-76.13214,43.653475,36,075,FALSE,3,111,1
+Quality Structures,2002,Journeyman,NA,Elmira Laborers,Male,White,24.2,1208.63,2018-04-22,14825,Chemung,Chemung,NY,-76.62459,42.043018000000004,36,015,FALSE,3,111,2
+Quality Structures,3555,Journeyman,NA,Corning Carpenters,Male,White,27.45,1321.58,2018-04-22,16933,Mansfield,Tioga,PA,-77.06939,41.811139,42,117,FALSE,3,112,1
+Quality Structures,3131,Journeyman,NA,Millwright Local 1163,Male,White,28.25,1644.33,2018-04-22,16932,Mainesburg,Tioga,PA,-76.94145,41.796032,42,117,FALSE,3,112,2
+Quality Structures,1817,Journeyman,NA,Syracuse Laborers,Male,White,24.2,918.43,2018-04-22,14456,Geneva,Ontario,NY,-76.99394,42.853039,36,069,FALSE,3,113,1
+Quality Structures,1700,Journeyman,NA,Syracuse Laborers,Male,White,24.2,942.64,2018-04-22,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,3,113,2
+Quality Structures,6977,Journeyman,NA,Syracuse Laborers,Male,White,24.2,942.63,2018-04-22,13224,Syracuse,Onondaga,NY,-76.1032,43.041866,36,067,FALSE,3,114,1
+Quality Structures,9976,Operator,NA,Syracuse Operators,Male,White,36.84,1603.94,2018-04-22,13617,Canton,St. Lawrence,NY,-75.14417,44.58249,36,089,FALSE,3,114,2
+Quality Structures,2495,Journeyman,NA,Corning Carpenters,Male,White,27.45,683.91,2018-04-22,16901,Wellsboro,Tioga,PA,-77.31915,41.736343,42,117,FALSE,3,115,1
+Quality Structures,4674,Journeyman,NA,Rochester Laborers,Male,White,25.89,935.3,2018-04-22,14422,Byron,Genesee,NY,-78.06371,43.079217,36,037,FALSE,3,115,2
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,810.58,2018-02-11,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,1,1
+Schalk & Son,7211,Apprentice,Carpenter,NA,Male,White,16.47,749.34,2018-02-18,14445,East Rochester,Monroe,NY,-77.48709,43.111663,36,055,FALSE,1,2,1
+Schalk & Son,1626,Apprentice,Carpenter,NA,Male,White,19.22,832.36,2018-02-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,2,2
+Schalk & Son,6590,Unspecified,Carpenter,NA,Male,White,27.45,894.4,2018-02-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,2,3
+Schalk & Son,4159,Unspecified,Carpenter,NA,Male,White,27.45,1096.54,2018-02-18,13122,New Woodstock,Madison,NY,-75.84778,42.837642,36,053,FALSE,1,2,4
+Schalk & Son,2863,Foreman,Carpenter,NA,Male,White,28.45,1607.28,2018-02-18,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,2,5
+Schalk & Son,1178,Unspecified,Carpenter,NA,Male,White,27.45,1031.71,2018-02-18,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,2,6
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1175.55,2018-02-18,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,2,7
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1328.12,2018-02-18,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,2,8
+Schalk & Son,1626,Apprentice,Carpenter,NA,Male,White,19.22,609.52,2018-02-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,3,1
+Schalk & Son,6590,Unspecified,Carpenter,NA,Male,White,27.45,714,2018-02-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,3,2
+Schalk & Son,2863,Foreman,Carpenter,NA,Male,White,28.45,951.86,2018-02-25,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,3,3
+Schalk & Son,7209,Unspecified,Carpenter,NA,Male,White,27.45,879.24,2018-02-25,13206,Syracuse,Onondaga,NY,-76.10724,43.069866,36,067,FALSE,1,3,4
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1240.52,2018-02-25,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,3,5
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1186.4,2018-02-25,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,3,6
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,1147.22,2018-03-04,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,4,1
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1028.89,2018-03-04,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,4,2
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1195.79,2018-03-04,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,4,3
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,1076.52,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,5,1
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1102.23,2018-03-11,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,5,2
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1054.93,2018-03-11,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,5,3
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,991.7,2018-03-18,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,6,1
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1102.24,2018-03-18,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,6,2
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1026.67,2018-03-18,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,6,3
+Schalk & Son,3060,Unspecified,Taper,NA,Male,White,25.49,677.66,2018-03-18,13135,Phoenix,Oswego,NY,-76.31339,43.235916,36,075,FALSE,1,6,4
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,1076.52,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,7,1
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1131.56,2018-03-25,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,7,2
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1054.94,2018-03-25,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,7,3
+Schalk & Son,8611,Unspecified,Carpenter,NA,Male,White,NA,902.66,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,8,1
+Schalk & Son,2863,Foreman,Carpenter,NA,Male,White,NA,1037.36,2018-04-01,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,8,2
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,1246.15,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,8,3
+Schalk & Son,7072,Unspecified,Carpenter,NA,Male,White,27.45,1000.61,2018-04-01,13066,Fayetteville,Onondaga,NY,-76.00876,43.028516,36,067,FALSE,1,8,4
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1287.34,2018-04-01,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,8,5
+Schalk & Son,7702,Apprentice,Carpenter,NA,Male,African American,19.22,598.26,2018-04-01,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,8,6
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,609.68,2018-04-01,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,8,7
+Schalk & Son,3060,Unspecified,Taper,NA,Male,White,25.49,911.78,2018-04-01,13135,Phoenix,Oswego,NY,-76.31339,43.235916,36,075,FALSE,1,8,8
+Schalk & Son,8611,Unspecified,Carpenter,NA,Male,White,27.45,842.26,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,9,1
+Schalk & Son,2863,Foreman,Carpenter,NA,Male,White,NA,1052.46,2018-04-08,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,9,2
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,1246.15,2018-04-08,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,9,3
+Schalk & Son,7072,Unspecified,Carpenter,NA,Male,White,27.45,1000.6,2018-04-08,13066,Fayetteville,Onondaga,NY,-76.00876,43.028516,36,067,FALSE,1,9,4
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1175.54,2018-04-08,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,9,5
+Schalk & Son,7702,Apprentice,Carpenter,NA,Male,African American,19.22,798.91,2018-04-08,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,9,6
+Schalk & Son,2770,Unspecified,Carpenter,NA,Male,White,27.45,1125.64,2018-04-08,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,9,7
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1243.91,2018-04-08,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,9,8
+Schalk & Son,3060,Unspecified,Taper,NA,Male,White,25.49,878.25,2018-04-08,13135,Phoenix,Oswego,NY,-76.31339,43.235916,36,075,FALSE,1,9,9
+Schalk & Son,8611,Unspecified,Carpenter,NA,Male,White,27.45,560.1,2018-04-15,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,10,1
+Schalk & Son,1790,Apprentice,Carpenter,NA,Male,African American,13.73,527.75,2018-04-15,13501,Utica,Oneida,NY,-75.22681,43.087669,36,065,FALSE,1,10,2
+Schalk & Son,1021,Unspecified,Carpenter,NA,Male,White,NA,888.97,2018-04-15,13027,Baldwinsville,Onondaga,NY,-76.33901,43.165134,36,067,FALSE,1,10,3
+Schalk & Son,5846,Unspecified,Carpenter,NA,Male,White,27.45,828.87,2018-04-15,13057,East Syracuse,Onondaga,NY,-76.05538,43.074266,36,067,FALSE,1,10,4
+Schalk & Son,8205,Unspecified,Carpenter,NA,Male,White,NA,937.05,2018-04-15,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,10,5
+Schalk & Son,2863,Foreman,Carpenter,NA,Male,White,NA,1052.46,2018-04-15,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,10,6
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,1246.14,2018-04-15,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,10,7
+Schalk & Son,2813,Unspecified,Carpenter,NA,Male,White,NA,1141.35,2018-04-15,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,10,8
+Schalk & Son,7072,Unspecified,Carpenter,NA,Male,White,27.45,1000.61,2018-04-15,13066,Fayetteville,Onondaga,NY,-76.00876,43.028516,36,067,FALSE,1,10,9
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1299.83,2018-04-15,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,10,10
+Schalk & Son,7702,Apprentice,Carpenter,NA,Male,African American,19.22,765.47,2018-04-15,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,10,11
+Schalk & Son,2770,Unspecified,Carpenter,NA,Male,White,27.45,1267.98,2018-04-15,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,10,12
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,871.21,2018-04-15,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,11,1
+Schalk & Son,3060,Unspecified,Taper,NA,Male,White,25.49,699.85,2018-04-15,13135,Phoenix,Oswego,NY,-76.31339,43.235916,36,075,FALSE,1,11,2
+Schalk & Son,5846,Unspecified,Carpenter,NA,Male,White,27.45,955.96,2018-04-22,13057,East Syracuse,Onondaga,NY,-76.05538,43.074266,36,067,FALSE,1,12,1
+Schalk & Son,2863,Foreman,Carpenter,NA,Male,White,28.45,1463.64,2018-04-22,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,12,2
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,1260.24,2018-04-22,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,12,3
+Schalk & Son,6213,Apprentice,Carpenter,NA,Male,White,NA,797,2018-04-22,13104,Manlius,Onondaga,NY,-75.96763,42.987329,36,067,FALSE,1,12,4
+Schalk & Son,7072,Unspecified,Carpenter,NA,Male,White,27.45,1204.68,2018-04-22,13066,Fayetteville,Onondaga,NY,-76.00876,43.028516,36,067,FALSE,1,12,5
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1204.83,2018-04-22,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,12,6
+Schalk & Son,7702,Apprentice,Carpenter,NA,Male,African American,19.22,681.87,2018-04-22,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,12,7
+Schalk & Son,2770,Unspecified,Carpenter,NA,Male,White,27.45,1267.97,2018-04-22,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,12,8
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1219.85,2018-04-22,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,12,9
+Schalk & Son,4159,Unspecified,Carpenter,NA,Male,White,NA,925.7,2018-04-29,13122,New Woodstock,Madison,NY,-75.84778,42.837642,36,053,FALSE,1,13,1
+Schalk & Son,2063,Foreman,Carpenter,NA,Male,White,28.45,1229.76,2018-04-29,13126,Oswego,Oswego,NY,-76.47992,43.449201,36,075,FALSE,1,13,2
+Schalk & Son,7393,Unspecified,Carpenter,NA,Male,White,27.45,1246.15,2018-04-29,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,13,3
+Schalk & Son,2813,Unspecified,Carpenter,NA,Male,White,NA,1064.78,2018-04-29,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,13,4
+Schalk & Son,7072,Unspecified,Carpenter,NA,Male,White,27.45,590.74,2018-04-29,13066,Fayetteville,Onondaga,NY,-76.00876,43.028516,36,067,FALSE,1,13,5
+Schalk & Son,1170,Unspecified,Carpenter,NA,Male,White,27.45,1043.42,2018-04-29,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,13,6
+Schalk & Son,3302,Foreman,Carpenter,NA,Male,White,28.45,1274.85,2018-04-29,13167,West Monroe,Oswego,NY,-76.0552,43.309645,36,075,FALSE,1,13,7
+Schalk & Son,7702,Apprentice,Carpenter,NA,Male,African American,19.22,782.19,2018-04-29,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,13,8
+Schalk & Son,2770,Unspecified,Carpenter,NA,Male,White,27.45,1195.78,2018-04-29,13041,Clay,Onondaga,NY,-76.18002,43.1835,36,067,FALSE,1,13,9
+Schalk & Son,9487,Unspecified,Carpenter,NA,Male,White,27.45,1219.85,2018-04-29,13076,Hastings,Oswego,NY,-76.14871,43.354706,36,075,FALSE,1,13,10
+Schalk & Son,3060,Unspecified,Taper,NA,Male,White,25.49,833.64,2018-04-29,13135,Phoenix,Oswego,NY,-76.31339,43.235916,36,075,FALSE,1,14,1
+Stone Bridge Iron & Steel,9027,Journeyman,Iron Worker,NA,NA,Native American,32.05,684.37,2018-03-04,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,2,1
+Stone Bridge Iron & Steel,6056,Journeyman,Iron Worker,NA,NA,White,29,0,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,3,1
+Stone Bridge Iron & Steel,7646,Journeyman,Iron Worker,NA,NA,White,29,0,2018-03-11,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,3,2
+Stone Bridge Iron & Steel,9027,Journeyman,Iron Worker,NA,NA,Native American,32.05,199.9,2018-03-11,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,3,3
+Stone Bridge Iron & Steel,4582,Journeyman,Iron Worker,NA,NA,White,29,0,2018-03-11,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,3,4
+Stone Bridge Iron & Steel,6056,Journeyman,Iron Worker,NA,NA,White,29,647.02,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,5,1
+Stone Bridge Iron & Steel,9027,Journeyman,Iron Worker,NA,NA,Native American,32.05,857.89,2018-03-25,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,5,2
+Stone Bridge Iron & Steel,4582,Journeyman,Iron Worker,NA,NA,White,29,680.69,2018-03-25,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,5,3
+Stone Bridge Iron & Steel,6056,Journeyman,Iron Worker,NA,NA,White,29,0,2018-04-01,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,7,1
+Stone Bridge Iron & Steel,2210,Journeyman,Iron Worker,NA,NA,White,29,0,2018-04-01,13031,Camillus,Onondaga,NY,-76.28757,43.039916,36,067,FALSE,1,7,2
+Stone Bridge Iron & Steel,2989,Journeyman,Iron Worker,NA,NA,White,29,0,2018-04-01,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,7,3
+Stone Bridge Iron & Steel,7832,Journeyman,Iron Worker,NA,NA,Native American,16.5,459.32,2018-04-01,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,7,4
+Stone Bridge Iron & Steel,9027,Journeyman,Iron Worker,NA,NA,Native American,32.05,1006.05,2018-04-01,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,7,5
+Stone Bridge Iron & Steel,2210,Journeyman,Iron Worker,NA,NA,White,29,510.56,2018-04-08,13031,Camillus,Onondaga,NY,-76.28757,43.039916,36,067,FALSE,1,8,1
+Stone Bridge Iron & Steel,5456,Journeyman,Iron Worker,NA,NA,White,29,533.25,2018-04-08,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,8,2
+Stone Bridge Iron & Steel,7832,Journeyman,Iron Worker,NA,NA,Native American,16.5,442.92,2018-04-08,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,8,3
+Stone Bridge Iron & Steel,9027,Journeyman,Iron Worker,NA,NA,Native American,32.05,975.53,2018-04-08,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,8,4
+Stone Bridge Iron & Steel,6942,Journeyman,Iron Worker,NA,NA,Hispanic,29,483.15,2018-04-15,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,9,1
+Stone Bridge Iron & Steel,6056,Journeyman,Iron Worker,NA,NA,White,29,827.67,2018-04-15,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,9,2
+Stone Bridge Iron & Steel,7019,Journeyman,Iron Worker,NA,NA,White,30.05,735.16,2018-04-15,14219,Buffalo,Erie,NY,-78.82717,42.790708,36,029,FALSE,1,9,3
+Stone Bridge Iron & Steel,2210,Journeyman,Iron Worker,NA,NA,White,29,272.34,2018-04-15,13031,Camillus,Onondaga,NY,-76.28757,43.039916,36,067,FALSE,1,9,4
+Stone Bridge Iron & Steel,7020,Journeyman,Iron Worker,NA,NA,White,29,913.84,2018-04-15,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,9,5
+Stone Bridge Iron & Steel,5456,Journeyman,Iron Worker,NA,NA,White,29,848.54,2018-04-15,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,9,6
+Stone Bridge Iron & Steel,7832,Journeyman,Iron Worker,NA,NA,Native American,16.5,475.55,2018-04-15,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,9,7
+Stone Bridge Iron & Steel,9027,Journeyman,Iron Worker,NA,NA,Native American,32.05,908.41,2018-04-15,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,9,8
+Stone Bridge Iron & Steel,6942,Journeyman,Iron Worker,NA,NA,Hispanic,29,483.15,2018-04-22,13088,Liverpool,Onondaga,NY,-76.19365,43.105917,36,067,FALSE,1,10,1
+Stone Bridge Iron & Steel,6056,Journeyman,Iron Worker,NA,NA,White,29,827.67,2018-04-22,13069,Fulton,Oswego,NY,-76.40029,43.32347,36,075,FALSE,1,10,2
+Stone Bridge Iron & Steel,7019,Journeyman,Iron Worker,NA,NA,White,30.05,735.15,2018-04-22,14219,Buffalo,Erie,NY,-78.82717,42.790708,36,029,FALSE,1,10,3
+Stone Bridge Iron & Steel,0740,Journeyman,Iron Worker,NA,NA,Native American,29,881.19,2018-04-22,13205,Syracuse,Onondaga,NY,-76.14501,43.010916,36,067,FALSE,1,10,4
+Stone Bridge Iron & Steel,7020,Journeyman,Iron Worker,NA,NA,White,29,913.84,2018-04-22,13209,Syracuse,Onondaga,NY,-76.23488,43.081324,36,067,FALSE,1,10,5
+Stone Bridge Iron & Steel,5456,Journeyman,Iron Worker,NA,NA,White,29,848.54,2018-04-22,13080,Jordan,Onondaga,NY,-76.47874,43.07446,36,067,FALSE,1,10,6
+Stone Bridge Iron & Steel,9027,Journeyman,Iron Worker,NA,NA,Native American,32.05,908.42,2018-04-22,14779,Salamanca,Cattaraugus,NY,-78.7297,42.168508,36,009,FALSE,1,10,7
+Stone Bridge Iron & Steel,0452,Journeyman,Iron Worker,NA,NA,White,29,781.65,2018-04-22,13340,Frankfort,Herkimer,NY,-75.10019,43.046471,36,043,FALSE,1,10,8
