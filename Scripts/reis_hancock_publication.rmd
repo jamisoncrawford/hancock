@@ -655,7 +655,7 @@ ggplot(hourly, aes(x = Race, y = Hourly)) +
   geom_jitter(alpha = 0.5, height = .2, width = .3, size = 2,
               aes(color = Race)) +
   scale_color_brewer(palette = "Set2") +
-  xlab("Contractor") +
+  xlab("Race") +
   ylab("Hourly Pay (USD)") +
   coord_flip() +
   theme_classic() +
@@ -667,13 +667,38 @@ ggplot(hourly, aes(x = Race, y = Hourly)) +
 
 <br>
 
-**Alternate visualizations help illustrate the distribution of hourly wages conditioned on race and contractor.** *Figure 8.2: Frequency of Hourly Wages Earned by Race & Contractor* depicts a stacked trellis histogram depicting hourly wage distributions by race and conditioned on contractor. Each bar represents a $1 increment in hourly rates.  
+**Alternate visualizations help further illustrate these conclusions**. *Figure 8.2: Descriptive Statistics of Hourly Wage v. Title & Race by Contractor* supports the conclusion that hourly wage disparities are principally due to differences in rank or title. Moreover, the distribution of hourly wages conditioned on race and contractor is illustrated in *Figure 8.3: Frequency of Hourly Wages Earned by Race & Contractor*, which depicts a stacked trellis histogram representing the frequency of pay grades for each unique worker.. Each bar represents a $1 increment in hourly rates.  
 
 <br>
 
 <center>
 
-**Figure 8.2: Frequency of Hourly Wages Earned by Race & Contractor**
+**Figure 8.2: Descriptive Statistics of Hourly Wage v. Title & Race by Contractor**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+hourly$Title <- str_replace_all(string = hourly$Title, 
+                                pattern = "General Foreman|Subforeman|Foreman", 
+                                replacement = "Foreman")
+hourly$Title <- str_replace_all(string = hourly$Title,
+                                pattern = "Apprentice.*", 
+                                replacement = "Apprentice")
+
+ggplot(hourly, aes(x = Race, y = Hourly)) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
+  geom_jitter(alpha = 0.5, height = .2, width = .3, size = 2,
+              aes(color = Title)) +
+  scale_color_brewer(palette = "Set2") +
+  xlab("Race") +
+  ylab("Hourly Pay (USD)") +
+  coord_flip() +
+  theme_classic() +
+  facet_wrap(~ Name) +
+  theme(legend.position = "bottom")
+```
+
+<br>
+
+**Figure 8.3: Frequency of Hourly Wages Earned by Race & Contractor**
 
 ```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 library(ggplot2)
@@ -751,15 +776,17 @@ net_con_sum <- net_con_sum %>%
          "Contractor" = Name)
 ```
 
-**White workers earn the vast majority of all net payments**, i.e. gross earnings less deductions. According to *Table 9: Total Net Earnings by Race*, White workers earned total net earnings of $716.5 K (91.9%), while African American workers, Native American workers, workers of two or more races, and Hispanic workers earned $38.6 K (4.9%), $14.5 K (1.9%), $9.1 K (1.2%), and less than $1 K (0.1%), respectively.
+### Total Net Pay by Race
 
-**Minority workers earn less than Whites relative to their proportion of the workforce.** While White workers comprise 86.2% of total unique workers across contractors, they take home 91.9% of all net income. African Americans, Native Americans, workers of two or more races, and the single Hispanic worker, among records where race is disclosed, comprise 7.3%, 3.3.%, 2.4%, and 0.8% of the total workforce, but only take home 4.9%, 1.9%, 1.2%, and 0.1% of total net earnings, respectively. Recall that we see similar trends in "Section 2.4: Periods by Race" in the present work. This may be due, in part, to differences in leadership positions (i.e. "Foremen") as well as specialized classes (i.e. "Operators"), all of which are comprised of Whites. This is best illustrated in *Figure 9: Total Net Earnings v. Race*. 
+**White workers earn the vast majority of all net payments**, i.e. gross earnings less deductions. According to *Table 9.1: Total Net Earnings by Race*, White workers earned total net earnings of $716.5 K (91.9%), while African American workers, Native American workers, workers of two or more races, and Hispanic workers earned $38.6 K (4.9%), $14.5 K (1.9%), $9.1 K (1.2%), and less than $1 K (0.1%), respectively.
+
+**Minority workers earn less than Whites relative to their proportion of the workforce.** While White workers comprise 86.2% of total unique workers across contractors, they take home 91.9% of all net income. African Americans, Native Americans, workers of two or more races, and the single Hispanic worker, among records where race is disclosed, comprise 7.3%, 3.3.%, 2.4%, and 0.8% of the total workforce, but only take home 4.9%, 1.9%, 1.2%, and 0.1% of total net earnings, respectively. Recall that we see similar trends in "Section 2.4: Periods by Race" in the present work. This may be due, in part, to differences in leadership positions (i.e. "Foremen") as well as specialized classes (i.e. "Operators"), all of which are comprised of Whites. This is best illustrated in *Figure 9.1: Total Net Earnings v. Race*. 
 
 <br>
 
 <center>
 
-**Table 9: Total Net Earnings by Race**
+**Table 9.1: Total Net Earnings by Race**
 
 ```{r echo=FALSE, message=FALSE}
 net_sum_ft <- regulartable(net_sum, cwidth = 3.5)
@@ -769,7 +796,7 @@ theme_box(net_sum_ft)
 
 <br>
 
-**Figure 9: Total Net Earnings v. Race**
+**Figure 9.1: Total Net Earnings v. Race**
 
 ```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 library(ggplot2)
@@ -789,7 +816,58 @@ ggplot(net_sum_viz, aes(x = reorder(Race, Payments),
 
 <br>
 
+### Statistics on Net Pay by Race
+
+```{r echo=FALSE, message=FALSE}
+net_stat <- net %>%
+  group_by(Race) %>%
+  summarize(Minimum = min(Net),
+            Mean = mean(Net),
+            Median = median(Net),
+            Maximum = max(Net)) %>%
+  arrange(desc(Mean)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Mean = dollar(Mean),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum))
+```
+
+**Similar to hourly wage, individual net earnings show White workers receive significantly more money.** According to *Table 9.2: Summary Statistics on Net Pay by Race*, while maximum take home pay for African Americans, Native Americans, workers of two or more races, and Hispanic workers were $1,601, $1,006, $864, and $483, respectively, while the maximum amount received by a White worker was significantly higher, at $2,478.
+
+**The disparity between average net earnings of White and minority workers are just as extreme.** That is, on average, African Americans' net earnings per pay period are $820, Native Americans receive $659, workers of two or more races receive $608, and Hispanics earn $483 (recall, however, that there is only 1 Hispanic worker). In contrast, White workers, on average, receive $1,002 per net payment - a markedly higher sum. Median values deviate marginally from mean values, at an average absolute value of $24.05. These findings are better illustrated in *Figure 9.2: Descriptive Statistics of Net Pay v. Race*, aid in the interpretation of which is described earlier in "Section 2.8: Hourly Pay by Race". 
+
+<br>
+
+<center>
+
+**Table 9.2: Summary Statistics on Net Pay by Race**
+
+```{r echo=FALSE, message=FALSE}
+net_stat_ft <- regulartable(net_stat, cwidth = 3.5)
+net_stat_ft <- fontsize(net_stat_ft, part = "all", size = 14)
+theme_box(net_stat_ft)
+```
+
+<br>
+
+**Figure 9.2: Descriptive Statistics of Net Pay v. Race**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+ggplot(net, aes(x = Race, y = Net)) +
+  geom_boxplot(fill = "#FF9900", alpha = 0.35, outlier.shape = 15, outlier.size = 2) +
+  geom_jitter(height = .3, width = .2, fill = "#003399", color = "#003399", alpha = 0.15, size = 2) +
+  coord_flip() + 
+  ylab("Hourly Pay (USD)") +
+  theme_light()
+```
+
+</center>
+
+<br>
+
 ## Net Pay by Race & Contractor
+
+### Total Net by Race & Contractor
 
 **Racial disparities in net earnings relative to the proportion of workers holds true across companies**, with the exception of *Stone Bridge Iron & Steel, Inc.*. *Longhouse Construction LLC* has a crew of 85.7% White workers who take home 87% of net earnings, while its single African American worker comprises 14.3% but earns 13% of net earnings. *Edward Schalk & Son, Inc.*, with a larger crew size of 23, is comprised of 91.3% White workers receiving 94.8% of net earnings and 8.7% of African American workers receiving 5.2% of net earnings. *Quality Structures, Inc.* is comprised of 85.9% White workers receiving 92% of net earnings - and 72% of net earnings across all companies - while its African American workers, workers of two or more races, and Native American workers comprise 8.5%, 4.2%, and 1.4% of employees, but receiving 5.4%, 1.5%, and 1.1% of net earnings, respectively.
 
@@ -832,13 +910,97 @@ ggplot(net_con_sum_viz, aes(x = reorder(Name, Total), y = Total, fill = Race)) +
 library(ggplot2)
 
 ggplot(net[net$Race == "White", ], aes(x = Name, y = Net, color = Race)) +
-  geom_jitter(alpha = 0.3, width = 0.175) +
-  geom_jitter(data = net[net$Race != "White", ], size = 2, width = 0.175, alpha = 0.9, aes(x = Name, y = Net, color = Race)) +
+  geom_jitter(alpha = 0.4, width = 0.175) +
+  geom_jitter(data = net[net$Race != "White", ], size = 3, width = 0.175, alpha = 0.9, aes(x = Name, y = Net, color = Race)) +
   xlab("Contractor") +
   scale_color_brewer(palette = "Set2") +
   theme_classic() +
   theme(legend.position = "bottom") +
   scale_y_continuous(name="Individual Net Earnings (USD)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+### Stats: Net by Race & Contractor
+
+```{r echo=FALSE, message=FALSE}
+net_con_stat <- net %>%
+  group_by(Name, Race) %>%
+  summarize(Minimum = min(Net),
+            Mean = mean(Net),
+            Median = median(Net),
+            Maximum = max(Net)) %>%
+  arrange(Name, desc(Mean)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Mean = dollar(Mean),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum))
+```
+
+**Similar racial disparities exist in net earnings by company, but only to an extreme degree in certain some.** As seen in *Table 11: Summary Statistics on Net Pay by Race & Contractor*, *Longhouse Construction LLC* exhibits relatively minor differences in average and maximum net earnings, favoring White workers, and again, Native American workers at *Stone Bridge Iron & Steel, Inc.* receive net earnings which have a moderately higher average and maximum net earnings than White workers. However, extreme disparities may be found in *Edward Schalk & Son, Inc.*, where White workers earn an average weekly net income of $1,042, the highest of which is $1,607.28. African American workers in *Edward Schalk & Son, Inc.*, in comparison, earn an average weekly net income of $692.41, the highest of which is $798 - a stark contrast to White workers.
+
+**The most extreme racial disparities in net earnings occurs at *Quality Structures, Inc*.** The highest net payment among White workers was $2,479, while the highest net payments among African Americans, Native Americans, and workers of two or mmore races were $1,601, $819, and $864, respectively. Moreover, the average of individual net payments among White workers was $1,033, while African Americans, Native Americans, and workers of two or more races earned an average weekly net payment of $873, $610, and $608, respectively. Notably, despite also exhibiting the lowest net earning on record, $96, the median net earning of White workers was $946, $87 below average. In other words, despite the widest range in net earnings, as well as the lowest net earning on record, significantly large net payments among Whites were responsible for pulling up the average weekly net earning beyond the 50th percentile. These findings are better illustrated in the trellis boxplots conditioned on contractor in *Figure 11.1: Summary Statistics of Net Pay v. Race by Contractor*.
+
+<br>
+
+<center>
+
+**Table 11: Summary Statistics on Net Pay by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE}
+net_con_stat_ft <- regulartable(net_con_stat, cwidth = 3.5)
+net_con_stat_ft <- fontsize(net_con_stat_ft, part = "all", size = 14)
+theme_box(net_con_stat_ft)
+```
+
+<br>
+
+**Figure 11.1: Summary Statistics of Net Pay v. Race by Contractor**
+
+```{r echo=FALSE, message=FALSE, fig.width=15, fig.height=10}
+library(ggplot2)
+
+ggplot(net, aes(x = Race, y = Net)) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
+  geom_jitter(alpha = 0.25, height = .2, width = .3, size = 2,
+              aes(color = Race)) +
+  scale_color_brewer(palette = "Set2") +
+  xlab("Race") +
+  coord_flip() +
+  theme_classic() +
+  facet_wrap(~ Name) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Net Payments (USD)", labels = scales::comma)
+```
+
+<br>
+
+</center>
+
+
+**Alternate visualizations again help illustrate the distribution of net earnings conditioned on race and contractor.** *Figure 11.2: Frequency & Distribution of Net Pay by Race & Contractor* depicts a stacked trellis histogram depicting the frequency of weekly net payments and their distributions by race and conditioned on contractor. Each bar represents a $25 increment in net payments, while taller bars indicate higher frequency.  
+
+<br>
+
+<center>
+
+**Figure 11.2: Frequency & Distribution of Net Pay by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE, fig.width=15, fig.height=10}
+library(ggplot2)
+
+ggplot(net, aes(x = Net, fill = Race)) +
+  geom_histogram(binwidth = 25, alpha = 0.75) +
+  xlab("Hourly Pay ($25 Increments)") +
+  ylab("Number of Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  facet_grid(Name ~ .) +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(minor_breaks = seq(0 , 25, 5), breaks = seq(0, 25, 5)) +
+  scale_x_continuous(name = "Net Payments ($25 Increments)", labels = scales::comma)
 ```
 
 </center>
