@@ -679,7 +679,7 @@ ggplot(hourly, aes(x = Race, y = Hourly)) +
 library(ggplot2)
 
 ggplot(hourly, aes(x = Hourly, fill = Race)) +
-  geom_histogram(binwidth = 1) +
+  geom_histogram(binwidth = 1, alpha = 0.75) +
   xlab("Hourly Pay ($1 Increments)") +
   ylab("Number of Unique Workers") +
   scale_fill_brewer(palette = "Set2") +
@@ -751,11 +751,15 @@ net_con_sum <- net_con_sum %>%
          "Contractor" = Name)
 ```
 
+**White workers earn the vast majority of all net payments**, i.e. gross earnings less deductions. According to *Table 9: Total Net Earnings by Race*, White workers earned total net earnings of $716.5 K (91.9%), while African American workers, Native American workers, workers of two or more races, and Hispanic workers earned $38.6 K (4.9%), $14.5 K (1.9%), $9.1 K (1.2%), and less than $1 K (0.1%), respectively.
+
+**Minority workers earn less than Whites relative to their proportion of the workforce.** While White workers comprise 86.2% of total unique workers across contractors, they take home 91.9% of all net income. African Americans, Native Americans, workers of two or more races, and the single Hispanic worker, among records where race is disclosed, comprise 7.3%, 3.3.%, 2.4%, and 0.8% of the total workforce, but only take home 4.9%, 1.9%, 1.2%, and 0.1% of total net earnings, respectively. Recall that we see similar trends in "Section 2.4: Periods by Race" in the present work. This may be due, in part, to differences in leadership positions (i.e. "Foremen") as well as specialized classes (i.e. "Operators"), all of which are comprised of Whites. This is best illustrated in *Figure 9: Total Net Earnings v. Race*. 
+
 <br>
 
 <center>
 
-**Table 9: Net Earnings by Race**
+**Table 9: Total Net Earnings by Race**
 
 ```{r echo=FALSE, message=FALSE}
 net_sum_ft <- regulartable(net_sum, cwidth = 3.5)
@@ -787,6 +791,10 @@ ggplot(net_sum_viz, aes(x = reorder(Race, Payments),
 
 ## Net Pay by Race & Contractor
 
+**Racial disparities in net earnings relative to the proportion of workers holds true across companies**, with the exception of *Stone Bridge Iron & Steel, Inc.*. *Longhouse Construction LLC* has a crew of 85.7% White workers who take home 87% of net earnings, while its single African American worker comprises 14.3% but earns 13% of net earnings. *Edward Schalk & Son, Inc.*, with a larger crew size of 23, is comprised of 91.3% White workers receiving 94.8% of net earnings and 8.7% of African American workers receiving 5.2% of net earnings. *Quality Structures, Inc.* is comprised of 85.9% White workers receiving 92% of net earnings - and 72% of net earnings across all companies - while its African American workers, workers of two or more races, and Native American workers comprise 8.5%, 4.2%, and 1.4% of employees, but receiving 5.4%, 1.5%, and 1.1% of net earnings, respectively.
+
+**Notably, *Stone Bridge Iron & Steel, Inc.* turns this pattern on its head.** Though there are a total of 13 unqiue workers, White, Native American, and Hispanic workers comprise 69.2%, 23.1%, and 0.8% of employees and receive 53.5%, 41.4%, and 5.1% of net earnings, respectively. These findings are revealed in *Table 10: Net Earnings by Race & Contractor* and illustrated in both *Figure 10.1: Net Earnings v. Contractor by Race* and *Figure 10.2: Individual Net Earnings v. Contractor by Race*. While the former best visualizes proportionality via stacked bars, the latter depicts the sheer outnumbering of individual net earnings comparing White workers and workers of color, as well as the significantly higher net payments many White workers receive. 
+
 <br>
 
 <center>
@@ -801,7 +809,7 @@ theme_box(net_con_sum_ft)
 
 <br>
 
-**Table 10.1: Net Earnings v. Contractor by Race**
+**Figure 10.1: Net Earnings v. Contractor by Race**
 
 ```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 library(ggplot2)
@@ -818,14 +826,14 @@ ggplot(net_con_sum_viz, aes(x = reorder(Name, Total), y = Total, fill = Race)) +
 
 <br>
 
-**Table 10.2: Individual Net Earnings v. Contractor by Race**
+**Figure 10.2: Individual Net Earnings v. Contractor by Race**
 
 ```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 library(ggplot2)
 
 ggplot(net[net$Race == "White", ], aes(x = Name, y = Net, color = Race)) +
-  geom_jitter(alpha = 0.2, width = 0.175) +
-  geom_jitter(data = net[net$Race != "White", ], width = 0.175, alpha = 0.9, aes(x = Name, y = Net, color = Race)) +
+  geom_jitter(alpha = 0.3, width = 0.175) +
+  geom_jitter(data = net[net$Race != "White", ], size = 2, width = 0.175, alpha = 0.9, aes(x = Name, y = Net, color = Race)) +
   xlab("Contractor") +
   scale_color_brewer(palette = "Set2") +
   theme_classic() +
@@ -834,3 +842,9 @@ ggplot(net[net$Race == "White", ], aes(x = Name, y = Net, color = Race)) +
 ```
 
 </center>
+
+<br>
+
+# Findings: On Location
+
+TBD. 
