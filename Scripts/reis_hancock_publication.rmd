@@ -265,7 +265,8 @@ ggplot(con_table, aes(x = reorder(Contractor, `Unique Workers`),
   coord_flip() +
   xlab("Contractor") +
   scale_fill_brewer(palette = "Set2") +
-  theme_light()
+  theme_light() +
+  theme(legend.position = "bottom")
 ```
 
 </center>
@@ -382,7 +383,8 @@ ggplot(week_con_table, aes(x = reorder(Contractor, `Periods`),
   xlab("Contractor") +
   ylab("Preiods (In Weeks)") +
   scale_fill_brewer(palette = "Set2") +
-  theme_light()
+  theme_light() +
+  theme(legend.position = "bottom")
 ```
 
 <br>
@@ -480,7 +482,8 @@ ggplot(title_agg_table,
   xlab("Title") +
   ylab("Unique Workers") +
   scale_fill_brewer(palette = "Set2") +
-  theme_light()
+  theme_light() +
+  theme(legend.position = "bottom")
 ```
 
 </center>
@@ -552,7 +555,8 @@ ggplot(titles_con_agg_table,
   xlab("Class or Title") +
   scale_fill_brewer(palette = "Set2") +
   theme_light() +
-  facet_wrap( ~ Name)
+  facet_wrap( ~ Name) +
+  theme(legend.position = "bottom")
 ```
 
 </center>
@@ -588,7 +592,13 @@ hourly_con_sum <- hourly %>%
             Maximum = dollar(max(Hourly)))
 ```
 
+**The reader should note certain caveats regarding wage data analyzed.** Specifically, *Patricia Electric, Inc.* was omitted from the data collection process due to its homogenous racial makeup (100% White), reducing the total number of unique workers analyzed from 123 to 110. At times, unique workers earned different hourly wages throughout the course of construction due to pay raises. Moreover, in multiple instances throughout records provided by *Quality Stuctures, Inc.*, unique workers were recorded as earning different hourly wages, atypically due to raises but, in general, due to different hourly wages among different unions. All hourly wages were made uniform across unique workers' records by selecting the lowest wage, regardless of pay period, in order to ensure the most conservative analysis possible, especially due to the findings in the present work that the majority of net pay is exported from Onondaga County. 
 
+**Differences in minimum and maximum hourly pay between minority and White workers are significant**, as shown in *Table 7: Descriptive Statistics of Hourly Wage by Race*, a table of minimum, median, mean, and maximum hourly wages conditioned on race. While unique workers among three different categories of race - African American, White, and two or more races - tied for the lowest hourly wage, $13.73, the highest hourly wage went to White workers at $42.64, while the second highest went to Native American workers at $32.05. Those of two or more races earned the lowest maximum hourly wage, at $24.20, while African American and Hispanic workers tied for second lowest maximum hourly wage at $29. Notably, $29 per hour is both the minimum and maximum wage for "Hispanic" workers, since there was only one in the entire workforce.
+
+**Differences in average hourly pay between minority and White workers ranged from minor to significant.** Excluding the single Hispanic worker at an average hourly wage of $29, White workers earned average hourly wages that were $2.07, $3.96, and $10.29 higher than Native American workers, African American workers, and workers of two or more races, respectively. Differences in median wages between White, African American, and Native American workers were less extreme, indicating a slightly higher skew above the average hourly wage for African American and NAtive American workers, though median is less valuable given the small number of unqiue workers among minority races.
+
+**These differences are illustrated** in *Figure 7: Descriptive Statistics of Hourly Wage v. Race*, which depicts a box plot of hourly wage distributions conditioned on race. The center line within each box indicates median hourly wage, while the left and right bounds of each box indicates the lower and upper quartiles, or 25th and 75th percentiles, respectively. The length of the box depicts the interquartile range (IQR), or 50% of all values between the 25th and 75th percentiles, while the "whisker" length is determined by the most extreme values falling within 150% of the IQR. Outliers, which exceed these lower and upper bounds, are indicated with grey and black squares along the horizontal gridlines. Lastly, blue points overlay the box plot, each indicating the hourly wage of a unique worker. Because many hourly wages are the same, these dots are "jittered", i.e. random noise is added to each point to break up dense concentrations where multiple unique workers earned the same hourly wage. The same visualization techniques are used in *Figure 8: Descriptive Statistics of Hourly Wage v. Race by Contractor*, albeit conditioned on contractors.
 
 <br>
 
@@ -621,7 +631,9 @@ ggplot(hourly, aes(x = Race, y = Hourly)) +
 
 ## Hourly Pay by Race & Contractor
 
-TBA.
+**While visualization conditioned on contractor better relays disparities, most are explained by rank and experience.** Notably, the highest hourly wages are held by "Foremen"" and "Operators", particularly in *Quality Structures, Inc.*, while the lowest hourly wages in the workforce, less than $20, are earned by "Apprentices", with the notable exception of 1 Native American "Journeyman" in *Stone Bridge Iron & Steel, Inc.* earning $16.50. Otherwise, the majority of workers at *Stone Bridge* earn the same hourly rate at $29, while 1 White worker earns $30.05, and 1 Native American worker earns the highest hourly wage at $32.05. Significant hourly wage disparities at *Edward Schalk & Son, Inc.* are due to 2 White and 2 African American "Apprentices". Wages at *Schalk & Son* largely concentrate at $27.45 among the all-White "Journeymen" and "Foremen". 
+
+<br>
 
 <center>
 
@@ -635,7 +647,7 @@ theme_box(hourly_con_sum_ft)
 
 <br>
 
-**Figure 8: Descriptive Statistics of Hourly Wage v. Race by Contractor**
+**Figure 8.1: Descriptive Statistics of Hourly Wage v. Race by Contractor**
 
 ```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
 ggplot(hourly, aes(x = Race, y = Hourly)) +
@@ -651,6 +663,174 @@ ggplot(hourly, aes(x = Race, y = Hourly)) +
   theme(legend.position="none")
 ```
 
+</center>
+
 <br>
+
+**Alternate visualizations help illustrate the distribution of hourly wages conditioned on race and contractor.** *Figure 8.2: Frequency of Hourly Wages Earned by Race & Contractor* depicts a stacked trellis histogram depicting hourly wage distributions by race and conditioned on contractor. Each bar represents a $1 increment in hourly rates.  
+
+<br>
+
+<center>
+
+**Figure 8.2: Frequency of Hourly Wages Earned by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+library(ggplot2)
+
+ggplot(hourly, aes(x = Hourly, fill = Race)) +
+  geom_histogram(binwidth = 1) +
+  xlab("Hourly Pay ($1 Increments)") +
+  ylab("Number of Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  facet_grid(Name ~ .) +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(minor_breaks = seq(0 , 25, 5), breaks = seq(0, 25, 5))
+```
+
+</center>
+
+## Net Pay by Race
+
+```{r echo=FALSE, message=FALSE}
+library(dplyr)
+library(scales)
+
+net <- master %>% 
+  filter(!is.na(race), !is.na(net)) %>% 
+  unique() %>%
+  select(name, title, race, net) %>%
+  rename("Name" = name, "Title" = title, "Race" = race, "Net" = net)
+
+net_sum <- net %>%
+  select(-Title) %>%
+  mutate(`Grand Total` = sum(Net))
+
+net_sum <- net_sum %>%
+  group_by(Race) %>%
+  summarize(Payments = n(),
+            `Total` = sum(Net)) %>%
+  ungroup() %>%
+  mutate(`Total Earnings (%)` = percent(Total / sum(Total)),
+         `Race Earnings ($)` = dollar(Total)) %>%
+  arrange(desc(Payments))
+
+net_sum_viz <- net_sum %>%
+  select(Race:Total) %>%
+  mutate(Thousands = Total / 1000)
+
+net_sum <- net_sum %>%
+  select(-Total) %>%
+  bind_cols(ind_table) %>%
+  select(-Race1) %>%
+  rename("Workers" = `Unique Workers`,
+         "Workers (%)" = Percentage)
+  
+
+net_con_sum <- net %>%
+  group_by(Name, Race) %>%
+  summarize(Payments = n(),
+            `Total` = sum(Net)) %>%
+  ungroup() %>%
+  mutate(`Total Earnings (%)` = percent(`Total` / sum(`Total`)),
+         `Company Earnings ($)` = dollar(`Total`)) %>%
+  arrange(Name, desc(Payments))
+
+net_con_sum_viz <- net_con_sum %>%
+  select(Name:Total)
+
+net_con_sum <- net_con_sum %>%
+  group_by(Name) %>%
+  mutate(`Company Earnings (%)` = percent(Total/sum(Total))) %>%
+  select(Name:Payments, `Company Earnings ($)`, `Company Earnings (%)`, `Total Earnings (%)`) %>%
+  bind_cols(as_data_frame(con_table)) %>%
+  select(-Contractor, - Race1) %>%
+  rename("Company Workers" = `Unique Workers`, 
+         "Company Workers (%)" = Percentage, 
+         "Contractor" = Name)
+```
+
+<br>
+
+<center>
+
+**Table 9: Net Earnings by Race**
+
+```{r echo=FALSE, message=FALSE}
+net_sum_ft <- regulartable(net_sum, cwidth = 3.5)
+net_sum_ft <- fontsize(net_sum_ft, part = "all", size = 12)
+theme_box(net_sum_ft)
+```
+
+<br>
+
+**Figure 9: Total Net Earnings v. Race**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+library(ggplot2)
+library(scales)
+
+ggplot(net_sum_viz, aes(x = reorder(Race, Payments), 
+                      y = Total)) +
+  geom_bar(stat = "identity", alpha = 0.6, fill = "tomato") +
+  coord_flip() +
+  xlab("Race") +
+  ylab("Total Earnings (USD)") +
+  theme_light() +
+  scale_y_continuous(name="Total Earnings (USD)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+## Net Pay by Race & Contractor
+
+<br>
+
+<center>
+
+**Table 10: Net Earnings by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE}
+net_con_sum_ft <- regulartable(net_con_sum, cwidth = 3.5)
+net_con_sum_ft <- fontsize(net_con_sum_ft, part = "all", size = 12)
+theme_box(net_con_sum_ft)
+```
+
+<br>
+
+**Table 10.1: Net Earnings v. Contractor by Race**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+library(ggplot2)
+
+ggplot(net_con_sum_viz, aes(x = reorder(Name, Total), y = Total, fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.6) +
+  coord_flip() +
+  xlab("Contractor") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(name="Total Earnings (USD)", labels = scales::comma)
+```
+
+<br>
+
+**Table 10.2: Individual Net Earnings v. Contractor by Race**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+library(ggplot2)
+
+ggplot(net[net$Race == "White", ], aes(x = Name, y = Net, color = Race)) +
+  geom_jitter(alpha = 0.2, width = 0.175) +
+  geom_jitter(data = net[net$Race != "White", ], width = 0.175, alpha = 0.9, aes(x = Name, y = Net, color = Race)) +
+  xlab("Contractor") +
+  scale_color_brewer(palette = "Set2") +
+  theme_classic() +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(name="Individual Net Earnings (USD)", labels = scales::comma)
+```
 
 </center>
