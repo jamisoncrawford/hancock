@@ -118,7 +118,7 @@ knitr::include_graphics("https://image.syracuse.com/home/syr-media/width960/img/
 
 <br>
 
-# Findings
+# Findings: On Race
 
 **The following outlines significant findings** in racial disparities in employment for Hancock Airport construction contractors which provided demographic information in the FOIA request. Where relevant, additional notable findings discovered in exploratory analysis are also provided. Lastly, net wage and location data are organized and visualized similarly, with accompanying interpretations provided.
 
@@ -353,7 +353,7 @@ week_con_table <- week_con_table %>%
   rename("Workers (%)" = Percentage)
 ```
 
-**Breaking down total periods worked by race and contractor reveals additional, albeit slight disparities.** *Table 4: Total Weeks Worked by Race & Contractor* depicts the total count and proportion of working periods by race among each contractor. *Quality Structures, Inc.* appears to have the greatest disparities, with Whites comprising 85.9% of workers but taking home 89.5% of the 607 paychecks distributed, while African Americans comprised 8.5% of workers and receiving 6.3% of all weekly paychecks. The 4.2% of workers in *Quality Structures, Inc.* took home a total of 15 paychecks (2.5%) while, unusually, the 3 Native Americans among its workers (1.4%) received payment for 1.8% of all work periods.
+**Breaking down total periods worked by race and contractor reveals additional, albeit slight disparities.** Note herein that "payment", "paycheck", "work week", and "work period" are used interchangeably and units of analysis represent a single work period for one unique worker. In other words, one unique worker may work multiple periods throughout the duration of construction and periods are measured cumulatively. *Table 4: Total Weeks Worked by Race & Contractor* depicts the total count and proportion of working periods by race among each contractor. *Quality Structures, Inc.* appears to have the greatest disparities, with Whites comprising 85.9% of workers but taking home 89.5% of the 607 paychecks distributed, while African Americans comprised 8.5% of workers and receiving 6.3% of all weekly paychecks. The 4.2% of workers in *Quality Structures, Inc.* took home a total of 15 paychecks (2.5%) while, unusually, the 3 Native Americans among its workers (1.4%) received payment for 1.8% of all work periods.
 
 **Racial disparities in weeks worked are smaller among other contractors.** The 91.3% of White workers in *Edward Schalk & Son, Inc.* received 73 payments of 79 total weeks worked (92.4%) while the remaining 8.7% of paychecks were distributed to its African American workers, or 7.6% of all payment periods, indicating slightly more work time for Whites in proportion to the company's racial makeup. *Longhouse Construction LLC* exhibited similarly small disparities, with an 85.7% of Whites working 86.4% of its total work weeks and 14.3% of African Americans working only 13.6% of total work weeks. Notably, *Stone Bridge Iron & Steel, Inc.* was the only organization which reversed this trend, with 69.2% of Whites working 60.6% of aggregate work periods, while 23.1% of its 3 Native Americans employees received payment for 33.3% of work periods. The only exception being the 1 Hispanic worker, comprising 7.7% of its unique workers and taking home 2, or 6.1% of total paychecks. These disparities are further illustrated in *Figure 4: Total Weeks Worked v. Race by Contractor*.
 
@@ -380,6 +380,7 @@ ggplot(week_con_table, aes(x = reorder(Contractor, `Periods`),
   geom_bar(stat = "identity", alpha = 0.6) +
   coord_flip() +
   xlab("Contractor") +
+  ylab("Preiods (In Weeks)") +
   scale_fill_brewer(palette = "Set2") +
   theme_light()
 ```
@@ -388,4 +389,268 @@ ggplot(week_con_table, aes(x = reorder(Contractor, `Periods`),
 
 ## Titles by Race
 
-TBD.
+```{r echo=FALSE, message=FALSE}
+library(dplyr)
+library(scales)
+library(stringr)
+
+titles <- master %>% 
+  filter(!is.na(race)) %>% 
+  select(name, ssn, title, race, zip) %>% 
+  unique()
+
+lvls <- c("General Foreman", "Foreman", "Subforeman", "Operator", "Journeyman", 
+          "Apprentice", "Apprentice 4th Year", "Apprentice 3rd Year", 
+          "Apprentice 2nd Year", "Apprentice 1st Year", "Unspecified")
+
+titles$title <- factor(titles$title, levels = lvls)
+
+titles <- titles %>% 
+  as_data_frame(table(individuals$title)) %>%
+  group_by(race, title) %>%
+  summarize(`Total Workers` = n()) %>%
+  rename("Race" = race, "Title" = title) %>%
+  select(Title, Race, `Total Workers`) %>%
+  arrange(ordered(Title), desc(`Total Workers`), Race)
+
+title_table <- titles %>%
+  ungroup %>%
+  mutate(`Percent (%)` = percent(`Total Workers` / sum(`Total Workers`)))
+
+# Aggregating Categories
+
+titles_agg <- master %>% 
+  filter(!is.na(race)) %>% 
+  select(name, ssn, title, race, zip) %>% 
+  unique()
+
+titles_agg$title <- str_replace_all(string = titles_agg$title, 
+                                    pattern = "General Foreman|Subforeman|Foreman", 
+                                    replacement = "Foreman")
+titles_agg$title <- str_replace_all(string = titles_agg$title,
+                                    pattern = "Apprentice.*", 
+                                    replacement = "Apprentice")
+
+lvls <- c("Foreman", "Operator", "Journeyman", "Apprentice", "Unspecified")
+titles_agg$title <- factor(titles_agg$title, levels = lvls)
+
+titles_agg <- titles_agg %>% 
+  as_data_frame(table(individuals$title)) %>%
+  group_by(race, title) %>%
+  summarize(`Total Workers` = n()) %>%
+  rename("Race" = race, "Title" = title) %>%
+  select(Title, Race, `Total Workers`) %>%
+  arrange(ordered(Title), desc(`Total Workers`), Race)
+
+title_agg_table <- titles_agg %>%
+  ungroup %>%
+  mutate(`Percent (%)` = percent(`Total Workers` / sum(`Total Workers`)))
+
+```
+
+**Notable caveats herein:** Terms"rank", "title", and "status" are used interchangeably and, although these do not reflect the modern US apprenticeship system, these ranks or titles are provided in the same fields within contractors' employment records. In other words, where one worker's record may state "Journeyman" in one field, another worker's record may state "Foreman" in the same field. Hence, "rank" or "title" is used in light of this incongruence. Lastly, titles and ranks are shown here in aggregate, having made uniform "Foreman", "Subforeman", and "General Foreman" as well as "Apprentices" for varying durations ("1st Year", "2nd Year", etc.). This has no effect on interpretation and findings. 
+
+**Conditioning rank or title on race reveals only Whites in positions of authority.** *Table 5: Aggregate Titles by Race* breaks down ranks of all 123 unique workers by race, in descending order (i.e. from "Foreman" to "Journeyman" to "Apprentice"), per records containing racial data. All leadership positions, i.e. "General Foreman", "Foreman", and "Subforeman" are assumed by 17 White Workers (13.8%) and all 7 specialized workers assuming the "Operator" title are also White (5.7%).
+
+**Workers of color only appear as "Journeyman" or "Apprentices".** While 56 White workers are "Journeyman" status, comprising 81.1% of all 69 "Journeymen" and 45.5% of the total workforce, African Americans, Native Americans, one Hispanic, and one worker of two or more races comprise 7, 4, 1, and 1 of all 69 "Journeyman" workers, or 10.1%, 5.7%, 1.4%, and 1.4% of all "Journeymen", respectively. In total, minority "Journeymen" comprise 18.6% of all "Journeymen" and 10.6% of the total workforce in which race is disclosed. Only 26% of 15 "Apprentices" are minorities - to wit, 2 African American workers and 2 workers of two or more races. These findings are further illustrated in *Figure 5: Aggregate Titles v. Total Workers by Race*.
+
+<br>
+
+<center>
+
+**Table 5: Aggregate Titles by Race**
+
+```{r echo=FALSE, message=FALSE}
+title_agg_table_ft <- regulartable(title_agg_table, cwidth = 3.5)
+title_agg_table_ft <- fontsize(title_agg_table_ft, part = "all", size = 14)
+theme_box(title_agg_table_ft)
+```
+
+<br>
+
+**Figure 5: Aggregate Titles v. Total Workers by Race**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+ggplot(title_agg_table, 
+       aes(x = factor(Title, levels=rev(levels(Title))), 
+           y = `Total Workers`, 
+           fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.6) +
+  coord_flip() +
+  xlab("Title") +
+  ylab("Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light()
+```
+
+</center>
+
+<br>
+
+## Titles by Race & Contractor
+
+```{r echo=FALSE, message=FALSE}
+library(dplyr)
+library(scales)
+library(stringr)
+
+titles_con_agg <- master %>% 
+  filter(!is.na(race)) %>% 
+  select(name, ssn, title, race, zip) %>% 
+  unique()
+
+titles_con_agg$title <- str_replace_all(string = titles_con_agg$title, 
+                                        pattern = "General Foreman|Subforeman|Foreman", 
+                                        replacement = "Foreman")
+titles_con_agg$title <- str_replace_all(string = titles_con_agg$title,
+                                        pattern = "Apprentice.*", 
+                                        replacement = "Apprentice")
+
+lvls <- c("Foreman", "Operator", "Journeyman", "Apprentice", "Unspecified")
+titles_con_agg$title <- factor(titles_con_agg$title, levels = lvls)
+
+titles_con_agg_table <- titles_con_agg %>% 
+  as_data_frame(table(titles_con_agg$title)) %>%
+  select(name, title, race) %>%
+  group_by(name, race, title) %>%
+  summarize(`Total Workers` = n()) %>%
+  rename("Name" = name, "Race" = race, "Title" = title) %>%
+  arrange(Name, ordered(Title), desc(`Total Workers`), Race)
+
+titles_con_agg_table <- titles_con_agg_table %>%
+  group_by(Name) %>%
+  mutate(`Company Percent (%)` = percent(`Total Workers` / sum(`Total Workers`)))
+```
+
+**Little understanding of racial disparities is added when "Title" is when broken down by contractor**, since these findings largely reflect the same absence of workers of color in leadership positions, as well as the majority of both Whites and minorities having "Journeyman" titles, as seen in *Table 6: Aggregate Titles by Race & Contractor*, below. 
+
+**Among somewhat noteworthy findings**, *Longhouse Construction LLC* had 5 of its 7 unique workers (71.4%), all White, assuming the role of "Foreman", or variations (e.g. "Foreman +2"), while maintaining 1 African American "Journeyman" and 1 White "Apprentice". Further investigation reveals that multiple unique White workers would assume the title of "Foreman" during the same work period. During the work period ending in March 17, 2018, there were a total of 3 "Foremen" and 1 "Foreman +2", including Monday, March 13, 2018, during which all 4 worked full days. Also noteworthy is *Stone Bridge Iron & Steel, Inc.*, in which all 13 unique workers were "Journeymen" and comprised of the lowest proportion of White workers among all 5 companies, with 30.8% of unique workers comprised of 3 Native Americans (23.1%) and 1 Hispanic worker (7.7%). These findings are further illustrated in *Figure 6: Aggregate Titles v. Total Workers by Race & Contractor*.
+
+<br>
+
+<center>
+
+**Table 6: Titles by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE}
+titles_con_agg_table_ft <- regulartable(titles_con_agg_table, cwidth = 3.5)
+titles_con_agg_table_ft <- fontsize(titles_con_agg_table_ft, part = "all", size = 14)
+theme_box(titles_con_agg_table_ft)
+```
+
+<br>
+
+**Figure 6: Titles v. Total Workers by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+ggplot(titles_con_agg_table, 
+       aes(x = factor(Title, levels=rev(levels(Title))), 
+           y = `Total Workers`, 
+           fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.6) +
+  coord_flip() +
+  xlab("Class or Title") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  facet_wrap( ~ Name)
+```
+
+</center>
+
+<br>
+
+## Hourly Pay by Race
+
+```{r echo=FALSE, message=FALSE}
+library(dplyr)
+library(scales)
+
+hourly <- master %>% 
+  filter(!is.na(race), !is.na(rate)) %>% 
+  select(name, ssn, title, race, zip, rate) %>% 
+  unique() %>%
+  select(name, title, race, rate) %>%
+  rename("Name" = name, "Title" = title, "Race" = race, "Hourly" = rate)
+
+hourly_sum <- hourly %>%
+  select(-Title) %>%
+  group_by(Race) %>%
+  summarize(Minimum = dollar(min(Hourly)), 
+            Median = dollar(median(Hourly)),
+            Mean = dollar(round(mean(Hourly), digits = 2)),
+            Maximum = dollar(max(Hourly)))
+
+hourly_con_sum <- hourly %>%
+  group_by(Name, Race) %>%
+  summarize(Minimum = dollar(min(Hourly)), 
+            Median = dollar(median(Hourly)),
+            Mean = dollar(round(mean(Hourly), digits = 2)),
+            Maximum = dollar(max(Hourly)))
+```
+
+
+
+<br>
+
+<center>
+
+**Table 7: Descriptive Statistics of Hourly Wage by Race**
+
+```{r echo=FALSE, message=FALSE}
+hourly_sum_ft <- regulartable(hourly_sum, cwidth = 3.5)
+hourly_sum_ft <- fontsize(hourly_sum_ft, part = "all", size = 14)
+theme_box(hourly_sum_ft)
+```
+
+<br>
+
+**Figure 7: Descriptive Statistics of Hourly Wage v. Race**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+ggplot(hourly, aes(x = Race, y = Hourly)) +
+  geom_boxplot(fill = "#FF9900", alpha = 0.35, outlier.shape = 15, outlier.size = 2) +
+  geom_jitter(height = .3, width = .2, fill = "#003399", color = "#003399", alpha = 0.3, size = 2) +
+  coord_flip() + 
+  ylab("Hourly Pay (USD)") +
+  theme_light()
+```
+
+</center>
+
+<br>
+
+## Hourly Pay by Race & Contractor
+
+TBA.
+
+<center>
+
+**Table 8: Descriptive Statistics of Hourly Wage by Race & Contractor**
+
+```{r echo=FALSE, message=FALSE}
+hourly_con_sum_ft <- regulartable(hourly_con_sum, cwidth = 3.5)
+hourly_con_sum_ft <- fontsize(hourly_con_sum_ft, part = "all", size = 11)
+theme_box(hourly_con_sum_ft)
+```
+
+<br>
+
+**Figure 8: Descriptive Statistics of Hourly Wage v. Race by Contractor**
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+ggplot(hourly, aes(x = Race, y = Hourly)) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
+  geom_jitter(alpha = 0.5, height = .2, width = .3, size = 2,
+              aes(color = Race)) +
+  scale_color_brewer(palette = "Set2") +
+  xlab("Contractor") +
+  ylab("Hourly Pay (USD)") +
+  coord_flip() +
+  theme_classic() +
+  facet_wrap(~ Name) +
+  theme(legend.position="none")
+```
+
+<br>
+
+</center>
