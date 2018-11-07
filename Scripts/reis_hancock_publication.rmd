@@ -43,6 +43,12 @@ url <- "https://raw.githubusercontent.com/jamisoncrawford/REIS/master/Tables/han
 master <- read_csv(file = url, col_types = "cccccccnnDccccnnccliii"); rm(url)
 ```
 
+# Executive Summary
+
+TBD.
+
+<br>
+
 # Introduction
 
 **Glass and aluminum** curtain walls, a grand staicase, and an indoor waterfall, among other features, now adorn the Syracuse Hancock International Airport, and will greet over two million travelers and other passersby for years to come. The terminal, built in 1961, underwent significant renovations throughout much of 2018, slated for completion in late Fall, at the cost of $60 million: $35.8 million from New York State, $1 million from Onondaga County, and the remainder from both federal and local sources ([Moriarty, 2018](https://www.syracuse.com/news/index.ssf/2018/07/first_look_inside_syracuse_airport_terminal_renovations_photos.html)).
@@ -1111,9 +1117,9 @@ city_10 <- master %>%
   rename("City" = city, "County" = county, "State" = state)
 
 city_agg <- city_10[11:81, ] %>%
-  summarize(City = "All Other",
-            County = "-",
-            State = "-",
+  summarize(City = "Other",
+            County = "Other",
+            State = "Other",
             `Total Workers` = sum(`Total Workers`),
             `Total Workers (%)` = percent(sum(`Total Workers (%)`)))
 
@@ -1159,6 +1165,201 @@ ggplot(city_10, aes(x = reorder(City, `Total Workers`),
 
 </center>
 
+<br>
+
+## Race by County
+
+```{r echo=FALSE, message=FALSE}
+county_race <- master %>%
+  filter(!is.na(zip),
+         !is.na(race)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(county, race) %>%
+  summarize(Total = n()) %>%
+  rename("Race" = race, "County" = county) %>%
+  arrange(Race, desc(Total), County) %>%
+  as_data_frame() %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = Total / sum(Total)) %>%
+  as_data_frame() %>%
+  mutate(`Workforce (%)` = Total / sum(Total))
+
+race_trunc <- county_race[11:29, ] %>%
+  summarize(County = "All Other",
+            Race = "White", 
+            Total = sum(Total),
+            `Race (%)` = sum(`Race (%)`),
+            `Workforce (%)` = sum(`Workforce (%)`))
+
+county_race_tbl <- county_race[1:10, ] %>%
+  bind_rows(race_trunc) %>%
+  mutate(`Race (%)` = percent(`Race (%)`),
+         `Workforce (%)` = percent(`Workforce (%)`)) %>%
+  arrange(desc(Race), desc(Total), County)
+
+county_race <- county_race %>%
+  mutate(`Race (%)` = percent(`Race (%)`),
+         `Workforce (%)` = percent(`Workforce (%)`))
+```
+
+**The majority of workers of color reside in Onondaga County.** According to *Table 14: Top Counties of Worker Origin for All Races*, 88.9% of all 9 African American workers reside in Onondaga County, while 1 traveled from Oneida County. While half of the 4 Native American workers reside in Onondaga County, the remaining half traveled from Cattaraugus County. Among workers of two or more races, 2 of 3 reside in Onondaga County, while the third traveled from Cayuga County. Lastly, the single Hispanic worker also resides in Onondaga County. In total, 13 of the 17 minority workers (76.5%) originated in Onondaga County.
+
+**Over 75% of White workers reside outside Onondaga County.** That is, only 26, or 24.1%, of White workers reside within Onondaga County, while the greatest number of White workers (34) traveled from Oswego County (31.5%). The third highest concentration of White workers (8) reside in Madison County, comprising 7.4% of Whites and 6.4% of the total workforce, while 40 White workers, comprising 37% of total White workers and 32% of the total workforce, came from counties other than Onondaga, Oswego, and Madison. These findings are illustrated in *Figure 14: Top Counties of Worker Origin for All Races*. A full list of workers by race and county is available in the *Appendix* under *Table 14.1*. 
+
+<br>
+
+<center>
+
+**Table 14: Top Counties of Worker Origin for All Races**
+
+```{r echo=FALSE, message=FALSE}
+county_race_tbl_ft <- regulartable(county_race_tbl, cwidth = 3.5)
+county_race_tbl_ft <- fontsize(county_race_tbl_ft, part = "all", size = 14)
+theme_box(county_race_tbl_ft)
+```
+
+</center>
+
+<br>
+
+**Note:** At first glance, there may appear to be a discrepancy between *Table 14: Top Counties of Worker Origin for All Races*. However, the above table provides counties with the greatest number of workers for all races. In other words, while only a fraction of White workers reside in Cayuga and Oneida Counties, they do not appear in the table, since Oswego, Onondaga, and Madison Counties contain the greatest number of White workers. In effect, the below visualization accounts for overlap in county origin, ensuring 7 White workers are removed from "Other" counties, while 5 and 2 are added to Cayuga and Oneida counties, respectively.
+
+<center>
+
+<br>
+
+**Figure 14: Top Counties of Worker Origin for All Races**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+library(ggplot2)
+
+county_race_viz <- county_race[c(1:10, 11, 20), 1:3] %>%
+  bind_rows(race_trunc[, 1:3]) %>%
+  arrange(desc(Race), desc(Total), County)
+
+county_race_viz[1, "Total"] <- 33
+county_race_viz[1, "County"] <- "Other"
+
+ggplot(county_race_viz, aes(x = reorder(County, Total), 
+                   y = Total,
+                   fill = Race)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  xlab("County") +
+  ylab("Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+</center>
+
+<br>
+
+## Race in Onondaga
+
+```{r echo=FALSE, message=FALSE}
+city_race <- master %>%
+  filter(!is.na(zip),
+         !is.na(race),
+         county == "Onondaga") %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  select(race, city) %>%
+  group_by(race, city) %>%
+  summarize(Total = n()) %>%
+  rename("Race" = race, "City" = city) %>%
+  arrange(Race, desc(Total), City) %>%
+  as_data_frame() %>%
+  group_by(City) %>%
+  mutate(`City (%)` = Total / sum(Total)) %>%
+  as_data_frame() %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = Total / sum(Total)) %>%
+  as_data_frame() %>%
+  mutate(`County (%)` = Total / sum(Total))
+
+city_race_tbl <- city_race %>%
+  mutate(`City (%)` = percent(`City (%)`),
+         `Race (%)` = percent(`Race (%)`),
+         `County (%)` = percent(`County (%)`)) %>%
+  rename("Race in City (%)" = `City (%)`,
+         "Total Workers (%)" = `County (%)`) %>%
+  select(1:3, 5, 4, 6)
+```
+
+**The majority of Onondaga County's minority workers live in Syracuse.** Recall that there are 66 unique workers in Onondaga County, or 35.1% of the total workforce. Of those 66, 39 contain employment records disclosing race, comprising 59% of Onondaga County workers and 20.7% of the total workforce. According to *Table 15: Location of Onondaga County Workers by Race*, strictly in terms of workers residing in Onondaga County for whom race is disclosed, 100% of the 8 African American workers reside in the city of Syracuse. Among the 2 workers of two or more races, 100% also reside in Syracuse. Only 1 of 2 Native American workers live in Syracuse, the second residing in La Fayette, while the sole Hispanic worker lives in Liverpool. In sum, 11 of Onondaga County's 13 minority workers, or 84.6%, live in the city.
+
+**Less than half of all White workers in Onondaga County live in Syracuse.** More specifically, 11 of the 26 White workers in Onondaga County, or 42.3%, live in Syracuse, comprising 50% of all workers living within the city and 28.2% of workers within the county. Of the other 15 White workers, 4 live in Liverpool, 3 live in Baldwinsville, and 2 live in Clay, comprising 15.4%, 11.5% and 7.7% of White workers in Onondaga County and 10.3%, 7.7%, and 5.6% of all Onondaga County workers, respectively. Lastly, 1 of each of the 6 remaining White worker lives in Camillus, East Syracuse, Fayetteville, Jordan, Manlius, and Tully. These findings are illustrated in *Figure 15: Location of Onondaga County Workers by Race*. 
+
+<br>
+
+<center>
+
+**Table 15: Location of Onondaga County Workers by Race**
+
+```{r echo=FALSE, message=FALSE}
+city_race_tbl_ft <- regulartable(city_race_tbl, cwidth = 3.5)
+city_race_tbl_ft <- fontsize(city_race_tbl_ft, part = "all", size = 14)
+theme_box(city_race_tbl_ft)
+```
+
+<br>
+
+**Figure 15: Location of Onondaga County Workers by Race**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+library(ggplot2)
+
+city_race_tbl[10:15, "City"] <- "Other"
+
+ggplot(city_race_tbl, aes(x = reorder(City, Total), 
+                   y = Total,
+                   fill = Race)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  xlab("City") +
+  ylab("Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+</center>
+
+<br>
+
+## Net Wages by County
+
+TBD.
+
+<br>
+
+## Net Wages in Onondaga
+
+TBD.
+
+<br>
+
+## Net Wages by Distance
+
+TBD.
+
+<br>
+
+# Contributors
+
+TBA.
+
+<br>
+
+# Contact
+
+TBA.
+
+<br>
+
 # Appendix
 
 <br>
@@ -1175,6 +1376,20 @@ city2 <- city %>%
 city_ft <- regulartable(city2, cwidth = 3.5)
 city_ft <- fontsize(city_ft, part = "all", size = 14)
 theme_box(city_ft)
+```
+
+</center>
+
+## Table 14.1
+
+<center>
+
+**Total Workers by Race & County**
+
+```{r echo=FALSE, message=FALSE}
+county_race_ft <- regulartable(county_race, cwidth = 3.5)
+county_race_ft <- fontsize(county_race_ft, part = "all", size = 14)
+theme_box(county_race_ft)
 ```
 
 </center>
