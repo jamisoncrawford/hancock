@@ -204,7 +204,7 @@ theme_box(ind_table_ft)
 
 **Figure 1: Unique Workers v. Race**
 
-```{r echo=FALSE, message=FALSE}
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
 library(ggplot2)
 
 ggplot(ind_table, aes(x = reorder(Race, `Unique Workers`), 
@@ -1009,4 +1009,172 @@ ggplot(net, aes(x = Net, fill = Race)) +
 
 # Findings: On Location
 
-TBD. 
+```{r echo=FALSE, message=FALSE, eval=FALSE}
+geo <- master %>% filter(!is.na(zip))
+geo %>% filter(!is.na(net)) %>% nrow()
+geo %>% select(name:rate, zip) %>% unique()
+```
+
+**Though the initial impetus behind analyzing employment data was driven by racial disparities**, exploratory analysis revealed another significant discovery among records. To wit, the majority of workers hired among most contractors were from neither Syracuse nor Onondaga County. In fact, a number of workers traveled to Syracuse from across the state, while some of the highest paid workers were imported from northern counties in Pennsylvania. 
+
+**The remainder of the analysis focuses on the mass importation of workers and the exodus of wealth.** Unlike race and gender data, which were missing from a large portion of records, 1,044 of the 1,045 total records (99.9%) contained the zip code of each employee, or sufficient data to deduce the zip code, if either illegible or sporadically redacted. Zip codes were deduced by matching combinations of social security numbers, titles or positions, company names, hourly wages, and other variables to determine matches where data were missing. Among all records, 1,012 (96.8%) contained data on weekly net earnings of 188 unique workers across 7 total contractors, allowing analysts to quantify much of the disposable income exported from Syracuse, including workers in:
+
+* John W. Danforth Company
+* Edward Schalk & Son, Inc.
+* Longhouse Construction LLC
+* NRC NY Environmental Services, Inc.
+* Patricia Electric, Inc.
+* Quality Structures, Inc.
+* Stone Bridge Iron & Steel, Inc.
+
+The only contractor excluded from the financial components herein is *Niagara Erecting, Inc.*, which contained illegible, handwritten data within fields for deductions and period net earnings.
+
+<br>
+
+## Total Workers by County & State
+
+```{r echo=FALSE, message=FALSE}
+county <- master %>%
+  filter(!is.na(zip)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(county, state) %>%
+  summarize(`Total Workers` = n()) %>%
+  arrange(desc(`Total Workers`)) %>%
+  as_data_frame() %>%
+  mutate(`Total Workers (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  rename("State" = state, "County" = county)
+```
+
+**Of a total workforce of 188 unique workers, just over one third reside in Onondaga County**, according to *Table 12: Total Workers by County & State*. That is, 66 unique workers, or 35.1%, reside in Onondaga County. The second and third largest proportions, comprised of 52 and 10 unique workers, or 27.7% and 5.3%, reside in Onondaga's border counties Oswego and Madison, respectively, while non-contiguous Oneida County imports 9 unique workers (4.8%). Of remaining border counties, Cayuga County and Cortland comprise the 5th and 8th largest importers, i.e. 7 and 4 unique workers, or 3.7% and 2.1%, respectively. In the entire workforce, 73 of 188 unique workers, or 38.8%, reside in counties bordering Onondaga.
+
+**One quarter of the 188 unique workers are from outside Central New york.** That is, 49 workers across companies, or 26%, are imported from 20 counties outside Onondaga and its 4 neighboring counties, including 6 workers (3.2%) from Pennsylvania - specifically, 5 from Tioga County (2.7%) and 1 from Lycoming County (0.5%). These findings are illustrated in *Figure 12: Total Workers v. County by State*. 
+
+<br>
+
+<center>
+
+**Table 12: Total Workers by County & State**
+
+```{r echo=FALSE, message=FALSE}
+county_ft <- regulartable(county, cwidth = 3.5)
+county_ft <- fontsize(county_ft, part = "all", size = 14)
+theme_box(county_ft)
+```
+
+<br>
+
+**Figure 12: Total Workers v. County by State**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+library(ggplot2)
+
+ggplot(county, aes(x = reorder(County, `Total Workers`), 
+                   y = `Total Workers`,
+                   fill = State)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  xlab("County") +
+  ylab("Total Unique Workers") +
+  scale_fill_brewer(palette = "Paired") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+</center>
+
+<br>
+
+## Total Workers by City
+
+```{r echo=FALSE, message=FALSE}
+city <- master %>%
+  filter(!is.na(zip)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(city, county, state) %>%
+  summarize(`Total Workers` = n()) %>%
+  arrange(desc(`Total Workers`)) %>%
+  as_data_frame() %>%
+  mutate(`Total Workers (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  rename("City" = city, "County" = county, "State" = state)
+
+city_10 <- master %>%
+  filter(!is.na(zip)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(city, county, state) %>%
+  summarize(`Total Workers` = n()) %>%
+  arrange(desc(`Total Workers`)) %>%
+  as_data_frame() %>%
+  mutate(`Total Workers (%)` = `Total Workers` / sum(`Total Workers`)) %>%
+  rename("City" = city, "County" = county, "State" = state)
+
+city_agg <- city_10[11:81, ] %>%
+  summarize(City = "All Other",
+            County = "-",
+            State = "-",
+            `Total Workers` = sum(`Total Workers`),
+            `Total Workers (%)` = percent(sum(`Total Workers (%)`)))
+
+city_10 <- city_10[1:10, ] %>%
+  mutate(`Total Workers (%)` = percent(`Total Workers (%)`)) %>%
+  bind_rows(city_agg)
+```
+
+**About one fifth of workers reside in Syracuse, while the remainder come from 80 other cities.** As seen in *Table 13: Top 10 Cities of Worker Origin*, 36 of 188 workers, or 19.1%, actually reside in Syracuse. The first and second cities exporting the most workers are Oswego, NY and Fulton, NY, totaling 18 and 17 workers, or 9.6% and 9%, respectively (35 workers, or 18.6%). The third, fourth, fifth, and sixth cities exporting the most workers include Liverpool, NY, Clay, NY, Cortland, NY, and Rochester, NY, totaling 7, 5, 4, and 4 workers, or 3.7%, 2.7%, 2.1%, and 2.1%, respectively (20 workers, or 11%). 
+
+**More than half the total workforce reside in the 74 cities exporting 3 or less workers, each.** That is, 97 unique workers across companies, or 51.6% of the total workforce, reside outside of Syracuse, Oswego, Fulton, Liverpool, Clay, Cortland, and Rochester, NY. While some are relatively close to Syracuse, e.g. 3 workers (1.6%) residing in Baldwinsville, NY, others travel some distance to work on Hancock International's renovations, e.g. 2 workers (1.1%) residing in Mansfield, PA. These findings are illustrated in *Figure 13: Total Workers v. Top 10 Cities & All Other by County*. A full list of workers by city is available in the *Appendix* under *Table 13.1*. 
+
+<br>
+
+<center>
+
+**Table 13: Top 10 Cities of Worker Origin**
+
+```{r echo=FALSE, message=FALSE}
+city_10_ft <- regulartable(city_10, cwidth = 3.5)
+city_10_ft <- fontsize(city_10_ft, part = "all", size = 14)
+theme_box(city_10_ft)
+```
+
+<br>
+
+**Figure 13: Total Workers v. Top 10 Cities & All Other by County**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+library(ggplot2)
+
+ggplot(city_10, aes(x = reorder(City, `Total Workers`), 
+                   y = `Total Workers`,
+                   fill = County)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  xlab("City") +
+  ylab("Total Unique Workers") +
+  scale_fill_brewer(palette = "Set3") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+</center>
+
+# Appendix
+
+<br>
+
+## Table 13.1
+
+<center>
+
+**Total Workers by City, County, & State**
+
+```{r echo=FALSE, message=FALSE}
+city2 <- city %>%
+  arrange(desc(`Total Workers`), State, County, City)
+city_ft <- regulartable(city2, cwidth = 3.5)
+city_ft <- fontsize(city_ft, part = "all", size = 14)
+theme_box(city_ft)
+```
+
+</center>
