@@ -1,7 +1,7 @@
 ---
 title: 'Hancock: Importing Whites, Exporting Wealth'
 author: "Jamison R. Crawford, MPA"
-date: "November 4, 2018"
+date: "November 10, 2018"
 output: 
   html_document:
     toc: true
@@ -10,7 +10,7 @@ output:
     number_sections: true
 ---
 
-```{r echo=FALSE, message=FALSE, cache=TRUE}
+```{r load_all, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
 
 if(!require(sf)){install.packages("sf")}
 if(!require(tmap)){install.packages("tmap")}
@@ -22,6 +22,8 @@ if(!require(scales)){install.packages("scales")}
 if(!require(stringr)){install.packages("stringr")}
 if(!require(ggplot2)){install.packages("ggplot2")}
 if(!require(leaflet)){install.packages("leaflet")}
+if(!require(viridis)){install.packages("viridis")}
+if(!require(noncensus)){install.packages("noncensus")}
 if(!require(flextable)){install.packages("flextable")}
 
 library(sf)
@@ -34,14 +36,23 @@ library(scales)
 library(stringr)
 library(ggplot2)
 library(leaflet)
+library(viridis)
 library(noncensus)
 library(flextable)
 
 rm(list = ls())
 
-url <- "https://raw.githubusercontent.com/jamisoncrawford/REIS/master/Tables/hancock_master_table_1.3.csv"
+url <- "https://raw.githubusercontent.com/jamisoncrawford/REIS/master/Tables/hancock_master_table_1.4.csv"
 master <- read_csv(file = url, col_types = "cccccccnnDccccnnccliii"); rm(url)
 ```
+
+# Warning
+
+**The present work is considered a "sneak peek" for testing purposes** and early sharing with collaborators. The data used and findings herein are not considered final for public consumption by the principal analyst.
+
+**Duplicate records were detected and recently removed.** Therefore, visualizations and tables herein, which are likely accurate but must undergo review, may differ from their accompanying interpretations. The analayst anticipates the most affected records involve net pay and, notably, the number of unique records has decreased from 1,045 to 927. 
+
+<br>
 
 # Executive Summary
 
@@ -59,7 +70,7 @@ TBD.
 
 <center>
 
-```{r pressure, echo=FALSE, fig.cap="*Concept rendering for the passenger terminal at Hancock International Airport. Source: [Syracuse.com](https://www.syracuse.com/business-news/index.ssf/2017/10/heres_what_syracuse_airport_will_look_like_after_49m_renovation_photos.html)*", out.width = '90%'}
+```{r concept_art, echo=FALSE, fig.cap="*Concept rendering for the passenger terminal at Hancock International Airport. Source: [Syracuse.com](https://www.syracuse.com/business-news/index.ssf/2017/10/heres_what_syracuse_airport_will_look_like_after_49m_renovation_photos.html)*", out.width = '90%'}
 
 knitr::include_graphics("https://image.syracuse.com/home/syr-media/width960/img/post-standard/photo/2017/10/17/-f16fcc8e20f3ee69.JPG")
 
@@ -134,13 +145,13 @@ knitr::include_graphics("https://image.syracuse.com/home/syr-media/width960/img/
 
 ## On Demographic Data
 
-```{r echo=FALSE, message=FALSE}
+```{r data_overview, echo=FALSE, message=FALSE}
 library(scales)
 library(dplyr)
 
 x <- nrow(master %>% filter(!is.na(race)))
 y <- nrow(master %>% filter( is.na(race)))
-p <- percent(y/x)
+p <- percent(y / x + y)
 ```
 
 **As an important caveat, contractors failing to disclose race or gender** in their employment records comprise `r p` of total payments throughout construction. That is, out of a total `r format(x + y, big.mark = ",")` recorded weekly payments, `r y` did not contain any race or gender data, while `r x` did. It is impossible to impute or otherwise approximate these data. Contractors failing to disclose race include:
@@ -149,12 +160,12 @@ p <- percent(y/x)
 * Niagara Erecting, Inc.
 * NRC NY Environmental Services, Inc.
 
-```{r echo=FALSE, message=FALSE}
+```{r individuals_overview, echo=FALSE, message=FALSE}
 library(dplyr)
 library(scales)
 
-x <- master %>% filter(!is.na(race)) %>% select(name, ssn, zip) %>% unique() %>% nrow()
-y <- master %>% filter( is.na(race)) %>% select(name, ssn, zip) %>% unique() %>% nrow()
+x <- master %>% filter(!is.na(race)) %>% select(name:rate, zip) %>% unique() %>% nrow()
+y <- master %>% filter( is.na(race)) %>% select(name:rate, zip) %>% unique() %>% nrow()
 p <- percent(x / (x + y))
 p_na <- percent(y / (x + y))
 ```
@@ -173,12 +184,14 @@ p_na <- percent(y / (x + y))
 * Quality Structures, Inc.
 * Stone Bridge Iron & Steel, Inc.
 
-```{r message=FALSE, echo=FALSE}
+```{r ind_race_overview, message=FALSE, echo=FALSE}
 library(dplyr)
+
 individuals <- master %>% 
   filter(!is.na(race)) %>% 
-  select(name, ssn, race, zip) %>% 
+  select(name:rate, zip) %>% 
   unique()
+
 wh <- individuals[individuals$race == "White", ]
 aa <- individuals[individuals$race == "African American", ]
 na <- individuals[individuals$race == "Native American", ]
@@ -192,7 +205,7 @@ hs <- individuals[individuals$race == "Hispanic", ]
 
 **Table 1: Unique Workers by Race**
  
-```{r message=FALSE, echo=FALSE}
+```{r race_count_table, message=FALSE, echo=FALSE}
 library(flextable)
 library(scales)
 
@@ -210,7 +223,7 @@ theme_box(ind_table_ft)
 
 **Figure 1: Unique Workers v. Race**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+```{r race_count_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
 library(ggplot2)
 
 ggplot(ind_table, aes(x = reorder(Race, `Unique Workers`), 
@@ -238,7 +251,7 @@ ggplot(ind_table, aes(x = reorder(Race, `Unique Workers`),
 
 **Table 2: Unique Workers by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE}
+```{r contractor_race_table, echo=FALSE, message=FALSE}
 library(flextable)
 library(scales)
 
@@ -260,7 +273,7 @@ theme_box(con_table_ft)
 
 **Figure 2: Unique Workers v. Race by Contractor**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+```{r contractor_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
 library(ggplot2)
 library(Cairo)
 
@@ -281,7 +294,7 @@ ggplot(con_table, aes(x = reorder(Contractor, `Unique Workers`),
 
 ## Periods by Race
 
-```{r echo=FALSE, message=FALSE}
+```{r periods_by_race, echo=FALSE, message=FALSE}
 library(dplyr)
 
 week_table <- master %>% 
@@ -312,7 +325,7 @@ week_table <- week_table %>%
 
 **Table 3: Total Weeks Worked by Race**
 
-```{r echo=FALSE, message=FALSE}
+```{r periods_by_race_tbl, echo=FALSE, message=FALSE}
 week_table_ft <- regulartable(week_table, cwidth = 3.5)
 week_table_ft <- fontsize(week_table_ft, part = "all", size = 14)
 theme_box(week_table_ft)
@@ -322,7 +335,7 @@ theme_box(week_table_ft)
 
 **Figure 3: Total Weeks Worked v. Race**
 
-```{r echo=FALSE, message=FALSE}
+```{r periods_by_race_viz, echo=FALSE, message=FALSE}
 ggplot(week_table, aes(x = reorder(Race, `Periods`), 
                       y = Periods)) +
   geom_bar(stat = "identity", alpha = 0.6, fill = "tomato") +
@@ -338,7 +351,7 @@ ggplot(week_table, aes(x = reorder(Race, `Periods`),
 
 ## Periods by Race & Contractor
 
-```{r echo=FALSE, message=FALSE}
+```{r periods_race_con, echo=FALSE, message=FALSE}
 library(dplyr)
 library(scales)
 
@@ -352,7 +365,8 @@ week_con_table <- week_con_table[, c("name", "race", "periods")]
 week_con_table <- week_con_table %>%
   group_by(name, race) %>%
   summarize(Periods = sum(periods)) %>%
-  rename("Race" = race, "Contractor" = name) %>%
+  rename("Race" = race, 
+         "Contractor" = name) %>%
   mutate(`Periods (%)` = percent(Periods / sum(Periods))) %>%
   arrange(Contractor, desc(Periods)) %>% 
   bind_cols(con_table) %>%
@@ -370,7 +384,7 @@ week_con_table <- week_con_table %>%
 
 **Table 4: Total Weeks Worked by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE}
+```{r periods_race_con_tbl, echo=FALSE, message=FALSE}
 week_con_table_ft <- regulartable(week_con_table, cwidth = 3.5)
 week_con_table_ft <- fontsize(week_con_table_ft, part = "all", size = 14)
 theme_box(week_con_table_ft)
@@ -380,11 +394,13 @@ theme_box(week_con_table_ft)
 
 **Figure 4: Total Weeks Worked v. Race by Contractor**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
-ggplot(week_con_table, aes(x = reorder(Contractor, `Periods`), 
-                      y = Periods, 
-                      fill = Race)) +
-  geom_bar(stat = "identity", alpha = 0.6) +
+```{r periods_race_con_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+ggplot(week_con_table, 
+       aes(x = reorder(Contractor, `Periods`), 
+           y = Periods, 
+           fill = Race)) +
+  geom_bar(stat = "identity", 
+           alpha = 0.6) +
   coord_flip() +
   xlab("Contractor") +
   ylab("Preiods (In Weeks)") +
@@ -397,14 +413,14 @@ ggplot(week_con_table, aes(x = reorder(Contractor, `Periods`),
 
 ## Titles by Race
 
-```{r echo=FALSE, message=FALSE}
+```{r title_by_race, echo=FALSE, message=FALSE}
 library(dplyr)
 library(scales)
 library(stringr)
 
 titles <- master %>% 
   filter(!is.na(race)) %>% 
-  select(name, ssn, title, race, zip) %>% 
+  select(name:rate, zip) %>% 
   unique()
 
 lvls <- c("General Foreman", "Foreman", "Subforeman", "Operator", "Journeyman", 
@@ -414,7 +430,7 @@ lvls <- c("General Foreman", "Foreman", "Subforeman", "Operator", "Journeyman",
 titles$title <- factor(titles$title, levels = lvls)
 
 titles <- titles %>% 
-  as_data_frame(table(individuals$title)) %>%
+  as_data_frame(table(titles$title)) %>%
   group_by(race, title) %>%
   summarize(`Total Workers` = n()) %>%
   rename("Race" = race, "Title" = title) %>%
@@ -429,7 +445,7 @@ title_table <- titles %>%
 
 titles_agg <- master %>% 
   filter(!is.na(race)) %>% 
-  select(name, ssn, title, race, zip) %>% 
+  select(name:rate, zip) %>% 
   unique()
 
 titles_agg$title <- str_replace_all(string = titles_agg$title, 
@@ -446,13 +462,18 @@ titles_agg <- titles_agg %>%
   as_data_frame(table(individuals$title)) %>%
   group_by(race, title) %>%
   summarize(`Total Workers` = n()) %>%
-  rename("Race" = race, "Title" = title) %>%
-  select(Title, Race, `Total Workers`) %>%
-  arrange(ordered(Title), desc(`Total Workers`), Race)
+  rename("Race" = race, 
+         "Title" = title) %>%
+  select(Race, Title, `Total Workers`) %>%
+  arrange(reorder(Race, desc(`Total Workers`)), ordered(Title), desc(`Total Workers`))
 
 title_agg_table <- titles_agg %>%
-  ungroup %>%
-  mutate(`Percent (%)` = percent(`Total Workers` / sum(`Total Workers`)))
+  ungroup() %>%
+  mutate(`Total Workers (%)` = percent(`Total Workers` / sum(`Total Workers`)))
+
+title_agg_table <- title_agg_table %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = percent(`Total Workers` / sum(`Total Workers`)))
 
 ```
 
@@ -468,7 +489,7 @@ title_agg_table <- titles_agg %>%
 
 **Table 5: Aggregate Titles by Race**
 
-```{r echo=FALSE, message=FALSE}
+```{r titles_by_race_tbl, echo=FALSE, message=FALSE}
 title_agg_table_ft <- regulartable(title_agg_table, cwidth = 3.5)
 title_agg_table_ft <- fontsize(title_agg_table_ft, part = "all", size = 14)
 theme_box(title_agg_table_ft)
@@ -478,7 +499,7 @@ theme_box(title_agg_table_ft)
 
 **Figure 5: Aggregate Titles v. Total Workers by Race**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+```{r titles_by_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
 ggplot(title_agg_table, 
        aes(x = factor(Title, levels=rev(levels(Title))), 
            y = `Total Workers`, 
@@ -498,14 +519,14 @@ ggplot(title_agg_table,
 
 ## Titles by Race & Contractor
 
-```{r echo=FALSE, message=FALSE}
+```{r title_by_race_con, echo=FALSE, message=FALSE}
 library(dplyr)
 library(scales)
 library(stringr)
 
 titles_con_agg <- master %>% 
   filter(!is.na(race)) %>% 
-  select(name, ssn, title, race, zip) %>% 
+  select(name:rate, zip) %>% 
   unique()
 
 titles_con_agg$title <- str_replace_all(string = titles_con_agg$title, 
@@ -523,12 +544,25 @@ titles_con_agg_table <- titles_con_agg %>%
   select(name, title, race) %>%
   group_by(name, race, title) %>%
   summarize(`Total Workers` = n()) %>%
-  rename("Name" = name, "Race" = race, "Title" = title) %>%
-  arrange(Name, ordered(Title), desc(`Total Workers`), Race)
+  rename("Company" = name, 
+         "Race" = race, 
+         "Title" = title) %>%
+  arrange(Company, reorder(Race, desc(`Total Workers`)), ordered(Title), desc(`Total Workers`))
 
 titles_con_agg_table <- titles_con_agg_table %>%
-  group_by(Name) %>%
-  mutate(`Company Percent (%)` = percent(`Total Workers` / sum(`Total Workers`)))
+  group_by(Company) %>%
+  mutate(`Company (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  ungroup()
+
+titles_con_agg_table <- titles_con_agg_table %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  ungroup()
+
+titles_con_agg_table <- titles_con_agg_table %>%
+  group_by(Title) %>%
+  mutate(`Title (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  ungroup()
 ```
 
 **Little understanding of racial disparities is added when "Title" is when broken down by contractor**, since these findings largely reflect the same absence of workers of color in leadership positions, as well as the majority of both Whites and minorities having "Journeyman" titles, as seen in *Table 6: Aggregate Titles by Race & Contractor*, below. 
@@ -541,7 +575,7 @@ titles_con_agg_table <- titles_con_agg_table %>%
 
 **Table 6: Titles by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE}
+```{r title_by_race_con_tbl, echo=FALSE, message=FALSE}
 titles_con_agg_table_ft <- regulartable(titles_con_agg_table, cwidth = 3.5)
 titles_con_agg_table_ft <- fontsize(titles_con_agg_table_ft, part = "all", size = 14)
 theme_box(titles_con_agg_table_ft)
@@ -551,7 +585,7 @@ theme_box(titles_con_agg_table_ft)
 
 **Figure 6: Titles v. Total Workers by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+```{r title_by_race_con_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
 ggplot(titles_con_agg_table, 
        aes(x = factor(Title, levels=rev(levels(Title))), 
            y = `Total Workers`, 
@@ -561,7 +595,7 @@ ggplot(titles_con_agg_table,
   xlab("Class or Title") +
   scale_fill_brewer(palette = "Set2") +
   theme_light() +
-  facet_wrap( ~ Name) +
+  facet_wrap( ~ Company) +
   theme(legend.position = "bottom")
 ```
 
@@ -1332,7 +1366,79 @@ ggplot(city_race_tbl, aes(x = reorder(City, Total),
 
 ## Net Wages by County
 
-TBD.
+```{r echo=FALSE, message=FALSE}
+county_net <- master %>%
+  filter(!is.na(zip),
+         !is.na(net)) %>%
+  select(-pdf_no, -pdf_pg, -occur) %>%
+  unique() %>%
+  select(net, county, state) %>%
+  group_by(state, county) %>%
+  summarize(`Total Net ($)` = sum(net)) %>%
+  rename("County" = county, "State" = state) %>%
+  arrange(State, desc(`Total Net ($)`)) %>%
+  as_data_frame() %>%
+  mutate(`Percent (%)` = `Total Net ($)` / sum(`Total Net ($)`)) %>%
+  select(2, 1, 3:4)
+
+checks <- master %>%
+  filter(!is.na(zip),
+         !is.na(net)) %>%
+  select(county, state, net) %>%
+  group_by(county) %>%
+  summarize("Total Checks" = n()) %>%
+  rename("County" = county) %>%
+  as_data_frame() %>%
+  mutate("Checks (%)" = percent(`Total Checks` / sum(`Total Checks`))) %>%
+  arrange(desc(`Total Checks`), County)
+
+county_net_tbl <- county_net %>%
+  left_join(county, by = c("County", "State")) %>%
+  left_join(checks, by = "County") %>%
+  mutate(`Mean Net per Worker` = dollar(`Total Net ($)` / `Total Workers`),
+         `Mean Net per Check` = dollar(`Total Net ($)` / `Total Checks`),
+         `Total Net ($)` = dollar(`Total Net ($)`),
+         `Percent (%)` = percent(`Percent (%)`)) %>%
+  select(1:6, 9, 7:8, 10)
+
+# Unformatted Numbers for Additional Calculations
+
+checks_raw <- master %>%
+  filter(!is.na(zip),
+         !is.na(net)) %>%
+  select(county, state, net) %>%
+  group_by(county) %>%
+  summarize("Total Checks" = n()) %>%
+  rename("County" = county) %>%
+  as_data_frame() %>%
+  mutate("Checks (%)" = `Total Checks` / sum(`Total Checks`)) %>%
+  arrange(desc(`Total Checks`), County)
+
+county_net_raw <- county_net %>%
+  left_join(county, by = c("County", "State")) %>%
+  left_join(checks_raw, by = "County") %>%
+  mutate(`Mean Net per Worker` = `Total Net ($)` / `Total Workers`,
+         `Mean Net per Check` = `Total Net ($)` / `Total Checks`,
+         `Total Net ($)` = `Total Net ($)`,
+         `Percent (%)` = `Percent (%)`) %>%
+  select(1:6, 9, 7:8, 10) %>%
+  mutate(`Worker Difference` = `Mean Net per Worker` - 3302.185,
+         `Check Difference` = `Mean Net per Check` - 838.2468,
+         `Worker ($)` = dollar(`Worker Difference`),
+         `Check ($)` = dollar(`Check Difference`),
+         `Worker (%)` = percent((`Mean Net per Worker` / 3302.185)),
+         `Check (%)` = percent((`Mean Net per Check` / 838.2468)))
+```
+
+**Out of more than $850,000 in net earnings, 3 of every 4 dollars left Onondaga County.** Recall that net earnings are comprised of gross earnings less deductions and liabilities, e.g. federal and taxes, union dues, family paid leave, medicare, social security, etc. In addition, recall that *Niagara Erecting, Inc.* was excluded from financial analysis for illegible data, [exhibited here](https://github.com/jamisoncrawford/REIS/blob/master/OCR%20PDFs/niagra_rocr.pdf), while *M&S Fire Protection, LLC* was excluded for failing to disclose any data beyond worker classification and net earnings, [exhibited here](https://github.com/jamisoncrawford/REIS/blob/master/OCR%20PDFs/m_and_s_fire_protection_rocr.pdf). As seen in *Table 16: Total Net Earnings by County & State*, the 66 workers in Onondaga County took home 274 paychecks (27.1% of all individual payments) and, despite representing 35.1% of the total workforce, received only 23.6% of total net earnings, or $229,352, at an average of $3,475.03 per worker and $837 per paycheck. 
+
+**Oswego County workers received 1.8% less than Onondaga County workers in total net earnings**, despite comprising 7.4% less than the total workforce (totaling 52 workers) and receiving 15.3% fewer paychecks (232 checks). In total, workers in Oswego County received $212,446, or 21.8% of total net earnings - an average of $4,085 per worker and $915 per check, 14.9% and 8.5% more than workers in Onondaga County, respectively.
+
+**The third largest total in net payments went to 5 workers in Tioga County, Pennsylvania.** Despite being markedly lower than Onondaga and Oswego Counties, total net earnings among 5 Tioga County, PA workers, amounted to $77,727 over 66 individual paychecks. Remarkably, the carpenters employed by *Quality Structures, Inc.*  were comprised of 4 Journeymen earning hourly rates ranging from $27.45 to $28.88, as well as a 1st-Year Apprentice, earning an hourly rate of $13.73, yet one week's maximum net pay . In total, the Tioga County workers
+
+**Total net earnings per county is markedly lower elsewhere, but differences in average pay are staggering.** In Cortland County, 4 workers comprising 2.1% of the workforce received the third largest amount sum, $44.8 K...
+
+**(The above interpretations require editing).**
 
 <br>
 
