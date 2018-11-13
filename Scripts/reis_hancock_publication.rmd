@@ -23,6 +23,7 @@ if(!require(stringr)){install.packages("stringr")}
 if(!require(ggplot2)){install.packages("ggplot2")}
 if(!require(leaflet)){install.packages("leaflet")}
 if(!require(viridis)){install.packages("viridis")}
+if(!require(geosphere)){install.packages("geosphere")}
 if(!require(noncensus)){install.packages("noncensus")}
 if(!require(flextable)){install.packages("flextable")}
 
@@ -37,6 +38,7 @@ library(stringr)
 library(ggplot2)
 library(leaflet)
 library(viridis)
+library(geosphere)
 library(noncensus)
 library(flextable)
 
@@ -50,7 +52,7 @@ master <- read_csv(file = url, col_types = "cccccccnnDccccnnccliii"); rm(url)
 
 **The present work is considered a "sneak peek" for testing purposes** and early sharing with collaborators. The data used and findings herein are not considered final for public consumption by the principal analyst.
 
-**Duplicate records were detected and recently removed.** Therefore, visualizations and tables herein, which are likely accurate but must undergo review, may differ from their accompanying interpretations. The analayst anticipates the most affected records involve net pay and, notably, the number of unique records has decreased from 1,045 to 927. 
+**Update****:** The following tables and visualizations have been reviewed and the author is relatively confident in their accuracy. However, the accompanying written interpretations have yet to be reviewed and *are not accurate*. 
 
 <br>
 
@@ -605,31 +607,39 @@ ggplot(titles_con_agg_table,
 
 ## Hourly Pay by Race
 
-```{r echo=FALSE, message=FALSE}
+```{r rate_by_race, echo=FALSE, message=FALSE}
 library(dplyr)
 library(scales)
 
 hourly <- master %>% 
   filter(!is.na(race), !is.na(rate)) %>% 
-  select(name, ssn, title, race, zip, rate) %>% 
+  select(name:rate, zip) %>% 
   unique() %>%
   select(name, title, race, rate) %>%
-  rename("Name" = name, "Title" = title, "Race" = race, "Hourly" = rate)
+  rename("Company" = name, 
+         "Title" = title, 
+         "Race" = race, 
+         "Hourly" = rate) %>%
+  filter(Race != "Hispanic")
 
 hourly_sum <- hourly %>%
   select(-Title) %>%
   group_by(Race) %>%
   summarize(Minimum = dollar(min(Hourly)), 
             Median = dollar(median(Hourly)),
-            Mean = dollar(round(mean(Hourly), digits = 2)),
-            Maximum = dollar(max(Hourly)))
+            Average = round(mean(Hourly), digits = 2),
+            Maximum = dollar(max(Hourly))) %>%
+  arrange(desc(Average)) %>%
+  mutate(Average = dollar(Average))
 
 hourly_con_sum <- hourly %>%
-  group_by(Name, Race) %>%
+  group_by(Company, Race) %>%
   summarize(Minimum = dollar(min(Hourly)), 
             Median = dollar(median(Hourly)),
-            Mean = dollar(round(mean(Hourly), digits = 2)),
-            Maximum = dollar(max(Hourly)))
+            Average = round(mean(Hourly), digits = 2),
+            Maximum = dollar(max(Hourly))) %>%
+  arrange(Company, desc(Average)) %>%
+  mutate(Average = dollar(Average))
 ```
 
 **The reader should note certain caveats regarding wage data analyzed.** Specifically, *Patricia Electric, Inc.* was omitted from the data collection process due to its homogenous racial makeup (100% White), reducing the total number of unique workers analyzed from 123 to 110. At times, unique workers earned different hourly wages throughout the course of construction due to pay raises. Moreover, in multiple instances throughout records provided by *Quality Stuctures, Inc.*, unique workers were recorded as earning different hourly wages, atypically due to raises but, in general, due to different hourly wages among different unions. All hourly wages were made uniform across unique workers' records by selecting the lowest wage, regardless of pay period, in order to ensure the most conservative analysis possible, especially due to the findings in the present work that the majority of net pay is exported from Onondaga County. 
@@ -646,7 +656,7 @@ hourly_con_sum <- hourly %>%
 
 **Table 7: Descriptive Statistics of Hourly Wage by Race**
 
-```{r echo=FALSE, message=FALSE}
+```{r rate_by_race_tbl, echo=FALSE, message=FALSE}
 hourly_sum_ft <- regulartable(hourly_sum, cwidth = 3.5)
 hourly_sum_ft <- fontsize(hourly_sum_ft, part = "all", size = 14)
 theme_box(hourly_sum_ft)
@@ -656,13 +666,15 @@ theme_box(hourly_sum_ft)
 
 **Figure 7: Descriptive Statistics of Hourly Wage v. Race**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+```{r rate_by_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+set.seed(1)
+
 ggplot(hourly, aes(x = Race, y = Hourly)) +
-  geom_boxplot(fill = "#FF9900", alpha = 0.35, outlier.shape = 15, outlier.size = 2) +
-  geom_jitter(height = .3, width = .2, fill = "#003399", color = "#003399", alpha = 0.3, size = 2) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 2) +
+  geom_jitter(height = 0, width = .3, color = "skyblue", alpha = 0.5, size = 2) +
   coord_flip() + 
   ylab("Hourly Pay (USD)") +
-  theme_light()
+  theme_classic()
 ```
 
 </center>
@@ -679,7 +691,7 @@ ggplot(hourly, aes(x = Race, y = Hourly)) +
 
 **Table 8: Descriptive Statistics of Hourly Wage by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE}
+```{r rate_by_race_con_tbl, echo=FALSE, message=FALSE}
 hourly_con_sum_ft <- regulartable(hourly_con_sum, cwidth = 3.5)
 hourly_con_sum_ft <- fontsize(hourly_con_sum_ft, part = "all", size = 11)
 theme_box(hourly_con_sum_ft)
@@ -689,17 +701,19 @@ theme_box(hourly_con_sum_ft)
 
 **Figure 8.1: Descriptive Statistics of Hourly Wage v. Race by Contractor**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+```{r rate_by_race_con_sum, echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+set.seed(1)
+
 ggplot(hourly, aes(x = Race, y = Hourly)) +
   geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
-  geom_jitter(alpha = 0.5, height = .2, width = .3, size = 2,
-              aes(color = Race)) +
+  geom_jitter(alpha = 0.5, height = 0, width = .3, size = 2, color = "skyblue",
+              aes(x = Race)) +
   scale_color_brewer(palette = "Set2") +
   xlab("Race") +
   ylab("Hourly Pay (USD)") +
   coord_flip() +
   theme_classic() +
-  facet_wrap(~ Name) +
+  facet_wrap(~ Company) +
   theme(legend.position="none")
 ```
 
@@ -707,7 +721,7 @@ ggplot(hourly, aes(x = Race, y = Hourly)) +
 
 <br>
 
-**Alternate visualizations help further illustrate these conclusions**. *Figure 8.2: Descriptive Statistics of Hourly Wage v. Title & Race by Contractor* supports the conclusion that hourly wage disparities are principally due to differences in rank or title. Moreover, the distribution of hourly wages conditioned on race and contractor is illustrated in *Figure 8.3: Frequency of Hourly Wages Earned by Race & Contractor*, which depicts a stacked trellis histogram representing the frequency of pay grades for each unique worker.. Each bar represents a $1 increment in hourly rates.  
+**Alternate visualizations help further illustrate these conclusions**. *Figure 8.2: Descriptive Statistics of Hourly Wage v. Title & Race by Contractor* supports the conclusion that hourly wage disparities are principally due to differences in rank or title. Moreover, the distribution of hourly wages conditioned on race and contractor is illustrated in *Figure 8.3: Frequency of Unique Hourly Wages Earned by Race & Contractor*, which depicts a stacked trellis histogram representing the frequency of pay grades for each unique worker.. Each bar represents a $1 increment in hourly rates.  
 
 <br>
 
@@ -715,7 +729,7 @@ ggplot(hourly, aes(x = Race, y = Hourly)) +
 
 **Figure 8.2: Descriptive Statistics of Hourly Wage v. Title & Race by Contractor**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+```{r rate_by_race_con_title_sum, echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 hourly$Title <- str_replace_all(string = hourly$Title, 
                                 pattern = "General Foreman|Subforeman|Foreman", 
                                 replacement = "Foreman")
@@ -725,22 +739,22 @@ hourly$Title <- str_replace_all(string = hourly$Title,
 
 ggplot(hourly, aes(x = Race, y = Hourly)) +
   geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
-  geom_jitter(alpha = 0.5, height = .2, width = .3, size = 2,
+  geom_jitter(alpha = 0.75, height = 0, width = .3, size = 2,
               aes(color = Title)) +
   scale_color_brewer(palette = "Set2") +
   xlab("Race") +
   ylab("Hourly Pay (USD)") +
   coord_flip() +
   theme_classic() +
-  facet_wrap(~ Name) +
+  facet_wrap(~ Company) +
   theme(legend.position = "bottom")
 ```
 
 <br>
 
-**Figure 8.3: Frequency of Hourly Wages Earned by Race & Contractor**
+**Figure 8.3: Frequency of Unique Hourly Wages Earned by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+```{r rate_by_race_con_title_frq, echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 library(ggplot2)
 
 ggplot(hourly, aes(x = Hourly, fill = Race)) +
@@ -749,7 +763,7 @@ ggplot(hourly, aes(x = Hourly, fill = Race)) +
   ylab("Number of Unique Workers") +
   scale_fill_brewer(palette = "Set2") +
   theme_light() +
-  facet_grid(Name ~ .) +
+  facet_grid(Company ~ .) +
   theme(legend.position = "bottom") +
   scale_y_continuous(minor_breaks = seq(0 , 25, 5), breaks = seq(0, 25, 5))
 ```
@@ -758,7 +772,7 @@ ggplot(hourly, aes(x = Hourly, fill = Race)) +
 
 ## Net Pay by Race
 
-```{r echo=FALSE, message=FALSE}
+```{r net_race_con_tbl, echo=FALSE, message=FALSE}
 library(dplyr)
 library(scales)
 
@@ -766,7 +780,7 @@ net <- master %>%
   filter(!is.na(race), !is.na(net)) %>% 
   unique() %>%
   select(name, title, race, net) %>%
-  rename("Name" = name, "Title" = title, "Race" = race, "Net" = net)
+  rename("Company" = name, "Title" = title, "Race" = race, "Net" = net)
 
 net_sum <- net %>%
   select(-Title) %>%
@@ -774,12 +788,12 @@ net_sum <- net %>%
 
 net_sum <- net_sum %>%
   group_by(Race) %>%
-  summarize(Payments = n(),
+  summarize(`Payments` = n(),
             `Total` = sum(Net)) %>%
   ungroup() %>%
-  mutate(`Total Earnings (%)` = percent(Total / sum(Total)),
-         `Race Earnings ($)` = dollar(Total)) %>%
-  arrange(desc(Payments))
+  mutate(`Total Net ($)` = dollar(Total),
+         `Total Net (%)` = percent(Total / sum(Total))) %>%
+  arrange(desc(`Payments`))
 
 net_sum_viz <- net_sum %>%
   select(Race:Total) %>%
@@ -794,26 +808,27 @@ net_sum <- net_sum %>%
   
 
 net_con_sum <- net %>%
-  group_by(Name, Race) %>%
+  group_by(Company, Race) %>%
   summarize(Payments = n(),
             `Total` = sum(Net)) %>%
   ungroup() %>%
-  mutate(`Total Earnings (%)` = percent(`Total` / sum(`Total`)),
-         `Company Earnings ($)` = dollar(`Total`)) %>%
-  arrange(Name, desc(Payments))
+  mutate(`Company Net ($)` = dollar(`Total`),
+         `Workforce Net (%)` = percent(`Total` / sum(`Total`))) %>%
+  arrange(reorder(Company, desc(Payments)), desc(Payments))
 
 net_con_sum_viz <- net_con_sum %>%
-  select(Name:Total)
+  select(Company:Total)
+
+con_table <- con_table %>%
+  rename("Company" = Contractor)
 
 net_con_sum <- net_con_sum %>%
-  group_by(Name) %>%
-  mutate(`Company Earnings (%)` = percent(Total/sum(Total))) %>%
-  select(Name:Payments, `Company Earnings ($)`, `Company Earnings (%)`, `Total Earnings (%)`) %>%
-  bind_cols(as_data_frame(con_table)) %>%
-  select(-Contractor, - Race1) %>%
-  rename("Company Workers" = `Unique Workers`, 
-         "Company Workers (%)" = Percentage, 
-         "Contractor" = Name)
+  group_by(Company) %>%
+  mutate(`Company Net (%)` = percent(Total/sum(Total))) %>%
+  select(Company:Payments, `Company Net ($)`, `Company Net (%)`, `Workforce Net (%)`) %>%
+  left_join(con_table, by = c("Company", "Race")) %>%
+  rename("Workers" = `Unique Workers`, 
+         "Workforce (%)" = Percentage)
 ```
 
 ### Total Net Pay by Race
@@ -828,7 +843,7 @@ net_con_sum <- net_con_sum %>%
 
 **Table 9.1: Total Net Earnings by Race**
 
-```{r echo=FALSE, message=FALSE}
+```{r net_by_race_tbl, echo=FALSE, message=FALSE}
 net_sum_ft <- regulartable(net_sum, cwidth = 3.5)
 net_sum_ft <- fontsize(net_sum_ft, part = "all", size = 12)
 theme_box(net_sum_ft)
@@ -838,7 +853,7 @@ theme_box(net_sum_ft)
 
 **Figure 9.1: Total Net Earnings v. Race**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+```{r net_by_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 library(ggplot2)
 library(scales)
 
@@ -858,16 +873,17 @@ ggplot(net_sum_viz, aes(x = reorder(Race, Payments),
 
 ### Statistics on Net Pay by Race
 
-```{r echo=FALSE, message=FALSE}
+```{r net_by_race_sum, echo=FALSE, message=FALSE}
 net_stat <- net %>%
+  filter(Race != "Hispanic") %>%
   group_by(Race) %>%
   summarize(Minimum = min(Net),
-            Mean = mean(Net),
+            Average = mean(Net),
             Median = median(Net),
             Maximum = max(Net)) %>%
-  arrange(desc(Mean)) %>%
+  arrange(desc(Average)) %>%
   mutate(Minimum = dollar(Minimum),
-         Mean = dollar(Mean),
+         Average = dollar(Average),
          Median = dollar(Median),
          Maximum = dollar(Maximum))
 ```
@@ -882,7 +898,7 @@ net_stat <- net %>%
 
 **Table 9.2: Summary Statistics on Net Pay by Race**
 
-```{r echo=FALSE, message=FALSE}
+```{r net_by_race_sum_tbl, echo=FALSE, message=FALSE}
 net_stat_ft <- regulartable(net_stat, cwidth = 3.5)
 net_stat_ft <- fontsize(net_stat_ft, part = "all", size = 14)
 theme_box(net_stat_ft)
@@ -892,13 +908,16 @@ theme_box(net_stat_ft)
 
 **Figure 9.2: Descriptive Statistics of Net Pay v. Race**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
-ggplot(net, aes(x = Race, y = Net)) +
-  geom_boxplot(fill = "#FF9900", alpha = 0.35, outlier.shape = 15, outlier.size = 2) +
-  geom_jitter(height = .3, width = .2, fill = "#003399", color = "#003399", alpha = 0.15, size = 2) +
+```{r net_by_race_sum_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7}
+net_hisp_rm <- net %>%
+  filter(Race != "Hispanic")
+
+ggplot(net_hisp_rm, aes(x = Race, y = Net)) +
+  geom_boxplot(alpha = 0.75, outlier.shape = 15, color = "lightgray", outlier.size = 2) +
+  geom_jitter(height = .0, width = .3, color = "skyblue", alpha = 0.3, size = 2) +
   coord_flip() + 
   ylab("Hourly Pay (USD)") +
-  theme_light()
+  theme_classic()
 ```
 
 </center>
@@ -919,7 +938,7 @@ ggplot(net, aes(x = Race, y = Net)) +
 
 **Table 10: Net Earnings by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE}
+```{r net_by_race_con_table, echo=FALSE, message=FALSE}
 net_con_sum_ft <- regulartable(net_con_sum, cwidth = 3.5)
 net_con_sum_ft <- fontsize(net_con_sum_ft, part = "all", size = 12)
 theme_box(net_con_sum_ft)
@@ -929,10 +948,10 @@ theme_box(net_con_sum_ft)
 
 **Figure 10.1: Net Earnings v. Contractor by Race**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+```{r net_by_race_con_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 library(ggplot2)
 
-ggplot(net_con_sum_viz, aes(x = reorder(Name, Total), y = Total, fill = Race)) +
+ggplot(net_con_sum_viz, aes(x = reorder(Company, Total), y = Total, fill = Race)) +
   geom_bar(stat = "identity", alpha = 0.6) +
   coord_flip() +
   xlab("Contractor") +
@@ -946,12 +965,14 @@ ggplot(net_con_sum_viz, aes(x = reorder(Name, Total), y = Total, fill = Race)) +
 
 **Figure 10.2: Individual Net Earnings v. Contractor by Race**
 
-```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+```{r net_by_race_con_scatviz, echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
 library(ggplot2)
+set.seed(3)
 
-ggplot(net[net$Race == "White", ], aes(x = Name, y = Net, color = Race)) +
+ggplot(net[net$Race == "White", ], aes(x = Company, y = Net, color = Race)) +
   geom_jitter(alpha = 0.4, width = 0.175) +
-  geom_jitter(data = net[net$Race != "White", ], size = 3, width = 0.175, alpha = 0.9, aes(x = Name, y = Net, color = Race)) +
+  geom_jitter(data = net[net$Race != "White", ], size = 3, height = 0, width = 0.175, alpha = 0.75, 
+              aes(x = Company, y = Net, color = Race)) +
   xlab("Contractor") +
   scale_color_brewer(palette = "Set2") +
   theme_classic() +
@@ -965,16 +986,16 @@ ggplot(net[net$Race == "White", ], aes(x = Name, y = Net, color = Race)) +
 
 ### Stats: Net by Race & Contractor
 
-```{r echo=FALSE, message=FALSE}
+```{r net_race_con_sum, echo=FALSE, message=FALSE}
 net_con_stat <- net %>%
-  group_by(Name, Race) %>%
+  group_by(Company, Race) %>%
   summarize(Minimum = min(Net),
-            Mean = mean(Net),
+            Average = mean(Net),
             Median = median(Net),
             Maximum = max(Net)) %>%
-  arrange(Name, desc(Mean)) %>%
+  arrange(reorder(Company, desc(Average)), desc(Average)) %>%
   mutate(Minimum = dollar(Minimum),
-         Mean = dollar(Mean),
+         Average = dollar(Average),
          Median = dollar(Median),
          Maximum = dollar(Maximum))
 ```
@@ -989,7 +1010,7 @@ net_con_stat <- net %>%
 
 **Table 11: Summary Statistics on Net Pay by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE}
+```{r net_race_con_sum_tbl, echo=FALSE, message=FALSE}
 net_con_stat_ft <- regulartable(net_con_stat, cwidth = 3.5)
 net_con_stat_ft <- fontsize(net_con_stat_ft, part = "all", size = 14)
 theme_box(net_con_stat_ft)
@@ -999,18 +1020,17 @@ theme_box(net_con_stat_ft)
 
 **Figure 11.1: Summary Statistics of Net Pay v. Race by Contractor**
 
-```{r echo=FALSE, message=FALSE, fig.width=15, fig.height=10}
+```{r net_race_con_sum_viz, echo=FALSE, message=FALSE, fig.width=15, fig.height=10}
 library(ggplot2)
 
-ggplot(net, aes(x = Race, y = Net)) +
+ggplot(net_hisp_rm, aes(x = Race, y = Net)) +
   geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
-  geom_jitter(alpha = 0.25, height = .2, width = .3, size = 2,
-              aes(color = Race)) +
+  geom_jitter(alpha = 0.3, height = 0, width = .3, size = 2, color = "skyblue") +
   scale_color_brewer(palette = "Set2") +
   xlab("Race") +
   coord_flip() +
   theme_classic() +
-  facet_wrap(~ Name) +
+  facet_wrap(~ Company) +
   theme(legend.position="none") +
   scale_y_continuous(name = "Net Payments (USD)", labels = scales::comma)
 ```
@@ -1028,7 +1048,7 @@ ggplot(net, aes(x = Race, y = Net)) +
 
 **Figure 11.2: Frequency & Distribution of Net Pay by Race & Contractor**
 
-```{r echo=FALSE, message=FALSE, fig.width=15, fig.height=10}
+```{r net_race_con_sum_frq, echo=FALSE, message=FALSE, fig.width=15, fig.height=10}
 library(ggplot2)
 
 ggplot(net, aes(x = Net, fill = Race)) +
@@ -1037,7 +1057,7 @@ ggplot(net, aes(x = Net, fill = Race)) +
   ylab("Number of Unique Workers") +
   scale_fill_brewer(palette = "Set2") +
   theme_light() +
-  facet_grid(Name ~ .) +
+  facet_grid(Company ~ .) +
   theme(legend.position = "bottom") +
   scale_y_continuous(minor_breaks = seq(0 , 25, 5), breaks = seq(0, 25, 5)) +
   scale_x_continuous(name = "Net Payments ($25 Increments)", labels = scales::comma)
@@ -1049,7 +1069,7 @@ ggplot(net, aes(x = Net, fill = Race)) +
 
 # Findings: On Location
 
-```{r echo=FALSE, message=FALSE, eval=FALSE}
+```{r geo_all, echo=FALSE, message=FALSE, eval=FALSE}
 geo <- master %>% filter(!is.na(zip))
 geo %>% filter(!is.na(net)) %>% nrow()
 geo %>% select(name:rate, zip) %>% unique()
@@ -1073,7 +1093,7 @@ The only contractor excluded from the financial components herein is *Niagara Er
 
 ## Total Workers by County & State
 
-```{r echo=FALSE, message=FALSE}
+```{r workers_by_county, echo=FALSE, message=FALSE}
 county <- master %>%
   filter(!is.na(zip)) %>%
   select(name:rate, zip:state) %>%
@@ -1096,7 +1116,7 @@ county <- master %>%
 
 **Table 12: Total Workers by County & State**
 
-```{r echo=FALSE, message=FALSE}
+```{r workers_by_county_tbl, echo=FALSE, message=FALSE}
 county_ft <- regulartable(county, cwidth = 3.5)
 county_ft <- fontsize(county_ft, part = "all", size = 14)
 theme_box(county_ft)
@@ -1106,7 +1126,7 @@ theme_box(county_ft)
 
 **Figure 12: Total Workers v. County by State**
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+```{r workers_by_county_viz, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
 library(ggplot2)
 
 ggplot(county, aes(x = reorder(County, `Total Workers`), 
@@ -1127,7 +1147,7 @@ ggplot(county, aes(x = reorder(County, `Total Workers`),
 
 ## Total Workers by City
 
-```{r echo=FALSE, message=FALSE}
+```{r workers_by_city, echo=FALSE, message=FALSE}
 city <- master %>%
   filter(!is.na(zip)) %>%
   select(name:rate, zip:state) %>%
@@ -1172,7 +1192,7 @@ city_10 <- city_10[1:10, ] %>%
 
 **Table 13: Top 10 Cities of Worker Origin**
 
-```{r echo=FALSE, message=FALSE}
+```{r workers_by_city_tbl, echo=FALSE, message=FALSE}
 city_10_ft <- regulartable(city_10, cwidth = 3.5)
 city_10_ft <- fontsize(city_10_ft, part = "all", size = 14)
 theme_box(city_10_ft)
@@ -1180,14 +1200,17 @@ theme_box(city_10_ft)
 
 <br>
 
-**Figure 13: Total Workers v. Top 10 Cities & All Other by County**
+**Figure 13: Total Workers v. Top 10 Cities by County**
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+```{r top_10_city_bar, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
 library(ggplot2)
 
-ggplot(city_10, aes(x = reorder(City, `Total Workers`), 
-                   y = `Total Workers`,
-                   fill = County)) +
+city_10_other_rm <- city_10 %>%
+  filter(City != "Other")
+
+ggplot(city_10_other_rm, aes(x = reorder(City, `Total Workers`), 
+                             y = `Total Workers`,
+                             fill = County)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   xlab("City") +
@@ -1203,7 +1226,7 @@ ggplot(city_10, aes(x = reorder(City, `Total Workers`),
 
 ## Race by County
 
-```{r echo=FALSE, message=FALSE}
+```{r race_county, echo=FALSE, message=FALSE}
 county_race <- master %>%
   filter(!is.na(zip),
          !is.na(race)) %>%
@@ -1219,18 +1242,20 @@ county_race <- master %>%
   as_data_frame() %>%
   mutate(`Workforce (%)` = Total / sum(Total))
 
-race_trunc <- county_race[11:29, ] %>%
-  summarize(County = "All Other",
+race_trunc <- county_race[13:29, ] %>%
+  summarize(County = "Other",
             Race = "White", 
             Total = sum(Total),
             `Race (%)` = sum(`Race (%)`),
             `Workforce (%)` = sum(`Workforce (%)`))
 
-county_race_tbl <- county_race[1:10, ] %>%
+county_race_tbl <- county_race[1:12, ] %>%
   bind_rows(race_trunc) %>%
   mutate(`Race (%)` = percent(`Race (%)`),
          `Workforce (%)` = percent(`Workforce (%)`)) %>%
   arrange(desc(Race), desc(Total), County)
+
+county_race_tbl <- county_race_tbl[c(1, 3:13, 2), ]
 
 county_race <- county_race %>%
   mutate(`Race (%)` = percent(`Race (%)`),
@@ -1245,9 +1270,9 @@ county_race <- county_race %>%
 
 <center>
 
-**Table 14: Top Counties of Worker Origin for All Races**
+**Table 14: Top 12 Counties of Worker Origin for All Races**
 
-```{r echo=FALSE, message=FALSE}
+```{r race_county_tbl, echo=FALSE, message=FALSE}
 county_race_tbl_ft <- regulartable(county_race_tbl, cwidth = 3.5)
 county_race_tbl_ft <- fontsize(county_race_tbl_ft, part = "all", size = 14)
 theme_box(county_race_tbl_ft)
@@ -1265,15 +1290,22 @@ theme_box(county_race_tbl_ft)
 
 **Figure 14: Top Counties of Worker Origin for All Races**
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+```{r county_race_bar, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
 library(ggplot2)
 
-county_race_viz <- county_race[c(1:10, 11, 20), 1:3] %>%
-  bind_rows(race_trunc[, 1:3]) %>%
-  arrange(desc(Race), desc(Total), County)
+county_index <- unique(county_race_tbl$County)
+county_index <- which(str_detect(string = county_race$County, 
+                                 pattern = "Oswego|Onondaga|Madison|Cayuga|Tioga|Cattaraugus|Oneida|Other"))
 
-county_race_viz[1, "Total"] <- 33
-county_race_viz[1, "County"] <- "Other"
+county_race_viz <- county_race[county_index, 1:3]
+county_race_viz_agg <- county_race[-county_index, 1:3] %>%
+  summarize(Total = sum(Total)) %>%
+  mutate(County = "Other",
+         Race = "White") %>%
+  select(County:Race, Total)
+
+county_race_viz <- county_race_viz %>%
+  bind_rows(county_race_viz_agg)
 
 ggplot(county_race_viz, aes(x = reorder(County, Total), 
                    y = Total,
@@ -1293,7 +1325,7 @@ ggplot(county_race_viz, aes(x = reorder(County, Total),
 
 ## Race in Onondaga
 
-```{r echo=FALSE, message=FALSE}
+```{r race_onondaga, echo=FALSE, message=FALSE}
 city_race <- master %>%
   filter(!is.na(zip),
          !is.na(race),
@@ -1315,12 +1347,11 @@ city_race <- master %>%
   mutate(`County (%)` = Total / sum(Total))
 
 city_race_tbl <- city_race %>%
-  mutate(`City (%)` = percent(`City (%)`),
-         `Race (%)` = percent(`Race (%)`),
-         `County (%)` = percent(`County (%)`)) %>%
-  rename("Race in City (%)" = `City (%)`,
-         "Total Workers (%)" = `County (%)`) %>%
-  select(1:3, 5, 4, 6)
+  mutate(`Workers in Location (%)` = percent(`City (%)`),
+         `Race in Location (%)` = percent(`Race (%)`),
+         `Workers in County (%)` = percent(`County (%)`),
+         `Total Workforce (%)` = percent(Total / sum(county_race$Total), accuracy = .1)) %>%
+  select(Race:Total, `Workers in Location (%)`:`Total Workforce (%)`)
 ```
 
 **The majority of Onondaga County's minority workers live in Syracuse.** Recall that there are 66 unique workers in Onondaga County, or 35.1% of the total workforce. Of those 66, 39 contain employment records disclosing race, comprising 59% of Onondaga County workers and 20.7% of the total workforce. According to *Table 15: Location of Onondaga County Workers by Race*, strictly in terms of workers residing in Onondaga County for whom race is disclosed, 100% of the 8 African American workers reside in the city of Syracuse. Among the 2 workers of two or more races, 100% also reside in Syracuse. Only 1 of 2 Native American workers live in Syracuse, the second residing in La Fayette, while the sole Hispanic worker lives in Liverpool. In sum, 11 of Onondaga County's 13 minority workers, or 84.6%, live in the city.
@@ -1333,7 +1364,7 @@ city_race_tbl <- city_race %>%
 
 **Table 15: Location of Onondaga County Workers by Race**
 
-```{r echo=FALSE, message=FALSE}
+```{r race_onondaga_tbl, echo=FALSE, message=FALSE}
 city_race_tbl_ft <- regulartable(city_race_tbl, cwidth = 3.5)
 city_race_tbl_ft <- fontsize(city_race_tbl_ft, part = "all", size = 14)
 theme_box(city_race_tbl_ft)
@@ -1343,7 +1374,7 @@ theme_box(city_race_tbl_ft)
 
 **Figure 15: Location of Onondaga County Workers by Race**
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+```{r race_onondaga_viz, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
 library(ggplot2)
 
 city_race_tbl[10:15, "City"] <- "Other"
@@ -1366,7 +1397,7 @@ ggplot(city_race_tbl, aes(x = reorder(City, Total),
 
 ## Net Wages by County
 
-```{r echo=FALSE, message=FALSE}
+```{r net_by_county_all, echo=FALSE, message=FALSE}
 county_net <- master %>%
   filter(!is.na(zip),
          !is.na(net)) %>%
@@ -1376,7 +1407,7 @@ county_net <- master %>%
   group_by(state, county) %>%
   summarize(`Total Net ($)` = sum(net)) %>%
   rename("County" = county, "State" = state) %>%
-  arrange(State, desc(`Total Net ($)`)) %>%
+  arrange(desc(`Total Net ($)`)) %>%
   as_data_frame() %>%
   mutate(`Percent (%)` = `Total Net ($)` / sum(`Total Net ($)`)) %>%
   select(2, 1, 3:4)
@@ -1395,11 +1426,12 @@ checks <- master %>%
 county_net_tbl <- county_net %>%
   left_join(county, by = c("County", "State")) %>%
   left_join(checks, by = "County") %>%
-  mutate(`Mean Net per Worker` = dollar(`Total Net ($)` / `Total Workers`),
-         `Mean Net per Check` = dollar(`Total Net ($)` / `Total Checks`),
+  mutate(`Average Net per Worker` = dollar(`Total Net ($)` / `Total Workers`),
+         `Average Net per Check` = dollar(`Total Net ($)` / `Total Checks`),
          `Total Net ($)` = dollar(`Total Net ($)`),
          `Percent (%)` = percent(`Percent (%)`)) %>%
-  select(1:6, 9, 7:8, 10)
+  select(1:6, 9, 7:8, 10) %>%
+  rename("Workers" = `Total Workers`)
 
 # Unformatted Numbers for Additional Calculations
 
@@ -1426,8 +1458,33 @@ county_net_raw <- county_net %>%
          `Check Difference` = `Mean Net per Check` - 838.2468,
          `Worker ($)` = dollar(`Worker Difference`),
          `Check ($)` = dollar(`Check Difference`),
-         `Worker (%)` = percent((`Mean Net per Worker` / 3302.185)),
-         `Check (%)` = percent((`Mean Net per Check` / 838.2468)))
+         `Worker (%)` = percent(((`Mean Net per Worker` / 3302.185) - 1)),
+         `Check (%)` = percent(((`Mean Net per Check` / 838.2468) - 1)))
+
+net_tbl_full <- county_net_raw %>%
+  mutate(`Total Net ($)` = dollar(`Total Net ($)`),
+         `Percent (%)` = percent(`Percent (%)`),
+         `Mean Net per Worker` = dollar(`Mean Net per Worker`),
+         `Checks (%)` = percent(`Checks (%)`),
+         `Mean Net per Check` = dollar(`Mean Net per Check`),
+         `Worker Difference` = dollar(`Worker Difference`),
+         `Check Difference` = dollar(`Check Difference`)) %>%
+  rename("Total Net (%)" = `Percent (%)`,
+         "Average Net/Worker ($)" = `Mean Net per Worker`,
+         "Total Checks (%)" = `Checks (%)`,
+         "Average Net/Check ($)" = `Mean Net per Check`,
+         "Worker Difference ($)" = `Worker Difference`,
+         "Check Difference ($)" = `Check Difference`,
+         "Worker Difference (%)" = `Worker (%)`,
+         "Check Difference (%)" = `Check (%)`) %>%
+  select(County:`Average Net/Worker ($)`, `Worker Difference ($)`, `Worker Difference (%)`,
+         `Total Checks`:`Average Net/Check ($)`, `Check Difference ($)`, `Check Difference (%)`)
+
+net_tbl_workers <- net_tbl_full %>%
+  select(County:`Worker Difference (%)`)
+
+net_tbl_checks <- net_tbl_full %>%
+  select(County:`Total Workers (%)`, `Total Checks`:`Check Difference (%)`)
 ```
 
 **Out of more than $850,000 in net earnings, 3 of every 4 dollars left Onondaga County.** Recall that net earnings are comprised of gross earnings less deductions and liabilities, e.g. federal and taxes, union dues, family paid leave, medicare, social security, etc. In addition, recall that *Niagara Erecting, Inc.* was excluded from financial analysis for illegible data, [exhibited here](https://github.com/jamisoncrawford/REIS/blob/master/OCR%20PDFs/niagra_rocr.pdf), while *M&S Fire Protection, LLC* was excluded for failing to disclose any data beyond worker classification and net earnings, [exhibited here](https://github.com/jamisoncrawford/REIS/blob/master/OCR%20PDFs/m_and_s_fire_protection_rocr.pdf). As seen in *Table 16: Total Net Earnings by County & State*, the 66 workers in Onondaga County took home 274 paychecks (27.1% of all individual payments) and, despite representing 35.1% of the total workforce, received only 23.6% of total net earnings, or $229,352, at an average of $3,475.03 per worker and $837 per paycheck. 
@@ -1442,17 +1499,248 @@ county_net_raw <- county_net %>%
 
 <br>
 
-## Net Wages in Onondaga
+<center>
 
-TBD.
+```{r total_by_county_calc, echo=FALSE, warning=FALSE, message=FALSE}
+total_earnings <- master %>%
+  filter(!is.na(zip), !is.na(net)) %>%
+  group_by(county, name, ssn) %>%
+  mutate(total_earned = sum(net)) %>%
+  ungroup() %>% 
+  select(name, ssn, county, race, total_earned) %>%
+  unique() %>%
+  group_by(county) %>%
+  mutate(med_total_in_county = median(total_earned)) %>%
+  ungroup()
+  
+onondaga_med <- total_earnings %>%
+   filter(county == "Onondaga") %>%
+   summarize(med_tot = median(total_earned))
+
+syr_total_earnings <- master %>%
+  filter(!is.na(zip), !is.na(net)) %>%
+  group_by(county, name, ssn) %>%
+  mutate(total_earned = sum(net)) %>%
+  ungroup() %>% 
+  select(name, ssn, county, city, race, total_earned) %>%
+  unique() %>%
+  filter(city == "Syracuse") %>%
+  summarize(Total = n(),
+            Minimum = min(total_earned),
+            Average = mean(total_earned),
+            Median = median(total_earned),
+            Maximum = max(total_earned)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum))
+```
+
+**Table 16.1: Total Workforce Earnings & Average Total Worker Earnings by County**
+
+```{r worker_net_by_county_tbl, echo=FALSE, message=FALSE}
+net_tbl_workers_ft <- regulartable(net_tbl_workers, cwidth = 3.5)
+net_tbl_workers_ft <- fontsize(net_tbl_workers_ft, part = "all", size = 10)
+theme_box(net_tbl_workers_ft)
+```
+
+<br>
+
+**Figure 16.1: Total Workforce Earnings by County**
+
+```{r net_by_county_viz, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+library(ggplot2)
+
+ggplot(county_net_raw, aes(x = reorder(County, `Total Net ($)`), 
+                   y = `Total Net ($)`,
+                   fill = State)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  xlab("County") +
+  ylab("Total Workforce Net Earnings (USD)") +
+  scale_fill_brewer(palette = "Paired") +
+  theme_light() +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(name="Total Net Earnings in Workforce (USD)", labels = scales::comma)
+```
+
+<br>
+
+**Table 16.2: Summary Statistics on Total Worker Earnings by County**
+
+```{r total_by_county_sumstats, echo=FALSE, message=FALSE}
+
+total_by_county_sumstats <- total_earnings %>%
+  group_by(county) %>%
+  summarize(Minimum = min(total_earned),
+            Average = mean(total_earned),
+            Median = median(total_earned),
+            Maximum = max(total_earned)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum)) %>%
+  rename("County" = county) %>%
+  left_join(county, by = "County") %>%
+  select(County, `Total Workers`, `Total Workers (%)`, Minimum:Maximum) %>%
+  rename("Workers" = `Total Workers`,
+         "Workers (%)" = `Total Workers (%)`)
+
+total_by_county_sumstats_ft <- regulartable(total_by_county_sumstats, cwidth = 3.5)
+total_by_county_sumstats_ft <- fontsize(total_by_county_sumstats_ft, part = "all", size = 14)
+theme_box(total_by_county_sumstats_ft)
+```
+
+<br>
+
+**Figure 16.2: Distribution of Total Net Earnings per Worker by County Compared to Median Onondaga Totals**
+
+```{r total_by_county_boxplot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+library(ggplot2)
+
+ggplot(total_earnings, aes(x = reorder(county, med_total_in_county), y = total_earned)) +
+  geom_hline(yintercept = 2534, color = "gray", linetype = 5) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 2) +
+  geom_jitter(alpha = 0.5, height = 0, width = .25, size = 1, color = "skyblue") +
+  xlab("County") +
+  ylab("Total Net Earnings per Worker (USD)") +
+  coord_flip() +
+  theme_classic() +
+  scale_y_continuous(name = "Total Net Earnings per Worker (USD)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+<center>
+
+**Table 16.3: Total Workforce Earnings & Average Net Payment Size by County **
+
+```{r check_net_by_county_tbl, echo=FALSE, message=FALSE}
+net_tbl_checks_ft <- regulartable(net_tbl_checks, cwidth = 3.5)
+net_tbl_checks_ft <- fontsize(net_tbl_checks_ft, part = "all", size = 10)
+theme_box(net_tbl_checks_ft)
+```
+
+<br>
+
+```{r net_payment_by_county_calc, echo=FALSE, message=FALSE, warning=FALSE}
+net_payments <- master %>%
+  filter(!is.na(zip), !is.na(net)) %>%
+  group_by(county) %>%
+  mutate(median_net = median(net)) %>%
+  ungroup() %>%
+  mutate(onondaga_med = 788.87)
+
+syr_nets <- master %>%
+  filter(!is.na(zip), !is.na(net), city == "Syracuse") %>%
+  select(name, ssn, net, city, zip, county) %>%
+  summarize(Total = n(),
+            Minimum = min(net),
+            Average = mean(net),
+            Median = median(net),
+            Maximum = max(net)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum))
+```
+
+**Table 16.4: Summary Statistics on Net Payment Size by County**
+
+```{r net_by_county_sumstats, echo=FALSE, message=FALSE}
+
+net_by_county_sumstats <- net_payments %>%
+  group_by(county) %>%
+  summarize(Minimum = min(net),
+            Average = mean(net),
+            Median = median(net),
+            Maximum = max(net)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum)) %>%
+  rename("County" = county) %>%
+  left_join(county, by = "County") %>%
+  select(County, `Total Workers`, `Total Workers (%)`, Minimum:Maximum) %>%
+  rename("Workers" = `Total Workers`,
+         "Workers (%)" = `Total Workers (%)`)
+
+net_by_county_sumstats_ft <- regulartable(net_by_county_sumstats, cwidth = 3.5)
+net_by_county_sumstats_ft <- fontsize(net_by_county_sumstats_ft, part = "all", size = 14)
+theme_box(net_by_county_sumstats_ft)
+```
+
+<br>
+
+**Figure 16.3: Distribution of Weekly Net Payments by County Compared to Median Onondaga Net Pay**
+
+```{r net_by_county_boxplot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+library(ggplot2)
+  
+ggplot(net_payments, aes(x = reorder(county, median_net), y = net)) +
+  geom_hline(yintercept = 788.87, color = "gray", linetype = 5) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 2) +
+  geom_jitter(alpha = 0.5, height = 0, width = .25, size = 1, color = "skyblue") +
+  xlab("County") +
+  ylab("Weekly Net Payments (USD)") +
+  coord_flip() +
+  theme_classic() +
+  scale_y_continuous(name="Weekly Net Payments (USD)", labels = scales::comma)
+```
+
+</center>
 
 <br>
 
 ## Net Wages by Distance
 
-TBD.
+```{r distance_all, echo=FALSE, message=FALSE, warning=FALSE}
+library(geosphere)
+
+syr_long <- -76.1474
+syr_lat <- 43.0481
+
+total_by_dist <- master %>%
+  filter(!is.na(zip), !is.na(net)) %>%
+  group_by(county, name, ssn) %>%
+  mutate(total_earned = sum(net)) %>%
+  ungroup() %>% 
+  select(name, ssn, title, race, net, total_earned, zip:latitude) %>%
+  unique()
+
+# Calculate Euclidean Distance Using Meeus Formula (Ellipsoidal)
+
+total_by_dist$meeus_dist <- NA
+
+for (i in 1:nrow(total_by_dist)){
+  total_by_dist$meeus_dist[i] <- (distMeeus(p1 = c(total_by_dist$longitude[i], 
+                                                   total_by_dist$latitude[i]),
+                                            p2 = c(syr_long, syr_lat)) / 1000) / 1.60934
+}
+
+dist_total_cor <- cor(x = total_by_dist$meeus_dist, y = total_by_dist$total_earned)
+
+
+```
 
 <br>
+
+**Figure 17: Total Worker Net Earnings v. Distance from Syracuse**
+
+```{r total_by_dist_scatter, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7}
+ggplot(total_by_dist, aes(x = meeus_dist, y = total_earned)) +
+  geom_point(alpha = 0.2) +
+  geom_smooth(method = "lm", color = "tomato", alpha = 0.15) +
+  xlab("Euclidean Distance from Syracuse (Miles)") +
+  theme_classic() +
+  scale_y_continuous(name = "Total Net Earnings (USD)", labels = scales::comma)
+```
 
 # Contributors
 
