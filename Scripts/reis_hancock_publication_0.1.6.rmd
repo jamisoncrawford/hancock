@@ -1,0 +1,2459 @@
+---
+title: 'Hancock: Importing Whites, Exporting Wealth'
+author: "Jamison R. Crawford, MPA"
+date: "November 15, 2018"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    number_sections: true
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r load_all, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+
+if(!require(sf)){install.packages("sf")}
+if(!require(tmap)){install.packages("tmap")}
+if(!require(tidyr)){install.packages("tidyr")}
+if(!require(readr)){install.packages("readr")}
+if(!require(dplyr)){install.packages("dplyr")}
+if(!require(GGally)){install.packages("GGally")}
+if(!require(tigris)){install.packages("tigris")}
+if(!require(scales)){install.packages("scales")}
+if(!require(stringr)){install.packages("stringr")}
+if(!require(ggplot2)){install.packages("ggplot2")}
+if(!require(leaflet)){install.packages("leaflet")}
+if(!require(viridis)){install.packages("viridis")}
+if(!require(geosphere)){install.packages("geosphere")}
+if(!require(noncensus)){install.packages("noncensus")}
+if(!require(flextable)){install.packages("flextable")}
+if(!require(kableExtra)){install.packages("kableExtra")}
+if(!require(choroplethr)){install.packages("choroplethr")}
+if(!require(choroplethrMaps)){install.packages("choroplethrMaps")}
+
+library(sf)
+library(tmap)
+library(tidyr)
+library(readr)
+library(dplyr)
+library(GGally)
+library(tigris)
+library(scales)
+library(stringr)
+library(ggplot2)
+library(leaflet)
+library(viridis)
+library(geosphere)
+library(noncensus)
+library(flextable)
+library(kableExtra)
+library(choroplethr)
+library(choroplethrMaps)
+
+rm(list = ls())
+
+setwd("~/Projects/REIS/Maps")
+tigris_cache_dir("~/Projects/REIS/Maps")
+options(scipen = 999,
+        tigris_use_cache = TRUE)
+
+url <- "https://raw.githubusercontent.com/jamisoncrawford/REIS/master/Tables/hancock_master_table_1.4.csv"
+master <- read_csv(file = url, col_types = "cccccccnnDccccnnccliii"); rm(url)
+```
+
+# Status: Early Access
+
+**The present work is considered a "sneak peek" for testing purposes and pre-release collaboration.** The data used and findings interpreted herein are still under review and not intended for widespread consumption.
+
+<br>
+
+# Executive Summary
+
+TBD.
+
+<br>
+
+# Introduction
+
+**Glass and aluminum** curtain walls, a grand staircase, and an indoor waterfall, among other features, now adorn the Syracuse Hancock International Airport, and will greet over two million travelers and other passersby for years to come. The terminal, built in 1961, underwent significant renovations throughout much of 2018, slated for completion in late Fall, at the cost of $60 million: $35.8 million from New York State, $1 million from Onondaga County, and the remainder from both federal and local sources ([Moriarty, 2018](https://www.syracuse.com/news/index.ssf/2018/07/first_look_inside_syracuse_airport_terminal_renovations_photos.html)).
+ 
+**The true cost to Syracuse** is one of opportunity. That is, opportunity costs in providing work to Syracuse residents, particularly African American and Latino residents, by failing to employ a workforce that remotely approximates the ethnoracial makeup of the city. Moreover, the mass exportation of wealth to tradesmen outside of Onondaga County proves further opportunity costs, as the vast majority of disposable income is distributed throughout New York State and northern Pennsylvania.
+
+<br>
+
+<center>
+
+```{r concept_art, cache=TRUE, echo=FALSE, fig.cap="*Concept rendering for the passenger terminal at Hancock International Airport. Source: [Syracuse.com](https://www.syracuse.com/business-news/index.ssf/2017/10/heres_what_syracuse_airport_will_look_like_after_49m_renovation_photos.html)*", out.width = '90%'}
+
+knitr::include_graphics("https://image.syracuse.com/home/syr-media/width960/img/post-standard/photo/2017/10/17/-f16fcc8e20f3ee69.JPG")
+
+```
+
+</center>
+
+<br>
+
+## Background
+
+**The motivation and impetus** behind this publication stems from the combined efforts of the [Urban Jobs Task Force (UJTF)](http://www.ujtf.org/) and [Legal Services of Western New York (LSCNY)](https://www.lscny.org/), a collaboration endeavoring to scrutinize myriad construction projects in the Greater Syracuse area, the final results of which are to be published in their *Racial Equity Impact Statement*, or REIS, which both describes the racial disparities in construction-related employment practices, as well as provides recommendations for ameliorating said disparities. Most importantly, the intent of the REIS is to ensure more equitable employment practices in the highly publicized and much anticipated renovation of [Interstate 86](https://en.wikipedia.org/wiki/Interstate_86_(Pennsylvania%E2%80%93New_York)).
+ 
+**Seeking assistance in wrangling and analyzing** raw employment records retrieved by leveraging the [Freedom of Information Act (FOIA)](https://www.foia.state.gov/Learn/FOIA.aspx), LSCNY recruited volunteers from the biweekly *Community Data Meet-Up*, a collaborative collection of largely social sector analysts, grantwriters, executives, and other data professionals sponsored by the [Central New York Community Foundation (CNYCF)](https://cnycf.org/). 
+ 
+<br>
+ 
+## Initial & New Hypotheses
+
+**The initial hypothesis warranting creation of the REIS** was the existence of racial disparities in construction-related employment practices, demonstrated by LSCNY and UJTF's poring over employment records for recent renovations of a local portion of [Interstate 690](https://en.wikipedia.org/wiki/Interstate_690) and depicting an ethnoracial makeup markedly at odds with Syracuse demographics.
+ 
+**Analyzing the Hancock renovation data revealed unanticipated insight** into the geographic distribution of construction employees, where location data were available, expanding the scope of analysis to include from where, precisely, workers were imported. Not only were the vast majority of workers White males, they traveled from all over New York State, as well as northern counties in Pennsylvania. With wage data at hand, the analyst discovered a mass exodus and dissemination of capital from Syracuse, only a fraction of which was received by residents living in Onondaga County.
+ 
+<br>
+ 
+## Methods
+
+**Employment records were compiled** from [photocopies stored as PDFs](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data) and extracted using both manual scraping and automated scraping with optical character recognition in R, an Open Source, scripted computer language designed for statistical analysis and other data science tasks. Variables of interest, if available, initially included workers':
+ 
+* Last four digits of social security numbers
+* Zip codes or other location data
+* Status, titles, and vocations
+* Race and gender
+* Unions
+
+**As the scope of analysis grew,** variables of interest were expanded to include workers':
+
+* Weekly net payments, i.e. gross income less deductions
+* Hourly wages when race or gender available
+* Ending date of working period
+
+**Once scraped, the data were merged** into a master table in [tidy format](https://vita.had.co.nz/papers/tidy-data.pdf). Additional variable definitions, units of measurement, raw data, scraping and processing scripts, and final tables are available in the [REIS GitHub repository](https://github.com/jamisoncrawford/REIS).
+
+**Zip codes were used to determine other location data** by merging the master table with the R `zipcodes` library, providing the city, state, and longitude/latitude coordinates, while [Federal Information Processing Standard (FIPS) codes](https://en.wikipedia.org/wiki/FIPS_county_code) were included to identify the state FIPS ID, county FIPS ID, and county name using the R `noncensus` library. The master table may be found in the ["Tables" folder of the REIS GitHub repository](https://github.com/jamisoncrawford/REIS/blob/master/Tables/hancock_master_table_1.2.csv). The code book, including variable definitions, units of measurement, and variable transformation details, is available in the [REIS Code Book](https://github.com/jamisoncrawford/REIS/blob/master/codebook.md), while a more in-depth overview of methodology and preprocessing steps is available in the [REIS README](https://github.com/jamisoncrawford/REIS/blob/master/README.md). 
+
+<br>
+
+## Sources: Companies Reviewed
+
+**Records retrieved from the FOIA request** for Hancock construction included the following companies:
+
+* John W. Danforth Company
+* Edward Schalk & Son, Inc.
+* Longhouse Construction LLC
+* Niagara Erecting, Inc.
+* NRC NY Environmental Services, Inc.
+* Patricia Electric, Inc.
+* Quality Structures, Inc.
+* Stone Bridge Iron & Steel, Inc.
+
+**Notable Caveats****:** Though provided, *M&S Fire Protection LLC* contained no variables of interest. While it contained some important data, *Niagara Erecting, Inc.* appeared to have handwritten weekly deductions and net pay, which were entirely illegible even in manual scraping. Though it provided gross amount earned, no attempt to extrapolate net pay was made. Lastly, not all records provided race or gender and in records for most companies reviewed, some data were obfuscated or redacted sporadically. Therefore, analysis was performed having filtered or imputed missing data where appropriate. A full list of target variables by company, as well as additional metadata, is available in the ["Target Variables" page of the REIS GitHub repository](https://github.com/jamisoncrawford/REIS/blob/master/target_variables.md).
+
+<br>
+
+# Findings: On Race
+
+**The following outlines significant findings** in racial disparities in employment for Hancock Airport construction contractors which provided demographic information in the FOIA request. Where relevant, additional notable findings discovered in exploratory analysis are also provided. Lastly, net wage and location data are organized and visualized similarly, with accompanying interpretations provided.
+
+**Notably, 100% of employees were male,** according to demographic records provided. Therefore, gender disparities are neither possible to determine, approximate, nor impute.
+
+<br>
+
+## On Demographic Data
+
+```{r data_overview, echo=FALSE, message=FALSE, cache=TRUE}
+library(scales)
+library(dplyr)
+
+x <- nrow(master %>% filter(!is.na(race)))
+y <- nrow(master %>% filter( is.na(race)))
+p <- percent(y / x + y)
+```
+
+```{r individuals_overview, echo=FALSE, message=FALSE, cache=TRUE}
+library(dplyr)
+library(scales)
+
+x <- master %>% filter(!is.na(race)) %>% select(name:rate, zip) %>% unique() %>% nrow()
+y <- master %>% filter( is.na(race)) %>% select(name:rate, zip) %>% unique() %>% nrow()
+p <- percent(x / (x + y))
+p_na <- percent(y / (x + y))
+
+overview <- data_frame("Record Data" = c("Available", "Missing"),
+                       "Race" = c(703, 224),
+                       "Race (%)" = c("75.8%", "24.2%"),
+                       "Zip Code" = c(926, 1),
+                       "Zip Code (%)" = c("99.9%", "0.1%"),
+                       "Net Pay" = c(900, 27),
+                       "Net Pay (%)" = c("97.1%", "2.9%"))
+
+ind_overview <- data_frame("Unqique Worker Data" = c("Available", "Missing"),
+                           "Race" = c(126, 63),
+                           "Race (%)" = c("66.7%", "33.3%"),
+                           "Zip Code" = c(188, 1),
+                           "Zip Code (%)" = c("99.5%", "0.5%"),
+                           "Net Pay" = c(180, 189),
+                           "Net Pay (%)" = c("95.2%", "4.8%"))
+```
+
+**Notable Caveats****:** Contractors failing to disclose race or gender in their employment records comprise 24.2% of total payments throughout construction. That is, out of a total 927 recorded weekly payments, 224 did not contain any race or gender data, while 703 did. It is improbable to impute or otherwise approximate these data accurately. Contractors failing to disclose race include:
+
+* John W. Danforth Company
+* Niagara Erecting, Inc.
+* NRC NY Environmental Services, Inc.
+
+An overview of total records data is available in *Table 1.1: Record Data Overview*.
+
+<br>
+
+<center>
+
+**Table 1.1: Record Data Overview**
+
+```{r record_overview_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+library(kableExtra)
+
+kable(overview) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"),
+                full_width = TRUE)
+```
+
+</center>
+
+<br>
+
+**In terms of individual employees, rather than records,** the number of unique workers are determined by using each unique combination of social security numbers (or unique identification codes if unavailable), titles, vocations, races (if available), zip codes, and company names. In total, there are 189 unique workers, 126, or 66.7% of whom have race disclosed, while 63, or 33.3% do not. An overview of unique workers data is available below in *Table 1.2: Unique Worker Data Overview*.
+
+<br>
+
+<center>
+
+**Table 1.2: Unique Worker Data Overview**
+
+```{r inds_overview_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+library(kableExtra)
+
+kable(ind_overview) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"),
+                full_width = TRUE)
+```
+
+</center>
+
+<br>
+
+## Workers by Race
+
+**Of the nine contractors producing employment records,** only five maintained records with workers' racial data:
+
+* Edward Schalk & Son, Inc.
+* Longhouse Construction LLC
+* Patricia Electric, Inc.
+* Quality Structures, Inc.
+* Stone Bridge Iron & Steel, Inc.
+
+```{r ind_race_overview, message=FALSE, echo=FALSE, cache=TRUE}
+library(dplyr)
+
+individuals <- master %>% 
+  filter(!is.na(race)) %>% 
+  select(name:rate, zip) %>% 
+  unique()
+
+wh <- individuals[individuals$race == "White", ]
+aa <- individuals[individuals$race == "African American", ]
+na <- individuals[individuals$race == "Native American", ]
+mr <- individuals[individuals$race == "Two or More Races", ]
+hs <- individuals[individuals$race == "Hispanic", ]
+```
+
+**The race of each unique worker is identified** again by determining unique combinations of variables, revealing 126 unique individuals for whom race is disclosed. Of those individuals, *Table 2: Unique Workers by Race* depicts 109 unique White workers, comprising the lion's share of total workers, or 86.5%, while only 9 African American workers, or 7.1%, 4 Native American workers, or 3.2%, and 3 workers of Two or More Races, or 2.4%, comprise remaining workers. Notably, only a single worker was identified as Hispanic, comprising 0.8% of unique workers with race disclosed. These disparities are illustrated in *Figure 2: Unique Workers by Race*.
+
+<br>
+
+<center>
+
+**Table 2: Unique Workers by Race**
+ 
+```{r race_count_table, message=FALSE, echo=FALSE, cache=TRUE}
+library(kableExtra)
+library(flextable)
+library(scales)
+
+ind_table <- as_data_frame(table(individuals$race)) %>% 
+  rename("Race" = Var1, "Unique Workers" = n) %>% 
+  mutate(Percentage = percent(`Unique Workers` / sum(`Unique Workers`))) %>%
+  arrange(desc(`Unique Workers`))
+
+kable(ind_table) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"),
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 2: Unique Workers by Race**
+
+```{r race_count_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+
+ggplot(ind_table, aes(x = reorder(Race, `Unique Workers`), 
+                      y = `Unique Workers`)) +
+  geom_bar(stat = "identity", alpha = 0.75, fill = "tomato") +
+  coord_flip() +
+  xlab("Race") +
+  ylab("Unique Workers") +
+  theme_light()
+```
+
+</center>
+
+<br>
+
+## Workers by Race & Company
+
+**Further breaking down unique worker race by contractors reveals additional findings** about workforce diversity, or lack thereof, within the companies themselves. For example, *Table 3: Unique Workers by Race & Company* reveals that all 9 workers in *Patricia Electric, Inc.* are White, while *Edward Schalk & Son, Inc.*, had more than twice the unique workers, 24 of whom were White (92.3%) and the remaining 2 were African American (7.7%). *Longhouse Construction LLC* had a similar racial makeup albeit a somewhat differing proportion of White to African American workers, with 1 of 7 unique workers identified as African American (14.3%) and the remaining 6 workers identified as White (85.7%). 
+
+**Notably, the lowest proportion of unique White workers** (69.2%) were hired by *Stone Bridge Iron & Steel, Inc.*, which also accounts for most unique Native American workers among all companies (75%), with 3 of 4 of the workforce's Native Americans identified within the company, comprising 23.1% of its workers. *Stone Bridge* also had, on record, the only Hispanic worker among all companies, comprising 7.7% of company workers. *Quality Structures, Inc.* had the greatest diversity in terms of distinct races. To wit, White, African American, Two or More Races, and Native American workers were among its ranks, though the vast majority, 61 of its 71 workers, were White (85.9%). *Figure 3: Unique Workers v. Race by Company* illustrates these proportions among each company.
+
+<br>
+
+<center>
+
+**Table 3: Unique Workers by Race & Company**
+
+```{r contractor_race_table, echo=FALSE, message=FALSE, cache=TRUE}
+library(flextable)
+library(scales)
+
+con_table <- individuals %>%
+  group_by(name, race) %>%
+  summarize(unique = n()) %>%
+  rename("Company" = name, 
+         "Race" = race, 
+         "Unique Workers" = unique) %>%
+  mutate(Percentage = percent(`Unique Workers` / sum(`Unique Workers`))) %>%
+  arrange(reorder(Company, desc(`Unique Workers`)), desc(`Unique Workers`))
+
+kable(con_table) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE) %>%
+  group_rows(group_label = "Quality Structures", start_row = 1, end_row = 4) %>%
+  group_rows(group_label = "Schalk & Son", start_row = 5, end_row = 6) %>%
+  group_rows(group_label = "Patricia Electric", start_row = 7, end_row = 7) %>%
+  group_rows(group_label = "Stone Bridge Iron & Steel", start = 8, end = 10) %>%
+  group_rows(group_label = "Longhouse Construction", start = 11, end = 12)
+```
+
+<br>
+
+**Figure 3: Unique Workers v. Race by Company**
+
+```{r contractor_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+library(Cairo)
+
+con_table$Company <- factor(x = con_table$Company, 
+                            levels = c("Longhouse Construction", "Patricia Electric",
+                                       "Stone Bridge Iron & Steel", "Schalk & Son", 
+                                       "Quality Structures"),
+                            ordered = TRUE)
+
+ggplot(con_table, aes(x = Company, 
+                      y = `Unique Workers`, 
+                      fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.75) +
+  coord_flip() +
+  xlab("Company") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom") 
+```
+
+</center>
+
+<br>
+
+## Periods by Race
+
+```{r periods_by_race, echo=FALSE, message=FALSE, cache=TRUE}
+library(dplyr)
+
+week_table <- master %>% 
+  filter(!is.na(race)) %>%
+  group_by(name, race, zip, ssn) %>%
+  summarize(periods = n()) %>%
+  arrange(desc(periods))
+
+week_table <- week_table[, c("race", "periods")]
+week_table <- week_table %>%
+  group_by(race) %>%
+  summarize(Periods = sum(periods)) %>%
+  rename("Race" = race) %>%
+  mutate(`Periods (%)` = percent(Periods / sum(Periods))) %>%
+  arrange(desc(Periods)) %>%
+  left_join(ind_table, by = "Race") %>%
+  rename("Workers" = `Unique Workers`,
+         "Workers (%)" = Percentage)
+```
+
+**Notable Caveats****:**, note herein that "payment", "paycheck", "work week", and "work period" are used interchangeably and units of analysis represent a single work period for one unique worker. In other words, one unique worker may work multiple periods throughout the duration of construction and periods are measured cumulatively.
+
+**Racial disparities in total weeks worked are slightly larger.** Among the 703 recorded pay periods containing race data, unique White workers accounted for 621 weeks worked (88.3%), slightly higher than the proportion of unique White workers in the total workforce (86.5%). *Table 4: Total Weeks Worked by Race* further reveals a slightly smaller proportion of the 45 weekly paychecks received by African Americans (6.4%) compared to the proportion of African Americans among in the total workforce (7.1%). A similar albeit slightly smaller proportional disparity exists among Native American workers.
+
+**In other words, White workers took home a slightly larger proportion of paychecks,** as well as comprised a significantly larger proportion of the total workforce compared to workers of color, while workers of color worked fewer weeks and received less paychecks relative to their proportion in the total workforce. Of particular note, again, is the single Hispanic worker among all 126 unique workers. Of the 703 paychecks distributed, he received 2. This is further illustrated in *Figure 4: Total Weeks Worked v. Race*. 
+
+<br>
+
+<center>
+
+**Table 4: Total Weeks Worked by Race**
+
+```{r periods_by_race_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(week_table) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 4: Total Weeks Worked v. Race**
+
+```{r periods_by_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+ggplot(week_table, aes(x = reorder(Race, `Periods`), 
+                      y = Periods)) +
+  geom_bar(stat = "identity", alpha = 0.75, fill = "tomato") +
+  coord_flip() +
+  xlab("Race") +
+  ylab("Periods (In Weeks)") +
+  theme_light()
+```
+
+</center>
+
+<br>
+
+## Periods by Race & Company
+
+```{r periods_race_con, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+library(dplyr)
+library(scales)
+
+week_con_table <- master %>%
+  filter(!is.na(race)) %>%
+  group_by(name, race, zip, ssn) %>%
+  summarize(periods = n()) %>%
+  arrange(desc(periods))
+  
+week_con_table <- week_con_table[, c("name", "race", "periods")]
+week_con_table <- week_con_table %>%
+  group_by(name, race) %>%
+  summarize(Periods = sum(periods)) %>%
+  rename("Race" = race, 
+         "Company" = name) %>%
+  mutate(`Periods (%)` = percent(Periods / sum(Periods))) %>%
+  arrange(reorder(Company, desc(Periods)), reorder(Race, desc(Periods))) %>% 
+  left_join(con_table, by = c("Company", "Race")) %>%
+  rename("Workers" = `Unique Workers`,
+         "Workers (%)" = Percentage)
+```
+
+**Breaking down total periods worked by race and contractor reinforces proportional disparities.** *Table 5: Total Weeks Worked by Race & Company* depicts the total count and proportion of working periods by race among each company. *Quality Structures, Inc.* appears to have the greatest disparities, with Whites comprising 85.9% of company workers but taking home 449, or 88.2%, of the 509 paychecks distributed, while African Americans comprised 8.5% of workers but only received 7.1% of paychecks distributed within the company. The 4.2% of workers of Two or More Races in *Quality Structures, Inc.* took home a total of 14 paychecks (2.8%) while, atypically, the 1 Native American among its 71 workers (1.4%) received 1.8% of all distributed paychecks.
+
+**Racial disparities in weeks worked are smaller among other contractors.** *Longhouse Construction LLC* exhibited small disparities, with an 85.7% of Whites working 86.4% of its total work weeks and 14.3% of African Americans working 13.6% of total work weeks. More equitably, the 92.3% of White workers in *Edward Schalk & Son, Inc.* received 73 of 79 total payments (92.4%) while the remaining 7.6% of paychecks were distributed to its 2 African American workers (7.7%), or 7.6% of all payment periods, indicating a practically negligible proportional disparity relative to the company's racial composition. Notably, *Stone Bridge Iron & Steel, Inc.* was the only organization which reversed this trend, with 69.2% of Whites working 60.6% of total work periods, while the company's 3 Native Americans employees, comprising 23.1% of company workers, received 11 payments, or 33.3% of work periods. The only exception being the 1 Hispanic worker, comprising 7.7% of the company's unique workers yet taking home 2 paychecks, or 6.1%, total company payments. These disparities are further illustrated in *Figure 5: Total Weeks Worked v. Race by Company*.
+
+<br>
+
+<center>
+
+**Table 5: Total Weeks Worked by Race & Company**
+
+```{r periods_race_con_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(week_con_table) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE) %>%
+  group_rows(group_label = "Quality Structures", start_row = 1, end_row = 4) %>%
+  group_rows(group_label = "Patricia Electric", start_row = 5, end_row = 5) %>%
+  group_rows(group_label = "Schalk & Son", start_row = 6, end_row = 7) %>%
+  group_rows(group_label = "Longhouse Construction", start = 8, end = 9) %>%
+  group_rows(group_label = "Stone Bridge Iron & Steel", start = 10, end = 12)
+```
+
+<br>
+
+**Figure 5: Total Weeks Worked v. Race by Company**
+
+```{r periods_race_con_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+week_con_table$Company <- factor(week_con_table$Company, 
+                                    levels = c("Longhouse Construction", "Stone Bridge Iron & Steel", 
+                                               "Patricia Electric", "Schalk & Son", "Quality Structures"), 
+                                    ordered = TRUE)
+
+ggplot(week_con_table, 
+       aes(x = Company, 
+           y = Periods, 
+           fill = Race)) +
+  geom_bar(stat = "identity", 
+           alpha = 0.75) +
+  coord_flip() +
+  xlab("Company") +
+  ylab("Preiods (In Weeks)") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+<br>
+
+## Titles by Race
+
+```{r title_by_race, echo=FALSE, message=FALSE, cache=TRUE}
+library(dplyr)
+library(scales)
+library(stringr)
+
+titles <- master %>% 
+  filter(!is.na(race)) %>% 
+  select(name:rate, zip) %>% 
+  unique()
+
+lvls <- c("General Foreman", "Foreman", "Subforeman", "Operator", "Journeyman", 
+          "Apprentice", "Apprentice 4th Year", "Apprentice 3rd Year", 
+          "Apprentice 2nd Year", "Apprentice 1st Year", "Unspecified")
+
+titles$title <- factor(titles$title, levels = lvls)
+
+titles <- titles %>% 
+  as_data_frame(table(titles$title)) %>%
+  group_by(race, title) %>%
+  summarize(`Total Workers` = n()) %>%
+  rename("Race" = race, "Title" = title) %>%
+  select(Title, Race, `Total Workers`) %>%
+  arrange(ordered(Title), desc(`Total Workers`), Race)
+
+title_table <- titles %>%
+  ungroup %>%
+  mutate(`Percent (%)` = percent(`Total Workers` / sum(`Total Workers`)))
+
+# Aggregating Categories
+
+titles_agg <- master %>% 
+  filter(!is.na(race)) %>% 
+  select(name:rate, zip) %>% 
+  unique()
+
+titles_agg$title <- str_replace_all(string = titles_agg$title, 
+                                    pattern = "General Foreman|Subforeman|Foreman", 
+                                    replacement = "Foreman")
+titles_agg$title <- str_replace_all(string = titles_agg$title,
+                                    pattern = "Apprentice.*", 
+                                    replacement = "Apprentice")
+
+lvls <- c("Foreman", "Operator", "Journeyman", "Apprentice", "Unspecified")
+titles_agg$title <- factor(titles_agg$title, levels = lvls)
+
+titles_agg <- titles_agg %>% 
+  as_data_frame(table(individuals$title)) %>%
+  group_by(race, title) %>%
+  summarize(`Workers` = n()) %>%
+  rename("Race" = race, 
+         "Title" = title) %>%
+  select(Race, Title, `Workers`) %>%
+  arrange(reorder(Race, desc(`Workers`)), ordered(Title), desc(`Workers`))
+
+title_agg_table <- titles_agg %>%
+  ungroup() %>%
+  mutate(`Workers (%)` = percent(`Workers` / sum(`Workers`)))
+
+title_agg_table <- title_agg_table %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = percent(`Workers` / sum(`Workers`)))
+
+```
+
+**Notable Caveats:** Terms "rank", "title", and "status" are used interchangeably and, although these do not reflect the modern US apprenticeship system, these ranks or titles are provided in the same fields within company employment records, with no discernible way to parse them without information loss. In other words, where one worker's record may state "Journeyman" in one field, another worker's record may state "Foreman" in the same field. Hence, "rank" or "title", rather than "class", is used in light of this incongruence. Lastly, titles and ranks are shown herein as aggregate, having made uniform "Foreman", which includes the variations "Subforeman" and "General Foreman", as well as "Apprentice", which typically includes prefixes or suffixes denoting durations ("1st Year", "2nd Year", etc.). This has no effect on descriptive findings and interpretations. 
+
+**Conditioning rank or title on race reveals only Whites in positions of authority.** *Table 6: Aggregate Titles by Race* breaks down ranks of all 126 unique workers by race, in descending order (i.e. from "Foreman" to "Journeyman" to "Apprentice"), per records containing racial data. All leadership positions, i.e. "General Foreman", "Foreman", and "Subforeman" are assumed by 18 White Workers, or 14.3% of the total workforce and 16.5% of total White workers, and all 7 specialized workers assuming the "Operator" title are also White, i.e. 5.6% of the total workforce and 6.4% of total White workers.
+
+**Workers of color only appear as "Journeyman" or "Apprentices".** While 56 White workers are "Journeyman" status (51.4% of Whites), comprising 81.1% of all 69 "Journeymen" and 44.4% of the total workforce, African Americans, Native Americans, one Hispanic worker, and one worker of Two or More Races comprise 7, 4, 1, and 1 of all 69 "Journeyman" workers, or 10.1%, 5.8%, 1.4%, and 1.4% of all "Journeymen", respectively. In total, minority "Journeymen" comprise 18.8% of all "Journeymen" and 10.3% of the total workforce for whom race is disclosed. Only 4 workers, or 26.7% of 15 "Apprentices", are minorities - to wit, 2 African American workers and 2 workers of Two or More Races. These findings are further illustrated in *Figure 6: Aggregate Titles v. Total Workers by Race*.
+
+<br>
+
+<center>
+
+**Table 6: Aggregate Titles by Race**
+
+```{r titles_by_race_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(title_agg_table) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE) %>%
+  group_rows(group_label = "White", start_row = 1, end_row = 5) %>%
+  group_rows(group_label = "African American", start_row = 6, end_row = 7) %>%
+  group_rows(group_label = "Native American", start_row = 8, end_row = 8) %>%
+  group_rows(group_label = "Two or More Races", start = 9, end = 10) %>%
+  group_rows(group_label = "Hispanic", start = 11, end = 11)
+```
+
+<br>
+
+**Figure 6: Aggregate Titles v. Total Workers by Race**
+
+```{r titles_by_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+title_agg_table$Title <- factor(title_agg_table$Title, 
+                                levels = c("Journeyman", "Foreman", "Unspecified", 
+                                           "Apprentice", "Operator"), 
+                                ordered = TRUE) 
+
+ggplot(title_agg_table, 
+       aes(x = factor(Title, levels=rev(levels(Title))), 
+           y = `Workers`, 
+           fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.75) +
+  coord_flip() +
+  xlab("Title") +
+  ylab("Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+</center>
+
+<br>
+
+## Titles by Race & Company
+
+```{r title_by_race_con, echo=FALSE, message=FALSE, cache=TRUE}
+library(dplyr)
+library(scales)
+library(stringr)
+
+titles_con_agg <- master %>% 
+  filter(!is.na(race)) %>% 
+  select(name:rate, zip) %>% 
+  unique()
+
+titles_con_agg$title <- str_replace_all(string = titles_con_agg$title, 
+                                        pattern = "General Foreman|Subforeman|Foreman", 
+                                        replacement = "Foreman")
+titles_con_agg$title <- str_replace_all(string = titles_con_agg$title,
+                                        pattern = "Apprentice.*", 
+                                        replacement = "Apprentice")
+
+lvls <- c("Foreman", "Operator", "Journeyman", "Apprentice", "Unspecified")
+titles_con_agg$title <- factor(titles_con_agg$title, levels = lvls)
+
+titles_con_agg_table <- titles_con_agg %>% 
+  as_data_frame(table(titles_con_agg$title)) %>%
+  select(name, title, race) %>%
+  group_by(name, race, title) %>%
+  summarize(`Total Workers` = n()) %>%
+  rename("Company" = name, 
+         "Race" = race, 
+         "Title" = title) %>%
+  arrange(reorder(Company, desc(`Total Workers`)), 
+                  reorder(Race, desc(`Total Workers`)), 
+                  ordered(Title), desc(`Total Workers`))
+
+titles_con_agg_table <- titles_con_agg_table %>%
+  group_by(Company) %>%
+  mutate(`Company (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  ungroup()
+
+titles_con_agg_table <- titles_con_agg_table %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  ungroup()
+
+titles_con_agg_table <- titles_con_agg_table %>%
+  group_by(Title) %>%
+  mutate(`Title (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  ungroup()
+```
+
+**Little understanding of racial disparities is added when "Title" is broken down by contractor**, since these findings largely reflect the same absence of workers of color in leadership positions, as well as most Whites and minorities having "Journeyman" titles, as seen in *Table 7: Titles by Race & Company*, below. 
+
+**Among somewhat noteworthy findings**, *Longhouse Construction LLC* had 5 of its 7 unique workers (71.4%), all White, assuming the role of "Foreman", or variations (e.g. "Foreman +2"), while maintaining 1 African American "Journeyman" and 1 White "Apprentice". Further investigation reveals that multiple unique White workers would assume the title of "Foreman" during the same work period. During the period ending in March 17, 2018, there were a total of 3 "Foremen" and 1 "Foreman +2" working, including Monday, March 13, 2018, during which all 4 "Foremen" worked full days. Also noteworthy is *Stone Bridge Iron & Steel, Inc.*, in which all 13 unique workers were "Journeymen", again comprising the smallest proportion of White workers and the largest proportion of minority "Journeymen", i.e. 3 Native Americans and 1 Hispanic, comprising 23.1% and 7.7% of "Journeymen" in the company and totaling 30.8% of workers with the title. These findings are further illustrated in *Figure 7: Aggregate Titles v. Total Workers by Race & Company*.
+
+<br>
+
+<center>
+
+**Table 7: Titles by Race & Company**
+
+```{r title_by_race_con_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(titles_con_agg_table) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE) %>%
+  group_rows(group_label = "Quality Structures", start_row = 1, end_row = 8) %>%
+  group_rows(group_label = "Schalk & Son", start_row = 9, end_row = 12) %>%
+  group_rows(group_label = "Stone Bridge Iron & Steel", start_row = 13, end_row = 15) %>%
+  group_rows(group_label = "Patricia Electric", start = 16, end = 18) %>%
+  group_rows(group_label = "Longhouse Construction", start = 19, end = 21)
+```
+
+<br>
+
+**Figure 7: Titles v. Total Workers by Race & Company**
+
+```{r title_by_race_con_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+
+titles_con_agg_table$Title <- factor(titles_con_agg_table$Title,
+                                       levels = c("Journeyman", "Operator", "Foreman",
+                                                  "Apprentice", "Unspecified"),
+                                     ordered = TRUE)
+
+titles_con_agg_table$Company <- factor(titles_con_agg_table$Company, 
+                                       levels = rev(c("Longhouse Construction", "Stone Bridge Iron & Steel", 
+                                                      "Patricia Electric", "Schalk & Son", "Quality Structures")), 
+                                       ordered = TRUE)
+
+ggplot(titles_con_agg_table, 
+       aes(x = factor(Title, levels=rev(levels(Title))), 
+           y = `Total Workers`, 
+           fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.75) +
+  coord_flip() +
+  xlab("Class or Title") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  facet_wrap( ~ Company) +
+  theme(legend.position = "bottom")
+```
+
+</center>
+
+<br>
+
+## Hourly Pay by Race
+
+```{r rate_by_race, echo=FALSE, message=FALSE, cache=TRUE}
+library(dplyr)
+library(scales)
+
+hourly <- master %>% 
+  filter(!is.na(race), !is.na(rate)) %>% 
+  select(name:rate, zip) %>% 
+  unique() %>%
+  select(name, title, race, rate) %>%
+  rename("Company" = name, 
+         "Title" = title, 
+         "Race" = race, 
+         "Hourly" = rate) %>%
+  filter(Race != "Hispanic")
+
+hourly_sum <- hourly %>%
+  select(-Title) %>%
+  group_by(Race) %>%
+  summarize(Minimum = dollar(min(Hourly)), 
+            Median = dollar(median(Hourly)),
+            Average = round(mean(Hourly), digits = 2),
+            Maximum = dollar(max(Hourly))) %>%
+  arrange(desc(Average)) %>%
+  mutate(Average = dollar(Average))
+
+hourly_con_sum <- hourly %>%
+  group_by(Company, Race) %>%
+  summarize(Minimum = dollar(min(Hourly)), 
+            Median = dollar(median(Hourly)),
+            Average = round(mean(Hourly), digits = 2),
+            Maximum = dollar(max(Hourly))) %>%
+  arrange(Company, desc(Average)) %>%
+  mutate(Average = dollar(Average))
+```
+
+**Notable Caveats****:** Specifically, *Patricia Electric, Inc.* was omitted from the data collection process due to its homogenous racial makeup (100% White), reducing the total number of unique workers analyzed from 126 to 110. At times, unique workers earned different hourly wages throughout the course of construction due to pay raises. Moreover, in multiple instances throughout records provided by *Quality Structures, Inc.*, unique workers were recorded as earning different hourly wages, atypically due to raises, in general, however, due to different hourly wages among different unions. All hourly wages were made uniform across unique workers' records by selecting the lowest wage, regardless of pay period, in order to ensure the most conservative analysis possible, especially due to claims in this work that most net pay is exported from Onondaga County. 
+
+**Differences in minimum and maximum hourly pay between minority and White workers are significant**, as shown in *Table 8: Descriptive Statistics of Hourly Wage by Race*, a table of minimum, median, average, and maximum hourly wages conditioned on race. While unique workers among three different categories of race - African American, White, and Two or More Races - tied for the lowest hourly wage, $13.73, the highest hourly wage was earned by a White worker at $42.64, while the second highest went to a Native American worker at $32.05. Workers of Two or More Races earned the lowest maximum hourly wage at $24.20, while African American and Hispanic workers tied for second lowest maximum hourly wage at $29. Notably, $29 per hour is both the minimum and maximum wage for "Hispanic" workers, since there was only one in the entire workforce and, therefore, was exempt from the table and accompanying visualization.
+
+**Differences in average hourly pay between minority and White workers ranged from minor to significant.** Excluding the single Hispanic worker at an average hourly wage of $29, White workers earned average hourly wages that were $2.07, $3.96, and $10.29 higher than Native American workers, African American workers, and workers of Two or More Races, respectively. Differences in median wages between White, African American, and Native American workers were less extreme, indicating a slightly higher skew above the average hourly wage for African American and Native American workers, though median is less valuable given the small number of unique minority workers.
+
+**These differences are illustrated** in *Figure 8: Descriptive Statistics of Hourly Wage v. Race*, which depicts a box plot of hourly wage distributions for each race. The center line within each box indicates median hourly wage, while the left and right bounds of each box indicates the lower and upper quartiles, or 25th and 75th percentiles, respectively. The length of the box depicts the interquartile range (IQR), or 50% of all values between the 25th and 75th percentiles, while the "whisker" length is determined by the most extreme values falling within 150% of the IQR. Outliers, which exceed these lower and upper bounds ("whiskers"), are indicated with grey squares. Lastly, blue points overlay the box plot, each indicating the hourly wage of a unique worker. Because many hourly wages are the same, these dots are "jittered", i.e. random noise is added to each point to break up dense concentrations where multiple unique workers earned the same hourly wage. Note that the data are only "jittered" vertically, as not to obfuscate the striations which clearly indicate multiple unique workers earning the same hourly rate. The same visualization techniques are used in *Figure 9.1: Descriptive Statistics of Hourly Wage v. Race by Company*, albeit using trellis graphics conditioned on company.
+
+<br>
+
+<center>
+
+**Table 8: Descriptive Statistics of Hourly Wage by Race**
+
+```{r rate_by_race_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(hourly_sum) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 8: Descriptive Statistics of Hourly Wage v. Race**
+
+```{r rate_by_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+set.seed(1)
+
+hourly$Race <- factor(hourly$Race, 
+                      levels = c("Two or More Races", "African American", 
+                                 "Native American", "White"), 
+                      ordered = TRUE)
+
+ggplot(hourly, aes(x = Race, y = Hourly)) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 2) +
+  geom_jitter(height = 0, width = .3, color = "skyblue", alpha = 0.5, size = 2) +
+  coord_flip() + 
+  ylab("Hourly Pay (USD)") +
+  theme_classic()
+```
+
+</center>
+
+<br>
+
+## Hourly Pay by Race & Company
+
+**While visualizations conditioned on contractor better relay disparities, most are explained by rank or title.** Notably, the highest hourly wages are held by "Foremen"" and "Operators", titles held exclusively by White workers and particularly visible in *Quality Structures, Inc.*, while the lowest hourly wages in the workforce, less than $20, are earned by "Apprentices", with the notable exception of 1 Native American "Journeyman" in *Stone Bridge Iron & Steel, Inc.* earning $16.50. Otherwise, most workers at *Stone Bridge* earn the same hourly rate at $29, while 1 White worker earns $30.05, and 1 Native American worker earns the highest hourly wage at $32.05. Significant hourly wage disparities at *Edward Schalk & Son, Inc.* are due to 2 White and 2 African American "Apprentices". Wages at *Schalk & Son* largely concentrate at $27.45 among the all-White "Journeymen" and "Foremen". These data are revealed in full in *Table 9: Descriptive Statistics of Hourly Wage by Race & Company*, below.
+
+<br>
+
+<center>
+
+**Table 9: Descriptive Statistics of Hourly Wage by Race & Company**
+
+```{r rate_by_race_con_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(hourly_con_sum) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE) %>%
+  group_rows(group_label = "Longhouse Construction", start_row = 1, end_row = 2) %>%
+  group_rows(group_label = "Quality Structures", start_row = 3, end_row = 6) %>%
+  group_rows(group_label = "Schalk & Son", start_row = 7, end_row = 8) %>%
+  group_rows(group_label = "Stone Bridge Iron & Steel", start = 9, end = 10)
+```
+
+<br>
+
+**Figure 9.1: Descriptive Statistics of Hourly Wage v. Race by Company**
+
+```{r rate_by_race_con_sum, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+set.seed(1)
+
+hourly$Company <- factor(hourly$Company,
+                         levels = c("Quality Structures", "Schalk & Son",
+                                    "Stone Bridge Iron & Steel", "Longhouse Construction"))
+
+ggplot(hourly, aes(x = Race, y = Hourly)) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
+  geom_jitter(alpha = 0.5, height = 0, width = .3, size = 2, color = "skyblue",
+              aes(x = Race)) +
+  scale_color_brewer(palette = "Set2") +
+  xlab("Race") +
+  ylab("Hourly Pay (USD)") +
+  coord_flip() +
+  theme_classic() +
+  facet_wrap(~ Company) +
+  theme(legend.position="none")
+```
+
+</center>
+
+<br>
+
+**Alternate visualizations help further illustrate these conclusions**. *Figure 9.2: Descriptive Statistics of Hourly Wage v. Title & Race by Company* supports the conclusion that hourly wage disparities are principally due to differences in titles. Moreover, the distribution of hourly wages conditioned on race and contractor is illustrated in *Figure 9.3: Frequency of Unique Hourly Wages Earned by Race & Company*, which depicts a stacked trellis histogram representing the frequency of pay grades for each unique worker. Each bar represents a $1 increment in hourly rates. In other words, the taller the bar, the greater the number of unique workers fell within the $1 range of hourly pay represented along the horizontal axis.
+
+<br>
+
+<center>
+
+**Figure 9.2: Descriptive Statistics of Hourly Wage v. Title & Race by Company**
+
+```{r rate_by_race_con_title_sum, echo=FALSE, message=FALSE, fig.width=12, fig.height=8, cache=TRUE}
+hourly$Title <- str_replace_all(string = hourly$Title, 
+                                pattern = "General Foreman|Subforeman|Foreman", 
+                                replacement = "Foreman")
+hourly$Title <- str_replace_all(string = hourly$Title,
+                                pattern = "Apprentice.*", 
+                                replacement = "Apprentice")
+
+hourly$Company <- factor(hourly$Company,
+                         levels = c("Quality Structures", "Schalk & Son",
+                                    "Stone Bridge Iron & Steel", "Longhouse Construction"))
+
+ggplot(hourly, aes(x = Race, y = Hourly)) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
+  geom_jitter(alpha = 0.75, height = 0, width = .3, size = 2,
+              aes(color = Title)) +
+  scale_color_brewer(palette = "Set2") +
+  xlab("Race") +
+  ylab("Hourly Pay (USD)") +
+  coord_flip() +
+  theme_classic() +
+  facet_wrap(~ Company) +
+  theme(legend.position = "bottom")
+```
+
+<br>
+
+**Figure 9.3: Frequency of Unique Hourly Wages Earned by Race & Company**
+
+```{r rate_by_race_con_title_frq, echo=FALSE, message=FALSE, fig.width=12, fig.height=8, cache=TRUE}
+library(ggplot2)
+
+hourly2 <- master %>% 
+  filter(!is.na(race), !is.na(rate)) %>% 
+  select(name:rate, zip) %>% 
+  unique() %>%
+  select(name, title, race, rate) %>%
+  rename("Company" = name, 
+         "Title" = title, 
+         "Race" = race, 
+         "Hourly" = rate)
+
+hourly2$Company <- factor(hourly2$Company,
+                          levels = c("Quality Structures", "Schalk & Son",
+                                    "Stone Bridge Iron & Steel", "Longhouse Construction"))
+
+ggplot(hourly2, aes(x = Hourly, fill = Race)) +
+  geom_histogram(binwidth = 1, alpha = 0.75) +
+  xlab("Hourly Pay ($1 Increments)") +
+  ylab("Number of Unique Workers") +
+  scale_fill_brewer(palette = "Set2", drop = TRUE) +
+  theme_light() +
+  facet_grid(Company ~ .) +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(minor_breaks = seq(0 , 25, 5), breaks = seq(0, 25, 5)) +
+  scale_x_continuous(breaks = seq(0, 50, 5), limits = c(0, 45))
+```
+
+</center>
+
+## Net Pay by Race
+
+```{r net_race_con_tbl, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+library(dplyr)
+library(scales)
+
+net <- master %>% 
+  filter(!is.na(race), !is.na(net)) %>% 
+  unique() %>%
+  select(name, title, race, net) %>%
+  rename("Company" = name, "Title" = title, "Race" = race, "Net" = net)
+
+net_sum <- net %>%
+  select(-Title) %>%
+  mutate(`Grand Total` = sum(Net))
+
+net_sum <- net_sum %>%
+  group_by(Race) %>%
+  summarize(`Payments` = n(),
+            `Total` = sum(Net)) %>%
+  ungroup() %>%
+  mutate(`Total Net ($)` = dollar(Total),
+         `Total Net (%)` = percent(Total / sum(Total))) %>%
+  arrange(desc(`Payments`))
+
+net_sum_viz <- net_sum %>%
+  select(Race:Total) %>%
+  mutate(Thousands = Total / 1000)
+
+net_sum <- net_sum %>%
+  select(-Total) %>%
+  bind_cols(ind_table) %>%
+  select(-Race1) %>%
+  rename("Workers" = `Unique Workers`,
+         "Workers (%)" = Percentage)
+  
+
+net_con_sum <- net %>%
+  group_by(Company, Race) %>%
+  summarize(Payments = n(),
+            `Total` = sum(Net)) %>%
+  ungroup() %>%
+  mutate(`Company Net ($)` = dollar(`Total`),
+         `Workforce Net (%)` = percent(`Total` / sum(`Total`))) %>%
+  arrange(reorder(Company, desc(Payments)), desc(Payments))
+
+net_con_sum_viz <- net_con_sum %>%
+  select(Company:Total)
+
+con_table <- con_table %>%
+  rename("Company" = Company)
+
+net_con_sum <- net_con_sum %>%
+  group_by(Company) %>%
+  mutate(`Company Net (%)` = percent(Total/sum(Total))) %>%
+  select(Company:Payments, `Company Net ($)`, `Company Net (%)`, `Workforce Net (%)`) %>%
+  left_join(con_table, by = c("Company", "Race")) %>%
+  rename("Workers" = `Unique Workers`, 
+         "Company (%)" = Percentage)
+```
+
+### Total Net Pay by Race
+
+**White workers received the vast majority of all net earnings**, i.e. gross earnings less deductions. According to *Table 10.1: Total Net Earnings by Race*, White workers earned total net earnings of $609.4 K (1.9% of total workforce earnings), while African American workers, Native American workers, workers of Two or More Races, and Hispanic workers earned $36.3 K (5.4%), $13.7 K (2%), $8.3 K (1.2%), and slightly less than $1 K (0.1%), respectively.
+
+**Minority workers earn less than Whites relative to their proportion of the workforce.** While White workers comprise 86.2% of total unique workers across contractors, they take home 91.1% of all net income. African Americans, Native Americans, workers of Two or More Races, and the single Hispanic worker, among records where race is disclosed, comprise 7.1%, 3.2%, 2.4%, and 0.8% of the total workforce, but only take home 5.4%, 2%, 1.2%, and 0.1% of total net earnings, respectively. Recall that we see similar trends in "Section 2.4: Periods by Race" in the present work. That is, a similar proportional disparity existed in total weeks worked. This may be due, in part, to differences in leadership positions (i.e. "Foremen") as well as specialized classes (i.e. "Operators"), all of which, again, are comprised of White workers. These findings are illustrated in *Figure 10.1: Total Net Earnings v. Race*. 
+
+<br>
+
+<center>
+
+**Table 10.1: Total Net Earnings by Race**
+
+```{r net_by_race_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(net_sum) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 10.1: Total Net Earnings v. Race**
+
+```{r net_by_race_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=8, cache=TRUE}
+library(ggplot2)
+library(scales)
+
+ggplot(net_sum_viz, aes(x = reorder(Race, Payments), 
+                      y = Total)) +
+  geom_bar(stat = "identity", alpha = 0.75, fill = "tomato") +
+  coord_flip() +
+  xlab("Race") +
+  ylab("Total Earnings (USD)") +
+  theme_light() +
+  scale_y_continuous(name="Total Earnings (USD)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+### Summary: Net Pay by Race
+
+```{r net_by_race_sum, echo=FALSE, message=FALSE, cache=TRUE}
+net_stat <- net %>%
+  filter(Race != "Hispanic") %>%
+  group_by(Race) %>%
+  summarize(Minimum = min(Net),
+            Average = mean(Net),
+            Median = median(Net),
+            Maximum = max(Net)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum))
+```
+
+**Similar to hourly wage, maximum net payment for White workers is significantly higher than minority workers.** According to *Table 10.2: Summary Statistics on Individual Net Payments by Race*, while maximum take home pay for African Americans, Native Americans, and workers of Two or More Races were $1,601, $1,006, and $864, respectively, while the maximum amount received by a White worker was significantly higher, at $2,478. Note that the single Hispanic earned the same net income for 2 periods worked, $483, which by virtue of worker count and payment frequency, is both the minimum and maximum net pay. Note that the Hispanic worker has been excluded from the summary statistics below. 
+
+**The disparity between average net earnings of White and minority workers are just as extreme.** That is, African American workers' average net earnings per pay period are $807, Native Americans earn an average of $652, and workers of Two or More Races earn an average of $638. In contrast, White workers, on average, receive $1,002 per net payment - a markedly higher sum. Median values deviate marginally from mean values, at an average absolute value of $24.43. These findings are better illustrated in *Figure 10.2: Descriptive Statistics of Net Pay v. Race*, and aid in the interpretation of boxplots is described earlier in "Section 5.8: Hourly Pay by Race". 
+
+<br>
+
+<center>
+
+**Table 10.2: Summary Statistics on Individual Net Payments by Race**
+
+```{r net_by_race_sum_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(net_stat) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 10.2: Descriptive Statistics of Net Pay v. Race**
+
+```{r net_by_race_sum_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+net_hisp_rm <- net %>%
+  filter(Race != "Hispanic")
+
+net_hisp_rm$Race <- factor(net_hisp_rm$Race, levels = c("Two or More Races", "Native American", 
+                                                        "African American", "White"), 
+                           ordered = TRUE)
+
+ggplot(net_hisp_rm, aes(x = Race, y = Net)) +
+  geom_boxplot(alpha = 0.75, outlier.shape = 15, color = "lightgray", outlier.size = 2) +
+  geom_jitter(height = .0, width = .3, color = "skyblue", alpha = 0.3, size = 2) +
+  coord_flip() + 
+  ylab("Hourly Pay (USD)") +
+  theme_classic()
+```
+
+</center>
+
+<br>
+
+## Net Pay by Race & Company
+
+### Total Net by Race & Company
+
+**Racial disparities in net earnings relative to the proportion of workers holds true across companies**, except for *Stone Bridge Iron & Steel, Inc.*. For example, the 7 unique workers in *Longhouse Construction LLC* is comprised of 85.7% White workers who take home 87% of the company's total net earnings, while 1 African American worker comprises 14.3% of company workers yet earns 13% of total company net earnings. *Edward Schalk & Son, Inc.*, with a larger crew size of 23, is comprised of 92.3% White workers receiving 94.8% of company net earnings and 7.7% of African American workers receiving 5.2% of company net earnings. *Quality Structures, Inc.* is comprised of 85.9% White workers receiving 91% of company net earnings - and 67.9% of net earnings across all companies - while its African American workers, workers of Two or More Races, and Native American workers comprise 8.5%, 4.2%, and 1.4% of employees, but receiving 6.2%, 1.7%, and 1.2% of net earnings, respectively.
+
+**Notably, *Stone Bridge Iron & Steel, Inc.* again turns this pattern on its head.** Though there are a total of 13 unique workers, White, Native American, and Hispanic workers comprise 69.2%, 23.1%, and 7.7% of employees and receive 53.5%, 41.4%, and 5.1% of net earnings, respectively. These findings are revealed in *Table 11.1: Net Earnings by Race & Company* and illustrated in both *Figure 11.1: Net Earnings v. Company by Race* and *Figure 11.2: Individual Net Earnings v. Company by Race*. While the former best visualizes proportionality via stacked bars, the latter depicts the sheer outnumbering of individual net earnings comparing White workers and workers of color, as well as the significantly higher individual net payments most White workers received. In the latter visualization, a scatter plot, minority workers' mapped payments are emphasized via size and saturation, while White workers' payments are de-emphasized via size and transparency for minority workers' payments to be visibly discernible. 
+
+<br>
+
+<center>
+
+**Table 11.1: Net Earnings by Race & Company**
+
+```{r net_by_race_con_table, echo=FALSE, message=FALSE, cache=TRUE}
+kable(net_con_sum) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                font_size = 10,
+                full_width = TRUE) %>%
+  group_rows(group_label = "Quality Structures", start_row = 1, end_row = 4) %>%
+    group_rows(group_label = "Patricia Electric", start_row = 5, end_row = 5) %>%
+  group_rows(group_label = "Schalk & Son", start_row = 6, end_row = 7) %>%
+  group_rows(group_label = "Longhouse Construction", start_row = 8, end_row = 9) %>%
+  group_rows(group_label = "Stone Bridge Iron & Steel", start = 10, end = 12)
+```
+
+<br>
+
+**Figure 11.1: Net Earnings v. Company by Race**
+
+```{r net_by_race_con_viz, echo=FALSE, message=FALSE, fig.width=12, fig.height=8, cache=TRUE}
+library(ggplot2)
+
+net_con_sum_viz$Company <- factor(net_con_sum_viz$Company,
+                                  levels = c("Longhouse Construction", "Stone Bridge Iron & Steel",
+                                             "Patricia Electric", "Schalk & Son", "Quality Structures"),
+                                  ordered = TRUE)
+
+ggplot(net_con_sum_viz, aes(x = Company, y = Total, fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.75) +
+  coord_flip() +
+  xlab("Company") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(name="Total Earnings (USD)", labels = scales::comma)
+```
+
+<br>
+
+**Figure 11.2: Individual Net Earnings v. Company by Race**
+
+```{r net_by_race_con_scatviz, echo=FALSE, message=FALSE, fig.width=12, fig.height=8, cache=TRUE}
+library(ggplot2)
+set.seed(3)
+
+net <- net %>%
+  group_by(Company) %>%
+  mutate(obs = n()) %>%
+  ungroup()
+
+ggplot(net[net$Race == "White", ], aes(x = reorder(Company, desc(obs)), y = Net, color = Race)) +
+  geom_jitter(alpha = 0.4, width = 0.175) +
+  geom_jitter(data = net[net$Race != "White", ], size = 3, height = 0, width = 0.175, alpha = 0.6, 
+              aes(x = reorder(Company, desc(obs)), y = Net, color = Race)) +
+  xlab("Company") +
+  scale_color_brewer(palette = "Set2") +
+  theme_classic() +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(name="Individual Net Earnings (USD)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+### Summary: Net by Race & Company
+
+```{r net_race_con_sum, echo=FALSE, message=FALSE, cache=TRUE}
+net_con_stat <- net %>%
+  group_by(Company, Race) %>%
+  summarize(Minimum = min(Net),
+            Average = mean(Net),
+            Median = median(Net),
+            Maximum = max(Net)) %>%
+  arrange(reorder(Company, desc(Average)), desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum))
+```
+
+**Similar racial disparities exist in net earnings by company, but only significantly so in some.** As seen in *Table 11.2: Summary Statistics on Net Pay by Race & Company*, *Longhouse Construction LLC* exhibits relatively minor differences in average and maximum net earnings, favoring White workers, and again, Native American workers at *Stone Bridge Iron & Steel, Inc.* receive net earnings which have a moderately higher average and maximum net earnings than White workers. However, extreme disparities may be found in *Edward Schalk & Son, Inc.*, where White workers earn an average weekly net income of $1,043, the highest of which is $1,607. The sole African American worker in *Edward Schalk & Son, Inc.*, in contrast, earns an average weekly net income of $692, the highest of which is $799 - a stark contrast to White workers.
+
+**The most extreme racial disparities in net earnings occurs in *Quality Structures, Inc*.** The highest net payment among White workers was $2,478, while the highest net payments among African Americans, Native Americans, and workers of Two or More Races were $1,601, $819, and $864, respectively. Moreover, average net payments among White workers was $1,011, while African Americans, Native Americans, and workers of Two or More Races earned an average weekly net payment of $859, $590, and $590, respectively. Notably, despite also exhibiting the lowest net earnings on record, $96, the median net earnings of White workers was $946, $87 below the average. In other words, despite the greatest variation in net earnings, as well as the lowest net earnings on record, significantly large net payments among Whites were responsible for pulling up the average weekly net earning beyond the 50th percentile. These findings are better illustrated in the trellis boxplots conditioned on company in *Figure 11.3: Summary Statistics of Net Pay v. Race by Company*.
+
+<br>
+
+<center>
+
+**Table 11.2: Summary Statistics on Net Pay by Race & Company**
+
+```{r net_race_con_sum_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(net_con_stat) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                full_width = TRUE) %>%
+  group_rows(group_label = "Patricia Electric", start_row = 1, end_row = 1) %>%
+    group_rows(group_label = "Schalk & Son", start_row = 2, end_row = 3) %>%
+  group_rows(group_label = "Quality Structures", start_row = 4, end_row = 7) %>%
+  group_rows(group_label = "Stone Bridge Iron & Steel", start_row = 8, end_row = 10) %>%
+  group_rows(group_label = "Longhouse Construction", start = 11, end = 12)
+```
+
+<br>
+
+**Figure 11.3: Summary Statistics of Net Pay v. Race by Company**
+
+```{r net_race_con_sum_viz, echo=FALSE, message=FALSE, fig.width=15, fig.height=10, cache=TRUE}
+library(ggplot2)
+
+net_hisp_rm$Race <- factor(net_hisp_rm$Race, levels = c("Native American", "Two or More Races",
+                                                        "African American", "White"), 
+                           ordered = TRUE)
+
+net_hisp_rm$Company <- factor(x = net_hisp_rm$Company, 
+                              levels = c("Quality Structures", "Schalk & Son",
+                                         "Patricia Electric", "Stone Bridge Iron & Steel",
+                                         "Longhouse Construction"),
+                              ordered = TRUE)
+
+ggplot(net_hisp_rm, aes(x = Race, y = Net)) +
+  geom_boxplot(alpha = 0.75, color = "lightgray", outlier.shape = 15, outlier.size = 3) +
+  geom_jitter(alpha = 0.3, height = 0, width = .3, size = 2, color = "skyblue") +
+  scale_color_brewer(palette = "Set2") +
+  xlab("Race") +
+  coord_flip() +
+  theme_classic() +
+  facet_wrap(~ Company) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Net Payments (USD)", labels = scales::comma)
+```
+
+<br>
+
+</center>
+
+
+**Alternate visualizations again help illustrate the distribution of net earnings conditioned on race and contractor.** *Figure 11.4: Frequency & Distribution of Net Pay by Race & Company* depicts a stacked trellis histogram depicting the frequency of weekly net payments and their distributions by race and conditioned on contractor. Each bar represents a $25 increment in net payments, while taller bars indicate higher frequencies of net payments within each $25 range.  
+
+<br>
+
+<center>
+
+**Figure 11.4: Frequency & Distribution of Net Pay by Race & Company**
+
+```{r net_race_con_sum_frq, echo=FALSE, message=FALSE, fig.width=15, fig.height=10, cache=TRUE}
+library(ggplot2)
+
+net$Company <- factor(net$Company, levels = c("Quality Structures", "Schalk & Son", 
+                                              "Patricia Electric", "Stone Bridge Iron & Steel",
+                                              "Longhouse Construction"), 
+                      ordered = TRUE)
+
+ggplot(net, aes(x = Net, fill = Race)) +
+  geom_histogram(binwidth = 25, alpha = 0.75) +
+  xlab("Hourly Pay ($25 Increments)") +
+  ylab("Number of Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  facet_grid(Company ~ .) +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(minor_breaks = seq(0 , 25, 5), breaks = seq(0, 25, 5)) +
+  scale_x_continuous(name = "Net Payments ($25 Increments)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+# Findings: On Location
+
+```{r geo_all, echo=FALSE, message=FALSE, eval=FALSE, cache=TRUE}
+geo <- master %>% filter(!is.na(zip))
+geo %>% filter(!is.na(net)) %>% nrow()
+geo %>% select(name:rate, zip) %>% unique()
+```
+
+**Though the initial impetus behind analyzing employment data was driven by racial disparities**, exploratory analysis revealed another significant discovery among records. To wit, most workers hired among most contractors were from neither Syracuse nor Onondaga County. In fact, a number of workers traveled to Syracuse from across the state, while some of the highest paid workers were imported from northern counties in Pennsylvania. 
+
+**The remainder of the analysis focuses on the mass importation of workers and the exodus of wealth.** Unlike race and gender data, which were missing from approximately 1 in every 4 records, 926 of the 927 records (99.9%) contained the zip code of each employee, or sufficient data to deduce the zip code, if either illegible or sporadically redacted. Zip codes were deduced by matching combinations of social security numbers, titles or positions, company names, hourly wages, and other variables to determine matches where data were missing - recall that this method is very similar to determining worker uniqueness. Among all records, 900 (97.1%) contained data on weekly net earnings of the 188 unique workers with available location data across 7 total contractors, allowing the analyst to quantify much of the net (i.e. disposable) income exported from Syracuse, including workers in:
+
+* John W. Danforth Company
+* Edward Schalk & Son, Inc.
+* Longhouse Construction LLC
+* NRC NY Environmental Services, Inc.
+* Patricia Electric, Inc.
+* Quality Structures, Inc.
+* Stone Bridge Iron & Steel, Inc.
+
+The only contractor excluded from the financial components herein is *Niagara Erecting, Inc.*, which contained illegible, handwritten data within fields for deductions and period net earnings. Note that the 188 of the 189 workers which had unredacted or inferable location data will be referred to as the "workforce" herein.
+
+<br>
+
+## Total Workers by County & State
+
+```{r workers_by_county, echo=FALSE, message=FALSE, cache=TRUE}
+county <- master %>%
+  filter(!is.na(zip)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(county, state) %>%
+  summarize(`Total Workers` = n()) %>%
+  arrange(desc(`Total Workers`)) %>%
+  as_data_frame() %>%
+  mutate(`Total Workers (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  rename("State" = state, "County" = county)
+```
+
+```{r workers_by_county_map, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, cache=TRUE}
+library(sf)
+library(tmap)
+library(tigris)
+library(leaflet)
+library(noncensus)
+data("counties")
+
+county_chor <- county
+
+for (i in 1:nrow(county_chor)){
+  county_chor$County[i] <- paste(county_chor$County[i], "County", sep = " ")
+}
+
+shapes <- tigris::counties(state = c(36, 42), 
+                           resolution = '20m',
+                           class = "sf")
+shapes <- fortify(shapes)
+
+county_chor <- county_chor %>% rename("county_name" = County,
+                                      "state" = State,
+                                      "workers" = `Total Workers`) %>%
+  left_join(counties, by = c("county_name", "state")) %>%
+  mutate(full_fips = paste(state_fips, county_fips, sep = "")) %>%
+  select(-`Total Workers (%)`, -county_name, -state, -fips_class, 
+         -CSA, -CBSA, -population, -full_fips) %>%
+  rename("COUNTYFP" = county_fips,
+         "STATEFP" = state_fips,
+         "WORKERS" = `workers`)
+
+county_shapes <- inner_join(shapes, county_chor, by = c("STATEFP", "COUNTYFP"))
+county_shapes$STATE <- NA
+county_shapes <- county_shapes[, c(6, 20, 1:5, 7:19)]
+
+for (i in 1:nrow(county_shapes)){
+  if (county_shapes$STATEFP[i] == "36"){
+    county_shapes$STATE[i] <- "New York"
+  } else if (county_shapes$STATEFP[i] == "42"){
+    county_shapes$STATE[i] <- "Pennsylvania"
+  }
+}
+```
+
+**Just over one third of workers reside in Onondaga County, while nearly a fifth reside in border counties**, according to *Table 12: Total Workers by County & State*. That is, 66 unique workers, or 35.1%, reside in Onondaga. The second and third largest proportions of workers, comprised of 52 and 10 unique workers, or 27.7% and 5.3%, reside in Onondaga's border counties Oswego and Madison, respectively, while the non-contiguous Oneida County imports 9 unique workers (4.8%). Of remaining border counties, Cayuga and Cortland Counties comprise the 5th and 8th largest importers, i.e. 7 and 4 unique workers, or 3.7% and 2.1%, respectively. In the entire workforce, 73 of 188 unique workers, or 38.8%, reside in counties bordering Onondaga.
+
+**One quarter of the 188 unique workers are from outside Central New York.** That is, 49 workers across companies, or 26%, are imported from 20 counties outside Onondaga and its 4 neighboring counties, including 6 workers (3.2%) from Pennsylvania. Specifically, 5 workers travel from Tioga County (2.7%) while 1 travels from Lycoming County (0.5%). These findings are illustrated in *Figure 12.1: Total Workers v. County by State* and *Figure 12.2: Workforce Density by County*.
+
+<br>
+
+<center>
+
+**Table 12: Total Workers by County & State**
+
+```{r workers_by_county_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(county) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 12.1: Total Workers v. County by State**
+
+```{r workers_by_county_viz, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+
+ggplot(county, aes(x = reorder(County, `Total Workers`), 
+                   y = `Total Workers`,
+                   fill = State)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  xlab("County") +
+  ylab("Total Unique Workers") +
+  scale_fill_brewer(palette = "Paired") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+<br>
+
+**Figure 12.2: Workforce Density by County**
+
+```{r choropleth_workers_output, message=FALSE, warning=FALSE, echo=FALSE, fig.width=8.25, fig.height=7, cache=TRUE, eval = TRUE}
+
+tmap_mode(mode = "view")
+
+tm_shape(county_shapes) +
+  tm_fill(col = "WORKERS",
+          title = "Workers", 
+          style = "cont",
+          alpha = 0.75, 
+          popup.vars = c("State:" = "STATE", 
+                         "Workers:" = "WORKERS")) +
+  tm_borders(col = "White",
+             lwd = 1.6) +
+  tm_text(text = "NAME", size = .75) +
+  tm_layout(title = "Workforce Density", 
+            title.size = 1.15, 
+            title.position = c("LEFT", "TOP"), 
+            main.title.position = c("LEFT", "TOP"),
+            legend.title.size = 1,
+            legend.position = c("RIGHT", "BOTTOM"),
+            frame = FALSE, saturation = -3)
+```
+
+*Click on a county to see its state and the number of workers there.*
+
+</center>
+
+<br>
+
+## Total Workers by City
+
+```{r workers_by_city, echo=FALSE, message=FALSE, cache=TRUE}
+city <- master %>%
+  filter(!is.na(zip)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(city, county, state) %>%
+  summarize(`Total Workers` = n()) %>%
+  arrange(desc(`Total Workers`)) %>%
+  as_data_frame() %>%
+  mutate(`Total Workers (%)` = percent(`Total Workers` / sum(`Total Workers`))) %>%
+  rename("City" = city, "County" = county, "State" = state)
+
+city_10 <- master %>%
+  filter(!is.na(zip)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(city, county, state) %>%
+  summarize(`Total Workers` = n()) %>%
+  arrange(desc(`Total Workers`)) %>%
+  as_data_frame() %>%
+  mutate(`Total Workers (%)` = `Total Workers` / sum(`Total Workers`)) %>%
+  rename("City" = city, "County" = county, "State" = state)
+
+city_agg <- city_10[11:81, ] %>%
+  summarize(City = "Other",
+            County = "Other",
+            State = "Other",
+            `Total Workers` = sum(`Total Workers`),
+            `Total Workers (%)` = percent(sum(`Total Workers (%)`)))
+
+city_10 <- city_10[1:10, ] %>%
+  mutate(`Total Workers (%)` = percent(`Total Workers (%)`)) %>%
+  bind_rows(city_agg)
+```
+
+**One in five workers reside in Syracuse, while the remainder come from 80 other locations.** As seen in *Table 13.1: Top 10 Cities of Worker Origin*, 36 of 188 workers, or 19.1%, reside in Syracuse. The second and third locations exporting the most workers are Oswego, NY and Fulton, NY, totaling 18 and 17 workers, or 9.6% and 9%, respectively, totaling 35 workers, or 18.6%. The fourth, fifth, sixth, and seventh locations exporting the most workers include Liverpool, NY, Clay, NY, Cortland, NY, and Rochester, NY, totaling 7, 5, 4, and 4 workers, or 3.7%, 2.7%, 2.1%, and 2.1%, respectively, totaling 20 workers, or 11%. 
+
+**Over half the total workforce resides in the 74 locations exporting three or less workers.** That is, 97 workers, or 51.6% of the total workforce, reside outside of Syracuse, Oswego, Fulton, Liverpool, Clay, Cortland, and Rochester, NY. While some are relatively close to Syracuse, e.g. 3 workers (1.6%) residing in Baldwinsville, NY, others travel from as far as Salamanca, NY, a Euclidean (straight) distance of approximately 144 miles and a 3.25-hour drive. These findings are illustrated in *Figure 13.1: Total Workers v. Top 10 Cities & All Other by County*. A full list of workers by city is available in the *Appendix* under *Table 13.2*. 
+
+<br>
+
+<center>
+
+**Table 13.1: Top 10 Cities of Worker Origin**
+
+```{r workers_by_city_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(city_10) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 13.1: Total Workers v. Top 10 Cities by County**
+
+```{r top_10_city_bar, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+
+city_10_other_rm <- city_10 %>%
+  filter(City != "Other")
+
+ggplot(city_10_other_rm, aes(x = reorder(City, `Total Workers`), 
+                             y = `Total Workers`,
+                             fill = County)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  xlab("City") +
+  ylab("Total Unique Workers") +
+  scale_fill_brewer(palette = "Set3") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+</center>
+
+<br>
+
+## Race by County
+
+```{r race_county, echo=FALSE, message=FALSE, cache=TRUE}
+county_race <- master %>%
+  filter(!is.na(zip),
+         !is.na(race)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(county, state, race) %>%
+  summarize(Total = n()) %>%
+  rename("Race" = race, "County" = county, "State" = state) %>%
+  arrange(Race, desc(Total), County) %>%
+  as_data_frame() %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = Total / sum(Total)) %>%
+  as_data_frame() %>%
+  mutate(`Workforce (%)` = Total / sum(Total))
+
+race_trunc <- county_race[13:29, ] %>%
+  summarize(County = "Other",
+            State = "",
+            Race = "White", 
+            Total = sum(Total),
+            `Race (%)` = sum(`Race (%)`),
+            `Workforce (%)` = sum(`Workforce (%)`))
+
+county_race_tbl <- county_race[1:12, ] %>%
+  bind_rows(race_trunc) %>%
+  mutate(`Race (%)` = percent(`Race (%)`),
+         `Workforce (%)` = percent(`Workforce (%)`)) %>%
+  arrange(desc(Race), desc(Total), County)
+
+county_race_tbl <- county_race_tbl[c(1, 3:13, 2), ]
+
+county_race <- county_race %>%
+  mutate(`Race (%)` = percent(`Race (%)`),
+         `Workforce (%)` = percent(`Workforce (%)`))
+```
+
+**Most minority workers, where race data are disclosed, reside in Onondaga County.** According to *Table 14.1: Top Counties of Worker Origin for All Races*, 88.9% of the 9 African American workers in the total workforce, reside in Onondaga County, while 1 traveled from Oneida County. Half of the 4 Native American workers reside in Onondaga County, with the remaining half traveling from Cattaraugus County. Among workers of Two or More Races, 2 of 3 reside in Onondaga County, while 1 traveled from Cayuga County. Lastly, the single Hispanic worker also resides in Onondaga County. In total, 13 of the 17 minority workers among the total workforce (76.5%) originated in Onondaga County.
+
+**Over 75% of White workers reside outside Onondaga County.** That is, only 26, or 24.1%, of White workers reside within Onondaga County, while the greatest number of White workers, 34 or 31.5%, traveled from Oswego County. The third highest concentration of White workers are the 8 workers residing in Madison County, comprising 7.4% of Whites and 6.4% of the total workforce. The 40 remaining White workers, comprising 37% of total White workers and 32% of the total workforce, came from counties other than Onondaga, Oswego, and Madison. These findings are illustrated in *Figure 14.1: Top Counties of Worker Origin for All Races* and *Figure 14.2: Racial Composition of Workforce by County*. A full list of workers by race and county is available in the *Appendix* under *Table 14.2*. 
+
+<br>
+
+<center>
+
+**Table 14.1: Top 12 Counties of Worker Origin for All Races**
+
+```{r race_county_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(county_race_tbl) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+</center>
+
+<br>
+
+**Note:** Although there may appear to be discrepancies between *Table 14.1: Top Counties of Worker Origin for All Races* and *Figure 14: Top Counties of Worker Origin for All Races*, the above table parses counties by and is exhaustive of race, while the below figure combines counties to avoid double-counting unique workers.
+
+<center>
+
+<br>
+
+**Figure 14.1: Top Counties of Worker Origin for All Races**
+
+```{r county_race_bar, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+
+county_index <- unique(county_race_tbl$County)
+county_index <- which(str_detect(string = county_race$County, 
+                                 pattern = "Oswego|Onondaga|Madison|Cayuga|Tioga|Cattaraugus|Oneida|Other"))
+
+county_race_viz <- county_race[county_index, 1:4]
+county_race_viz_agg <- county_race[-county_index, 1:4] %>%
+  summarize(Total = sum(Total)) %>%
+  mutate(County = "Other",
+         State = "-",
+         Race = "White") %>%
+  select(County:Race, Total)
+
+county_race_viz <- county_race_viz %>%
+  bind_rows(county_race_viz_agg)
+
+county_race_viz$County <- factor(county_race_viz$County,
+                                 levels = rev(c("Onondaga", "Oswego", "Other", "Madison", 
+                                                "Cayuga", "Tioga", "Oneida", "Cattaraugus")),
+                                 ordered = TRUE)
+
+ggplot(county_race_viz, aes(x = County, 
+                   y = Total,
+                   fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.75) +
+  coord_flip() +
+  xlab("County") +
+  ylab("Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+<br>
+
+```{r county_race_prep, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, cache=TRUE}
+library(tidyr)
+
+cnt_rc <- county_race %>%
+  select(-`Race (%)`, -`Workforce (%)`) %>%
+  spread(key = Race, value = Total) %>%
+  group_by(County, State, `African American`, Hispanic, `Native American`, `Two or More Races`, White) %>%
+  summarize_all(funs(.[which(!is.na(.))])) %>%
+  as_data_frame() %>%
+  mutate(Total = NA,
+         min_prc = NA,
+         `Minority (%)` = NA,
+         st_fips = NA)
+
+for (i in 1:nrow(cnt_rc)){
+  cnt_rc$Total[i] <- sum(cnt_rc[i, 3:7], na.rm = TRUE)
+  cnt_rc$min_prc[i] <- round(sum(cnt_rc[i, 3:6], na.rm = TRUE) / cnt_rc$Total[i], digits = 2) * 100
+  cnt_rc$`Minority (%)`[i] <- percent((cnt_rc$min_prc[i] / 100), accuracy = 1)}
+
+for (i in 1:nrow(cnt_rc)){
+if (cnt_rc$State[i] == "NY"){
+    cnt_rc$st_fips[i] <- "36"
+  } else if (cnt_rc$State[i] == "PA"){
+    cnt_rc$st_fips[i] <- "42"
+  }
+}
+
+cnt_rc[is.na(cnt_rc)] <- 0
+
+cnt_sf <- tigris::counties(state = c("36", "42"), 
+                           resolution = "20m", 
+                           class = "sf")
+
+cnt_sf <- fortify(cnt_sf)
+names(cnt_rc)[c(1,11)] <- c("NAME", "STATEFP")
+
+cnt_rc_sf <- inner_join(cnt_sf, cnt_rc, by = c("NAME", "STATEFP"))
+cnt_rc_sf <- cnt_rc_sf[, c(5, 1:4, 6:27)]
+```
+
+**Figure 14.2: Racial Composition of Workforce by County**
+
+```{r chor_cnty_rc_map, message=FALSE, warning=FALSE, echo=FALSE, fig.width=8.25, fig.height=7, cache=TRUE, eval=TRUE}
+library(tmap)
+library(leaflet)
+library(tmaptools)
+
+tmap_mode(mode = "view")
+
+lf_rc_cnt <- tm_shape(cnt_rc_sf) +
+  tm_fill(col = "min_prc",
+          title = "% Minority", 
+          style = "cont",
+          alpha = 0.75, 
+          popup.vars = c("Workers:" = "Total",
+                         "Minority" = "Minority (%)",
+                         "Hispanic:" = "Hispanic",
+                         "Native:" = "Native American",
+                         "Mixed:" = "Two or More Races",
+                         "Black:" = "African American",
+                         "White:" = "White")) +
+  tm_borders(col = "White",
+             lwd = 1.6) +
+  tm_text(text = "NAME", size = .6) +
+  tm_layout(title = "Racial Composition by County", 
+            title.size = 1.15, 
+            title.position = c("LEFT", "TOP"), 
+            main.title.position = c("LEFT", "TOP"),
+            legend.title.size = 1,
+            legend.position = c("RIGHT", "BOTTOM"),
+            frame = FALSE, saturation = -3)
+
+lf_rc_cnt <- tmap_leaflet(lf_rc_cnt)
+lf_rc_cnt %>% setView(lng = -76.1474, lat = 43.0481, zoom = 7)
+```
+
+*Click on a county to view the total workers, proportion of minority workers, and breakdown of workers by race.*
+
+</center>
+
+<br>
+
+## Race in Onondaga
+
+```{r race_onondaga, echo=FALSE, message=FALSE, cache=TRUE}
+city_race <- master %>%
+  filter(!is.na(zip),
+         !is.na(race),
+         county == "Onondaga") %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  select(race, city) %>%
+  group_by(race, city) %>%
+  summarize(Total = n()) %>%
+  rename("Race" = race, "City" = city) %>%
+  arrange(Race, desc(Total), City) %>%
+  as_data_frame() %>%
+  group_by(City) %>%
+  mutate(`City (%)` = Total / sum(Total)) %>%
+  as_data_frame() %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = Total / sum(Total)) %>%
+  as_data_frame() %>%
+  mutate(`County (%)` = Total / sum(Total))
+
+city_race_tbl <- city_race %>%
+  mutate(`Workers in Location (%)` = percent(`City (%)`),
+         `Race in Location (%)` = percent(`Race (%)`),
+         `Workers in County (%)` = percent(`County (%)`),
+         `Total Workforce (%)` = percent(Total / sum(county_race$Total), accuracy = .1)) %>%
+  select(Race:Total, `Workers in Location (%)`:`Total Workforce (%)`) %>%
+  rename("Location" = City)
+```
+
+**Most of Onondaga County's and the total workforce's minority workers live in Syracuse.** Recall that there are 66 unique workers in Onondaga County, or 35.1% of the total workforce. Of those 66, 39 contain employment records disclosing race, i.e. 59% of Onondaga County workers and 20.7% of the total workforce. According to *Table 15: Location of Onondaga County Workers by Race*, strictly in terms of workers residing in Onondaga County of whom race is disclosed, all 8 African American workers and all 2 workers of Two or More Races reside in Syracuse. Only 1 of 2 Native American workers live in Syracuse, the second residing in La Fayette, while the sole Hispanic worker lives in Liverpool. In sum, 11 of Onondaga County's 13 minority workers, or 84.6%, live in Syracuse, representing 76.5% of total workforce minorities.
+
+**Less than half of all White workers in Onondaga County live in Syracuse.** More specifically, 11 of the 26 White workers in Onondaga County, or 42.3%, live in Syracuse, comprising 50% of all workers living within the city and 28.2% of workers within the county. Of the other 15 White workers, 4 live in Liverpool, 3 in Baldwinsville, and 2 in Clay, comprising 15.4%, 11.5% and 7.7% of White workers in Onondaga County and 10.3%, 7.7%, and 5.6% of all Onondaga County workers, respectively. Lastly, 1 of each of the 6 remaining White worker lives in Camillus, East Syracuse, Fayetteville, Jordan, Manlius, and Tully. These findings are illustrated in *Figure 15.1: Location of Onondaga County Workers by Race*. The 6 separate locations, containing 1 White worker each, is aggregated and labeled "Other". In addition, *Figure 15.2: Racial Composition by Zip Codes* shows the racial makeup of all cities for workers with race disclosed.
+
+<br>
+
+<center>
+
+**Table 15: Location of Onondaga County Workers by Race**
+
+```{r race_onondaga_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(city_race_tbl) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                font_size = 10,
+                full_width = TRUE) %>%
+  group_rows(group_label = "African American", start_row = 1, end_row = 1) %>%
+    group_rows(group_label = "Hispanic", start_row = 2, end_row = 2) %>%
+  group_rows(group_label = "Native American", start_row = 3, end_row = 4) %>%
+  group_rows(group_label = "Two or More Races", start_row = 5, end_row = 5) %>%
+  group_rows(group_label = "White", start = 6, end = 15)
+```
+
+<br>
+
+**Figure 15.1: Location of Onondaga County Workers by Race**
+
+```{r race_onondaga_viz, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+
+city_race_tbl[10:15, "Location"] <- "Other"
+
+city_race_tbl$Location <- factor(city_race_tbl$Location, 
+                             levels = c("La Fayette", "Clay", "Baldwinsville",
+                                        "Liverpool", "Other", "Syracuse"),
+                             ordered = TRUE)
+
+ggplot(city_race_tbl, aes(x = Location, 
+                   y = Total,
+                   fill = Race)) +
+  geom_bar(stat = "identity", alpha = 0.75) +
+  coord_flip() +
+  xlab("Location") +
+  ylab("Unique Workers") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(legend.position = "bottom")
+```
+
+<br>
+
+```{r zipcode_choropleth_prep, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, cache=TRUE}
+library(tidyr)
+
+zip_race <- master %>%
+  filter(!is.na(zip),
+         !is.na(race)) %>%
+  select(name:rate, zip:state) %>%
+  unique() %>%
+  group_by(city, zip, county, state, race) %>%
+  summarize(Total = n()) %>%
+  rename("Race" = race, "City" = city, "Zip Code" = zip, "County" = county, "State" = state) %>%
+  arrange(Race, desc(Total), County) %>%
+  as_data_frame() %>%
+  group_by(Race) %>%
+  mutate(`Race (%)` = percent(Total / sum(Total))) %>%
+  as_data_frame() %>%
+  mutate(`Workforce (%)` = percent(Total / sum(Total))) %>%
+  select(-`Race (%)`, - `Workforce (%)`) %>%
+  spread(key = "Race", value = "Total") %>%
+  group_by(City, `Zip Code`, County, State, `African American`, `Hispanic`, 
+           `Native American`, `Two or More Races`, `White`) %>%
+  summarize_all(funs(.[which(!is.na(.))])) %>%
+  as_data_frame() %>%
+  mutate(`Minority (%)` = NA)
+
+for (i in 1:nrow(zip_race)){
+  zip_race$`Minority (%)`[i] <- percent(sum(zip_race[i, 5:8], 
+                                            na.rm = TRUE) / sum(zip_race[i, 5:9], 
+                                                                na.rm = TRUE), accuracy = .1)
+}
+
+zip_race[is.na(zip_race)] <- 0
+zip_race$Workers <- NA
+
+for(i in 1:nrow(zip_race)){
+  zip_race$Workers[i] <- rowSums(zip_race[i, 5:9], na.rm = TRUE)
+}
+
+zip_sf <- tigris::zctas(state = c("36", "42"), 
+                        starts_with = c("12", "13", "14", "16", "17"), 
+                        class = "sf")
+zip_sf <- fortify(zip_sf)
+names(zip_race)[2] <- "ZCTA5CE10"
+
+zip_race_sf <- inner_join(zip_sf, zip_race, by = "ZCTA5CE10")
+zip_race_sf <- zip_race_sf[, c(10, 1:9, 11:20)]
+
+zip_race_sf$Main <- zip_race_sf$City
+zip_race_sf <- zip_race_sf[, c(21, 1:20)]
+zip_race_sf[c(48, 50:53, 55:57), "City"] <- ""
+zip_race_sf[35, "City"] <- "Salina"
+zip_race_sf[54, "City"] <- "Solvay & Van Buren"
+zip_race_sf[35, "Main"] <- "Salina"
+zip_race_sf[54, "Main"] <- "Solvay & Van Buren"
+
+zip_race_sf$minor_perc <- zip_race_sf$`Minority (%)`
+zip_race_sf$minor_perc <- str_replace_all(zip_race_sf$minor_perc, 
+                                          pattern = "%", 
+                                          replacement = "")
+zip_race_sf$minor_perc <- as.numeric(zip_race_sf$minor_perc)
+```
+
+**Figure 15.2: Racial Composition by Zip Codes**
+
+```{r choropleth_zip_race, message=FALSE, warning=FALSE, echo=FALSE, fig.width=8.25, fig.height=7, cache=TRUE, eval=TRUE}
+
+tmap_mode(mode = "view")
+
+my_tm <- tm_shape(zip_race_sf) +
+  tm_fill(col = "minor_perc",
+          title = "% Minority", 
+          style = "cont",
+          alpha = 0.75, 
+          popup.vars = c("County:" = "County",
+                         "Zip:" = "ZCTA5CE10",
+                         "Workers:" = "Workers",
+                         "Minority:" = "Minority (%)",
+                         "Hispanic:" = "Hispanic",
+                         "Native:" = "Native American",
+                         "Mixed:" = "Two or More Races",
+                         "Black:" = "African American",
+                         "White:" = "White")) +
+  tm_borders(col = "White",
+             lwd = 1.6) +
+  tm_text(text = "City", size = .6) +
+  tm_layout(title = "Racial Composition", 
+            title.size = 1.15, 
+            title.position = c("LEFT", "TOP"), 
+            main.title.position = c("LEFT", "TOP"),
+            legend.title.size = 1,
+            legend.position = c("RIGHT", "BOTTOM"),
+            frame = FALSE, saturation = -3)
+
+my_tm <- tmap_leaflet(my_tm)
+my_tm %>% setView(lng = -76.1474, lat = 43.0481, zoom = 9)
+```
+
+*Click on an area to see the zip code, county, total workers, proportion of minority workers, and breakdown by race.*
+
+</center>
+
+<br>
+
+## Net Wages by County
+
+### Mean Total Net by County
+
+```{r net_by_county_all, echo=FALSE, message=FALSE, cache=TRUE}
+county_net <- master %>%
+  filter(!is.na(zip),
+         !is.na(net)) %>%
+  select(-pdf_no, -pdf_pg, -occur) %>%
+  unique() %>%
+  select(net, county, state) %>%
+  group_by(state, county) %>%
+  summarize(`Total Net` = sum(net)) %>%
+  rename("County" = county, "State" = state) %>%
+  arrange(desc(`Total Net`)) %>%
+  as_data_frame() %>%
+  mutate(`Percent (%)` = `Total Net` / sum(`Total Net`)) %>%
+  select(2, 1, 3:4)
+
+checks <- master %>%
+  filter(!is.na(zip),
+         !is.na(net)) %>%
+  select(county, state, net) %>%
+  group_by(county) %>%
+  summarize("Total Checks" = n()) %>%
+  rename("County" = county) %>%
+  as_data_frame() %>%
+  mutate("Checks (%)" = percent(`Total Checks` / sum(`Total Checks`))) %>%
+  arrange(desc(`Total Checks`), County)
+
+county_net_tbl <- county_net %>%
+  left_join(county, by = c("County", "State")) %>%
+  left_join(checks, by = "County") %>%
+  mutate(`Average Net per Worker` = dollar(`Total Net` / `Total Workers`),
+         `Average Net per Check` = dollar(`Total Net` / `Total Checks`),
+         `Total Net` = dollar(`Total Net`),
+         `Percent (%)` = percent(`Percent (%)`)) %>%
+  select(1:6, 9, 7:8, 10) %>%
+  rename("Workers" = `Total Workers`)
+
+# Unformatted Numbers for Additional Calculations
+
+checks_raw <- master %>%
+  filter(!is.na(zip),
+         !is.na(net)) %>%
+  select(county, state, net) %>%
+  group_by(county) %>%
+  summarize("Total Checks" = n()) %>%
+  rename("County" = county) %>%
+  as_data_frame() %>%
+  mutate("Checks (%)" = `Total Checks` / sum(`Total Checks`)) %>%
+  arrange(desc(`Total Checks`), County)
+
+county_net_raw <- county_net %>%
+  left_join(county, by = c("County", "State")) %>%
+  left_join(checks_raw, by = "County") %>%
+  mutate(`Mean Net per Worker` = `Total Net` / `Total Workers`,
+         `Mean Net per Check` = `Total Net` / `Total Checks`,
+         `Total Net` = `Total Net`,
+         `Percent (%)` = `Percent (%)`) %>%
+  select(1:6, 9, 7:8, 10) %>%
+  mutate(`Worker Difference` = `Mean Net per Worker` - 3302.185,
+         `Check Difference` = `Mean Net per Check` - 838.2468,
+         `Worker` = dollar(`Worker Difference`),
+         `Check` = dollar(`Check Difference`),
+         `Worker (%)` = percent(((`Mean Net per Worker` - 3302.185) / 3302.185), accuracy = .1),
+         `Check (%)` = percent(((`Mean Net per Check` - 838.2468) / 838.2468), accuracy = .1))
+
+net_tbl_full <- county_net_raw %>%
+  mutate(`Total Net` = dollar(`Total Net`),
+         `Percent (%)` = percent(`Percent (%)`),
+         `Mean Net per Worker` = dollar(`Mean Net per Worker`),
+         `Checks (%)` = percent(`Checks (%)`),
+         `Mean Net per Check` = dollar(`Mean Net per Check`),
+         `Worker Difference` = dollar(`Worker Difference`),
+         `Check Difference` = dollar(`Check Difference`)) %>%
+  rename("Total Net (%)" = `Percent (%)`,
+         "Average Net/Worker" = `Mean Net per Worker`,
+         "Total Checks (%)" = `Checks (%)`,
+         "Average Net/Check" = `Mean Net per Check`,
+         "Worker Difference" = `Worker Difference`,
+         "Check Difference" = `Check Difference`,
+         "Worker Difference (%)" = `Worker (%)`,
+         "Check Difference (%)" = `Check (%)`) %>%
+  select(County:`Average Net/Worker`, `Worker Difference`, `Worker Difference (%)`,
+         `Total Checks`:`Average Net/Check`, `Check Difference`, `Check Difference (%)`)
+
+net_tbl_workers <- net_tbl_full %>%
+  select(County:`Worker Difference (%)`)
+
+net_tbl_checks <- net_tbl_full %>%
+  select(County:`Total Workers (%)`, `Total Checks`:`Check Difference (%)`)
+```
+
+**Notable Caveats****:** Recall that net earnings are comprised of gross earnings less deductions and liabilities, e.g. federal and state taxes, union dues, family paid leave, medicare, social security, etc. In addition, recall that *Niagara Erecting, Inc.* was excluded from financial analysis for illegible deductions and net pay data, [exhibited here](https://github.com/jamisoncrawford/REIS/blob/master/OCR%20PDFs/niagra_rocr.pdf), while *M&S Fire Protection, LLC* was excluded for failing to disclose any data beyond worker classification and net earnings, [exhibited here](https://github.com/jamisoncrawford/REIS/blob/master/OCR%20PDFs/m_and_s_fire_protection_rocr.pdf). Importantly, 5 of the 9 unique White workers in *Niagara Erecting* resided within Onondaga County, 2 of whom lived in Syracuse, so it although these numbers may have been relatively negligible to the below findings, especially given that the company worked a total of 24 weeks among all workers, it would be unethical to dismiss these data outright.
+
+**Out of more than $850,000 in net earnings, 3 of every 4 dollars left Onondaga County.** As seen in *Table 16.1: Total Net Earnings by County & State*, the 66 workers in Onondaga County took home 274 paychecks (27.1% of all individual payments) and, despite representing 35.1% of the total workforce, received only 25.6% of total net earnings, or $217,944 of a total $851,050.
+
+**Oswego County workers earned 1.8% less in total earnings, but made up 7.4% less of the workforce.** Out of 188 workers, 52 reside in Oswego County, or 27.7% of the total workforce and 7.4% less than Onondaga County's 66 workers. In total, workers in Oswego County received $202,440, or 23.8% of total net earnings - average total net earnings of $3,893 per worker, i.e. $591 or 17.9% more than the average total net earnings of Onondaga County workers. In sum, total earnings are markedly disproportionate to the proportion of the workforce each county represents, while differences in average total earnings are significant, as well.
+
+**The third largest total in net payments went to five carpenters in Tioga County, Pennsylvania.** Despite being markedly lower than Onondaga and Oswego Counties, comprising 66 workers and 52 workers or 35.1% and 27.7% of the total workforce, respectively, 5 carpenters employed by *Quality Structures*, comprising 2.7% of the total workforce, earned a total of $49,826 over 44 individual pay periods. Remarkably, these workers included 4 Journeymen earning hourly rates ranging from $27.45 to $28.88, as well as a 1st-Year Apprentice, earning an hourly rate of $13.73. Yet one worker earned the greatest maximum net earnings for a single pay period: $2,478, while the greatest total net earnings for a single worker from Tioga was $15,870. Even more remarkable is that there were 5 other counties with unique workings earning even greater total net earnings. These 5 workers in Tioga County received average total net earnings of $9,965, $6,663 or 201.8% more than the average total net earnings of Onondaga County workers.
+
+**Average total net earnings among Cortland, NY workers were even higher than workers in Tioga County.** Cortland County's 4 workers comprised 2.1% of the total workforce of 188 workers, ranking fourth among counties in total net earnings amounting to $42,966, with average total net earnings per worker amounting to $10,742, $7,439 more than average total net earnings of Onondaga County workers and representing a 225.3% increase.
+
+**A single worker from Schoharie County earned nearly $20,000 in net pay over 13 weeks.** The only worker from Schoharie County, a Foreman residing in the quaint town of Summit, NY (Population: 1,148) under the auspices of *Quality Structures*, took home total net earnings of $19,367 over 13 separate pay periods at an hourly rate of $36.30, single-handedly bringing his entire county to the 12th greatest total net earnings out of 25 total counties. His total net earnings were $16,065 greater than the average total net earnings of Onondaga County workers, at an increase of 486.5%.
+
+**While total earnings by county decrease, staggering contrasts with Onondaga County pepper findings.** While the number of workers per county vary and most counties earn significantly less than total net earnings in Onondaga County, Onondaga County workers rank 18th out of 25 counties in average total net earnings per worker. Excluding the aforementioned Schoharie County, the top 5 counties in terms of average total net earnings per worker include Livingston County, NY, Broome County, NY, Lycoming County, PA, Chemung County, NY, and St. Lawrence County, NY, with average total earnings of $18,553, $15,035, $12,315, $12,135, and $11,383, at 461.8%, 355.3%, 272.9%, 267.5%, and 244.7% increases over average total earnings by Onondaga County workers, respectively. These and other noteworthy summary statistics are depicted in *Table 16.2: Summary Statistics on Total Worker Earnings by County*.
+
+<br>
+
+<center>
+
+```{r total_by_county_calc, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+total_earnings <- master %>%
+  filter(!is.na(zip), !is.na(net)) %>%
+  group_by(county, name, ssn) %>%
+  mutate(total_earned = sum(net)) %>%
+  ungroup() %>% 
+  select(name, ssn, county, race, total_earned) %>%
+  unique() %>%
+  group_by(county) %>%
+  mutate(med_total_in_county = median(total_earned)) %>%
+  ungroup()
+  
+onondaga_med <- total_earnings %>%
+   filter(county == "Onondaga") %>%
+   summarize(med_tot = median(total_earned))
+
+syr_total_earnings <- master %>%
+  filter(!is.na(zip), !is.na(net)) %>%
+  group_by(county, name, ssn) %>%
+  mutate(total_earned = sum(net)) %>%
+  ungroup() %>% 
+  select(name, ssn, county, city, race, total_earned) %>%
+  unique() %>%
+  filter(city == "Syracuse") %>%
+  summarize(Total = n(),
+            Minimum = min(total_earned),
+            Average = mean(total_earned),
+            Median = median(total_earned),
+            Maximum = max(total_earned)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum))
+```
+
+**Table 16.1: Total Workforce Earnings & Average Total Worker Earnings by County**
+
+```{r worker_net_by_county_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+kable(net_tbl_workers) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                font_size = 10,
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 16.1: Total Workforce Earnings by County**
+
+```{r net_by_county_viz, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+
+ggplot(county_net_raw, aes(x = reorder(County, `Total Net`), 
+                   y = `Total Net`,
+                   fill = State)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  xlab("County") +
+  ylab("Total Workforce Net Earnings (USD)") +
+  scale_fill_brewer(palette = "Paired") +
+  theme_light() +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(name="Total Net Earnings in Workforce (USD)", labels = scales::comma)
+```
+
+<br>
+
+### Summary: Mean Total Net by County
+
+**Summary statistics aid in understanding the distribution of total net earnings** and are provided below in *Table 16.2: Summary Statistics on Total Worker Earnings by County*, arranged in descending order of average net earnings, as well as visualized in *Figure 16.2: Distribution of Total Net Earnings per Worker by County Compared to Median Onondaga Totals*, arranged in descending order of median net earnings. While most remarkable findings are discussed above, some summary statistics are noteworthy.
+
+**The greatest average total net earnings by a single worker was over $22.8 K.** Over 14 pay periods, a General Foreman from *Quality Structures* in Broome County, NY, earning an hourly wage of $42.64, earned a total of $22,805 at an average weekly net payment amounting to $1,629. 
+
+**Excluding $0 net payments, the least amount of total net earnings was in Oswego County: Less than $100.** A Fulton, NY "Foreman" from *Longhouse Construction* earned $91 for a single week of work at an hourly rate of $32. While this may seem remarkable, given the title of "Foreman", recall that *Longhouse Construction* had 5 unique "Foremen", 1 Apprentice, and 1 Journeyman. 
+
+<br>
+
+**Table 16.2: Summary Statistics on Total Worker Earnings by County**
+
+```{r total_by_county_sumstats, echo=FALSE, message=FALSE, cache=TRUE}
+
+total_by_county_sumstats <- total_earnings %>%
+  group_by(county) %>%
+  summarize(Minimum = min(total_earned),
+            Average = mean(total_earned),
+            Median = median(total_earned),
+            Maximum = max(total_earned)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum)) %>%
+  rename("County" = county) %>%
+  left_join(county, by = "County") %>%
+  select(County, `Total Workers`, `Total Workers (%)`, Minimum:Maximum) %>%
+  rename("Workers" = `Total Workers`,
+         "Workers (%)" = `Total Workers (%)`)
+
+kable(total_by_county_sumstats) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 16.2: Distribution of Total Net Earnings per Worker by County Compared to Median Onondaga Totals**
+
+```{r total_by_county_boxplot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+
+ggplot(total_earnings, aes(x = reorder(county, med_total_in_county), y = total_earned)) +
+  geom_hline(yintercept = 2534, color = "gray", linetype = 5) +
+  geom_boxplot(alpha = 0.85, color = "lightgray", outlier.shape = 15, outlier.size = 2) +
+  geom_jitter(alpha = 0.5, height = 0, width = .25, size = 1, color = "skyblue") +
+  xlab("County") +
+  ylab("Total Net Earnings per Worker (USD)") +
+  coord_flip() +
+  theme_classic() +
+  scale_y_continuous(name = "Total Net Earnings per Worker (USD)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+### Net Payments by County
+
+**Average individual net earnings by county reinforce the above findings on average total net earnings.** That is, proportional disparities in average total worker earnings by county, when compared to the county's representation in the workforce, exist in average individual net payments by county. These findings are revealed in *Table 16.3: Total Workforce Earnings & Average Net Payment Size by County*, arranged in descending order by county total net earnings, as well as visualized in *Figure 16.3: Distribution of Weekly Net Payments by County Compared to Median Onondaga Net Pay*, arranged in descending order by median individual net earnings. Summary statistics of average individual net earnings by county are available in *Table 16.4: Summary Statistics on Net Payment Size by County* in the *Appendix*. Note that the same caveats in "Section 6.5.1 Total Worker Net by County" apply here, as well.
+
+**Out of nearly 900 paychecks, more than 7 of every 10 checks left Onondaga County.** That is, only 28.9% of all paychecks, or 260 weeks, were received and worked by Onondaga County workers, while 71.1% checks, or 639 weeks, were received and worked by individuals living in other counties, respectively. This contrasts with 66 county workers out of a workforce totaling 188 individuals, or 35.1% of the total workforce. In other words, despite representing 35.1% of total workers, individuals in Onondaga County worked only 28.9% of total pay periods, a proportional disparity of 6.2%. Remarkably, the average Onondaga County worker worked 3.9 weeks.
+
+**Oswego County had 27.7% of total workers, but received 24.6% of paychecks and 23.8% of total net pay.** Compare this to the 35.1% of total workers, receipt of 28.9% of of paychecks, and 25.6% of total pay by Onondaga County workers, respectively. In other words, proportional disparities favor Oswego County workers, who represented 7.4% less workers, worked 4.3% less weeks, but earned a mere 1.8% less than Onondaga County workers in total. On average, Oswego County workers earned $78 more per paycheck than Onondaga County workers, or a 9.3% increase. The average number of weeks per worker was 4.3, slightly higher than workers in Onondaga County. 
+
+**Five workers in Tioga County, PA earned, on average, 35.1% more per paycheck than Onondaga County workers.** Representing a mere 2.7% of the workforce, these 5 carpenters earned, on average, $294 more per paycheck than Onondaga County workers, or 35.1% more, over 44 pay periods. The average number of weeks worked by individuals in Tioga County was more than double that of Onondaga County workers, at 8.8 weeks versus 3.9 weeks, respectively. In total, Tioga County workers ranked 4th in greatest number of weeks worked and paychecks received, with 3rd place going to Cayuga County at 46 weeks. 
+
+**On average, workers outside Onondaga County worked one third more weeks.** While Onondaga County workers, on average, worked 3.9 weeks, workers in all other counties, on average, worked 5.2 weeks, or a 33.3% increase. Among average total weeks spent on site per worker, by county, Onondaga County ranks 19th out of 25 counties.
+
+<br>
+
+<center>
+
+**Table 16.3: Total Workforce Earnings & Average Net Payment Size by County**
+
+```{r check_net_by_county_tbl, echo=FALSE, message=FALSE, cache=TRUE}
+net_tbl_checks <- net_tbl_checks %>%
+  rename("Workers" = `Total Workers`,
+         "Workers (%)" = `Total Workers (%)`,
+         "Checks" = `Total Checks`,
+         "Checks (%)" = `Total Checks (%)`) %>%
+  mutate(`Average Checks/Worker` = round(Checks / Workers, digits = 1)) %>%
+  select(County:`Average Net/Check`, 
+         `Average Checks/Worker`, 
+         `Check Difference`:`Check Difference (%)`)
+
+kable(net_tbl_checks) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                font_size = 8,
+                full_width = TRUE)
+```
+
+<br>
+
+```{r net_payment_by_county_calc, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+net_payments <- master %>%
+  filter(!is.na(zip), !is.na(net)) %>%
+  group_by(county) %>%
+  mutate(median_net = median(net)) %>%
+  ungroup() %>%
+  mutate(onondaga_med = 788.87)
+
+syr_nets <- master %>%
+  filter(!is.na(zip), !is.na(net), city == "Syracuse") %>%
+  select(name, ssn, net, city, zip, county) %>%
+  summarize(Total = n(),
+            Minimum = min(net),
+            Average = mean(net),
+            Median = median(net),
+            Maximum = max(net)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum))
+```
+
+<br>
+
+**Figure 16.3: Distribution of Weekly Net Payments by County Compared to Median Onondaga Net Pay**
+
+```{r net_by_county_boxplot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+library(ggplot2)
+  
+ggplot(net_payments, aes(x = reorder(county, median_net), y = net)) +
+  geom_hline(yintercept = 788.87, color = "gray", linetype = 5) +
+  geom_boxplot(alpha = 0.85, color = "lightgray", outlier.shape = 15, outlier.size = 2) +
+  geom_jitter(alpha = 0.5, height = 0, width = .25, size = 1, color = "skyblue") +
+  xlab("County") +
+  ylab("Weekly Net Payments (USD)") +
+  coord_flip() +
+  theme_classic() +
+  scale_y_continuous(name="Weekly Net Payments (USD)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+## Net Wages by Distance
+
+**There is a weak to moderate positive correlation between total earnings and distance from Syracuse.** Specifically, the relationship between total earnings per unique worker and distance from Syracuse ("as the crow flies"), has a Pearson correlation coefficient of $r = 2.96$, just bordering on moderate positive correlation. Worth mentioning, the correlation between individual net payments and distance from Syracuse is weak, at $r = 0.24$. The former relationship is illustrated in *Figure 17: Total Worker Net Earnings v. Distance from Syracuse*. By discretizing, or categorizing distance ranges, in 25-mile increments, the reader may draw interesting conclusions, as revealed in *Table 17: Overview of Earnings & Pay Periods by Distance Ranges from Syracuse*.
+
+**Over half of unique workers live within 25 miles of Syracuse and work nearly half of all pay periods.** Specifically, of the 179 workers with both net pay and location data, 98 workers, comprising 54.7% of the workforce, live within a 25-mile radius and work 448, or 49.8%, of total work periods. This cohort earns proportionally less than all other workers, excepting 4 living between 125 and 150 miles away, receiving $387,486, or 44.9% of total workforce net earnings. Also excepting the 4 living between 125 and 150 miles away, workers within 25 miles of Syracuse receive the lowest average total net earnings at $3,953.93.
+
+**As distance increases, total workers decrease but average weeks and average total earnings tend to increase.** As distance ranges increase from 25 to 50, 50 to 75, 75 to 100, and 100 to 125, total workers decrease, numbering 49, 12, 13, and 3, while average weeks per worker numbers 2.5, 7.3, 7.9, and 9, and average total net per worker amounts to $4.4 K, $8.3 K, $9 K, and $10.4 K, respectively. The exception being the furthest cohort, between 125 and 150 miles from Syracuse, which has the lowest values for weeks worked, average weeks per worker, total net earnings, and total net earnings per worker.
+
+**Cohorts with minority workers have the lowest average weeks and total net earnings per worker.** The least amount of average weeks worked and average total net earnings per worker is found among the 4 workers living between 125 and 150 miles from Syracuse, to the tune of 3.5 weeks and $2.5 K, respectively, while comprised of 2 White and 2 Native American workers, the latter comprising 50% of the cohort. The cohort living within 25 miles of Syracuse is comprised of 98 workers, 14 or 14.3 percent of whom are comprised of 8 African American workers, 3 workers of Two or More Races, 2 Native American Workers, and 1 Hispanic worker. This cohort has the second lowest values in average total earnings per worker, at $3.9 K, and second lowest values in average weeks worked, at 4.57. Lastly, the third and final cohort, ranging from 25 to 50 miles from Syracuse, has only 1 African American worker, comprising 2% of its 49 workers. The cohort in total has the third lowest value in average weeks per worker, at 4.51, and the second lowest average net earnings per worker at $4,415.
+
+```{r distance_all, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+library(geosphere)
+
+syr_long <- -76.1474
+syr_lat <- 43.0481
+
+total_by_dist <- master %>%
+  filter(!is.na(zip), !is.na(net)) %>%
+  group_by(county, name, ssn, zip) %>%
+  mutate(total_earned = sum(net)) %>%
+  ungroup() %>% 
+  group_by(county, name, ssn, zip) %>%
+  mutate(total_chks = n()) %>%
+  ungroup() %>%
+  select(name:rate, net, total_earned, total_chks, zip:latitude)
+
+# Calculate Euclidean Distance Using Meeus Formula (Ellipsoidal)
+
+total_by_dist$meeus_dist <- NA
+
+for (i in 1:nrow(total_by_dist)){
+  total_by_dist$meeus_dist[i] <- (distMeeus(p1 = c(total_by_dist$longitude[i], 
+                                                   total_by_dist$latitude[i]),
+                                            p2 = c(syr_long, syr_lat)) / 1000) / 1.60934
+}
+
+ind_total_cor <- total_by_dist %>% select(meeus_dist, total_earned) %>% unique()
+ind_dist_cor <- cor(x = ind_total_cor$meeus_dist, y = ind_total_cor$total_earned)
+
+net_cor <- total_by_dist %>% select(meeus_dist, net)
+net_dist_cor <- cor(x = net_cor$meeus_dist, y = net_cor$net)
+
+total_by_dist$dist_cat <- cut(x = total_by_dist$meeus_dist, 
+                              breaks = c(0, 25, 50, 75,100, 125, 150),
+                              labels = c("0-25", "25-50", "50-75", "75-100", "100-125", "125-150"),
+                              ordered_result = TRUE)
+
+total_by_dist$min_stat <- NA
+
+for (i in 1:nrow(total_by_dist)){
+  if (total_by_dist$race[i] != "White" & !is.na(total_by_dist$race[i])){
+    total_by_dist$min_stat[i] <- 1
+  } else {
+    total_by_dist$min_stat[i] <- 0
+  }
+}
+
+dist_table <- total_by_dist %>%
+  group_by(name, ssn, title, position, union, sex, race, rate, 
+           total_earned, county, state, meeus_dist, dist_cat, min_stat) %>%
+  summarize("Checks" = n()) %>%
+  rename("Distance" = meeus_dist,
+         "Range (Miles)" = dist_cat,
+         "Minority" = min_stat) %>%
+  ungroup() %>%
+  group_by(`Range (Miles)`) %>%
+  summarize("Workers" = n(),
+            "Total Net" = sum(total_earned),
+            "Weeks" = sum(Checks),
+            "Minority" = sum(Minority),
+            "Minority (%)" = percent(Minority / Workers)) %>%
+  ungroup() %>%
+  mutate("Workers (%)" = percent(Workers / sum(Workers)),
+         "Total Net (%)" = percent(`Total Net` / sum(`Total Net`)),
+         `Average Net/Worker` = dollar(`Total Net` / Workers),
+         `Total Net` = dollar(`Total Net`),
+         `Average Weeks/Worker` = round(Weeks / Workers, digits = 2),
+         `Weeks (%)` = percent(Weeks / sum(Weeks))) %>%
+  select(`Range (Miles)`:Workers, `Workers (%)`, Minority, `Minority (%)`, Weeks, 
+         `Weeks (%)`, `Average Weeks/Worker`, `Total Net`, `Total Net (%)`, `Average Net/Worker`)
+```
+
+<br>
+
+<center>
+
+**Table 17: Overview of Earnings & Pay Periods by Distance Ranges from Syracuse**
+
+```{r dist_table, echo=FALSE, message=FALSE, cache=TRUE}
+kable(dist_table) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                font_size = 9,
+                full_width = TRUE)
+```
+
+<br>
+
+**Figure 17: Total Worker Net Earnings v. Distance from Syracuse**
+
+```{r total_by_dist_scatter, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=7, cache=TRUE}
+ggplot(total_by_dist, aes(x = meeus_dist, y = total_earned)) +
+  geom_density2d(alpha = 0.4, color = "lightgray") +
+  geom_point(alpha = 0.5, color = "skyblue") +
+  geom_smooth(method = "lm", color = "skyblue3", alpha = 0.1) +
+  xlab("Euclidean Distance from Syracuse (Miles)") +
+  theme_classic() +
+  scale_y_continuous(name = "Total Net Earnings (USD)", labels = scales::comma)
+```
+
+</center>
+
+<br>
+
+# Contributors
+
+**This analysis would not be possible** without the contributions of the following organizations and individuals:
+
+* **Andrew Croom, Esq.** *Legal Services of Central New York*. Retrieving data via FOIA and data preprocessing tasks.
+* **Shannon Connor, MA.** *Aspen Dental Management*. Reviewing accuracy of scraped data and preprocessing tasks.
+* **Legal Services of Central New York.** Co-creator of the Racial Equity Impact Statement (REIS).
+* **Urban Jobs Task Force.** Co-creator of the Racial Equity Impact Statement (REIS).
+* **Central New York Community Foundation.** *Community Data Meetings.* Facilitating volunteer recruitment, peer review.
+
+<br>
+
+# Contact
+
+[**Jamison R. Crawford, MPA**](https://www.linkedin.com/in/jamisoncrawford/) is a data analysis and visualization consultant in Syracuse, NY, specializing in nonprofit management and governance, and both analyst and author of the present work. 
+
+**Questions on the analysis as well as recommendations** for additional areas of research in the Hancock Airport Renovation data are most welcome and appreciated, as is scrutiny of the analysis, itself. All tasks and instructions to reproduce this work from raw data to publication are available in the [REIS Repository on GitHub](https://github.com/jamisoncrawford/REIS).
+
+[**Contact the Analyst**](mailto:jrcrawfo@syr.edu)
+
+<br>
+
+# Versions & Dates
+
+The following information is for the purposes of reproducible research for the present analysis. Steps for complete reproducibility, from raw data to the findings below, are provided in the [REIS repository](https://github.com/jamisoncrawford/REIS).
+
+**Publication Version****:** 0.1.6
+
+**Latest Update****:** 2018-11-15
+
+**RStudio Version****:** 1.1.456
+
+**R Version****:** 3.5.1
+
+**OS****:** Windows 10
+
+<br>
+
+# Appendix
+
+<br>
+
+## Table 13.2
+
+<center>
+
+**Total Workers by City, County, & State**
+
+```{r echo=FALSE, message=FALSE, cache=TRUE}
+city2 <- city %>%
+  arrange(desc(`Total Workers`), State, County, City)
+kable(city2) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+</center>
+
+<br>
+
+## Table 14.2
+
+<center>
+
+**Total Workers by Race & County**
+
+```{r echo=FALSE, message=FALSE, cache=TRUE}
+kable(county_race) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+</center>
+
+<br>
+
+## Table 16.4
+
+<center>
+
+**Summary Statistics on Net Payment Size by County**
+
+```{r net_by_county_sumstats, echo=FALSE, message=FALSE, cache=TRUE}
+
+net_by_county_sumstats <- net_payments %>%
+  group_by(county) %>%
+  summarize(Minimum = min(net),
+            Average = mean(net),
+            Median = median(net),
+            Maximum = max(net)) %>%
+  arrange(desc(Average)) %>%
+  mutate(Minimum = dollar(Minimum),
+         Average = dollar(Average),
+         Median = dollar(Median),
+         Maximum = dollar(Maximum)) %>%
+  rename("County" = county) %>%
+  left_join(county, by = "County") %>%
+  select(County, State, `Total Workers`, `Total Workers (%)`, Minimum:Maximum) %>%
+  rename("Workers" = `Total Workers`,
+         "Workers (%)" = `Total Workers (%)`)
+
+kable(net_by_county_sumstats) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed",
+                                      "responsive"),
+                full_width = TRUE)
+```
+
+</center>
