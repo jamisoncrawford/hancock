@@ -1,6 +1,54 @@
 # Code Book
 
-The following lists the table names, variables, and definitions for each employment document scraped.
+The following lists the table names, variables, units of measurement if applicable, processing tasks, and definitions for each employment document scraped, as well as the "Master Table", merging and homogenizing variables uniformly where possible.
+
+# Master Table
+
+## Overview
+
+The "Master Table", `hancock_master_table_*.csv`, with `*` indicating the version number, may be found in the REIS repository folder, ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts), and is comprised of merged tables scraped from employment records, with uniform variables listed below. The merging script, `hancock_master_*.r`, is available in the REIS repository folder: ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts).
+
+## Employee & Company Variables
+
+Employee related variables include:
+
+* `name`: The company or contractor of the employee, partially abbreviated for legibility
+* `ssn`: Last four digit of employee social security number
+  - If `ssn` is missing, redacted, or illegible, a unique ID is provided for distinction, indicated in variable `ssn_sub`
+* `title`: Employee position per company specification, partially aligned with the US Apprenticeship system; categories within documentation include:
+  - `Journeyman`
+  - `Foreman`
+  - `General Foreman`
+  - `Operator Class 1`
+  - `Operator Class A`
+  - `Apprentice 1st Year`
+  - `Apprentice 2nd Year`
+  - `Apprentice 3rd Year`
+* `position`: Employee vocation or specialization, e.g. "Sheet Metal Worker"
+* `union`: The union of the employee, partially abbreviated for legibility, and availble only for company: *Quality Structures, Inc.*
+* `sex`: Employee gender
+* `race`: Racial classification of employee per [EEOC taxonomy](https://www.eeoc.gov/eeoc/statistics/employment/jobpat-eeo1/glossary.cfm); categories within documentation include:
+  - `White`
+  - `Two or More Races`
+  - `American Indian or Alaskan`
+  - `Black or African American`
+* `ssn_sub`: Binary or logical value indicating whether the `ssn` value is missing and substituted with a unique ID for distinction
+
+## Financial & Time-Related Variables
+
+Finance- and time-related variables include:
+
+* `rate`: Hourly pay of employee
+  - In instances of wage increases during the project or in instances where multiple pay rates are provided, the lowest value of `rate` is chosen and competing values are homogenized
+  - In rare instances where only overtime (OT) wages are provided, there was no attempt to regularize them
+* `net`: The gross amount earned less all deductions during the pay period for the week of `ending` (see below)
+* `ending`: The date for the ending of each 7-day payment period, including 
+
+## 
+
+# Scraped Tables
+
+Scraped tables include all output from both automated scrapes. The variable definitions, processing tasks, units of measurement, and other metadata correspond to the latest versions, also supplied, which may be found in the REIS repository folder: ["Tables"](https://github.com/jamisoncrawford/REIS/tree/master/Tables). Scraping and processing scripts are available in the REIS repository folder: ["Scripts"](https://github.com/jamisoncrawford/REIS/tree/master/Scripts). Lastly, for some tables, `*_narm_**.csv` versions are available, where `*` indicates the company or contractor name and `**` indicates the version number. `*_narm_**.csv` scripts have `NA` values (missing, redacted, or illegible data) replaced with empty cells for ease of import to spreadsheet software. 
 
 ## Quality Structures, Inc.
 
