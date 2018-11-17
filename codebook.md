@@ -14,7 +14,8 @@ Employee related variables include:
 
 * `name`: The company or contractor of the employee, partially abbreviated for legibility
 * `ssn`: Last four digit of employee social security number
-  - If `ssn` is missing, redacted, or illegible, a unique ID is provided for distinction, indicated in variable `ssn_sub`
+  - In instances where `ssn` is missing, redacted, or illegible, unique combinations of variables `name`, `title`, `position`, `race`, `sex`, `rate`, and `zip` are used to infer `ssn`
+  - If `ssn` is missing, redacted, illegible, and uninferrable, a unique ID is provided for distinction, indicated in variable `ssn_sub`
 * `title`: Employee position per company specification, partially aligned with the US Apprenticeship system; categories within documentation include:
   - `Journeyman`
   - `Foreman`
@@ -34,7 +35,7 @@ Employee related variables include:
   - `Black or African American`
 * `ssn_sub`: Binary or logical value indicating whether the `ssn` value is missing and substituted with a unique ID for distinction
 
-## Financial & Time-Related Variables
+## Finance- & Time-Related Variables
 
 Finance- and time-related variables include:
 
@@ -42,9 +43,25 @@ Finance- and time-related variables include:
   - In instances of wage increases during the project or in instances where multiple pay rates are provided, the lowest value of `rate` is chosen and competing values are homogenized
   - In rare instances where only overtime (OT) wages are provided, there was no attempt to regularize them
 * `net`: The gross amount earned less all deductions during the pay period for the week of `ending` (see below)
-* `ending`: The date for the ending of each 7-day payment period, including 
+* `ending`: The date for the ending of each 7-day payment period in POSIXlt format, i.e. "YYYY-MM-DD"
 
-## 
+## Location Variables
+
+Location-related variables include:
+
+* `zip`: The employee zip code provided in each record
+  - In instances where zip code is missing, redacted, or illegible, unique combinations of variables `name`, `ssn`, `title`, `position`, `race`, `sex`, and `rate` are used to infer `zip`
+  - Only one value of `zip` was uninferrable
+  - Derived from 2004 *CivicSpace Database*
+* `city`: The city or town of the employee
+  - Transformation output of `zip` using 2010 US Census data, stored in R package `noncensus`
+* `county`: The county of the employee
+  - Transformation output of `zip` using 2010 US Census data FIPS codes, stored in R package `noncensus`
+* `state`: The state of the employee
+  - Transformation output of `zip` using 2010 US Census data FIPS codes, stored in R package `noncensus`
+* `longitude`: The longitude coordinate of the `zip` centroids via R package `zipcode` via R package `noncensus`
+* `latitude`: The latitude coordinate of the `zip` centroids via R package `zipcode` via R package `noncensus`
+
 
 # Scraped Tables
 
