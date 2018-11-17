@@ -59,8 +59,10 @@ Location-related variables include:
   - Transformation output of `zip` using 2010 US Census data FIPS codes, stored in R package `noncensus`
 * `state`: The state of the employee
   - Transformation output of `zip` using 2010 US Census data FIPS codes, stored in R package `noncensus`
-* `longitude`: The longitude coordinate of the `zip` centroids via R package `zipcode` via R package `noncensus`
-* `latitude`: The latitude coordinate of the `zip` centroids via R package `zipcode` via R package `noncensus`
+* `longitude`: The longitude coordinate of the `zip` via R package `zipcode` via R package `noncensus`
+* `latitude`: The latitude coordinate of the `zip` via R package `zipcode` via R package `noncensus`
+* `sfips`: State FIPS code per R package `noncensus`, derived by merging datasets `zip_codes` and `counties`
+* `cfips`: County FIPS code per R package `noncensus`, derived by merging datasets `zip_codes` and `counties`
 
 
 # Scraped Tables
