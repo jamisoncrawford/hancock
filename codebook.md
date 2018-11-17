@@ -26,7 +26,8 @@ Employee related variables include:
   - `Apprentice 2nd Year`
   - `Apprentice 3rd Year`
 * `position`: Employee vocation or specialization, e.g. "Sheet Metal Worker"
-* `union`: The union of the employee, partially abbreviated for legibility, and availble only for company: *Quality Structures, Inc.*
+* `union`: Employee union, partially abbreviated for legibility, and availbale only for company: *Quality Structures, Inc.*
+  - If records indicate multiple values of `union`, only the first value was recorded
 * `sex`: Employee gender
 * `race`: Racial classification of employee per [EEOC taxonomy](https://www.eeoc.gov/eeoc/statistics/employment/jobpat-eeo1/glossary.cfm); categories within documentation include:
   - `White`
@@ -74,7 +75,7 @@ These variables are for reference purposes in corroborating scraped variable val
   - Typically "1", excepting observations from *Quality Structures, Inc.*
 * `pdf_pg`: Indicates the page number in the PDF containing the observation
 * `occur`: Indicates the position of the record on the given page, `pdf_pg`, and PDF number, `pdf_no`
-  - For example, observation 39, with a `occur` value of "6", is the sixth observation on the eigth page (`pdf_pg`) of the first PDF (`pdf_no`) in `danforth_table_1.1.csv`
+  - For example, observation 39, with an `occur` value of "6", references the sixth record on the eigth page (`pdf_pg`) of the first PDF (`pdf_no`) in `danforth_table_1.1.csv`
 
 # Scraped Tables
 
