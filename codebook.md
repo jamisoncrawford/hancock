@@ -64,6 +64,17 @@ Location-related variables include:
 * `sfips`: State FIPS code per R package `noncensus`, derived by merging datasets `zip_codes` and `counties`
 * `cfips`: County FIPS code per R package `noncensus`, derived by merging datasets `zip_codes` and `counties`
 
+Additional information on location-related variables are available in CRAN documentation for R packages ["zipcodes"](https://cran.r-project.org/web/packages/zipcode/zipcode.pdf) and ["noncensus"](https://cran.r-project.org/web/packages/noncensus/noncensus.pdf).
+
+## Data Source Variables
+
+These variables are for reference purposes in corroborating scraped variable values with original data sources, as well as additional investigation into particular observations. Original sources are located in REIS repository folders ["Raw Data"](https://github.com/jamisoncrawford/REIS/tree/master/Raw%20Data), ["Rotated PDFs"](https://github.com/jamisoncrawford/REIS/tree/master/Rotated%20PDFs), and ["OCR PDFs"](https://github.com/jamisoncrawford/REIS/tree/master/OCR%20PDFs). Data source variables include:
+
+* `pdf_no`: Indicates the PDF from which the observation derives
+  - Typically "1", excepting observations from *Quality Structures, Inc.*
+* `pdf_pg`: Indicates the page number in the PDF containing the observation
+* `occur`: Indicates the position of the record on the given page, `pdf_pg`, and PDF number, `pdf_no`
+  - For example, observation 39, with a `occur` value of "6", is the sixth observation on the eigth page (`pdf_pg`) of the first PDF (`pdf_no`) in `danforth_table_1.1.csv`
 
 # Scraped Tables
 
