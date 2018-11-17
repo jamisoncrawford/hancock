@@ -9,6 +9,14 @@ Each section provides the following:
 * Variables of Interest
 * Data Notes
 
+## Additional Variables of Interest
+
+Financial data became of interest during exploratory analysis in order to demonstrate dissemination of capital from Onondaga County. If available, the following variables were also captured:
+
+1. Hourly Rate of Pay
+2. Net Earnings for Period
+3. Period Ending Date
+
 ## John W. Danforth Company
 
 *danforth_company.pdf*
@@ -43,8 +51,8 @@ Each section provides the following:
 **Note:** "Race" & "Gender" located on far right of each document.
 
 1. City, State, Zip
-2. SS# last four digits
-3. Work classification 
+2. Social Security Number (4 Digits) 
+3. Work Classification 
 4. Race
 5. Gender
 
