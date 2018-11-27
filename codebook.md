@@ -2,15 +2,29 @@
 
 The following lists the table names, variables, units of measurement if applicable, processing tasks, and definitions for each employment document scraped, as well as the "Master Table", merging and homogenizing variables uniformly where possible.
 
-# Publication
+# Publication Variables
 
 The latest available version of published findings, ["Hancock Renovations: Importing Whites, Exporting Wealth"](http://rpubs.com/JamisonCrawford/hancock) (Crawford, 2018), is available on the *RPubs* platform. The *R Markdown* script, an `.Rmd` file, is also available in the ["Scripts" Folder](https://github.com/jamisoncrawford/REIS/tree/master/Scripts) of the REIS repository, titled `reis_hancock_publication_*.rmd`, with `*` indicating a 3-figure version ID. *Hancock Renovations* features a variety of tables with variables created within the *R Markdown* script, itself, so all steps in variable transformations are built into the publication. This concept, known as [literate programming](https://en.wikipedia.org/wiki/Literate_programming), is further explained in `README.md`, located in the REIS repository. The following therefore defines any novel variable transformations occurring within the analysis.
 
 ## Metadata Tables
 
+The following table corresponds to *Section 4.1: On Demographic Data* and describes the "Master Dataset" in terms of available and missing records, as well as available and missing unique worker data regarding variables `zip code`, `net` (net pay), and `race`.
+
 ###  Table 1: Data Overview
 
+* `Unique Payment Records`: 
+* `Unique Workers`: 
+* `Status`: 
+* `Race`: 
+* `Race (%)`: 
+* `Zip Code`: 
+* `Zip Code (%)`: 
+* `Net Pay`: 
+* `Net Pay (%)`: 
+
 ## Tables on Race
+
+The following corresponds to all tables ranging from *Section 4.2: Workers by Race* to *Section 4.11: Net Pay by Race & Company*. These data break down total quantities and proportions of unique workers, pay periods, titles or positions, hourly wages, and net pay conditioned on both race and company and race, alone. 
 
 ### Table 2: Unique Workers by Race
 
@@ -37,6 +51,8 @@ The latest available version of published findings, ["Hancock Renovations: Impor
 ### Table 11.2 Summary Statistics on Net Pay by Race & Company
 
 ## Tables on Location
+
+The following corresponds to all tables ranging from *Section 5.1: Total Workers by County & State* to *Section 5.6: Net Wages by Distance*. These data break down total quantities and proportions of unique workers, worker race, net wages, and individual payments conditioned on county and state, city, Onondaga County, and distance. Tables on net wages typically feature descriptive statistics as well as comparisons, via percentage differences, to Onondaga County workers.
 
 ### Table 12: Total Workers by County & State
 
