@@ -28,27 +28,73 @@ The following corresponds to all tables ranging from *Section 4.2: Workers by Ra
 
 ### Table 2: Unique Workers by Race
 
+* `Unique Workers`: 
+* `Percentage`: 
+
 ### Table 3: Unique Workers by Race & Company
+
+* `Company`: 
 
 ### Table 4: Total Weeks Worked by Race
 
+* `Periods`: 
+* `Periods (%)`: 
+* `Workers`: 
+* `Workers (%)`: 
+
 ### Table 5: Total Weeks Worked by Race & Company
+
+No new variables transformations.
 
 ### Table 6: Aggregate Titles by Race
 
+* `Title`: 
+
 ### Table 7: Titles by Race & Company
+
+* `Total Workers`: 
+* `Company (%)`: 
+* `Race (%)`: 
+* `Title (%)`: 
 
 ### Table 8: Summary Statistics of Hourly Wage by Race
 
+* `Minimum`: 
+* `Median`: 
+* `Average`: 
+* `Maximum`: 
+
 ### Table 9: Summary Statistics of Hourly Wage by Race & Company
+
+No new variables transformations.
 
 ### Table 10.1: Total Net Earnings by Race
 
+* `Payments`: 
+* `Total Net ($)`: 
+* `Total Net (%)`: 
+
 ### Table 10.2: Summary Statistics on Individual Net Payments by Race
+
+* `Minimum`: 
+* `Median`: 
+* `Average`: 
+* `Maximum`: 
 
 ### Table 11.1: Net Earnings by Race & Company
 
+* `Company Net ($)`: 
+* `Company Net (%)`: 
+* `Workforce Net (%)`: 
+* `Workers`: 
+* `Company (%)`: 
+
 ### Table 11.2 Summary Statistics on Net Pay by Race & Company
+
+* `Minimum`: 
+* `Median`: 
+* `Average`: 
+* `Maximum`: 
 
 ## Tables on Location
 
