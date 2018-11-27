@@ -127,6 +127,8 @@ The master merge script perfoms the following for most scraped tables, post-modi
 
 ## Analysis & Publication
 
+### Markdown & Literate Programming
+
 Findings are "knit" together via a combination of human-readable text, including visualizations and tables, and machine-readable transformations existing "under the hood" - a practice known as [literate programming](https://en.wikipedia.org/wiki/Literate_programming). Using R package `markdown`, an introduction, executive summary, background, methodology, findings, contributors, contact section, and appendix are weaved together to create "Hancock Renovations: Importing Whites, Exporting Wealth" (Crawford, 2018). Under the hood, the publication is comprised of the following languages: 
 
 * [R](https://en.wikipedia.org/wiki/R_(programming_language)) for in-line values, data analysis, visualization, and table formatting
@@ -134,7 +136,21 @@ Findings are "knit" together via a combination of human-readable text, including
 * [YAML](https://en.wikipedia.org/wiki/YAML) for modifying theme and navigation bar
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) for modifications to headers and text alignment
 
-Though some exploratory analysis was performed externally, most analysis occurs within the *R Markdown* script, itself. That is, the analysis, table output, and visualizations, including HTML widgets, exist *within* the publication, albeit suppressed. 
+### Analysis
+
+Though some exploratory analysis was performed externally, most analysis occurs within the *R Markdown* script, itself. That is, the analysis, table output, and visualizations, including HTML widgets, exist *within* the publication, albeit suppressed. The .Rmd script and previous versions are available in the [Scripts Folder](https://github.com/jamisoncrawford/REIS/tree/master/Scripts), under `reis_hancock_publication_1.0.0.rmd`.
+
+The majority of analysis is descriptive in that it is intended to break the data down in myriad ways and report notable findings. Despite one Pearson correlation, statistics are limited to descriptive, i.e. "Five-Number Summaries", including mean, median, minimum, and maximum values for groups and subgroups. Base R functions are used for descriptive statistics and other arithmetic operations, as well as extraction and string manipulation. Other R packages include:
+
+* `readr` for importing data
+* `dplyr` for data manipualtion, specifically grouping, summarizing, and merging
+* `zoo` and `scales` for formatting numeric data appropriately, e.g. percentages and currencies
+* `ggplot2` for all 2-dimensional data visualizations
+* `kableExtra` for formatting interactive table widgets
+* `stringr` for string (text) manipulation
+* `geosphere` for calculating Euclidean distances via coordinates
+* `tigris`, `sf`, and `noncensus` for importing ZIP and county shapefiles
+* `tmap` and `leaflet` for interactive choropleth and bubble maps
 
 ## Caveats
 
