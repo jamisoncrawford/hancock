@@ -103,6 +103,12 @@ All manually scraped data are stored in the "Manual Scrapes" folder of the prese
   - Employee compensation data
   - Employee location data
   - Record data, e.g. `pdf_pg`
+  
+R scripts recording these processes are found in the [Scripts Folder](https://github.com/jamisoncrawford/REIS/tree/master/Scripts), titled `edward_schalk_and_son_edits_1.2.r` and `manual_scrape_edits_multiple_1.1.r` for processing records from *Edward Schalk & Son, Inc.* and all remaining employers, respectively. Their output may be found in several .CSV files, including previous and latest verisons and with names corresponding to company titles, located in the [Tables Folder](https://github.com/jamisoncrawford/REIS/tree/master/Tables). These include `na.rm` tables in which R's default missing value placeholder, `NA`, is replaced with empty strings.
+
+## Master Table Transformations
+
+All employer datasets, located in the [Tables Folder](https://github.com/jamisoncrawford/REIS/tree/master/Tables) were merged into a master dataset, `hancock_master_table_1.4.csv`, also located in the same folder. The R script for merging and homogenizing variables, `hancock_master_1.3.r` is available in the [Scripts Folder](https://github.com/jamisoncrawford/REIS/tree/master/Scripts).
 
 ## Caveats
 
