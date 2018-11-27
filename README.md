@@ -145,7 +145,7 @@ The majority of analysis is descriptive in that it is intended to break the data
 * `readr` for importing data
 * `dplyr` for data manipualtion, specifically grouping, summarizing, and merging
 * `zoo` and `scales` for formatting numeric data appropriately, e.g. percentages and currencies
-* `ggplot2` for all 2-dimensional data visualizations
+* `ggplot2` for all non-interactive data visualizations
 * `kableExtra` for formatting interactive table widgets
 * `stringr` for string (text) manipulation
 * `geosphere` for calculating Euclidean distances
