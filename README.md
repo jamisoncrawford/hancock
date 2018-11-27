@@ -125,9 +125,16 @@ The master merge script perfoms the following for most scraped tables, post-modi
   - Initializes state FIPS codes, `sfips`, and county FIPS codes `cfips`
   - Pastes FIPS codes to determine county name via dataset `counties` from R package `noncensus`
 
-## Publication & Transformations
+## Analysis & Publication
 
-Findings are "knit" together via a combination of human-readable text, including visualizations and tables, and machine-readable transformations existing "under the hood" - a practice known as [literate programming](https://en.wikipedia.org/wiki/Literate_programming). Using R package `markdown`, an introduction, executive summary, background, methodology, findings, contributors, contact section, and appendix are weaved together to create "Hancock Renovations: Importing Whites, Exporting Wealth" (Crawford, 2018). In essence, the publication consists of standard [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax, 
+Findings are "knit" together via a combination of human-readable text, including visualizations and tables, and machine-readable transformations existing "under the hood" - a practice known as [literate programming](https://en.wikipedia.org/wiki/Literate_programming). Using R package `markdown`, an introduction, executive summary, background, methodology, findings, contributors, contact section, and appendix are weaved together to create "Hancock Renovations: Importing Whites, Exporting Wealth" (Crawford, 2018). Under the hood, the publication is comprised of the following languages: 
+
+* [R](https://en.wikipedia.org/wiki/R_(programming_language)) for in-line values, data analysis, visualization, and table formatting
+* [Markdown](https://en.wikipedia.org/wiki/Markdown) for standard formatting, e.g. hyperlinks, bold, italics
+* [YAML](https://en.wikipedia.org/wiki/YAML) for modifying theme and navigation bar
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) for modifications to headers and text alignment
+
+Though some exploratory analysis was performed externally, most analysis occurs within the *R Markdown* script, itself. That is, the analysis, table output, and visualizations, including HTML widgets, exist *within* the publication, albeit suppressed. 
 
 ## Caveats
 
