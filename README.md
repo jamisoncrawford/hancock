@@ -88,7 +88,7 @@ Following review, all output in *quality_structures_scrape_1.1.csv*, located in 
 
 ### All Other Employers
 
-Remaining documentation, excluding "Quality Strictires, Inc.", remains to undergo paired review for accuracy; to be determined.
+Remaining documentation, excluding "Quality Strictires, Inc.", remains to undergo paired review for accuracy; see *Caveats*.
 
 ## Scraped Table Modifications
 
