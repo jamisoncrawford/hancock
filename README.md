@@ -125,6 +125,10 @@ The master merge script perfoms the following for most scraped tables, post-modi
   - Initializes state FIPS codes, `sfips`, and county FIPS codes `cfips`
   - Pastes FIPS codes to determine county name via dataset `counties` from R package `noncensus`
 
+## Publication & Transformations
+
+Findings are "knit" together via a combination of human-readable text, including visualizations and tables, and machine-readable transformations existing "under the hood" - a practice known as [literate programming](https://en.wikipedia.org/wiki/Literate_programming). Using R package `markdown`, an introduction, executive summary, background, methodology, findings, contributors, contact section, and appendix are weaved together to create "Hancock Renovations: Importing Whites, Exporting Wealth" (Crawford, 2018). In essence, the publication consists of standard [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax, 
+
 ## Caveats
 
 **Automatic Numeric Conversion:** When importing .csv files into *Microsoft Excel* or other spreadsheet software, it may automatically convert character values into numeric values. If those values begin with one or more leading zeroes ("0"), e.g. `ssn` in *quality_structures_scrape_1.1.csv*, they will be removed automatically. It is strongly advised that users ensure automatic formatting for numeric data is disabled in their spreadsheet software, or else users ensure that converted values are reverted back to character format and leading zeroes are appended.
