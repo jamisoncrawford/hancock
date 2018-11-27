@@ -148,9 +148,15 @@ The majority of analysis is descriptive in that it is intended to break the data
 * `ggplot2` for all 2-dimensional data visualizations
 * `kableExtra` for formatting interactive table widgets
 * `stringr` for string (text) manipulation
-* `geosphere` for calculating Euclidean distances via coordinates
+* `geosphere` for calculating Euclidean distances
 * `tigris`, `sf`, and `noncensus` for importing ZIP and county shapefiles
 * `tmap` and `leaflet` for interactive choropleth and bubble maps
+
+Note that these do not include packages used for preprocessing tasks.
+
+### Publication
+
+Final analysis, tables, visualizations, and interpretations are hosted on [RPubs](http://rpubs.com/), a free publication platform for R `markdown` output hosted by *RStudio*. The publication, in its current form, is viewable here: ["Hancock Renovations: Importing Whites, Exporting Wealth"](http://rpubs.com/JamisonCrawford/hancock) (ibid.). Future updates to the publication will be indicated *Section 8: Versions & Dates*.
 
 ## Caveats
 
