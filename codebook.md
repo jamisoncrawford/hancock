@@ -2,6 +2,58 @@
 
 The following lists the table names, variables, units of measurement if applicable, processing tasks, and definitions for each employment document scraped, as well as the "Master Table", merging and homogenizing variables uniformly where possible.
 
+# Publication
+
+The latest available version of published findings, ["Hancock Renovations: Importing Whites, Exporting Wealth"](http://rpubs.com/JamisonCrawford/hancock) (Crawford, 2018), is available on the *RPubs* platform. The *R Markdown* script, an `.Rmd` file, is also available in the ["Scripts" Folder](https://github.com/jamisoncrawford/REIS/tree/master/Scripts) of the REIS repository, titled `reis_hancock_publication_*.rmd`, with `*` indicating a 3-figure version ID. *Hancock Renovations* features a variety of tables with variables created within the *R Markdown* script, itself, so all steps in variable transformations are built into the publication. This concept, known as [literate programming](https://en.wikipedia.org/wiki/Literate_programming), is further explained in `README.md`, located in the REIS repository. The following therefore defines any novel variable transformations occurring within the analysis.
+
+## Metadata Tables
+
+###  Table 1: Data Overview
+
+### Tables on Race
+
+### Table 2: Unique Workers by Race
+
+### Table 3: Unique Workers by Race & Company
+
+### Table 4: Total Weeks Worked by Race
+
+### Table 5: Total Weeks Worked by Race & Company
+
+### Table 6: Aggregate Titles by Race
+
+### Table 7: Titles by Race & Company
+
+### Table 8: Summary Statistics of Hourly Wage by Race
+
+### Table 9: Summary Statistics of Hourly Wage by Race & Company
+
+### Table 10.1: Total Net Earnings by Race
+
+### Table 10.2: Summary Statistics on Individual Net Payments by Race
+
+### Table 11.1: Net Earnings by Race & Company
+
+### Table 11.2 Summary Statistics on Net Pay by Race & Company
+
+## Tables on Location
+
+### Table 12: Total Workers by County & State
+
+### Table 13.1: Top 10 Cities of Worker Origin
+
+### Table 14.1: Top 12 Counties of Worker Origin for All Races
+
+### Table 15: Location of Onondaga County Workers by Race
+
+### Table 16.1: Total Workforce Earnings & Average Total Worker Earnings by County
+
+### Table 16.2: Summary Statistics on Total Worker Earnings by County
+
+### Table 16.3 Total Workforce Earnings & Average Net Payment Size by County
+
+### Table 17: Overview of Earnings & Pay Periods by Distance Ranges from Syracuse
+
 # Master Table
 
 ## Overview
