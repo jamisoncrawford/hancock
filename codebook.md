@@ -10,7 +10,7 @@ The latest available version of published findings, ["Hancock Renovations: Impor
 
 ###  Table 1: Data Overview
 
-### Tables on Race
+## Tables on Race
 
 ### Table 2: Unique Workers by Race
 
