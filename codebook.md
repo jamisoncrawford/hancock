@@ -52,7 +52,7 @@ The following corresponds to all tables ranging from *Section 4.2: Workers by Ra
 
 ## Tables on Location
 
-The following corresponds to all tables ranging from *Section 5.1: Total Workers by County & State* to *Section 5.6: Net Wages by Distance*. These data break down total quantities and proportions of unique workers, worker race, net wages, and individual payments conditioned on county and state, city, Onondaga County, and distance. Tables on net wages typically feature descriptive statistics as well as comparisons, via percentage differences, to Onondaga County workers.
+The following corresponds to all tables ranging from *Section 5.1: Total Workers by County & State* to *Section 5.6: Net Wages by Distance*. These data break down total quantities and proportions of unique workers, worker race, net wages, and individual payments conditioned on county and state, city, Onondaga County, and distance. Tables on net wages typically feature descriptive statistics as well as comparisons, via percentage and raw dollar differences, to Onondaga County workers.
 
 ### Table 12: Total Workers by County & State
 
