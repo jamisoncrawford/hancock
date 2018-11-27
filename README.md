@@ -108,7 +108,7 @@ All manually scraped data are stored in the "Manual Scrapes" folder of the prese
 
 **Automatic Numeric Conversion:** When importing .csv files into *Microsoft Excel* or other spreadsheet software, it may automatically convert character values into numeric values. If those values begin with one or more leading zeroes ("0"), e.g. `ssn` in *quality_structures_scrape_1.1.csv*, they will be removed automatically. It is strongly advised that users ensure automatic formatting for numeric data is disabled in their spreadsheet software, or else users ensure that converted values are reverted back to character format and leading zeroes are appended.
 
-**Accuracy:** All manually scraped documents, i.e. all barring *quality_structures_scrape_1.1.csv*, remain to be reviewed for accuracy. Use these data judiciously until it is confirmed that they have been reviewed. It may be assumed that the vast majority of manually scraped data are accurate, however.
+**Accuracy:** All manually scraped documents, i.e. all barring *quality_structures_scrape_1.1.csv*, remain to be reviewed by a third party for accuracy. Use these data judiciously until it is confirmed that they have been reviewed. It may be assumed that all, if not the vast majority of manually scraped data are accurate, however.
 
 ## Contributors
 
@@ -117,3 +117,6 @@ The following individuals contributed to this project in the manner described be
 * **Jamison Crawford, MPA:** Principal analyst.
 * **Andrew Croom, JD:** Retrieved and manually organized all raw data, as well as provided variables of interest.
 * **Shannon Connor, MA:** Assisted in all paired data inspection and corroboration processes.
+* **Legal Services of Central New York:** Co-creator of the Racial Equity Impact Statement (REIS).
+* **Urban Jobs Task Force:** Co-creator of the Racial Equity Impact Statement (REIS).
+* **Central New York Community Foundation:** *Community Data Meetings.* Facilitating volunteer recruitment, peer review.
