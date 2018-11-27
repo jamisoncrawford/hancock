@@ -110,6 +110,21 @@ R scripts recording these processes are found in the [Scripts Folder](https://gi
 
 All employer datasets, located in the [Tables Folder](https://github.com/jamisoncrawford/REIS/tree/master/Tables) were merged into a master dataset, `hancock_master_table_1.4.csv`, also located in the same folder. The R script for merging and homogenizing variables, `hancock_master_1.3.r` is available in the [Scripts Folder](https://github.com/jamisoncrawford/REIS/tree/master/Scripts).
 
+The master merge script perfoms the following for most scraped tables, post-modification:
+
+* Initializes variable `name`, a partically abbreviated version of the employer name for grouping purposes
+* Converts `ending` to POSIXlt format, i.e. "YYYY-MM-DD"
+* Coerces `name`, `state`, `zip`, and `title` to nonordinal factors (i.e. categorical variables)
+* Initializes variables if undisclosed in raw data, e.g. `race`, `sex`, `union`, and `rate`
+* If available, coerces `net` and `rate` to class numeric variables
+* Initializes `NA` variables if inapplicable to scraped tables, e.g. `pdf_no`
+* Merges all datasets into master table using R package `dplyr` and `*_join()` verbs
+* Applies unique, 1-digit `ssn` IDs where unique workers are detected but `ssn` is missing
+  - Initializes binary variable `ssn_sub` (class logical) to indicate substitute ID
+* Further extrapolates location data using dataset `zip_codes` from R package `noncensus`
+  - Initializes state FIPS codes, `sfips`, and county FIPS codes `cfips`
+  - Pastes FIPS codes to determine county name via dataset `counties` from R package `noncensus`
+
 ## Caveats
 
 **Automatic Numeric Conversion:** When importing .csv files into *Microsoft Excel* or other spreadsheet software, it may automatically convert character values into numeric values. If those values begin with one or more leading zeroes ("0"), e.g. `ssn` in *quality_structures_scrape_1.1.csv*, they will be removed automatically. It is strongly advised that users ensure automatic formatting for numeric data is disabled in their spreadsheet software, or else users ensure that converted values are reverted back to character format and leading zeroes are appended.
