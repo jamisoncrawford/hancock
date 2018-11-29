@@ -31,19 +31,21 @@ The following corresponds to all tables ranging from *Section 4.2: Workers by Ra
 
 ### Table 2: Unique Workers by Race
 
-* `Unique Workers`: 
-* `Percentage`: 
+* `Unique Workers`: Total number of individual workers identified in *Table 1*, reconditioned on `race`, where `race` data are disclosed.
+  - One unit is equal to one worker.
+* `Percentage`: Proportion of unique workers conditioned on `race`, where `race` data are disclosed.
+  - Percentage determined using unique workers conditioned on `race` as numerator and total unique workers, where `race` data are disclosed, as denominator.
 
 ### Table 3: Unique Workers by Race & Company
 
-* `Company`: 
+* `Company`: Expansion of *Table 2* `Unique Workers` and `Percentage` to include further conditioning on company `name`.
 
 ### Table 4: Total Weeks Worked by Race
 
-* `Periods`: 
-* `Periods (%)`: 
-* `Workers`: 
-* `Workers (%)`: 
+* `Periods`: Total number of payment periods conditioned on `race`.
+* `Periods (%)`: Proportion of total payment periods per each `race` compared to total `Periods`.
+* `Workers`: Total number of unique workers conditioned on `race`.
+* `Workers (%)`: Proportion of total unique workers per each `race` comapred to total `Workers`.  
 
 ### Table 5: Total Weeks Worked by Race & Company
 
@@ -51,14 +53,20 @@ No new variables transformations.
 
 ### Table 6: Aggregate Titles by Race
 
-* `Title`: 
+* `Title`: Ordinal variable indicating rank, position, or status of unique workers, homogenized/aggregated for uniformity.
+  - Categories include, in descending order: "Foreman", "Operator", "Journeyman", "Apprentice", "Unspecified".
+  - Variations in original `title` values were homogenized via pattern detection and extraction per the following:
+    - "Foreman" derives from "Foreman", "General Foreman", "Subforeman", and "Foreman 2"
+    - "Apprentice" derives from "Apprentice 1st Year", "Apprentice 2nd Year", etc., "1st Year Apprentice", "2nd Year Apprentice", etc.
+  - Fields indicating `Title` contained mixed values both congruent and incongruent with modern US Apprenticeship system.
+    - I.e., the same field may contain, e.g., "Operator", "Foreman", "General Foreman", "Apprentice 2nd Year", and "Journeyman"
 
 ### Table 7: Titles by Race & Company
 
-* `Total Workers`: 
-* `Company (%)`: 
-* `Race (%)`: 
-* `Title (%)`: 
+* `Total Workers`: Total count of unique workers grouped by company `name`, worker `race`, and worker `title` .
+* `Company (%)`: Proportion of company's workers out of `Total Workers` within company.
+* `Race (%)`: Proportion of workers with `race` out of `Total Workers`.
+* `Title (%)`: Proportion of workers with `title` out of `Total Workers`.
 
 ### Table 8: Summary Statistics of Hourly Wage by Race
 
