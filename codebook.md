@@ -12,15 +12,18 @@ The following table corresponds to *Section 4.1: On Demographic Data* and descri
 
 ###  Table 1: Data Overview
 
-* `Unique Payment Records`: 
-* `Unique Workers`: 
-* `Status`: 
-* `Race`: 
-* `Race (%)`: 
-* `Zip Code`: 
-* `Zip Code (%)`: 
-* `Net Pay`: 
-* `Net Pay (%)`: 
+* `Unique Payment Records`: Total observations for each pay period across all workers and companies.
+* `Unique Workers`: Total number of unique workers when grouped by company `name`, social security number (`ssn`), `title`, `race`, `sex`, and hourly `rate`, as seen in `hancock_master_1.3.r`.
+* `Status`: Indicates whether data are "Available" or "Missing", determinind via filtering on `race`, `zip`, and `net` pay.
+* `Race`: Total number of `Unique Payment Records` or `Unique Workers` with disclosed `race` data.
+  - One unit is equal to one observation.
+* `Race (%)`: Proportion of `Unique Payment Records` or `Unique Workers` with disclosed `race` data.
+* `Zip Code`: Total number of `Unique Payment Records` or `Unique Workers` with disclosed `zip` code data.
+  - One unit is equal to one observation.
+* `Zip Code (%)`: Proportion of `Unique Payment Records` or `Unique Workers` with disclosed `zip` code data.
+* `Net Pay`: Total number of `Unique Payment Records` or `Unique Workers` with disclosed `net` pay data.
+  - One unit is equal to one observation.
+* `Net Pay (%)`: Proportion of `Unique Payment Records` or `Unique Workers` with disclosed `net` pay data.
 
 ## Tables on Race
 
