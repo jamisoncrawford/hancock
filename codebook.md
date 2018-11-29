@@ -53,6 +53,8 @@ No new variables transformations.
 
 ### Table 6: Aggregate Titles by Race
 
+Proportions are calculated using the total unique workers in each company (`name`), each `race`, and each `title` as denominators.
+
 * `Title`: Ordinal variable indicating rank, position, or status of unique workers, homogenized/aggregated for uniformity.
   - Categories include, in descending order: "Foreman", "Operator", "Journeyman", "Apprentice", "Unspecified".
   - Variations in original `title` values were homogenized via pattern detection and extraction per the following:
@@ -65,47 +67,44 @@ No new variables transformations.
 
 * `Total Workers`: Total count of unique workers grouped by company `name`, worker `race`, and worker `title` .
 * `Company (%)`: Proportion of company's workers out of `Total Workers` within company.
-* `Race (%)`: Proportion of workers with `race` out of `Total Workers`.
-* `Title (%)`: Proportion of workers with `title` out of `Total Workers`.
+* `Race (%)`: Proportion of workers with `race` out of `Total Workers` of same `race`, `title`, and `company`.
+* `Title (%)`: Proportion of workers with `title` out of `Total Workers` of same `race`, `title`, and `company`.
 
 ### Table 8: Summary Statistics of Hourly Wage by Race
 
-* `Minimum`: 
-* `Median`: 
-* `Average`: 
-* `Maximum`: 
+* `Minimum`: Lowest hourly `rate` earned among unique workers within each `race`.
+* `Median`: Hourly `rate` earned among unique workers within each `race` at 50th percentile.
+* `Average`: Average `rate` earned among unique workers within each `race`.
+* `Maximum`: Highest hourly `rate` earned among unique workers within each `race`.
 
 ### Table 9: Summary Statistics of Hourly Wage by Race & Company
 
-No new variables transformations.
+Variable definitions are identical to *Table 8*, albeit further conditioned on both `race` and company `name`.
 
 ### Table 10.1: Total Net Earnings by Race
 
-* `Payments`: 
-* `Total Net ($)`: 
-* `Total Net (%)`: 
+* `Payments`: Total number of pay periods (and, ergo, paychecks), where `race` and `net` are disclosed, for each `race`.
+* `Total Net ($)`: Total amount of `net` pay earned, where `race` and `net` are disclosed, for each `race`.
+  - Measured in US dollars
+* `Total Net (%)`: Proportion of `net` pay earned, where `race` and `net` are disclosed, for each `race`.
+  - Numerator, measured in US dollars, is total `net` earned per `race`
+  - Denominator, measured in US dollars, is total `net` earned among all unique workers
 
 ### Table 10.2: Summary Statistics on Individual Net Payments by Race
 
-* `Minimum`: 
-* `Median`: 
-* `Average`: 
-* `Maximum`: 
+Variable definitions are identical to *Table 8*, albeit describing individual observations of `net` payments grouped by `race`.
 
 ### Table 11.1: Net Earnings by Race & Company
 
-* `Company Net ($)`: 
-* `Company Net (%)`: 
-* `Workforce Net (%)`: 
-* `Workers`: 
-* `Company (%)`: 
+* `Company Net ($)`: Total `net` earnings per `race` out of total company `net` earnings.
+* `Company Net (%)`: Proportion of `net` earnings per `race` out of total company `net` earnings.
+* `Workforce Net (%)`: Proportion of `net` earnings per `race` out of total `net` earnings among all unique workers.
+* `Workers`: Total unique workers per `race` and company `name`.
+* `Company (%)`: Proportion of unique workers per `race` among all unique workers within company (`name`).
 
 ### Table 11.2 Summary Statistics on Net Pay by Race & Company
 
-* `Minimum`: 
-* `Median`: 
-* `Average`: 
-* `Maximum`: 
+Variable definitions are identical to *Table 8*, albeit describing individual observations of `net` payments grouped by `race`.
 
 ## Tables on Location
 
