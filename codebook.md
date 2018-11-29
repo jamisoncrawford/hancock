@@ -103,86 +103,86 @@ The following corresponds to all tables ranging from *Section 5.1: Total Workers
 ### Table 12: Total Workers by County & State
 
 * `County`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
+* `State`: 
+* `Total Workers`: 
+* `Total Workers (%)`: 
 
 ### Table 13.1: Top 10 Cities of Worker Origin
 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
+* `City`: 
+* `County`: 
+* `State`: 
+* `Total Workers`: 
+* `Total Workers (%)`: 
 
 ### Table 14.1: Top 12 Counties of Worker Origin for All Races
 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
+* `County`: 
+* `State`: 
+* `Race`: 
+* `Total`: 
+* `Race (%)`: 
+* `Workforce (%)`: 
 
 ### Table 15: Location of Onondaga County Workers by Race
 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
+* `Location`: 
+* `Total`: 
+* `Workers in Location (%)`: 
+* `Race in Location (%)`: 
+* `Workers in County (%)`: 
+* `Total Workforce (%)`: 
 
 ### Table 16.1: Total Workforce Earnings & Average Total Worker Earnings by County
 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
+* `County`: 
+* `State`: 
+* `Total Net`: 
+* `Total Net (%)`: 
+* `Total Workers`: 
+* `Total Workers (%)`: 
+* `Average Net/Worker`: 
+* `Worker Difference`: 
+* `Worker Difference (%)`: 
 
 ### Table 16.2: Summary Statistics on Total Worker Earnings by County
 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
+* `County`: 
+* `Workers`: 
+* `Workers (%)`: 
+* `Minimum`: 
+* `Average`: 
+* `Median`: 
+* `Maximum`: 
 
 ### Table 16.3 Total Workforce Earnings & Average Net Payment Size by County
 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
+* `County`: 
+* `State`: 
+* `Total Net`: 
+* `Total Net (%)`: 
+* `Workers`: 
+* `Workers (%)`: 
+* `Checks`: 
+* `Checks (%)`: 
+* `Average Net/Check`: 
+* `Average Checks/Worker`: 
+* `Check Difference`:
+* `Check Difference (%)`: 
 
 ### Table 17: Overview of Earnings & Pay Periods by Distance Ranges from Syracuse
 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
-* `xxx`: 
+* `Range (Miles)`: 
+* `Workers`: 
+* `Workers (%)`: 
+* `Minority`: 
+* `Minority (%)`: 
+* `Weeks`: 
+* `Weeks (%)`: 
+* `Average Weeks/Worker`: 
+* `Total Net`: 
+* `Total Net (%)`: 
+* `Average Net/Worker`: 
 
 # Master Table
 
