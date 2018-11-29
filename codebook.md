@@ -92,19 +92,19 @@ Variable definitions are identical to *Table 8*, albeit further conditioned on b
 
 ### Table 10.2: Summary Statistics on Individual Net Payments by Race
 
-Variable definitions are identical to *Table 8*, albeit describing individual observations of `net` payments grouped by `race`.
+Variable definitions are identical to *Table 8*, albeit describing individual `net` payments grouped by `race`.
 
 ### Table 11.1: Net Earnings by Race & Company
 
 * `Company Net ($)`: Total `net` earnings per `race` out of total company `net` earnings.
-* `Company Net (%)`: Proportion of `net` earnings per `race` out of total company `net` earnings.
-* `Workforce Net (%)`: Proportion of `net` earnings per `race` out of total `net` earnings among all unique workers.
+* `Company Net (%)`: Proportion of total `net` earnings per `race` out of total company `net` earnings.
+* `Workforce Net (%)`: Proportion of total `net` earnings per `race` out of total `net` earnings among all unique workers.
 * `Workers`: Total unique workers per `race` and company `name`.
 * `Company (%)`: Proportion of unique workers per `race` among all unique workers within company (`name`).
 
 ### Table 11.2 Summary Statistics on Net Pay by Race & Company
 
-Variable definitions are identical to *Table 8*, albeit describing individual observations of `net` payments grouped by `race`.
+Variable definitions are identical to *Table 8*, albeit describing total `net` payments grouped by individual workers and `race`.
 
 ## Tables on Location
 
