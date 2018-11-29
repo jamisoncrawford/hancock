@@ -114,7 +114,7 @@ The following corresponds to all tables ranging from *Section 5.1: Total Workers
 
 * `County`: Pennsylvania of New York State county where unique workers reside.
   - Extrapolated by merging disclosed `zip` codes with R packages `zipcode` and `noncensus`.
-  - Uses dataset `zipcodes` and datasets `zip_code` and `counties` from packages `zipcode` and `noncensus`, respectively.
+  - Uses dataset `zipcode` and datasets `zip_code` and `counties` from packages `zipcode` and `noncensus`, respectively.
   - Determined using variable `cfips`, the county FIPS code in `hancock_master_1.3.r`
 * `State`: State of worker residence.
   - Extrapolated from `zip` and `sfips` in `hancock_master_1.3.r` in same manner as `County`.
@@ -124,7 +124,7 @@ The following corresponds to all tables ranging from *Section 5.1: Total Workers
 ### Table 13.1: Top 10 Cities of Worker Origin
 
 * `City`: One of ten cities where most unique workers reside.
-  - Extrapolated from `zip` using R package `zipcode` and dataset `zipcodes`.
+  - Extrapolated from `zip` using R package `zipcode` and dataset `zipcode`.
 * `County`: See `County` definition in *Table 12*.
 * `State`: See `State` definition in *Table 12*.
 * `Total Workers`: See `Total Workers` definition in *Table 12*.
@@ -142,7 +142,7 @@ The following corresponds to all tables ranging from *Section 5.1: Total Workers
 ### Table 15: Location of Onondaga County Workers by Race
 
 * `Location`: Village, town, or city of workers within Onondaga County.
-  - Extrapolated via `zip` codes using R package `zipcode` and dataset `zipcodes`.
+  - Extrapolated via `zip` codes using R package `zipcode` and dataset `zipcode`.
 * `Total`: Total unique workers of each `Race` conditioned on `Location`.
 * `Workers in Location (%)`: Proportion of unique workers in `Location` for each `race` out of total workers in `Location`.
 * `Race in Location (%)`: Proportion of unique workers in `Location` for each `race` out of total workers in `race`.
@@ -174,17 +174,25 @@ Variable definitions are identical to *Table 16.1*, albeit describing individual
 
 ### Table 17: Overview of Earnings & Pay Periods by Distance Ranges from Syracuse
 
-* `Range (Miles)`: 
-* `Workers`: 
-* `Workers (%)`: 
-* `Minority`: 
-* `Minority (%)`: 
-* `Weeks`: 
-* `Weeks (%)`: 
-* `Average Weeks/Worker`: 
-* `Total Net`: 
-* `Total Net (%)`: 
-* `Average Net/Worker`: 
+* `Range (Miles)`: Range of Euclidean distance in 25-mile increments between worker `zip` code and Syracuse, NY.
+  - Longitude-latitude coordinates for each `zip` extrapolated using R package `zipcode` and dataset `zipcode`.
+  - Package `zipcode` uses August, 2004 *CivicSpace Database*, with documentation available on [CRAN: Package zipcode](https://cran.r-project.org/web/packages/zipcode/zipcode.pdf).
+  - Syracuse longitude-latitude coordinates provided by *Google*, though varies slightly with other sources.
+  - Worker longitude-latitude coordinates from *CivicSpace Database* typically use geographic centroid of *zip* shapefile.
+  - Euclidean distance determined using R package `geosphere` and function `distMeeus()`, i.e. the *Meeus Great Circle Distance*.
+    - *Meeus Great Circle Distance* function `distMeeus()` available in [Package geosphere documentation](https://cran.r-project.org/web/packages/geosphere/geosphere.pdf)
+    - Parameters for greatest equatorial distance and ellipsoid flattening uses default: "WGS-84 Ellipsoid"
+    - "WGS-84" is a [fixed radius](https://en.wikipedia.org/wiki/Earth_radius#Fixed_radius) from the World Geodetic System (WGS)
+* `Workers`: Total unique workers within `Range (Miles)`.
+* `Workers (%)`: Proportion of unique workers within `Range (Miles)` out of total workers in all ranges.
+* `Minority`: Total minority workers within `Range (Miles)`.
+* `Minority (%)`: Proportion of minority workers within `Range (Miles)` out of total minority workers in all ranges.
+* `Weeks`: Total pay periods (`ending`) among all unique workers within `Range (Miles)`.
+* `Weeks (%)`: Proportion of pay periods (`ending`) worked within `Range (Miles)` out of total pay periods worked in all ranges.
+* `Average Weeks/Worker`: Average pay periods (`ending`) worked per worker within given `Range (Miles)`.
+* `Total Net`: Total `net` earnings within given `Range (Miles)`.
+* `Total Net (%)`: Proportion of `net` earnings within given `Range (Miles)` out of total `net` earnings by all workers.
+* `Average Net/Worker`: Mean `net` earnings within given `Range (Miles)`.
 
 # Master Table
 
