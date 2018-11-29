@@ -85,10 +85,10 @@ Variable definitions are identical to *Table 8*, albeit further conditioned on b
 
 * `Payments`: Total number of pay periods (and, ergo, paychecks), where `race` and `net` are disclosed, for each `race`.
 * `Total Net ($)`: Total amount of `net` pay earned, where `race` and `net` are disclosed, for each `race`.
-  - Measured in US dollars
+  - Measured in US dollars.
 * `Total Net (%)`: Proportion of `net` pay earned, where `race` and `net` are disclosed, for each `race`.
-  - Numerator, measured in US dollars, is total `net` earned per `race`
-  - Denominator, measured in US dollars, is total `net` earned among all unique workers
+  - Numerator, measured in US dollars, is total `net` earned per `race`.
+  - Denominator, measured in US dollars, is total `net` earned among all unique workers.
 
 ### Table 10.2: Summary Statistics on Individual Net Payments by Race
 
