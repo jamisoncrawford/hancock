@@ -102,19 +102,87 @@ The following corresponds to all tables ranging from *Section 5.1: Total Workers
 
 ### Table 12: Total Workers by County & State
 
+* `County`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+
 ### Table 13.1: Top 10 Cities of Worker Origin
+
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
 
 ### Table 14.1: Top 12 Counties of Worker Origin for All Races
 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+
 ### Table 15: Location of Onondaga County Workers by Race
+
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
 
 ### Table 16.1: Total Workforce Earnings & Average Total Worker Earnings by County
 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+
 ### Table 16.2: Summary Statistics on Total Worker Earnings by County
+
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
 
 ### Table 16.3 Total Workforce Earnings & Average Net Payment Size by County
 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+
 ### Table 17: Overview of Earnings & Pay Periods by Distance Ranges from Syracuse
+
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
+* `xxx`: 
 
 # Master Table
 
