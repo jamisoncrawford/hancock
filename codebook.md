@@ -112,73 +112,65 @@ The following corresponds to all tables ranging from *Section 5.1: Total Workers
 
 ### Table 12: Total Workers by County & State
 
-* `County`: 
-* `State`: 
-* `Total Workers`: 
-* `Total Workers (%)`: 
+* `County`: Pennsylvania of New York State county where unique workers reside.
+  - Extrapolated by merging disclosed `zip` codes with R packages `zipcode` and `noncensus`.
+  - Uses dataset `zipcodes` and datasets `zip_code` and `counties` from packages `zipcode` and `noncensus`, respectively.
+  - Determined using variable `cfips`, the county FIPS code in `hancock_master_1.3.r`
+* `State`: State of worker residence.
+  - Extrapolated from `zip` and `sfips` in `hancock_master_1.3.r` in same manner as `County`.
+* `Total Workers`: Total unique workers grouped by `County`.
+* `Total Workers (%)`: Proportion of total unique workers by `County` out of total unique workers in workforce.
 
 ### Table 13.1: Top 10 Cities of Worker Origin
 
-* `City`: 
-* `County`: 
-* `State`: 
-* `Total Workers`: 
-* `Total Workers (%)`: 
+* `City`: One of ten cities where most unique workers reside.
+  - Extrapolated from `zip` using R package `zipcode` and dataset `zipcodes`.
+* `County`: See `County` definition in *Table 12*.
+* `State`: See `State` definition in *Table 12*.
+* `Total Workers`: See `Total Workers` definition in *Table 12*.
+* `Total Workers (%)`: See `Total Workers (%)` definition in *Table 12*.
 
 ### Table 14.1: Top 12 Counties of Worker Origin for All Races
 
-* `County`: 
-* `State`: 
-* `Race`: 
-* `Total`: 
-* `Race (%)`: 
-* `Workforce (%)`: 
+* `County`: PA and NY counties representing all minority races, and top 5 counties with greatest total White workers.
+* `State`: See `State` definition in *Table 12*.
+* `Race`: Worker `race`.
+* `Total`: Total unique workers of given `race` and `County`.
+* `Race (%)`: Proportion of unique workers of given `race` within given `County`.
+* `Workforce (%)`: Proportion of unique workers for each `race` within given `County` out of total workers for each `race`.
 
 ### Table 15: Location of Onondaga County Workers by Race
 
-* `Location`: 
-* `Total`: 
-* `Workers in Location (%)`: 
-* `Race in Location (%)`: 
-* `Workers in County (%)`: 
-* `Total Workforce (%)`: 
+* `Location`: Village, town, or city of workers within Onondaga County.
+  - Extrapolated via `zip` codes using R package `zipcode` and dataset `zipcodes`.
+* `Total`: Total unique workers of each `Race` conditioned on `Location`.
+* `Workers in Location (%)`: Proportion of unique workers in `Location` for each `race` out of total workers in `Location`.
+* `Race in Location (%)`: Proportion of unique workers in `Location` for each `race` out of total workers in `race`.
+* `Workers in County (%)`: Proportion of unique workers in `Location` for each `race` out of total workers in `County`.
+* `Total Workforce (%)`: Proportion of unique workers in `Location` for each `race` out of total workers in all counties.
 
 ### Table 16.1: Total Workforce Earnings & Average Total Worker Earnings by County
 
-* `County`: 
-* `State`: 
-* `Total Net`: 
-* `Total Net (%)`: 
-* `Total Workers`: 
-* `Total Workers (%)`: 
-* `Average Net/Worker`: 
-* `Worker Difference`: 
-* `Worker Difference (%)`: 
+* `County`: See `County` definition in *Table 12*.
+* `State`: See `State` definition in *Table 12*.
+* `Total Net`: Total `net` earnings per `County` among all unique workers.
+* `Total Net (%)`: Proportion of `net` earnings per `County` out of total `net` earnings in all counties.
+* `Total Workers`: Total unique workers within each `County`.
+* `Total Workers (%)`: Proportion of unique workers within `County` out of total unqiue workers in all counties.
+* `Average Net/Worker`: Mean total `net` earnings per unique worker within `County`.
+  - Measured in US dollars.
+* `Worker Difference`: Raw difference between `Average Net/Worker` in `County` compared to `Average Net/Worker` in Onondaga.
+* `Worker Difference (%)`: Percent difference between `Average Net/Worker` in `County` compared to `Average Net/Worker` in Onondaga.
+  - Formula: |County Average - Onondaga Average| / ( (County Average + Onondaga Average) / 2 ) * 100
+  - I.e., absolute difference in `net` divided by average `net` value; all multiplied by 100
 
 ### Table 16.2: Summary Statistics on Total Worker Earnings by County
 
-* `County`: 
-* `Workers`: 
-* `Workers (%)`: 
-* `Minimum`: 
-* `Average`: 
-* `Median`: 
-* `Maximum`: 
+Variable definitions are identical to *Table 8*, albeit describing total `net` payments per unique worker grouped by `county`.
 
 ### Table 16.3 Total Workforce Earnings & Average Net Payment Size by County
 
-* `County`: 
-* `State`: 
-* `Total Net`: 
-* `Total Net (%)`: 
-* `Workers`: 
-* `Workers (%)`: 
-* `Checks`: 
-* `Checks (%)`: 
-* `Average Net/Check`: 
-* `Average Checks/Worker`: 
-* `Check Difference`:
-* `Check Difference (%)`: 
+Variable definitions are identical to *Table 16.1*, albeit describing individual `net` payments grouped by `county`.
 
 ### Table 17: Overview of Earnings & Pay Periods by Distance Ranges from Syracuse
 
