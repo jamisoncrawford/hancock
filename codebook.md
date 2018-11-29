@@ -59,9 +59,9 @@ Proportions are calculated using the total unique workers in each company (`name
   - Categories include, in descending order: "Foreman", "Operator", "Journeyman", "Apprentice", "Unspecified".
   - Variations in original `title` values were homogenized via pattern detection and extraction per the following:
     - "Foreman" derives from "Foreman", "General Foreman", "Subforeman", and "Foreman 2"
-    - "Apprentice" derives from "Apprentice 1st Year", "Apprentice 2nd Year", etc., "1st Year Apprentice", "2nd Year Apprentice", etc.
+    - "Apprentice" derives from "Apprentice 1st Year" or "1st Year Apprentice", "2nd Year Apprentice", etc.
   - Fields indicating `Title` contained mixed values both congruent and incongruent with modern US Apprenticeship system.
-    - I.e., the same field may contain, e.g., "Operator", "Foreman", "General Foreman", "Apprentice 2nd Year", and "Journeyman"
+    - I.e., the same field may contain, e.g., "Operator", "Foreman", "Apprentice 2nd Year", and/or "Journeyman"
 
 ### Table 7: Titles by Race & Company
 
