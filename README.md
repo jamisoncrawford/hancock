@@ -167,7 +167,7 @@ Final analysis, tables, visualizations, and interpretations are hosted on [RPubs
 
 ## Contributors
 
-The following individuals contributed to this project in the manner described below:
+The following individuals and organizations contributed to this project in the manner described below:
 
 * **Jamison Crawford, MPA:** Principal analyst.
 * **Andrew Croom, JD:** Retrieved and manually organized all raw data, as well as provided variables of interest.
