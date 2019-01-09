@@ -1,0 +1,61 @@
+project,name,ending,zip,ssn,class,hours,rate,gross,net,sex,race,dup,ot,add,pdf_no,pdf_pg,pg_ob
+Hancock,Patricia Electric,2018-02-20,13027,2572,3rd Period Apprentice,39.0,18.40,782.00,614.79,Male,White,0,0,0,1,1,1
+Hancock,Patricia Electric,2018-02-20,13219,0030,Journeyman,39.0,36.75,1561.88,1419.05,Male,White,0,0,0,1,1,2
+Hancock,Patricia Electric,2018-02-20,13032,3050,4th Period Apprentice,38.5,22.05,920.59,678.31,Male,White,0,0,0,1,1,3
+Hancock,Patricia Electric,2018-02-20,13021,3972,Foreman,50.5,40.45,2255.09,1496.43,Male,White,0,0,0,1,1,4
+Hancock,Patricia Electric,2018-02-20,13403,7636,Journeyman,39.0,36.75,1561.88,1197.49,Male,White,0,0,0,1,1,5
+Hancock,Patricia Electric,2018-02-20,13408,0315,Journeyman,29.0,36.75,1157.63,963.93,Male,White,0,0,0,1,1,6
+Hancock,Patricia Electric,2018-02-13,13032,2381,Subforeman,3.0,38.60,154.40,1231.99,Male,White,0,0,0,1,2,1
+Hancock,Patricia Electric,2018-02-13,13032,3050,4th Period Apprentice,1.5,22.05,49.61,465.08,Male,White,0,1,0,1,2,2
+Hancock,Patricia Electric,2018-02-13,13021,3972,Foreman,24.0,40.45,1019.34,1125.26,Male,White,0,0,0,1,2,3
+Hancock,Patricia Electric,2018-02-13,13159,2532,Subforeman,1.5,38.60,86.85,1246.96,Male,White,0,1,0,1,2,4
+Hancock,Patricia Electric,2018-02-27,13027,2572,3rd Period Apprentice,45.0,18.40,947.60,730.55,Male,White,0,0,0,1,3,1
+Hancock,Patricia Electric,2018-02-27,13219,0030,Journeyman,45.0,36.75,2296.88,1717.65,Male,White,0,0,0,1,3,2
+Hancock,Patricia Electric,2018-02-27,13032,3050,4th Period Apprentice,45.0,22.05,1135.58,807.09,Male,White,0,0,0,1,3,3
+Hancock,Patricia Electric,2018-02-27,13021,3972,Foreman,55.0,40.45,2528.13,1572.32,Male,White,0,0,0,1,3,4
+Hancock,Patricia Electric,2018-02-27,13403,7636,Journeyman,55.0,36.75,2296.88,1444.52,Male,White,0,0,0,1,3,5
+Hancock,Patricia Electric,2018-02-27,13408,0315,Journeyman,55.0,36.75,2296.88,1444.67,Male,White,0,0,0,1,3,6
+Hancock,Patricia Electric,2018-03-06,13027,2572,3rd Period Apprentice,34.0,18.40,644.00,516.25,Male,White,0,0,0,1,4,1
+Hancock,Patricia Electric,2018-03-06,13219,0030,Journeyman,37.5,36.75,1460.81,1147.69,Male,White,0,0,0,1,4,2
+Hancock,Patricia Electric,2018-03-06,13032,3050,4th Period Apprentice,34.0,22.05,771.75,576.83,Male,White,0,0,0,1,4,3
+Hancock,Patricia Electric,2018-03-06,13021,3972,Foreman,49.5,40.45,2194.41,1387.79,Male,White,0,0,0,1,4,4
+Hancock,Patricia Electric,2018-03-06,13403,7636,Journeyman,43.0,36.75,1635.38,1071.71,Male,White,0,0,0,1,4,5
+Hancock,Patricia Electric,2018-03-06,13408,0315,Journeyman,43.0,36.75,1635.38,1072.38,Male,White,0,0,0,1,4,6
+Hancock,Patricia Electric,2018-03-13,13027,2572,3rd Period Apprentice,34.0,18.40,671.60,536.10,Male,White,0,0,0,1,5,1
+Hancock,Patricia Electric,2018-03-13,13219,0030,Journeyman,33.5,36.75,1258.69,1006.09,Male,White,0,0,0,1,5,2
+Hancock,Patricia Electric,2018-03-13,13032,3050,4th Period Apprentice,33.5,22.05,738.68,553.71,Male,White,0,0,0,1,5,3
+Hancock,Patricia Electric,2018-03-13,13021,3972,Foreman,46.5,40.45,2012.39,1286.27,Male,White,0,0,0,1,5,4
+Hancock,Patricia Electric,2018-03-13,13403,7636,Journeyman,40.5,36.75,1497.56,990.37,Male,White,0,0,0,1,5,5
+Hancock,Patricia Electric,2018-03-13,13408,0315,Journeyman,24.0,36.75,882.00,963.55,Male,White,0,0,0,1,5,6
+Hancock,Patricia Electric,2018-03-13,13479,9037,Journeyman,41.0,36.75,1525.13,1117.55,Male,White,0,0,0,1,5,7
+Hancock,Patricia Electric,2018-03-20,13027,2572,3rd Period Apprentice,36.0,18.40,699.20,555.94,Male,White,0,0,0,1,6,1
+Hancock,Patricia Electric,2018-03-20,13219,0030,Journeyman,45.0,36.75,1745.63,1343.41,Male,White,0,0,0,1,6,2
+Hancock,Patricia Electric,2018-03-20,13032,3050,4th Period Apprentice,41.0,22.05,1003.26,727.85,Male,White,0,0,0,1,6,3
+Hancock,Patricia Electric,2018-03-20,13021,3972,Foreman,50.0,40.45,2224.75,1404.65,Male,White,0,0,0,1,6,4
+Hancock,Patricia Electric,2018-03-20,13403,7636,Journeyman,44.0,36.75,1690.50,1103.58,Male,White,0,0,0,1,6,5
+Hancock,Patricia Electric,2018-03-20,13479,9037,Journeyman,40.0,36.75,1470.00,1079.59,Male,White,0,0,0,1,6,6
+Hancock,Patricia Electric,2018-03-27,13027,2572,3rd Period Apprentice,32.0,18.40,610.88,492.45,Male,White,0,0,0,1,7,1
+Hancock,Patricia Electric,2018-03-27,13219,0030,Journeyman,42.5,36.75,1651.91,1279.08,Male,White,0,0,0,1,7,2
+Hancock,Patricia Electric,2018-03-27,13032,3050,4th Period Apprentice,34.5,22.05,788.29,588.39,Male,White,0,0,0,1,7,3
+Hancock,Patricia Electric,2018-03-27,13021,3972,Foreman,43.0,40.45,1800.03,1165.78,Male,White,0,0,0,1,7,4
+Hancock,Patricia Electric,2018-03-27,13403,7636,Journeyman,42.5,36.75,1607.81,1055.44,Male,White,0,0,0,1,7,5
+Hancock,Patricia Electric,2018-03-27,13479,9037,Journeyman,40.0,36.75,1514.10,1110.03,Male,White,0,0,0,1,7,6
+Hancock,Patricia Electric,2018-04-03,13027,2572,3rd Period Apprentice,38.5,18.40,770.50,606.76,Male,White,0,0,0,1,8,1
+Hancock,Patricia Electric,2018-04-03,13219,0030,Journeyman,39.0,36.75,1565.55,1219.83,Male,White,0,0,0,1,8,2
+Hancock,Patricia Electric,2018-04-03,13032,3050,4th Period Apprentice,34.5,22.05,788.29,588.39,Male,White,0,0,0,1,8,3
+Hancock,Patricia Electric,2018-04-03,13021,3972,Foreman,47.0,40.45,2042.73,1303.19,Male,White,0,0,0,1,8,4
+Hancock,Patricia Electric,2018-04-03,13403,7636,Journeyman,40.5,36.75,1497.56,990.37,Male,White,0,0,0,1,8,5
+Hancock,Patricia Electric,2018-04-03,13479,9037,Journeyman,37.0,36.75,1492.05,1095.13,Male,White,0,0,0,1,8,6
+Hancock,Patricia Electric,2018-04-10,13027,2572,3rd Period Apprentice,40.0,18.40,809.60,634.09,Male,White,0,0,0,1,9,1
+Hancock,Patricia Electric,2018-04-10,13219,0030,Journeyman,37.0,36.75,1451.63,1141.40,Male,White,0,0,0,1,9,2
+Hancock,Patricia Electric,2018-04-10,13032,3050,4th Period Apprentice,40.0,22.05,970.20,708.02,Male,White,0,0,0,1,9,3
+Hancock,Patricia Electric,2018-04-10,13021,3972,Foreman,48.0,40.45,2103.40,1337.03,Male,White,0,0,0,1,9,4
+Hancock,Patricia Electric,2018-04-10,13159,2532,Subforeman,6.0,38.60,231.60,906.66,Male,White,0,0,0,1,9,5
+Hancock,Patricia Electric,2018-04-10,13403,7636,Journeyman,46.5,36.75,1855.88,1197.49,Male,White,0,0,0,1,9,6
+Hancock,Patricia Electric,2018-04-10,13479,9037,Journeyman,32.0,36.75,1323.00,978.94,Male,White,0,0,0,1,9,7
+Hancock,Patricia Electric,2018-04-17,13027,2572,3rd Period Apprentice,24.0,18.40,441.60,370.21,Male,White,0,0,0,1,10,1
+Hancock,Patricia Electric,2018-04-17,13219,0030,Journeyman,45.5,36.75,1773.19,1416.34,Male,White,0,0,0,1,10,2
+Hancock,Patricia Electric,2018-04-17,13032,3050,4th Period Apprentice,29.0,22.05,694.58,646.17,Male,White,0,0,0,1,10,3
+Hancock,Patricia Electric,2018-04-17,13021,3972,Foreman,47.0,40.45,2042.73,1303.19,Male,White,0,0,0,1,10,4
+Hancock,Patricia Electric,2018-04-17,13403,7636,Journeyman,42.0,36.75,1580.25,1039.18,Male,White,0,0,0,1,10,5
+Hancock,Patricia Electric,2018-04-17,13479,9037,Journeyman,42.0,36.75,1580.25,1155.49,Male,White,0,0,0,1,10,6
