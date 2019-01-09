@@ -1,4 +1,4 @@
-project,name,ending,zip,ssn,class,hours,rate,gross,net,sex,race,dup,ot,add,pdf_no,pdf_pg,occur,,,,
+project,name,ending,zip,ssn,class,hours,rate,gross,net,sex,race,dup,ot,add,pdf_no,pdf_pg,pg_ob,,,,
 Hancock,Danforth,2018-02-11,13108,,Journeyman,14.0,34.01,476.14,975.24,,,0,0,0,1,1,1,,,,
 Hancock,Danforth,2018-02-11,13084,3431,General Foreman,14.0,38.61,540.54,999.41,,,0,0,0,1,1,2,,,,
 Hancock,Danforth,2018-02-11,13069,5589,Journeyman,3.0,32.46,97.38,862.98,,,0,0,0,1,1,3,,,,
